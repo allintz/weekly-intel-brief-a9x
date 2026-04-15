@@ -1,0 +1,12 @@
+/*
+  X-Robots-Tag: noindex, nofollow
+  Referrer-Policy: no-referrer
+  X-Frame-Options: SAMEORIGIN
+  X-Content-Type-Options: nosniff
+
+/editions.json
+  Cache-Control: public, max-age=60
+  Content-Type: application/json
+
+/archive/*
+  Cache-Control: public, max-age=3600
