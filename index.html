@@ -403,7 +403,7 @@ body.light #tooltip-layer {
   <h1>Weekly Democracy <span class="gradient">Intelligence Brief</span></h1>
   <div style="font-size:26px;color:var(--accent-light);margin:12px 0 14px;letter-spacing:-0.01em;font-weight:600">April 15, 2026</div>
   <p class="sub">Prediction markets, expert forecasts, and policy intelligence across democratic resilience, elections, AGI timelines, and AI governance.</p>
-  <p style="font-size:13px;color:var(--text-secondary);margin:6px 0 0;line-height:1.5;max-width:720px">Fully Claude-generated each Monday. Alex estimates roughly 97% accuracy but expects 1&ndash;3 errors per edition. Message him with corrections or feedback.</p>
+  <p style="font-size:13px;color:var(--text-secondary);margin:6px 0 0;line-height:1.5;max-width:720px">Fully Claude-generated each Monday. Alex estimates about 97% accuracy. Expect 1&ndash;3 errors and maybe one big error each issue. Message him with corrections or feedback.</p>
   <div class="meta-row">
     <span class="badge"><span class="dot dot-amber"></span>Auto-updates every Monday 3am ET</span>
     <span id="refresh-ts" style="font-size:11px;color:var(--text-muted);margin-left:10px"></span>
@@ -419,6 +419,13 @@ body.light #tooltip-layer {
     <div>
       <h4><span class="has-tip" data-tip="Foreign Intelligence Surveillance Act Section 702. Authorizes warrantless surveillance of non-US persons located outside the US. Controversial because US persons' communications often get swept up (incidental collection) and can be queried without a warrant. Originally post-9/11 authority, sunsets periodically, requires renewal.">FISA Section 702</span> expires April 20 &mdash; 6 days</h4>
       <p>House vote <strong>Wednesday Apr 16</strong>. White House pushing clean 18-month extension. Carriers warned they'll stop collecting Apr 20 if not renewed. Democrats split; some Rs demanding warrant requirements. <a href="https://www.cnn.com/2026/04/13/politics/fisa-section-702-suveillance-law-expiration-congress">CNN</a> &middot; <a href="https://www.npr.org/2026/04/14/nx-s1-5768270/what-to-know-about-section-702-surveillance">NPR</a> &middot; <a href="https://www.brennancenter.org/our-work/research-reports/section-702-foreign-intelligence-surveillance-act-fisa-2026-resource-page">Brennan Center primer</a></p>
+    </div>
+  </div>
+  <div class="alert critical">
+    <div class="alert-icon">&#128205;</div>
+    <div>
+      <h4>Virginia redistricting referendum &mdash; April 21 (6 days)</h4>
+      <p>Special election on a constitutional amendment letting the General Assembly temporarily redraw congressional districts (currently drawn by the bipartisan commission, returning post-2030). If it passes, a Dem-favoring map signed by Gov Spanberger Feb 20 takes effect, shifting projected partisan lean toward Democrats in <strong>10 of 11</strong> districts. Polymarket Yes at <strong>88%</strong> (\$407K volume) &mdash; up from 73% a week earlier. Polls split: Emerson 57% Yes, Roanoke 51% Yes, ~18% undecided. Early voting since Mar 6; ends Apr 18. This is the Dem counter to mid-decade R-state gerrymanders (TX, MO) &mdash; a passage shifts the 2026 House expected value by several seats. <a href="https://en.wikipedia.org/wiki/2026_Virginia_redistricting_amendment">Wiki</a> &middot; <a href="https://polymarket.com/event/will-the-virginia-redistricting-referendum-pass">Polymarket</a> &middot; <a href="https://www.elections.virginia.gov/election-law/proposed-amendment-for-april-2026-special-election/">Ballot text</a> &middot; <a href="https://ballotpedia.org/Virginia_Use_of_Legislative_Congressional_Redistricting_Map_Amendment_(April_2026)">Ballotpedia</a></p>
     </div>
   </div>
   <div class="alert watch">
@@ -447,6 +454,7 @@ body.light #tooltip-layer {
       <div class="date-row"><div class="d d-red">Apr 16</div><div><strong>FISA 702 House vote</strong></div></div>
       <div class="date-row"><div class="d d-red">Apr 16</div><div>NJ-11 special election (Mejia D vs Hathaway R)</div></div>
       <div class="date-row"><div class="d d-red">Apr 20</div><div><strong>FISA 702 sunsets</strong></div></div>
+      <div class="date-row"><div class="d d-red">Apr 21</div><div><strong>VA redistricting referendum</strong> (special election)</div></div>
       <div class="date-row"><div class="d d-blue">Apr 23-27</div><div>ICLR 2026 (Rio) &mdash; top ML research venue</div></div>
       <div class="date-row"><div class="d d-amber">May 5</div><div><strong>Ohio primary</strong> (Senate special, Vance's seat)</div></div>
       <div class="date-row"><div class="d d-amber">May 6-8</div><div>AI Strategy &amp; Governance Summit (Stockholm)</div></div>
@@ -565,6 +573,7 @@ body.light #tooltip-layer {
   <table class="tbl">
     <thead><tr><th>Market</th><th>Prob</th><th>Vol</th><th>Status</th><th>Src</th></tr></thead>
     <tbody>
+      <tr data-market="polymarket:will-the-virginia-redistricting-referendum-pass"><td><strong>VA redistricting referendum passes</strong> (Apr 21) &mdash; <span style="color:var(--text-muted);font-size:11px">Dem counter-gerrymander</span></td><td class="p" style="color:var(--green)">88%</td><td class="vol">$407K</td><td><span class="tag tag-near">Near res.</span></td><td><a href="https://polymarket.com/event/will-the-virginia-redistricting-referendum-pass">PM</a></td></tr>
       <tr data-market="polymarket:insurrection-act-invoked-by"><td><span class="has-tip" data-tip="1807 law authorizing the president to deploy US military on US soil to suppress civil disorder, insurrection, or rebellion. Last invoked in 1992 (LA riots). Trump has repeatedly threatened invocation over immigration protests in Minneapolis, Chicago, LA.">Insurrection Act</span> by Dec 31, 2026</td><td class="p">28%</td><td class="vol">$1.04M</td><td><span class="tag tag-active">Active</span></td><td><a href="https://polymarket.com/event/insurrection-act-invoked-by">PM</a></td></tr>
       <tr data-market="polymarket:will-donald-trump-invoke-the-insurrection-act-before-july"><td>Insurrection Act by Jun 30, 2026</td><td class="p">11%</td><td class="vol">&mdash;</td><td><span class="tag tag-active">Active</span></td><td><a href="https://polymarket.com/event/will-donald-trump-invoke-the-insurrection-act-before-july">PM</a></td></tr>
       <tr><td>SCOTUS strikes <span class="has-tip" data-tip="Trump EO seeking to end automatic birthright citizenship for children of non-citizens born in US. Challenges 14th Amendment interpretation that's stood since 1898 (US v. Wong Kim Ark). Market at 94% reflects expert consensus that 14th Amendment precedent is clear.">birthright citizenship EO</span></td><td class="p" style="color:var(--green)">94%</td><td class="vol">$107K</td><td><span class="tag tag-near">Near res.</span></td><td><a href="https://polymarket.com/predictions/scotus">PM</a></td></tr>
