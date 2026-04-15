@@ -365,7 +365,7 @@ body.light #tooltip-layer {
       }
       data.editions.forEach(function(e, idx) {
         var a = document.createElement('a');
-        a.href = idx === 0 ? '/' : '/archive/' + e.date + '.html';
+        a.href = idx === 0 ? '/' : '/archive/' + e.date;
         a.textContent = e.date + (idx === 0 ? '  (current)' : '');
         if (idx === 0) a.classList.add('current');
         if (e.date === myEdition) a.classList.add('self');
@@ -389,7 +389,6 @@ body.light #tooltip-layer {
     <a href="#s3">AGI Timelines</a>
     <a href="#s4">AI Governance</a>
     <a href="#dates">Key Dates</a>
-    <a href="#alex-estimates">Alex's Estimates</a>
   </div>
   <div class="nav-right">
     <span class="badge"><span class="dot dot-amber"></span>Snapshot Apr 14 2026</span>
@@ -568,12 +567,17 @@ body.light #tooltip-layer {
     <thead><tr><th>Market</th><th>Prob</th><th>Vol</th><th>Status</th><th>Src</th></tr></thead>
     <tbody>
       <tr><td><span class="has-tip" data-tip="1807 law authorizing the president to deploy US military on US soil to suppress civil disorder, insurrection, or rebellion. Last invoked in 1992 (LA riots). Trump has repeatedly threatened invocation over immigration protests in Minneapolis, Chicago, LA.">Insurrection Act</span> by Dec 31, 2026</td><td class="p">28%</td><td class="vol">$1.04M</td><td><span class="tag tag-active">Active</span></td><td><a href="https://polymarket.com/event/insurrection-act-invoked-by">PM</a></td></tr>
+      <tr><td>Insurrection Act by Jun 30, 2026</td><td class="p">11%</td><td class="vol">&mdash;</td><td><span class="tag tag-active">Active</span></td><td><a href="https://polymarket.com/event/will-donald-trump-invoke-the-insurrection-act-before-july">PM</a></td></tr>
       <tr><td>SCOTUS strikes <span class="has-tip" data-tip="Trump EO seeking to end automatic birthright citizenship for children of non-citizens born in US. Challenges 14th Amendment interpretation that's stood since 1898 (US v. Wong Kim Ark). Market at 94% reflects expert consensus that 14th Amendment precedent is clear.">birthright citizenship EO</span></td><td class="p" style="color:var(--green)">94%</td><td class="vol">$107K</td><td><span class="tag tag-near">Near res.</span></td><td><a href="https://polymarket.com/predictions/scotus">PM</a></td></tr>
       <tr><td>SCOTUS lets Trump fire <span class="has-tip" data-tip="Trump v. Slaughter: Challenge to president's power to fire FTC commissioners at will, currently protected by Humphrey's Executor (1935). A ruling for Trump weakens agency independence across FTC, FCC, NLRB, Federal Reserve Board.">FTC commissioners</span></td><td class="p" style="color:var(--red)">88%</td><td class="vol">$21K</td><td><span class="tag tag-active">Active</span></td><td><a href="https://polymarket.com/predictions/scotus">PM</a></td></tr>
       <tr><td>SCOTUS bars mail ballots after election day</td><td class="p" style="color:var(--amber)">69%</td><td class="vol">$31K</td><td><span class="tag tag-active">Active</span></td><td><a href="https://polymarket.com/predictions/scotus">PM</a></td></tr>
       <tr><td><span class="has-tip" data-tip="Safeguard American Voter Eligibility Act. Would require documentary proof of US citizenship (birth certificate, passport) to register to vote in federal elections. Critics say it would disenfranchise married women who changed names, low-income voters, and those without easy access to documents. Passed House Feb 2026, needs 60 Senate votes.">SAVE Act</span> (H.R. 22) signed into law 2026</td><td class="p">12%</td><td class="vol">$147K</td><td><span class="tag tag-active">Active</span></td><td><a href="https://polymarket.com/event/save-act-signed-into-law-in-2026">PM</a></td></tr>
+      <tr><td>Senate passes <span class="has-tip" data-tip="Separate bill from H.R. 22. H.R. 7296 (SAVE America Act) is a narrower voter ID bill. Senate Democrats have vowed unified opposition and blocked cloture attempts. 97% priced at No reflects structural filibuster block.">SAVE America Act</span> (H.R. 7296)</td><td class="p" style="color:var(--red)">2%</td><td class="vol">&mdash;</td><td><span class="tag tag-near">Near res.</span></td><td><a href="https://polymarket.com/event/will-the-senate-pass-the-save-america-act-hr-7296">PM</a></td></tr>
       <tr><td>Anthropic CEO arrested (by Jun 30)</td><td class="p">3%</td><td class="vol">$146K</td><td><span class="tag tag-active">Active</span></td><td><a href="https://polymarket.com/event/anthropic-ceo-arrested">PM</a></td></tr>
+      <tr><td>Supreme Court vacancy in 2026</td><td class="p">55%</td><td class="vol">$3.7K</td><td><span class="tag tag-thin">Thin</span></td><td><a href="https://polymarket.com/predictions/scotus">PM</a></td></tr>
       <tr><td>Alito retirement by Dec 31</td><td class="p">53%</td><td class="vol">$52K</td><td><span class="tag tag-active">Active</span></td><td><a href="https://polymarket.com/predictions/scotus">PM</a></td></tr>
+      <tr><td>Court rules 2020 election was fraudulent</td><td class="p">8%</td><td class="vol">$18K</td><td><span class="tag tag-active">Active</span></td><td><a href="https://polymarket.com/predictions/scotus">PM</a></td></tr>
+      <tr><td>Trump removed via <span class="has-tip" data-tip="Section 4 of the 25th Amendment: VP + majority of Cabinet can declare president unable to discharge powers. President can challenge; needs 2/3 of both chambers to uphold removal. Never successfully invoked. Market prices reflect extreme tail risk.">25th Amendment</span> before 2027</td><td class="p">~1%</td><td class="vol">$13K</td><td><span class="tag tag-thin">Thin</span></td><td><a href="https://polymarket.com/event/trump-removed-via-25th-amendment-before-2027">PM</a></td></tr>
     </tbody>
   </table>
 
@@ -774,54 +778,6 @@ body.light #tooltip-layer {
 </div>
 </section>
 
-
-<!-- ALEX'S ESTIMATES -->
-<section class="section" id="alex-estimates">
-<div class="container">
-  <div class="section-head">
-    <div class="section-num" style="background:var(--rose)">A</div>
-    <div class="section-title">Alex's Estimates</div>
-  </div>
-
-  <div class="alert watch" style="margin-bottom:24px">
-    <div class="alert-icon">&#9888;&#65039;</div>
-    <div>
-      <h4>These are Alex's personal estimates, not market prices</h4>
-      <p>Everything below is from Alex's own research and modeling &mdash; not aggregated from prediction markets or expert forecasters. Use with that context. When they diverge from market prices, that's either a view Alex holds more strongly than the market, or an estimate on something no market tracks.</p>
-    </div>
-  </div>
-
-  <div class="sub-head"><span class="has-tip" data-tip="Defense Production Act of 1950. Gives the president authority to compel private companies to prioritize government contracts, allocate resources, and restrict exports during national defense emergencies. Used recently for COVID vaccines, baby formula, semiconductors.">DPA</span> vs. Anthropic &mdash; probability tree (Alex, Apr 13 2026)</div>
-  <p style="font-size:13px;color:var(--text-secondary);margin-bottom:14px">32-month forecast through EOY 2028. Pentagon ultimatum (Hegseth, Feb 2026) demanded Anthropic drop usage restrictions. Severity ladder from information-gathering to nationalization.</p>
-  <div class="pb"><div class="pb-top"><span class="pb-name">Any formal DPA action (by EOY 2028)</span><span class="pb-val" style="color:var(--amber)">22-35%</span></div><div class="pb-track"><div class="pb-fill amber" style="width:28%"></div></div><div class="pb-meta"><span>Unconditional &middot; compare: Manifold ~15%</span></div></div>
-  <div class="pb"><div class="pb-top"><span class="pb-name">Anthropic signs voluntary deal (modal path)</span><span class="pb-val" style="color:var(--green)">30-45%</span></div><div class="pb-track"><div class="pb-fill green" style="width:37%"></div></div><div class="pb-meta"><span>Like OpenAI's Dept of War agreement</span></div></div>
-  <div class="pb"><div class="pb-top"><span class="pb-name"><span class="has-tip" data-tip="DPA Title I authority lets the president compel companies to prioritize or allocate materials/services to government use. In the AI context: could compel Anthropic to prioritize government customers, lend compute, or allocate model access to DoD.">Title I allocation</span> (compel prioritization)</span><span class="pb-val">8-15%</span></div><div class="pb-track"><div class="pb-fill amber" style="width:12%"></div></div><div class="pb-meta"><span>Unconditional</span></div></div>
-  <div class="pb"><div class="pb-top"><span class="pb-name">Forced model retraining</span><span class="pb-val" style="color:var(--red)">3-7%</span></div><div class="pb-track"><div class="pb-fill red" style="width:5%"></div></div><div class="pb-meta"><span>Unconditional</span></div></div>
-  <div class="pb" style="margin-bottom:28px"><div class="pb-top"><span class="pb-name">Nationalization</span><span class="pb-val" style="color:var(--red)">2-5%</span></div><div class="pb-track"><div class="pb-fill red" style="width:3.5%"></div></div><div class="pb-meta"><span>Unconditional &middot; extreme tail</span></div></div>
-
-  <div class="sub-head">Electoral &times; AGI scenario matrix (Alex)</div>
-  <p style="font-size:13px;color:var(--text-secondary);margin-bottom:12px">Utility scores (0&ndash;100) for long-run outcomes by electoral result and AGI timing. Higher = better for AI safety + democratic resilience. Captures the interaction between the two main concerns.</p>
-  <table class="tbl" style="margin-bottom:16px">
-    <thead><tr><th>Scenario</th><th style="text-align:center">Early AGI (2027-28)</th><th style="text-align:center">Modal AGI (2029-32)</th></tr></thead>
-    <tbody>
-      <tr><td>Dem trifecta</td><td class="p" style="text-align:center;color:var(--amber)">45</td><td class="p" style="text-align:center;color:var(--green)">75</td></tr>
-      <tr><td>Dem pres + R Congress</td><td class="p" style="text-align:center;color:var(--amber)">35</td><td class="p" style="text-align:center">55</td></tr>
-      <tr><td>R pres + Dem House</td><td class="p" style="text-align:center;color:var(--red)">20</td><td class="p" style="text-align:center;color:var(--amber)">35</td></tr>
-      <tr><td>R trifecta</td><td class="p" style="text-align:center;color:var(--red)">10</td><td class="p" style="text-align:center;color:var(--red)">15-20</td></tr>
-    </tbody>
-  </table>
-  <p style="font-size:12px;color:var(--text-muted);margin-bottom:28px">Key insight: presidency value is primarily <em>defensive</em> (prevent harm to safety labs) rather than constructive. Fast takeoff compresses the governance window.</p>
-
-  <div class="sub-head">EA organization targeting risk (Alex)</div>
-  <p style="font-size:13px;color:var(--text-secondary);margin-bottom:12px">Given AG Bondi's Dec 2025 memo and the active nonprofit targeting pattern, Alex's estimate for EA-specific legal exposure.</p>
-  <div class="pb" style="margin-bottom:28px"><div class="pb-top"><span class="pb-name">P(EA organizations face legal action by 2028)</span><span class="pb-val">3-5.5%</span></div><div class="pb-track"><div class="pb-fill red" style="width:4.5%"></div></div><div class="pb-meta"><span>Depends on giving visibility and donation channel</span></div></div>
-
-  <div class="sub-head">AGI arrival timing buckets (Alex)</div>
-  <p style="font-size:13px;color:var(--text-secondary);margin-bottom:12px">Alex's summarized two-bucket model for scenario planning.</p>
-  <div class="pb"><div class="pb-top"><span class="pb-name">P(Early AGI: 2027-2028)</span><span class="pb-val">~30%</span></div><div class="pb-track"><div class="pb-fill amber" style="width:30%"></div></div><div class="pb-meta"><span>Anchored to Greenblatt's updated estimate</span></div></div>
-  <div class="pb"><div class="pb-top"><span class="pb-name">P(Modal AGI: 2029-2032)</span><span class="pb-val">~35-40%</span></div><div class="pb-track"><div class="pb-fill blue" style="width:38%"></div></div><div class="pb-meta"><span>Consistent with Metaculus community median</span></div></div>
-</div>
-</section>
 
 <!-- FOOTER -->
 <footer>

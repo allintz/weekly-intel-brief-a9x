@@ -93,7 +93,7 @@
       }
       data.editions.forEach(function(e, idx) {
         var a = document.createElement('a');
-        a.href = idx === 0 ? '/' : '/archive/' + e.date + '.html';
+        a.href = idx === 0 ? '/' : '/archive/' + e.date;
         a.textContent = e.date + (idx === 0 ? '  (current)' : '');
         if (idx === 0) a.classList.add('current');
         if (e.date === myEdition) a.classList.add('self');
