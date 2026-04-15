@@ -403,7 +403,7 @@ body.light #tooltip-layer {
   <h1>Weekly Democracy <span class="gradient">Intelligence Brief</span></h1>
   <div style="font-size:26px;color:var(--accent-light);margin:12px 0 14px;letter-spacing:-0.01em;font-weight:600">April 15, 2026</div>
   <p class="sub">Prediction markets, expert forecasts, and policy intelligence across democratic resilience, elections, AGI timelines, and AI governance. Built for the Monday team check-in.</p>
-  <p style="font-size:13px;color:var(--text-secondary);margin:6px 0 0;line-height:1.5;max-width:720px">Fully Claude-generated each Monday. Alex estimates roughly 99% accuracy but expects 1&ndash;3 errors per edition. Message him with corrections or feedback.</p>
+  <p style="font-size:13px;color:var(--text-secondary);margin:6px 0 0;line-height:1.5;max-width:720px">Fully Claude-generated each Monday. Alex estimates roughly 97% accuracy but expects 1&ndash;3 errors per edition. Message him with corrections or feedback.</p>
   <div class="meta-row">
     <span class="badge"><span class="dot dot-amber"></span>Auto-updates every Monday 3am ET</span>
   </div>
@@ -531,9 +531,9 @@ body.light #tooltip-layer {
   </div>
 
   <div class="g2" style="margin-bottom:28px">
-    <div class="card">
+    <div class="card" id="blw-short">
       <h4>Bright Line Watch &mdash; Expert Democracy Rating</h4>
-      <div class="card-sub">0&ndash;100 scale &middot; <a href="https://brightlinewatch.org/the-persistence-of-diminished-democracy-in-a-second-trump-presidency/">Latest: "Persistence of Diminished Democracy" (Mar 2026)</a></div>
+      <div class="card-sub">0&ndash;100 scale &middot; <a href="https://brightlinewatch.org/the-persistence-of-diminished-democracy-in-a-second-trump-presidency/">Latest: "Persistence of Diminished Democracy" (March 2026)</a> &middot; <a href="#blw-appendix" style="color:var(--accent-light)">Methodology &amp; trajectory deep dive &darr;</a></div>
       <canvas id="blwChart" height="200"></canvas>
     </div>
     <div class="card">
@@ -766,6 +766,93 @@ body.light #tooltip-layer {
   <div class="implications">
     <h4>&#128161; Implications for our work</h4>
     <p>The Anthropic-Pentagon conflict is the live test case for government leverage over AI safety labs. A voluntary deal path would follow OpenAI's template. <strong>If Dem House materializes in Nov 2026, congressional oversight becomes the primary check</strong> on executive use of DPA/supply-chain designations against safety-oriented labs.</p>
+  </div>
+</div>
+</section>
+
+
+<!-- APPENDIX: BLW DEEP DIVE -->
+<section class="section" id="blw-appendix" style="padding-top:48px;border-top:1px solid var(--border)">
+<div class="container">
+  <div class="section-head">
+    <div class="section-num" style="background:var(--surface-3);color:var(--text-secondary);font-size:13px">A1</div>
+    <div>
+      <div class="section-title">Appendix: Bright Line Watch Deep Dive</div>
+      <div style="font-size:12px;color:var(--text-muted);margin-top:2px">Methodology, historical trajectory, and what the Expert Rating does and doesn't capture</div>
+    </div>
+  </div>
+
+  <div class="card" style="margin-bottom:20px">
+    <h4>What BLW is</h4>
+    <p><a href="https://brightlinewatch.org/">Bright Line Watch</a> is a nonpartisan research project run by political scientists that surveys hundreds of experts (and, separately, the general public) on US democratic health. Founded in early 2017; principal investigators include Brendan Nyhan (Dartmouth), John Carey (Dartmouth), Susan Hyde (Berkeley), and Gretchen Helmke (Rochester). [UNVERIFIED on affiliations \u2014 check <a href="https://brightlinewatch.org/people/">BLW People page</a> before citing.]</p>
+    <p>Each "wave" (approximately every 6 months since 2017) asks respondents to: (1) rate current US democracy on a 0\u2013100 scale, (2) score performance on roughly 30 specific democratic principles \u2014 election integrity, peaceful transfer of power, independent judiciary, civilian control of the military, press freedom, and so on \u2014 and (3) forecast whether specific norms will be violated in the coming months.</p>
+  </div>
+
+  <div class="card" style="margin-bottom:20px">
+    <h4>The 0\u2013100 scale \u2014 what the numbers mean</h4>
+    <p>BLW calibrates the scale with benchmark anchors published alongside each wave:</p>
+    <ul style="margin:8px 0 0 20px;padding:0;line-height:1.8">
+      <li><strong>~93</strong> \u2014 strong liberal-democracy reference</li>
+      <li><strong>~47</strong> \u2014 illiberal-regime reference (competitive authoritarian systems)</li>
+      <li><strong>57</strong> \u2014 current US (March 2026 wave)</li>
+    </ul>
+    <p style="margin-top:8px;font-size:12px;color:var(--text-muted)">[UNVERIFIED on the exact country pairings attached to each anchor \u2014 they vary by wave. See the <a href="https://brightlinewatch.org/the-persistence-of-diminished-democracy-in-a-second-trump-presidency/">latest wave's methodology section</a> for current references.]</p>
+  </div>
+
+  <div class="card" style="margin-bottom:20px">
+    <h4>Historical trajectory</h4>
+    <p>The chart in Section 1 shows the last 4\u20135 waves. Full history is on <a href="https://brightlinewatch.org/publications/">BLW's publications page</a>. Rough shape of the full arc:</p>
+    <ul style="margin:8px 0 0 20px;padding:0;line-height:1.8">
+      <li><strong>2017\u20132020</strong> (Trump I) \u2014 mid-70s, drifting down</li>
+      <li><strong>2021\u20132024</strong> (Biden) \u2014 partial recovery to mid-70s</li>
+      <li><strong>2025</strong> (Trump II onset) \u2014 sharp drop</li>
+      <li><strong>March 2026</strong> \u2014 57, down from 60 post-Venezuela military operation</li>
+    </ul>
+    <p style="margin-top:8px;font-size:12px;color:var(--text-muted)">[UNVERIFIED on the rough pre-2026 ratings \u2014 the Section 1 chart shows the exact published values.]</p>
+  </div>
+
+  <div class="card" style="margin-bottom:20px">
+    <h4>What the March 2026 wave found</h4>
+    <ul style="margin:8px 0 0 20px;padding:0;line-height:1.8">
+      <li><strong>Only 2 of ~30 principles improved</strong>; the rest declined or held flat</li>
+      <li><strong>18-point partisan gap</strong> between Democratic and Republican respondents in the public survey \u2014 record wide</li>
+      <li><strong>62% of Republicans approved</strong> of fatal ICE shootings during immigration enforcement (public-survey component)</li>
+      <li>Expert rating dropped from 60 to 57 after the Venezuela military operation</li>
+    </ul>
+    <p style="margin-top:8px">Full writeup: <a href="https://brightlinewatch.org/the-persistence-of-diminished-democracy-in-a-second-trump-presidency/">"The Persistence of Diminished Democracy in a Second Trump Presidency"</a> (March 2026).</p>
+  </div>
+
+  <div class="card" style="margin-bottom:20px">
+    <h4>What it measures well</h4>
+    <ul style="margin:8px 0 0 20px;padding:0;line-height:1.8">
+      <li><strong>Expert consensus on specific norms</strong> \u2014 concrete questions ("does the government refrain from using law enforcement to investigate political opponents?"), large bipartisan expert panel</li>
+      <li><strong>Long-arc trend signal</strong> \u2014 the ~6-month cadence catches cumulative backsliding that single events miss</li>
+      <li><strong>Public-vs-expert divergence</strong> \u2014 reveals when elite assessments diverge from mass opinion and in which direction</li>
+    </ul>
+  </div>
+
+  <div class="card" style="margin-bottom:20px">
+    <h4>What it doesn't capture well</h4>
+    <ul style="margin:8px 0 0 20px;padding:0;line-height:1.8">
+      <li><strong>Rapid events between waves</strong> \u2014 6-month cadence misses week-to-week drift. Pair with Sentinel, markets, and specific legal actions for real-time signal</li>
+      <li><strong>Institutional strength beyond norms</strong> \u2014 the survey asks whether norms are being followed, not the underlying robustness of institutions (courts, bureaucracy, military) that might push back against violations</li>
+      <li><strong>State-level variation</strong> \u2014 US democratic quality varies enormously across states. The rating is a federal-level aggregate</li>
+      <li><strong>Expert selection</strong> \u2014 the political science profession skews liberal. BLW weights for this but critics argue the benchmark for "what counts as democratic decline" is endogenous to the panel's priors</li>
+    </ul>
+  </div>
+
+  <div class="card" style="margin-bottom:20px">
+    <h4>Comparison to other indices</h4>
+    <ul style="margin:8px 0 0 20px;padding:0;line-height:1.8">
+      <li><a href="https://www.v-dem.net/">V-Dem (Varieties of Democracy)</a> \u2014 ~4,000 country-experts globally, annual, 200+ indicators. Generally slower to move than BLW</li>
+      <li><a href="https://freedomhouse.org/report/freedom-world">Freedom House "Freedom in the World"</a> \u2014 annual civil + political liberties scoring. Less responsive to short-term norm violations</li>
+      <li><a href="https://www.eiu.com/topic/democracy-index">EIU Democracy Index</a> \u2014 Economist Intelligence Unit's annual aggregate</li>
+    </ul>
+    <p style="margin-top:8px">All three show US decline over the Trump II period; BLW is the most granular and time-responsive for US-specific trend watching.</p>
+  </div>
+
+  <div style="font-size:12px;color:var(--text-secondary);padding-top:8px">
+    <a href="#blw-short" style="color:var(--accent-light);text-decoration:none">&uarr; Back to Section 1 BLW summary</a>
   </div>
 </div>
 </section>
