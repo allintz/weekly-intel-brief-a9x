@@ -2,7 +2,7 @@
 
 Weekly Intelligence Brief dashboard, hosted on Cloudflare Pages with a dated archive.
 
-- **Current edition**: `https://prediction-tracker.pages.dev/` (placeholder until first deploy)
+- **Current edition**: `https://weekly-intel-brief-a9x.pages.dev/` (placeholder until first deploy)
 - **Previous editions**: accessible via the `Editions ▾` widget top-right of the page
 - **Search engines blocked** via `_headers` (`X-Robots-Tag: noindex`) and `robots.txt`
 
@@ -37,7 +37,7 @@ Each HTML file has the archive-nav widget injected between `<!-- ARCHIVE_NAV_STA
    cd ~/code/prediction-tracker
    python3 publish.py "/Users/alexlintz/Documents/Obsidian Vault/00_Inbox/prediction-tracker-v2.html"
    ```
-   Wrangler will ask to create the `prediction-tracker` Pages project on first run. Accept. Site goes live at `https://prediction-tracker.pages.dev/` within ~30 seconds.
+   Wrangler will ask to create the `weekly-intel-brief-a9x` Pages project on first run. Accept. Site goes live at `https://weekly-intel-brief-a9x.pages.dev/` within ~30 seconds.
 
 ## Weekly publish
 
@@ -75,7 +75,7 @@ Requires that the machine running the trigger has `wrangler` installed and authe
 
 ## Custom domain (optional, later)
 
-In the Cloudflare dashboard → Pages → `prediction-tracker` → Custom domains, add something like `tracker.lintz.io` (or a subdomain of any zone you own). CF handles TLS automatically.
+In the Cloudflare dashboard → Pages → `weekly-intel-brief-a9x` → Custom domains, add something like `tracker.lintz.io` (or a subdomain of any zone you own). CF handles TLS automatically.
 
 ## Removing an edition
 

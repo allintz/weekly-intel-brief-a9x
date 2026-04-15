@@ -17,7 +17,7 @@ Requires:
   - git initialized in this directory
 
 Environment (optional):
-  CF_PAGES_PROJECT  Cloudflare Pages project name (default: prediction-tracker)
+  CF_PAGES_PROJECT  Cloudflare Pages project name (default: weekly-intel-brief-a9x)
 """
 from __future__ import annotations
 
@@ -39,7 +39,7 @@ NAV_SNIPPET = ROOT / "_archive-nav.html"
 NAV_START = "<!-- ARCHIVE_NAV_START -->"
 NAV_END = "<!-- ARCHIVE_NAV_END -->"
 
-DEFAULT_PROJECT = os.environ.get("CF_PAGES_PROJECT", "prediction-tracker")
+DEFAULT_PROJECT = os.environ.get("CF_PAGES_PROJECT", "weekly-intel-brief-a9x")
 
 
 def inject_nav(html: str, edition_date: str) -> str:
