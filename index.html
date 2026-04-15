@@ -406,6 +406,7 @@ body.light #tooltip-layer {
   <p style="font-size:13px;color:var(--text-secondary);margin:6px 0 0;line-height:1.5;max-width:720px">Fully Claude-generated each Monday. Alex estimates roughly 97% accuracy but expects 1&ndash;3 errors per edition. Message him with corrections or feedback.</p>
   <div class="meta-row">
     <span class="badge"><span class="dot dot-amber"></span>Auto-updates every Monday 3am ET</span>
+    <span id="refresh-ts" style="font-size:11px;color:var(--text-muted);margin-left:10px"></span>
   </div>
 </div>
 </section>
@@ -564,18 +565,18 @@ body.light #tooltip-layer {
   <table class="tbl">
     <thead><tr><th>Market</th><th>Prob</th><th>Vol</th><th>Status</th><th>Src</th></tr></thead>
     <tbody>
-      <tr><td><span class="has-tip" data-tip="1807 law authorizing the president to deploy US military on US soil to suppress civil disorder, insurrection, or rebellion. Last invoked in 1992 (LA riots). Trump has repeatedly threatened invocation over immigration protests in Minneapolis, Chicago, LA.">Insurrection Act</span> by Dec 31, 2026</td><td class="p">28%</td><td class="vol">$1.04M</td><td><span class="tag tag-active">Active</span></td><td><a href="https://polymarket.com/event/insurrection-act-invoked-by">PM</a></td></tr>
-      <tr><td>Insurrection Act by Jun 30, 2026</td><td class="p">11%</td><td class="vol">&mdash;</td><td><span class="tag tag-active">Active</span></td><td><a href="https://polymarket.com/event/will-donald-trump-invoke-the-insurrection-act-before-july">PM</a></td></tr>
+      <tr data-market="polymarket:insurrection-act-invoked-by"><td><span class="has-tip" data-tip="1807 law authorizing the president to deploy US military on US soil to suppress civil disorder, insurrection, or rebellion. Last invoked in 1992 (LA riots). Trump has repeatedly threatened invocation over immigration protests in Minneapolis, Chicago, LA.">Insurrection Act</span> by Dec 31, 2026</td><td class="p">28%</td><td class="vol">$1.04M</td><td><span class="tag tag-active">Active</span></td><td><a href="https://polymarket.com/event/insurrection-act-invoked-by">PM</a></td></tr>
+      <tr data-market="polymarket:will-donald-trump-invoke-the-insurrection-act-before-july"><td>Insurrection Act by Jun 30, 2026</td><td class="p">11%</td><td class="vol">&mdash;</td><td><span class="tag tag-active">Active</span></td><td><a href="https://polymarket.com/event/will-donald-trump-invoke-the-insurrection-act-before-july">PM</a></td></tr>
       <tr><td>SCOTUS strikes <span class="has-tip" data-tip="Trump EO seeking to end automatic birthright citizenship for children of non-citizens born in US. Challenges 14th Amendment interpretation that's stood since 1898 (US v. Wong Kim Ark). Market at 94% reflects expert consensus that 14th Amendment precedent is clear.">birthright citizenship EO</span></td><td class="p" style="color:var(--green)">94%</td><td class="vol">$107K</td><td><span class="tag tag-near">Near res.</span></td><td><a href="https://polymarket.com/predictions/scotus">PM</a></td></tr>
       <tr><td>SCOTUS lets Trump fire <span class="has-tip" data-tip="Trump v. Slaughter: Challenge to president's power to fire FTC commissioners at will, currently protected by Humphrey's Executor (1935). A ruling for Trump weakens agency independence across FTC, FCC, NLRB, Federal Reserve Board.">FTC commissioners</span></td><td class="p" style="color:var(--red)">88%</td><td class="vol">$21K</td><td><span class="tag tag-active">Active</span></td><td><a href="https://polymarket.com/predictions/scotus">PM</a></td></tr>
       <tr><td>SCOTUS bars mail ballots after election day</td><td class="p" style="color:var(--amber)">69%</td><td class="vol">$31K</td><td><span class="tag tag-active">Active</span></td><td><a href="https://polymarket.com/predictions/scotus">PM</a></td></tr>
-      <tr><td><span class="has-tip" data-tip="Safeguard American Voter Eligibility Act. Would require documentary proof of US citizenship (birth certificate, passport) to register to vote in federal elections. Critics say it would disenfranchise married women who changed names, low-income voters, and those without easy access to documents. Passed House Feb 2026, needs 60 Senate votes.">SAVE Act</span> (H.R. 22) signed into law 2026</td><td class="p">12%</td><td class="vol">$147K</td><td><span class="tag tag-active">Active</span></td><td><a href="https://polymarket.com/event/save-act-signed-into-law-in-2026">PM</a></td></tr>
-      <tr><td>Senate passes <span class="has-tip" data-tip="Separate bill from H.R. 22. H.R. 7296 (SAVE America Act) is a narrower voter ID bill. Senate Democrats have vowed unified opposition and blocked cloture attempts. 97% priced at No reflects structural filibuster block.">SAVE America Act</span> (H.R. 7296)</td><td class="p" style="color:var(--red)">2%</td><td class="vol">&mdash;</td><td><span class="tag tag-near">Near res.</span></td><td><a href="https://polymarket.com/event/will-the-senate-pass-the-save-america-act-hr-7296">PM</a></td></tr>
-      <tr><td>Anthropic CEO arrested (by Jun 30)</td><td class="p">3%</td><td class="vol">$146K</td><td><span class="tag tag-active">Active</span></td><td><a href="https://polymarket.com/event/anthropic-ceo-arrested">PM</a></td></tr>
+      <tr data-market="polymarket:save-act-signed-into-law-in-2026"><td><span class="has-tip" data-tip="Safeguard American Voter Eligibility Act. Would require documentary proof of US citizenship (birth certificate, passport) to register to vote in federal elections. Critics say it would disenfranchise married women who changed names, low-income voters, and those without easy access to documents. Passed House Feb 2026, needs 60 Senate votes.">SAVE Act</span> (H.R. 22) signed into law 2026</td><td class="p">12%</td><td class="vol">$147K</td><td><span class="tag tag-active">Active</span></td><td><a href="https://polymarket.com/event/save-act-signed-into-law-in-2026">PM</a></td></tr>
+      <tr data-market="polymarket:will-the-senate-pass-the-save-america-act-hr-7296"><td>Senate passes <span class="has-tip" data-tip="Separate bill from H.R. 22. H.R. 7296 (SAVE America Act) is a narrower voter ID bill. Senate Democrats have vowed unified opposition and blocked cloture attempts. 97% priced at No reflects structural filibuster block.">SAVE America Act</span> (H.R. 7296)</td><td class="p" style="color:var(--red)">2%</td><td class="vol">&mdash;</td><td><span class="tag tag-near">Near res.</span></td><td><a href="https://polymarket.com/event/will-the-senate-pass-the-save-america-act-hr-7296">PM</a></td></tr>
+      <tr data-market="polymarket:anthropic-ceo-arrested"><td>Anthropic CEO arrested (by Jun 30)</td><td class="p">3%</td><td class="vol">$146K</td><td><span class="tag tag-active">Active</span></td><td><a href="https://polymarket.com/event/anthropic-ceo-arrested">PM</a></td></tr>
       <tr><td>Supreme Court vacancy in 2026</td><td class="p">55%</td><td class="vol">$3.7K</td><td><span class="tag tag-thin">Thin</span></td><td><a href="https://polymarket.com/predictions/scotus">PM</a></td></tr>
       <tr><td>Alito retirement by Dec 31</td><td class="p">53%</td><td class="vol">$52K</td><td><span class="tag tag-active">Active</span></td><td><a href="https://polymarket.com/predictions/scotus">PM</a></td></tr>
       <tr><td>Court rules 2020 election was fraudulent</td><td class="p">8%</td><td class="vol">$18K</td><td><span class="tag tag-active">Active</span></td><td><a href="https://polymarket.com/predictions/scotus">PM</a></td></tr>
-      <tr><td>Trump removed via <span class="has-tip" data-tip="Section 4 of the 25th Amendment: VP + majority of Cabinet can declare president unable to discharge powers. President can challenge; needs 2/3 of both chambers to uphold removal. Never successfully invoked. Market prices reflect extreme tail risk.">25th Amendment</span> before 2027</td><td class="p">~1%</td><td class="vol">$13K</td><td><span class="tag tag-thin">Thin</span></td><td><a href="https://polymarket.com/event/trump-removed-via-25th-amendment-before-2027">PM</a></td></tr>
+      <tr data-market="polymarket:trump-removed-via-25th-amendment-before-2027"><td>Trump removed via <span class="has-tip" data-tip="Section 4 of the 25th Amendment: VP + majority of Cabinet can declare president unable to discharge powers. President can challenge; needs 2/3 of both chambers to uphold removal. Never successfully invoked. Market prices reflect extreme tail risk.">25th Amendment</span> before 2027</td><td class="p">~1%</td><td class="vol">$13K</td><td><span class="tag tag-thin">Thin</span></td><td><a href="https://polymarket.com/event/trump-removed-via-25th-amendment-before-2027">PM</a></td></tr>
     </tbody>
   </table>
 
@@ -721,7 +722,7 @@ body.light #tooltip-layer {
     <tbody>
       <tr><td><a href="https://www.metaculus.com/questions/5121/">When will first general AI be announced?</a></td><td class="p" style="color:var(--accent-light)">Feb 2028</td><td>Aug '26&ndash;Feb '32</td><td>1,846</td><td style="font-size:11px;color:var(--text-muted)">Must satisfy ALL: 2hr adversarial <span class="has-tip" data-tip="A 2-hour conversation where human judges try to distinguish AI from human. Judges are briefed to ask difficult questions designed to trip up AI. Significantly harder than classic Turing test.">Turing test</span> (text/images/audio) + <span class="has-tip" data-tip="Loebner Silver: a more rigorous Turing test variant. Never won. AI must fool at least half of judges in a 25-minute conversation. Historical benchmark.">Loebner Silver</span> + <span class="has-tip" data-tip="Tests common-sense reasoning through ambiguous sentences requiring real-world knowledge to disambiguate. E.g., 'The trophy doesn't fit in the suitcase because it is too big.' Which is too big? Current AI scores 90%+ on most versions.">Winograd</span> 90% + SAT 75th + <span class="has-tip" data-tip="Annual undergraduate math competition, famously difficult. Top 500 score ~0 points out of 120. Current AI can solve some but not full exams reliably.">Putnam</span> + robotic <span class="has-tip" data-tip="1:8 scale Ferrari 312 T4 model assembly from instructions. Tests multi-step physical reasoning, tool use, and robotics integration. No current system can do this.">Ferrari 312 T4 assembly</span>.</td></tr>
       <tr><td><a href="https://www.metaculus.com/questions/9062/">AGI &rarr; Superintelligence</a></td><td class="p">~25 mo</td><td>5.5&ndash;147 mo</td><td>1,700</td><td style="font-size:11px;color:var(--text-muted)">Much better than best humans at virtually all cognitive tasks.</td></tr>
-      <tr><td><a href="https://polymarket.com/event/openai-announces-it-has-achieved-agi-before-2027">OpenAI announces AGI before 2027?</a></td><td class="p">22.5%</td><td>&mdash;</td><td>&mdash;</td><td style="font-size:11px;color:var(--text-muted)">OpenAI self-declaration. Triggers contractual end to Microsoft capped-profit exclusivity.</td></tr>
+      <tr data-market="polymarket:openai-announces-it-has-achieved-agi-before-2027"><td><a href="https://polymarket.com/event/openai-announces-it-has-achieved-agi-before-2027">OpenAI announces AGI before 2027?</a></td><td class="p">22.5%</td><td>&mdash;</td><td>&mdash;</td><td style="font-size:11px;color:var(--text-muted)">OpenAI self-declaration. Triggers contractual end to Microsoft capped-profit exclusivity.</td></tr>
     </tbody>
   </table>
 
@@ -758,7 +759,7 @@ body.light #tooltip-layer {
       <tr><td><strong>EU AI Act</strong></td><td><span class="tag tag-active">Enforcing</span></td><td>Majority provisions enter force <strong>Aug 2</strong>.<div style="color:var(--text-muted);font-size:11px;margin-top:4px;line-height:1.4">First enforced comprehensive AI regulation on frontier labs. GPAI obligations set the de-facto global baseline; compliance reshapes cross-border model deployment.</div></td><td><a href="https://artificialintelligenceact.eu/implementation-timeline/">Timeline</a></td></tr>
       <tr><td><strong>SCOTUS: <span class="has-tip" data-tip="Challenge to Louisiana's congressional map. SCOTUS will rule on whether Section 2 of the Voting Rights Act (prohibits voting practices that discriminate on the basis of race) is itself unconstitutional. Observers expect the court to further weaken the VRA. Argued Oct 15, 2025.">Louisiana v. Callais</span></strong></td><td><span class="tag tag-pending">Pending</span></td><td>Decision late June. Could gut <span class="has-tip" data-tip="Section 2 of the Voting Rights Act of 1965. Prohibits state/local governments from imposing voting practices that result in discrimination based on race. Core tool for challenging gerrymandering and vote dilution.">VRA Section 2</span>.<div style="color:var(--text-muted);font-size:11px;margin-top:4px;line-height:1.4">If §2 falls, racial-gerrymandering challenges lose their core tool before 2026 midterms and the 2030 redistricting cycle. Directly reshapes the map.</div></td><td><a href="https://www.scotusblog.com/cases/case-files/louisiana-v-callais-2/">SCOTUSblog</a></td></tr>
       <tr><td><strong>SCOTUS: <span class="has-tip" data-tip="Challenge to president's power to fire independent agency heads (FTC commissioners). Could overturn Humphrey's Executor v. US (1935), which protected independent agencies from at-will presidential removal. Ruling would let Trump fire FTC, FCC, NLRB, Fed Board commissioners at will.">Trump v. Slaughter</span></strong></td><td><span class="tag tag-pending">Pending</span></td><td>Decision late June. <span class="has-tip" data-tip="1935 SCOTUS precedent: president cannot fire commissioners of independent agencies except for cause. Foundation of modern administrative state's independence from presidential control.">Humphrey's Executor</span> at risk.<div style="color:var(--text-muted);font-size:11px;margin-top:4px;line-height:1.4">Overturning lets the president fire FTC/FCC/NLRB/Fed commissioners at will. Major executive consolidation over regulation — bleeds into AI governance, antitrust, and election-adjacent agencies.</div></td><td><a href="https://www.scotusblog.com/2025/10/is-humphreys-executor-headed-for-slaughter/">SCOTUSblog</a></td></tr>
-      <tr><td><strong>SAVE Act (H.R. 22)</strong></td><td><span class="tag tag-pending">Senate floor</span></td><td>12% signed into law. Needs 60 votes.<div style="color:var(--text-muted);font-size:11px;margin-top:4px;line-height:1.4">Requires documentary citizenship proof (passport/birth certificate) to register. If enacted, creates significant registration friction — largest effect on voters who don't already hold these documents.</div></td><td><a href="https://polymarket.com/event/save-act-signed-into-law-in-2026">PM</a></td></tr>
+      <tr data-market="polymarket:save-act-signed-into-law-in-2026"><td><strong>SAVE Act (H.R. 22)</strong></td><td><span class="tag tag-pending">Senate floor</span></td><td>12% signed into law. Needs 60 votes.<div style="color:var(--text-muted);font-size:11px;margin-top:4px;line-height:1.4">Requires documentary citizenship proof (passport/birth certificate) to register. If enacted, creates significant registration friction — largest effect on voters who don't already hold these documents.</div></td><td><a href="https://polymarket.com/event/save-act-signed-into-law-in-2026">PM</a></td></tr>
       <tr><td><strong>Stanford AI Index 2026</strong></td><td><span class="tag tag-active">Released Apr 13</span></td><td>China nearly closed benchmark gap with US.<div style="color:var(--text-muted);font-size:11px;margin-top:4px;line-height:1.4">Undercuts the "US lead" frame that grounds export controls and racing-to-deploy arguments. If real, strengthens both hawk (catch-up-or-lose) and dove (coordination) policy cases.</div></td><td><a href="https://hai.stanford.edu/ai-index/2026-ai-index-report">HAI</a></td></tr>
     </tbody>
   </table>
@@ -1086,6 +1087,46 @@ new Chart(document.getElementById('nomineeChart'),{type:'bar',data:{labels:['New
       <div style="display:flex;align-items:center;gap:6px"><div style="width:10px;height:10px;background:#22c55e;border-radius:50%"></div>Point estimate</div>
     </div>
   `;
+})();
+</script>
+
+<!-- LIVE PRICE HYDRATION: reads /markets.json (refreshed daily at noon ET by a separate trigger) and updates prob/vol cells with data-market attrs. Silently falls back to baked-in values if fetch fails. -->
+<script>
+(function() {
+  function fmtVol(n) {
+    if (n == null) return null;
+    if (n >= 1e6) return '\u0024' + (n/1e6).toFixed(2) + 'M';
+    if (n >= 1e3) return '\u0024' + Math.round(n/1e3) + 'K';
+    return '\u0024' + Math.round(n);
+  }
+  async function hydrate() {
+    try {
+      const res = await fetch('/markets.json', {cache: 'no-cache'});
+      if (!res.ok) return;
+      const data = await res.json();
+      if (!data || !data.markets) return;
+      document.querySelectorAll('[data-market]').forEach(function(row) {
+        const m = data.markets[row.dataset.market];
+        if (!m) return;
+        const probEl = row.querySelector('.p') || row.querySelector('[data-market-prob]');
+        const volEl = row.querySelector('.vol') || row.querySelector('[data-market-vol]');
+        if (probEl && m.prob_pct != null) probEl.textContent = m.prob_pct + '%';
+        if (volEl && m.volume_usd != null) {
+          const v = fmtVol(m.volume_usd);
+          if (v) volEl.textContent = v;
+        }
+      });
+      const ts = document.getElementById('refresh-ts');
+      if (ts && data.last_refreshed_display) {
+        ts.textContent = 'Prices refreshed: ' + data.last_refreshed_display;
+      }
+    } catch(e) {}
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', hydrate);
+  } else {
+    hydrate();
+  }
 })();
 </script>
 </body>
