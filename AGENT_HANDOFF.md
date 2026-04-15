@@ -267,19 +267,57 @@ echo "https://weekly-intel-brief-a9x.alex-l-lintz.workers.dev/"
 echo "Archive: https://weekly-intel-brief-a9x.alex-l-lintz.workers.dev/archive/$EDITION_DATE"
 ```
 
-### 6.5 Modifying the trigger
+### 6.5 Modifying the trigger prompts
 
-Use `RemoteTrigger` tool, action `update`, with a partial body that replaces `job_config.ccr.events[0].data.message.content`. Keep STEPS 1-4 of the existing prompt intact; append STEP 5 (above) as a new section at the end.
+There are **two** triggers:
 
-**Before calling update**: first call `RemoteTrigger action=get trigger_id=trig_015VW4j8oG44BzN9X7VsxJvw` to read the current full prompt and save a verbatim backup (paste it into your working notes so you can restore if needed). Concatenate existing + new STEP 5. Then update.
+| ID | Purpose | Cron |
+|---|---|---|
+| `trig_015VW4j8oG44BzN9X7VsxJvw` | Weekly full HTML regeneration | `0 7 * * 1` (Mon 3am ET) |
+| `trig_013ZJFtCfECjyChX5h6YPJen` | Daily price refresh (writes `/markets.json` only) | `0 16 * * *` (Noon ET daily) |
 
-**Test run**: after update, call `RemoteTrigger action=run trigger_id=trig_015VW4j8oG44BzN9X7VsxJvw` to dispatch an immediate test. Monitor via:
-- CF Pages deploys tab (CF dashboard → Workers & Pages → `weekly-intel-brief-a9x` → Deployments), or
-- `gh api repos/allintz/weekly-intel-brief-a9x/commits -q '.[0].commit.message'` for latest commit
+Both are edited the same way:
 
-Iterate until a full run produces a valid HTML edition.
+**1. Read the current prompt:**
+```
+RemoteTrigger action=get trigger_id=<TRIGGER_ID>
+```
+Save the `content` string verbatim as a local backup (e.g., `/tmp/trigger-backup-<date>.txt`). Do not commit the backup — it contains the GitHub PAT and Metaculus token.
 
-**Rollback**: if the update breaks things, revert by `RemoteTrigger action=update` with the pre-change prompt.
+**2. Apply surgical patches** to the content string. Prefer targeted find-and-replace over wholesale rewrites — the prompt is ~41KB and small errors propagate. Python/sed/awk locally is fine.
+
+**3. Push the update:**
+```
+RemoteTrigger action=update trigger_id=<TRIGGER_ID>
+body={
+  "job_config": {
+    "ccr": {
+      "environment_id": "env_01XyfHyiHHbWTU8fupppmi1T",   ← REQUIRED; API returns 400 if omitted
+      "events": [{"data": {"message": {"content": "<full new content>", "role": "user"}}}]
+    }
+  }
+}
+```
+There is no partial-content update — the `content` string is replaced wholesale. Include the full new prompt body each time.
+
+**Common gotchas:**
+- Omitting `environment_id` → HTTP 400 `translate job_config v1→v2: job_config missing ccr.environment_id`.
+- Writing Python `\uXXXX` escapes directly into HTML/prompt strings → literal `\u2013` etc. renders in the output. Always decode escapes to real Unicode chars before emitting.
+- The prompt has many layered sections (STEP 1–6, REQUIRED SECTIONS, QUALITY RULES, FINAL CHECKS). Keep anchors unique when patching; use surrounding context to disambiguate.
+
+**Test run (weekly trigger):**
+```
+RemoteTrigger action=run trigger_id=trig_015VW4j8oG44BzN9X7VsxJvw
+```
+Monitor via CF Pages deploys tab or `gh api repos/allintz/weekly-intel-brief-a9x/commits -q '.[0].commit.message'`. A full run pushes 4 files. Iterate until a valid edition publishes.
+
+**Test run (daily refresh):**
+```
+RemoteTrigger action=run trigger_id=trig_013ZJFtCfECjyChX5h6YPJen
+```
+Monitor the repo for a `Refresh markets.json <timestamp>` commit. If nothing commits within ~3 minutes, the prompt probably failed silently — read the full prompt, trace the shell pipeline, and simplify.
+
+**Rollback**: revert with `RemoteTrigger action=update` using the pre-change backup.
 
 ### 6.6 Making HTML the primary artifact
 
