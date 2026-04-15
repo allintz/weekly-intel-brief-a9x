@@ -530,7 +530,7 @@ body.light #tooltip-layer {
 
   <div class="implications">
     <h4>&#128161; Implications for our work</h4>
-    <p>Expert democracy rating at 57 is closer to the illiberal benchmark (47) than strong democracy (93). The 18-point partisan gap means the two parties don't just disagree on policy &mdash; they disagree on whether democracy is functioning. The scenario matrix shows that <strong>Dem trifecta + modal AGI scores 75/100</strong> while R trifecta + early AGI scores 10/100. Electoral outcomes are the primary lever.</p>
+    <p>Expert democracy rating at 57 is closer to the illiberal benchmark (47) than strong democracy (93). The 18-point partisan gap means the two parties disagree on whether democracy is functioning, not just on policy. Electoral outcomes are the primary lever on how the AGI-transition window plays out.</p>
   </div>
 
   <div class="g2" style="margin-bottom:28px">
@@ -676,7 +676,7 @@ body.light #tooltip-layer {
 
   <div class="implications">
     <h4>&#128161; Implications for our work</h4>
-    <p>The scenario matrix scores Dem trifecta + modal AGI at <strong>75/100</strong> vs R trifecta + early AGI at <strong>10/100</strong>. If Kokotajlo is right about mid-2028 Automated Coder, the governance window is ~2 years from now. Presidency value is primarily <em>defensive</em> (prevent harm to safety labs &mdash; see Anthropic-Pentagon conflict) rather than constructive. Fast takeoff compresses this further.</p>
+    <p>If Kokotajlo is right about mid-2028 Automated Coder, the governance window is ~2 years from now. Presidency value is primarily <em>defensive</em> (prevent harm to safety labs &mdash; see Anthropic-Pentagon conflict) rather than constructive. Fast takeoff compresses this further.</p>
   </div>
 
   <div class="alert watch" style="margin-bottom:24px">
@@ -703,17 +703,6 @@ body.light #tooltip-layer {
         <li><strong>Cotra&rsquo;s 15% by 2030 is the most spread-out distribution</strong> &mdash; she assigns significant mass to the 2040s+. The community and AI Futures Project are much more concentrated.</li>
         <li><strong>Forecast recency matters.</strong> Kokotajlo/Lifland updated in Q1 2026 (very recent, post-Opus 4.6). Cotra&rsquo;s last public update was 2024 &mdash; her estimate would likely shift sooner if she republished today given the 2025&ndash;2026 capability jumps.</li>
       </ul>
-    </div>
-
-    <div style="background:var(--surface-2);border-radius:8px;padding:14px;margin-top:12px;font-size:12px;color:var(--text-secondary);line-height:1.6">
-      <strong style="color:var(--text)">Other ways to visualize this:</strong> Each has tradeoffs.
-      <ul style="margin:8px 0 0 20px;padding:0">
-        <li><strong>CDF curves</strong> (like Cotra&rsquo;s original paper): Shows each forecaster&rsquo;s full probability distribution over time. Most information-rich, but harder to read at a glance and requires each forecaster to have published a distribution (most haven&rsquo;t).</li>
-        <li><strong>Confidence interval bars</strong> (10%&ndash;90% ranges with median marker): Surfaces uncertainty explicitly. Works when forecasters publish ranges; for point estimates we&rsquo;d have to impute.</li>
-        <li><strong>Update-history chart</strong>: Show how each forecaster has moved over time (Kokotajlo shifted 1.5yr sooner between late 2025 and Q1 2026). Surfaces velocity of belief updates, but requires historical snapshots.</li>
-        <li><strong>Heatmap</strong>: Forecasters on Y-axis, years on X-axis, cells colored by probability mass. Very dense, good for researchers; confusing for casual readers.</li>
-      </ul>
-      <em style="display:block;margin-top:8px">Happy to build any of these if useful.</em>
     </div>
 
     <div style="margin-top:16px;padding-top:16px;border-top:1px solid var(--border);font-size:12px;color:var(--text-secondary)">
@@ -767,13 +756,13 @@ body.light #tooltip-layer {
   <table class="tbl" style="margin-bottom:28px">
     <thead><tr><th>Issue</th><th>Status</th><th>Next Event</th><th>Src</th></tr></thead>
     <tbody>
-      <tr><td><strong>Anthropic v. DOD</strong></td><td><span class="tag tag-danger">Litigation</span></td><td>Appeals denied (Apr 8). Trial continues.</td><td><a href="https://www.lawfaremedia.org/article/the-right-remedy-in-the-anthropic-case">Lawfare</a></td></tr>
-      <tr><td><strong>FISA 702</strong></td><td><span class="tag tag-danger">Expiring Apr 20</span></td><td>House vote Apr 16</td><td><a href="https://www.cnn.com/2026/04/13/politics/fisa-section-702-suveillance-law-expiration-congress">CNN</a></td></tr>
-      <tr><td><strong>EU AI Act</strong></td><td><span class="tag tag-active">Enforcing</span></td><td>Majority provisions enter force <strong>Aug 2</strong></td><td><a href="https://artificialintelligenceact.eu/implementation-timeline/">Timeline</a></td></tr>
-      <tr><td><strong>SCOTUS: <span class="has-tip" data-tip="Challenge to Louisiana's congressional map. SCOTUS will rule on whether Section 2 of the Voting Rights Act (prohibits voting practices that discriminate on the basis of race) is itself unconstitutional. Observers expect the court to further weaken the VRA. Argued Oct 15, 2025.">Louisiana v. Callais</span></strong></td><td><span class="tag tag-pending">Pending</span></td><td>Decision late June. Could gut <span class="has-tip" data-tip="Section 2 of the Voting Rights Act of 1965. Prohibits state/local governments from imposing voting practices that result in discrimination based on race. Core tool for challenging gerrymandering and vote dilution.">VRA Section 2</span>.</td><td><a href="https://www.scotusblog.com/cases/case-files/louisiana-v-callais-2/">SCOTUSblog</a></td></tr>
-      <tr><td><strong>SCOTUS: <span class="has-tip" data-tip="Challenge to president's power to fire independent agency heads (FTC commissioners). Could overturn Humphrey's Executor v. US (1935), which protected independent agencies from at-will presidential removal. Ruling would let Trump fire FTC, FCC, NLRB, Fed Board commissioners at will.">Trump v. Slaughter</span></strong></td><td><span class="tag tag-pending">Pending</span></td><td>Decision late June. <span class="has-tip" data-tip="1935 SCOTUS precedent: president cannot fire commissioners of independent agencies except for cause. Foundation of modern administrative state's independence from presidential control.">Humphrey's Executor</span> at risk.</td><td><a href="https://www.scotusblog.com/2025/10/is-humphreys-executor-headed-for-slaughter/">SCOTUSblog</a></td></tr>
-      <tr><td><strong>SAVE Act (H.R. 22)</strong></td><td><span class="tag tag-pending">Senate floor</span></td><td>12% signed into law. Needs 60 votes.</td><td><a href="https://polymarket.com/event/save-act-signed-into-law-in-2026">PM</a></td></tr>
-      <tr><td><strong>Stanford AI Index 2026</strong></td><td><span class="tag tag-active">Released Apr 13</span></td><td>China nearly closed benchmark gap with US.</td><td><a href="https://hai.stanford.edu/ai-index/2026-ai-index-report">HAI</a></td></tr>
+      <tr><td><strong>Anthropic v. DOD</strong></td><td><span class="tag tag-danger">Litigation</span></td><td>Appeals denied (Apr 8). Trial continues.<div style="color:var(--text-muted);font-size:11px;margin-top:4px;line-height:1.4">Live test of whether supply-chain / DPA authorities let the executive compel frontier labs. Ruling sets precedent for government leverage over deployment &amp; training.</div></td><td><a href="https://www.lawfaremedia.org/article/the-right-remedy-in-the-anthropic-case">Lawfare</a></td></tr>
+      <tr><td><strong>FISA 702</strong></td><td><span class="tag tag-danger">Expiring Apr 20</span></td><td>House vote Apr 16.<div style="color:var(--text-muted);font-size:11px;margin-top:4px;line-height:1.4">Warrantless surveillance authority. Reauth fight shapes the surveillance architecture an authoritarian administration inherits through the AGI window.</div></td><td><a href="https://www.cnn.com/2026/04/13/politics/fisa-section-702-suveillance-law-expiration-congress">CNN</a></td></tr>
+      <tr><td><strong>EU AI Act</strong></td><td><span class="tag tag-active">Enforcing</span></td><td>Majority provisions enter force <strong>Aug 2</strong>.<div style="color:var(--text-muted);font-size:11px;margin-top:4px;line-height:1.4">First enforced comprehensive AI regulation on frontier labs. GPAI obligations set the de-facto global baseline; compliance reshapes cross-border model deployment.</div></td><td><a href="https://artificialintelligenceact.eu/implementation-timeline/">Timeline</a></td></tr>
+      <tr><td><strong>SCOTUS: <span class="has-tip" data-tip="Challenge to Louisiana's congressional map. SCOTUS will rule on whether Section 2 of the Voting Rights Act (prohibits voting practices that discriminate on the basis of race) is itself unconstitutional. Observers expect the court to further weaken the VRA. Argued Oct 15, 2025.">Louisiana v. Callais</span></strong></td><td><span class="tag tag-pending">Pending</span></td><td>Decision late June. Could gut <span class="has-tip" data-tip="Section 2 of the Voting Rights Act of 1965. Prohibits state/local governments from imposing voting practices that result in discrimination based on race. Core tool for challenging gerrymandering and vote dilution.">VRA Section 2</span>.<div style="color:var(--text-muted);font-size:11px;margin-top:4px;line-height:1.4">If §2 falls, racial-gerrymandering challenges lose their core tool before 2026 midterms and the 2030 redistricting cycle. Directly reshapes the map.</div></td><td><a href="https://www.scotusblog.com/cases/case-files/louisiana-v-callais-2/">SCOTUSblog</a></td></tr>
+      <tr><td><strong>SCOTUS: <span class="has-tip" data-tip="Challenge to president's power to fire independent agency heads (FTC commissioners). Could overturn Humphrey's Executor v. US (1935), which protected independent agencies from at-will presidential removal. Ruling would let Trump fire FTC, FCC, NLRB, Fed Board commissioners at will.">Trump v. Slaughter</span></strong></td><td><span class="tag tag-pending">Pending</span></td><td>Decision late June. <span class="has-tip" data-tip="1935 SCOTUS precedent: president cannot fire commissioners of independent agencies except for cause. Foundation of modern administrative state's independence from presidential control.">Humphrey's Executor</span> at risk.<div style="color:var(--text-muted);font-size:11px;margin-top:4px;line-height:1.4">Overturning lets the president fire FTC/FCC/NLRB/Fed commissioners at will. Major executive consolidation over regulation — bleeds into AI governance, antitrust, and election-adjacent agencies.</div></td><td><a href="https://www.scotusblog.com/2025/10/is-humphreys-executor-headed-for-slaughter/">SCOTUSblog</a></td></tr>
+      <tr><td><strong>SAVE Act (H.R. 22)</strong></td><td><span class="tag tag-pending">Senate floor</span></td><td>12% signed into law. Needs 60 votes.<div style="color:var(--text-muted);font-size:11px;margin-top:4px;line-height:1.4">Requires documentary citizenship proof (passport/birth certificate) to register. If enacted, creates significant registration friction — largest effect on voters who don't already hold these documents.</div></td><td><a href="https://polymarket.com/event/save-act-signed-into-law-in-2026">PM</a></td></tr>
+      <tr><td><strong>Stanford AI Index 2026</strong></td><td><span class="tag tag-active">Released Apr 13</span></td><td>China nearly closed benchmark gap with US.<div style="color:var(--text-muted);font-size:11px;margin-top:4px;line-height:1.4">Undercuts the "US lead" frame that grounds export controls and racing-to-deploy arguments. If real, strengthens both hawk (catch-up-or-lose) and dove (coordination) policy cases.</div></td><td><a href="https://hai.stanford.edu/ai-index/2026-ai-index-report">HAI</a></td></tr>
     </tbody>
   </table>
 </div>
@@ -952,7 +941,7 @@ new Chart(document.getElementById('nomineeChart'),{type:'bar',data:{labels:['New
   const forecasters = [
     { name: 'Kokotajlo', affil: 'AI Futures Project', date: 'Mar 2026', ac: 2028.4, agi: 2030, color: '#6366f1' },
     { name: 'Lifland', affil: 'AI Futures Project', date: 'Mar 2026', ac: 2030.4, agi: 2032, color: '#818cf8' },
-    { name: 'Greenblatt', affil: 'Redwood Research', date: 'Mar 2026', point: 2028.9, pointLabel: '30% by EOY 2028', color: '#22c55e' },
+    { name: 'Greenblatt', affil: 'Redwood Research', date: 'Mar 2026', point: 2028.9, pointLabel: 'Full AI R&D auto · 30% by EOY 2028', color: '#22c55e' },
     { name: 'Cotra', affil: 'METR', date: '2024 (stale)', point: 2030, pointLabel: '15% by 2030', color: '#3b82f6' },
     { name: 'Aschenbrenner', affil: 'Situational Awareness', date: 'mid-2024', point: 2027.5, pointLabel: 'AGI 2027-28', color: '#f59e0b' },
     { name: 'Metaculus community', affil: '1,846 forecasters', date: 'continuous', point: 2028.15, pointLabel: 'AGI Feb 2028 (strict)', color: '#ef4444' },
