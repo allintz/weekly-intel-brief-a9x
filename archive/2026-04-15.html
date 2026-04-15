@@ -108,15 +108,39 @@ nav .container { display: flex; align-items: center; justify-content: space-betw
 .alert a { color: var(--accent-light); text-decoration: none; }
 .alert a:hover { text-decoration: underline; }
 
+.updates-list { display: flex; flex-direction: column; gap: 10px; }
+.update-item {
+  padding: 12px 16px 14px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--border-light);
+  border-radius: 6px;
+}
+.update-item.imminent { border-left-color: var(--red); }
+.update-item.near { border-left-color: var(--amber); }
+.update-item.watch { border-left-color: var(--accent); }
+.update-date {
+  font-size: 11px; color: var(--text-muted);
+  text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600;
+  margin-bottom: 4px;
+}
+.update-item h4 { font-size: 14px; font-weight: 600; margin-bottom: 4px; }
+.update-item p { font-size: 13px; color: var(--text-secondary); line-height: 1.55; margin: 0; }
+.update-item a { color: var(--accent-light); text-decoration: none; }
+.update-item a:hover { text-decoration: underline; }
+
 /* ─── KPI STRIP ─── */
 .kpi-strip {
-  display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px;
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px;
   padding: 28px 0; border-bottom: 1px solid var(--border);
 }
 .kpi {
   background: var(--surface); border: 1px solid var(--border); border-radius: 10px;
   padding: 16px; position: relative; overflow: hidden;
+  display: block; color: inherit; text-decoration: none;
+  transition: border-color 0.15s ease, transform 0.15s ease;
 }
+.kpi:hover { border-color: var(--border-light); transform: translateY(-1px); }
 .kpi::after {
   content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
 }
@@ -410,28 +434,25 @@ body.light #tooltip-layer {
 </div>
 </section>
 
-<!-- ALERTS -->
+<!-- WATCHING THIS WEEK -->
 <section style="padding: 20px 0 0;">
 <div class="container">
-  <div class="alert critical">
-    <div class="alert-icon">&#9888;&#65039;</div>
-    <div>
-      <h4><span class="has-tip" data-tip="Foreign Intelligence Surveillance Act Section 702. Authorizes warrantless surveillance of non-US persons located outside the US. Controversial because US persons' communications often get swept up (incidental collection) and can be queried without a warrant. Originally post-9/11 authority, sunsets periodically, requires renewal.">FISA Section 702</span> expires April 20 &mdash; 6 days</h4>
-      <p>House vote <strong>Wednesday Apr 16</strong>. White House pushing clean 18-month extension. Carriers warned they'll stop collecting Apr 20 if not renewed. Democrats split; some Rs demanding warrant requirements. <a href="https://www.cnn.com/2026/04/13/politics/fisa-section-702-suveillance-law-expiration-congress">CNN</a> &middot; <a href="https://www.npr.org/2026/04/14/nx-s1-5768270/what-to-know-about-section-702-surveillance">NPR</a> &middot; <a href="https://www.brennancenter.org/our-work/research-reports/section-702-foreign-intelligence-surveillance-act-fisa-2026-resource-page">Brennan Center primer</a></p>
+  <div class="sub-head" style="margin-bottom:14px">Watching this week</div>
+  <div class="updates-list">
+    <div class="update-item imminent">
+      <div class="update-date">April 16 vote &middot; April 20 sunset</div>
+      <h4><span class="has-tip" data-tip="Foreign Intelligence Surveillance Act Section 702. Authorizes warrantless surveillance of non-US persons located outside the US. US persons' communications get swept up incidentally and can be queried without a warrant. Post-9/11 authority, sunsets periodically, requires renewal.">FISA Section 702</span> reauthorization</h4>
+      <p>House vote Wed Apr 16; White House pushing clean 18-month extension. <span class="has-tip" data-tip="Democrats split; some Rs demanding warrant requirements. Carriers warned they'll stop collecting Apr 20 if not renewed.">Reauth uncertain</span>. <a href="https://www.cnn.com/2026/04/13/politics/fisa-section-702-suveillance-law-expiration-congress">CNN</a> &middot; <a href="https://www.brennancenter.org/our-work/research-reports/section-702-foreign-intelligence-surveillance-act-fisa-2026-resource-page">Brennan Center</a></p>
     </div>
-  </div>
-  <div class="alert critical">
-    <div class="alert-icon">&#128205;</div>
-    <div>
-      <h4>Virginia redistricting referendum &mdash; April 21 (6 days)</h4>
-      <p>Special election on a constitutional amendment letting the General Assembly temporarily redraw congressional districts (currently drawn by the bipartisan commission, returning post-2030). If it passes, a Dem-favoring map signed by Gov Spanberger Feb 20 takes effect, shifting projected partisan lean toward Democrats in <strong>10 of 11</strong> districts. Polymarket Yes at <strong>88%</strong> (\$407K volume) &mdash; up from 73% a week earlier. Polls split: Emerson 57% Yes, Roanoke 51% Yes, ~18% undecided. Early voting since Mar 6; ends Apr 18. This is the Dem counter to mid-decade R-state gerrymanders (TX, MO) &mdash; a passage shifts the 2026 House expected value by several seats. <a href="https://en.wikipedia.org/wiki/2026_Virginia_redistricting_amendment">Wiki</a> &middot; <a href="https://polymarket.com/event/will-the-virginia-redistricting-referendum-pass">Polymarket</a> &middot; <a href="https://www.elections.virginia.gov/election-law/proposed-amendment-for-april-2026-special-election/">Ballot text</a> &middot; <a href="https://ballotpedia.org/Virginia_Use_of_Legislative_Congressional_Redistricting_Map_Amendment_(April_2026)">Ballotpedia</a></p>
+    <div class="update-item imminent">
+      <div class="update-date">April 21 special election</div>
+      <h4>Virginia redistricting referendum</h4>
+      <p>Polymarket <strong>88% Yes</strong> (\$407K vol, up from 73% last week) on a constitutional amendment letting the General Assembly temporarily redraw congressional maps. If passes, a <span class="has-tip" data-tip="Dem-favoring map signed by Gov Spanberger Feb 20 would favor Democrats in 10 of 11 districts — the Dem counter to mid-decade R-state gerrymanders in TX, MO. Passage shifts the 2026 House expected value by several seats. Early voting since Mar 6; ends Apr 18.">Dem-drawn map (10 of 11 districts)</span> takes effect through 2030. Polls <span class="has-tip" data-tip="Emerson 57% Yes, Roanoke 51% Yes, ~18% undecided.">split but lean Yes</span>. <a href="https://polymarket.com/event/will-the-virginia-redistricting-referendum-pass">Polymarket</a> &middot; <a href="https://ballotpedia.org/Virginia_Use_of_Legislative_Congressional_Redistricting_Map_Amendment_(April_2026)">Ballotpedia</a> &middot; <a href="https://en.wikipedia.org/wiki/2026_Virginia_redistricting_amendment">Wiki</a></p>
     </div>
-  </div>
-  <div class="alert watch">
-    <div class="alert-icon">&#128065;</div>
-    <div>
-      <h4>SCOTUS decisions incoming (late June)</h4>
-      <p><strong><span class="has-tip" data-tip="Challenge to Louisiana's congressional map. SCOTUS will rule on whether Section 2 of the Voting Rights Act (which prohibits voting practices that discriminate on the basis of race) is itself unconstitutional. Observers expect the court to further weaken the VRA. Argued Oct 15, 2025.">Louisiana v. Callais</span></strong> could gut <span class="has-tip" data-tip="Section 2 of the Voting Rights Act of 1965. Prohibits state/local governments from imposing voting practices that result in discrimination based on race. Core tool for challenging gerrymandering and vote dilution.">VRA Section 2</span>. <strong><span class="has-tip" data-tip="Challenge to president's power to fire independent agency heads (FTC commissioners in this case). Could overturn Humphrey's Executor v. United States (1935), which protected independent agencies from at-will presidential removal. Decision would let Trump fire FTC, FCC, NLRB, Fed Board commissioners at will.">Trump v. Slaughter</span></strong> could overturn <span class="has-tip" data-tip="1935 Supreme Court precedent that established presidents cannot fire commissioners of independent agencies (like FTC) except for cause. Foundation of modern administrative state's independence from presidential control.">Humphrey's Executor</span> (90-year precedent), letting president fire all agency heads. <strong>Mail ballot cases</strong> could restrict vote-by-mail nationally before midterms. <a href="https://www.scotusblog.com/cases/case-files/louisiana-v-callais-2/">SCOTUSblog</a> &middot; <a href="https://www.scotusblog.com/2025/10/is-humphreys-executor-headed-for-slaughter/">Humphrey's explainer</a></p>
+    <div class="update-item watch">
+      <div class="update-date">Late June decisions</div>
+      <h4>SCOTUS term end &mdash; three high-stakes rulings</h4>
+      <p><strong><span class="has-tip" data-tip="Challenge to Louisiana's congressional map. SCOTUS will rule on whether Section 2 of the Voting Rights Act (prohibits voting practices that discriminate by race) is itself unconstitutional. Argued Oct 15, 2025; observers expect the court to further weaken the VRA.">Louisiana v. Callais</span></strong> could gut <span class="has-tip" data-tip="Section 2 of the Voting Rights Act of 1965. Prohibits state/local governments from imposing voting practices that result in discrimination based on race. Core tool for challenging gerrymandering and vote dilution.">VRA §2</span>; <strong><span class="has-tip" data-tip="Challenge to president's power to fire independent agency heads (FTC commissioners in this case). Could overturn Humphrey's Executor v. US (1935), which protected independent agencies from at-will presidential removal. Ruling would let Trump fire FTC/FCC/NLRB/Fed commissioners at will.">Trump v. Slaughter</span></strong> could overturn <span class="has-tip" data-tip="1935 SCOTUS precedent establishing that presidents cannot fire commissioners of independent agencies except for cause. Foundation of modern administrative state's independence from presidential control.">Humphrey's Executor</span>; mail-ballot cases could restrict vote-by-mail nationally before midterms. <a href="https://www.scotusblog.com/cases/case-files/louisiana-v-callais-2/">SCOTUSblog (Callais)</a> &middot; <a href="https://www.scotusblog.com/2025/10/is-humphreys-executor-headed-for-slaughter/">Humphrey's explainer</a></p>
     </div>
   </div>
 </div>
@@ -478,42 +499,30 @@ body.light #tooltip-layer {
 <section>
 <div class="container">
   <div class="kpi-strip">
-    <div class="kpi blue">
+    <a class="kpi blue" href="https://electionbettingodds.com/" target="_blank" rel="noopener">
       <div class="kpi-label">House (D)</div>
       <div class="kpi-value" style="color:var(--blue)">85.2%</div>
       <div class="kpi-detail">5-platform aggregate</div>
       <div class="kpi-change seed">seed</div>
-    </div>
-    <div class="kpi blue">
+    </a>
+    <a class="kpi blue" href="https://electionbettingodds.com/" target="_blank" rel="noopener">
       <div class="kpi-label">Senate (D)</div>
       <div class="kpi-value" style="color:var(--blue)">53.2%</div>
       <div class="kpi-detail">$5.5M wagered</div>
       <div class="kpi-change seed">seed</div>
-    </div>
-    <div class="kpi red">
+    </a>
+    <a class="kpi red" href="https://www.natesilver.net/p/trump-approval-ratings-nate-silver-bulletin" target="_blank" rel="noopener">
       <div class="kpi-label">Trump Net Approval</div>
       <div class="kpi-value" style="color:var(--red)">-17.5</div>
       <div class="kpi-detail">Approve minus disapprove &middot; all-time 2nd-term low</div>
-      <div class="kpi-change" style="background:var(--red-dim);color:var(--red);">&darr; from -13.4</div>
-    </div>
-    <div class="kpi purple">
-      <div class="kpi-label">AGI Median</div>
-      <div class="kpi-value" style="color:var(--accent-light)">Feb '28</div>
-      <div class="kpi-detail">~2yr out &middot; Metaculus community (1,846)</div>
-      <div class="kpi-change seed">seed</div>
-    </div>
-    <div class="kpi amber">
+      <div class="kpi-change" style="background:var(--red-dim);color:var(--red);">&darr; from -13.4 last week</div>
+    </a>
+    <a class="kpi amber" href="https://polymarket.com/event/us-recession-by-end-of-2026" target="_blank" rel="noopener">
       <div class="kpi-label">P(Recession)</div>
       <div class="kpi-value" style="color:var(--amber)">~30%</div>
       <div class="kpi-detail">By EOY 2026 &middot; elevated vs. 20% Feb baseline</div>
       <div class="kpi-change seed">seed</div>
-    </div>
-    <div class="kpi rose">
-      <div class="kpi-label">Impeach (term)</div>
-      <div class="kpi-value" style="color:var(--rose)">70%</div>
-      <div class="kpi-detail">House vote only &middot; $44K &#9888;</div>
-      <div class="kpi-change seed">seed</div>
-    </div>
+    </a>
   </div>
 </div>
 </section>
@@ -552,11 +561,6 @@ body.light #tooltip-layer {
   </div>
 
   <div class="sub-head">Trump tenure &amp; impeachment</div>
-  <div class="pb">
-    <div class="pb-top"><span class="pb-name"><a href="https://polymarket.com/event/will-trump-be-impeached-before-his-term-ends">Impeached before term ends (Jan 2029)</a></span><span class="pb-val" style="color:var(--rose)">70%</span></div>
-    <div class="pb-track"><div class="pb-fill rose" style="width:70%"></div></div>
-    <div class="pb-meta"><span>House vote only, not Senate removal</span><span>$44K &#9888; thin</span></div>
-  </div>
   <div class="pb">
     <div class="pb-top"><span class="pb-name"><a href="https://polymarket.com/event/trump-out-as-president-before-2027">Trump out as President before 2027</a></span><span class="pb-val" style="color:var(--amber)">17%</span></div>
     <div class="pb-track"><div class="pb-fill amber" style="width:17%"></div></div>
