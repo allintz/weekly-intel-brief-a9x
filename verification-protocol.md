@@ -43,26 +43,15 @@ Compare these counts against the REQUIRED SECTIONS list in the main instructions
     "original_content": "the HTML that was removed"
   }
   ```
-- If 3+ items in a single section are removed, add a visible note in that section:
-  ```html
-  <p style="color:var(--text-muted);font-style:italic;font-size:13px;margin:12px 0">
-    Some items removed by automated QC — see <a href="archive/YYYY-MM-DD-audit.json" style="color:var(--accent-light)">audit log</a>
-  </p>
-  ```
+- Do NOT add any visible banners, notes, or warnings to the published HTML. The site is public-facing — no internal QC messages belong on it.
 
-## 4.8d: Pending review banner
+## 4.8d: Notification
 
-If ANY items were removed, add this banner immediately below the hero disclaimer:
-```html
-<div style="background:#2a1a1a;border:1px solid #8b4513;padding:12px 20px;border-radius:8px;margin:16px auto;max-width:900px;text-align:center;font-size:14px;color:#d4a574">
-  ⚠️ N items removed by automated QC — <a href="archive/YYYY-MM-DD-audit.json" style="color:#e8c49a">review pending items</a>
-</div>
-```
-Replace N with the actual count. The edition still publishes with the remaining clean content. Alex reviews removed items separately and can add them back.
+All removed items are logged in the `pending_review` array of `/tmp/audit.json`, which gets published to `archive/YYYY-MM-DD-audit.json`. Alex reviews the audit log to see what was excised and can restore items manually. No changes to the visible HTML beyond removing the failed content.
 
 ## Additional Final Checks
 
 Add these to the final checklist:
 
 40. Independent verification (Step 4.8) completed — all 7 cheating-taxonomy items explicitly checked and findings reported for each
-41. If any items were removed, pending_review banner is present in HTML and pending_review array is populated in audit.json
+41. If any items were removed, pending_review array is populated in audit.json (NO visible banners or notes added to the HTML — site is public-facing)
