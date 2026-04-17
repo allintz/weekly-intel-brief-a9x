@@ -1,0 +1,6 @@
+{
+  "step": "seed",
+  "msg": "initial seed — overwritten at each checkpoint during a trigger run",
+  "timestamp": "2026-04-17T14:20:00Z",
+  "edition_date": null
+}
