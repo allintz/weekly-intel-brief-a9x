@@ -161,14 +161,27 @@ Both are primary venues for forecasting updates, AI safety/governance research, 
 
 **For each relevant LW/EAF item**, render with this bullet format:
 
+```html
+<li><strong>[Author] &mdash; &ldquo;[Post title]&rdquo;</strong> (Date, LW|EAF[, karma if notable])
+  <ul>
+    <li>First key claim from the post.</li>
+    <li>Second claim / mechanism / driver.</li>
+    <li>Third: specific number / finding / implication.</li>
+    <li>Alex-relevant takeaway (one line).</li>
+  </ul>
+  <a href="...">Link</a>
+</li>
 ```
-**[Author] — "[Post title]"** (Date, LW|EAF[, karma if notable])
-- First key claim from the post.
-- Second claim / mechanism / driver.
-- Third: specific number / finding / implication.
-- Alex-relevant takeaway (one line).
-[Link]
+
+**CSS requirement**: the `<head>` style block must include the nested-bullet override so the inner `<ul>` renders as bullets (not as a weird bordered table). Confirm these rules exist in the stylesheet you copy from the template:
+
+```css
+.intel ul { margin: 6px 0 0 20px; padding: 0; }
+.intel ul li { padding: 2px 0; border-bottom: none; list-style: disc; font-size: 13px; line-height: 1.55; color: var(--text-secondary); }
+.intel ul li:last-child { border-bottom: none; }
 ```
+
+Without those, `.intel li` (the default intel-bullet style with border-bottom + list-style:none) cascades into the nested `<ul>`, and the sub-bullets render as a horizontal-ruled list — looks like a small table.
 
 Don't invent new claims — expand from what's in the post plus reasonable implication-for-Alex given his work focus (democracy field-building + AI governance).
 
@@ -295,22 +308,24 @@ curl -s https://raw.githubusercontent.com/allintz/weekly-intel-brief-a9x/main/_a
    - Sentinel takes on democratic backsliding (if any new this week)
    - Relevant LW/EAF posts on democracy/authoritarian trajectory from past 7 days, rendered in bullet format (see STEP 2 LW/EAF format instructions)
    - **Bright Line Watch card**: show ONLY the current score (e.g., `~44/100` for Spring 2026) + a link to the BLW appendix at the bottom. Do NOT reproduce the full historical trajectory table here — it lives only in the appendix (item 12). BLW card must have `id="blw-short"` and its card-sub must include `<a href="#blw-appendix" style="color:var(--accent-light)">Methodology &amp; trajectory deep dive ↓</a>`. Appendix required (item 12).
-   - **V-Dem LDI cross-country comparison**: include this table immediately below the BLW card:
+   - **V-Dem LDI cross-country comparison**: include this table immediately below the BLW card. **Rescale native 0–1 V-Dem scores to 0–100** so they share scale with the BLW score shown above — display them as whole numbers (multiply by 100). Section header must include a clarifier: `V-Dem Liberal Democracy Index (2025) — Cross-Country Context · rescaled to 0–100 for comparison with BLW`.
 
-     | Country | V-Dem LDI |
+     | Country | V-Dem (0–100) |
      |---|---|
-     | Denmark | 0.88 |
-     | Sweden | 0.85 |
-     | Germany | 0.82 |
-     | United Kingdom | 0.78 |
-     | Israel | 0.66 |
-     | **United States** | **0.57** |
-     | Poland | 0.50 |
-     | India | 0.45 |
-     | Hungary | 0.42 |
-     | Turkey | 0.30 |
+     | Denmark | 88 |
+     | Sweden | 85 |
+     | Germany | 82 |
+     | United Kingdom | 78 |
+     | Israel | 66 |
+     | **United States** | **57** |
+     | Poland | 50 |
+     | India | 45 |
+     | Hungary | 42 |
+     | Turkey | 30 |
 
-     Pull current V-Dem values from the V-Dem API or dataset if possible; otherwise use the 2025 snapshot above as fallback. Bold the United States row. One-line note beneath: "V-Dem LDI (0–1) measures liberal-democratic institutions cross-nationally; BLW measures US democratic practice specifically (expert survey)."
+     Pull current V-Dem values from the V-Dem API or dataset if possible; otherwise use the 2025 snapshot above as fallback. Bold the United States row. Beneath the table, include this explanation (not a one-liner — readers ask "why is BLW different from V-Dem for US"):
+
+     > **Why BLW ≠ V-Dem for the US**: they measure different things. BLW (expert survey) measures democratic *practice* — how officials actually behave, norm-following, specific incidents. V-Dem measures institutional *structure* — elections, rights, constraints. US institutions score relatively higher than US current practice, a common signal of drift where rules are still on the books but not being followed. Source: V-Dem (native scale 0–1, shown here ×100).
 
    - Approval/favorability + Silver Bulletin chart link
    - Trump tenure markets (3): Out before 2027, Impeached by EOY 2026, 25th Amendment. (Do NOT include 'Impeached before term ends'.)
