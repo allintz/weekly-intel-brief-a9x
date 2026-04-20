@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Weekly Democracy Intelligence Brief — Prediction Market & Intel Tracker</title>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root {
@@ -110,23 +109,23 @@ nav .container { display: flex; align-items: center; justify-content: space-betw
 
 .updates-list { display: flex; flex-direction: column; gap: 0; }
 .update-item {
-  padding: 14px 18px;
+  padding: 8px 14px;
   background: var(--surface);
   border: 1px solid var(--border);
   border-left: 3px solid var(--border-light);
   border-radius: 6px;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 .update-item.imminent { border-left-color: var(--red); }
 .update-item.near { border-left-color: var(--amber); }
 .update-item.watch { border-left-color: var(--accent); }
 .update-date {
-  font-size: 11px; color: var(--text-muted);
+  font-size: 10px; color: var(--text-muted);
   text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600;
-  margin-bottom: 4px;
+  margin-bottom: 2px;
 }
-.update-item h4 { font-size: 14px; font-weight: 600; margin-bottom: 4px; }
-.update-item p { font-size: 13px; color: var(--text-secondary); line-height: 1.55; margin: 0; }
+.update-item h4 { font-size: 13px; font-weight: 600; margin: 2px 0; }
+.update-item p { font-size: 12px; color: var(--text-secondary); line-height: 1.4; margin-top: 4px; }
 .update-item a { color: var(--accent-light); text-decoration: none; }
 .update-item a:hover { text-decoration: underline; }
 
@@ -444,12 +443,12 @@ body.light #tooltip-layer {
     <div class="update-item imminent">
       <div class="update-date">April 21 &mdash; Tomorrow</div>
       <h4>Virginia Redistricting Referendum</h4>
-      <p>Voters decide whether to create an independent redistricting commission, stripping Republicans of their gerrymander. Polymarket has it at <strong>84.5%</strong> to pass &mdash; down from 88% last week. A Yes vote would be the first successful Dem counter-gerrymander of the cycle and a significant democracy-field win. <a href="https://polymarket.com/event/will-the-virginia-redistricting-referendum-pass">PM</a></p>
+      <p>Voters decide whether to create an independent redistricting commission, stripping Republicans of their gerrymander. Polymarket has it at <strong>84.5%</strong> to pass &mdash; down from 88% last week. <span class="has-tip" data-tip="A Yes vote would be the first successful Dem counter-gerrymander of the cycle and a significant democracy-field win.">read more</span> <a href="https://polymarket.com/event/will-the-virginia-redistricting-referendum-pass">PM</a></p>
     </div>
     <div class="update-item near">
       <div class="update-date">May 5 &mdash; 2 weeks</div>
       <h4>Ohio Special Senate Election (Brown vs. Husted)</h4>
-      <p>First competitive Senate test of the cycle. <span class="has-tip" data-tip="Jon Husted is a mainstream Ohio Republican, not an election-denier. His nomination is the GOP&rsquo;s best shot at holding this seat.">Husted</span> holds structural advantage in a red-trending state; Brown sits at 37% on Kalshi. High-stakes: this is Vance&rsquo;s vacated seat in a Senate where every vote matters.</p>
+      <p>First competitive Senate test of the cycle. <span class="has-tip" data-tip="Jon Husted is a mainstream Ohio Republican, not an election-denier. His nomination is the GOP&rsquo;s best shot at holding this seat.">Husted</span> holds structural advantage in a red-trending state; Brown sits at 37% on Kalshi. <span class="has-tip" data-tip="High-stakes: this is Vance&rsquo;s vacated seat in a Senate where every vote matters.">read more</span></p>
     </div>
     <div class="update-item near">
       <div class="update-date">May 5 &mdash; 2 weeks</div>
@@ -459,17 +458,17 @@ body.light #tooltip-layer {
     <div class="update-item near">
       <div class="update-date">May 26 &mdash; 5 weeks</div>
       <h4>Texas GOP Senate Runoff: Cornyn vs. Paxton</h4>
-      <p><span class="has-tip" data-tip="Paxton filed Texas v. Pennsylvania (2020) seeking to invalidate election results in PA, GA, MI, and WI. SCOTUS dismissed unanimously for lack of standing.">Ken Paxton</span> is the most explicitly anti-democracy candidate on any 2026 ballot. If he beats incumbent Cornyn, he enters the Senate with a mandate to challenge electoral integrity. No active Dem vs. Paxton market yet &mdash; flip value would be very high if a competitive opponent emerges.</p>
+      <p><span class="has-tip" data-tip="Paxton filed Texas v. Pennsylvania (2020) seeking to invalidate election results in PA, GA, MI, and WI. SCOTUS dismissed unanimously for lack of standing.">Ken Paxton</span> is the most explicitly anti-democracy candidate on any 2026 ballot. If he beats incumbent Cornyn, he enters the Senate with a mandate to challenge electoral integrity. <span class="has-tip" data-tip="No active Dem vs. Paxton market yet — flip value would be very high if a competitive opponent emerges.">read more</span></p>
     </div>
     <div class="update-item watch">
       <div class="update-date">Ongoing</div>
       <h4>Anthropic&ndash;Trump Administration Thaw</h4>
-      <p>CEO Dario Amodei met with Treasury Secretary Bessent and WH Chief of Staff Wiles on April 18; White House called it &ldquo;productive and constructive.&rdquo; Pentagon blacklisting still in effect but apparently isolated to DoD &mdash; &ldquo;every agency except DoD wants Anthropic.&rdquo; Trajectory matters for how the most safety-focused major lab navigates this administration. <a href="https://techcrunch.com/2026/04/18/anthropics-relationship-with-the-trump-administration-seems-to-be-thawing/">TechCrunch</a></p>
+      <p>CEO Dario Amodei met with Treasury Secretary Bessent and WH Chief of Staff Wiles on April 18; White House called it &ldquo;productive and constructive.&rdquo; Pentagon blacklisting still in effect but apparently isolated to DoD &mdash; &ldquo;every agency except DoD wants Anthropic.&rdquo; <span class="has-tip" data-tip="Trajectory matters for how the most safety-focused major lab navigates this administration.">read more</span> <a href="https://techcrunch.com/2026/04/18/anthropics-relationship-with-the-trump-administration-seems-to-be-thawing/">TechCrunch</a></p>
     </div>
     <div class="update-item watch">
       <div class="update-date">April 28 &mdash; EU</div>
       <h4>EU AI Act Trilogue: Digital Omnibus</h4>
-      <p>Second trilogue on the Digital Omnibus package, which is reshaping enforcement timelines. Annex III high-risk AI compliance already deferred to December 2027; this trilogue may finalize the split. Only 8 of 27 EU member states have designated national competent authorities &mdash; enforcement is effectively absent across most of the EU regardless of what passes. <a href="https://artificialintelligenceact.eu/">EU AI Act tracker</a></p>
+      <p>Second trilogue on the Digital Omnibus package, which is reshaping enforcement timelines. Annex III high-risk AI compliance already deferred to December 2027; this trilogue may finalize the split. <span class="has-tip" data-tip="Only 8 of 27 EU member states have designated national competent authorities — enforcement is effectively absent across most of the EU regardless of what passes.">read more</span> <a href="https://artificialintelligenceact.eu/">EU AI Act tracker</a></p>
     </div>
   </div>
 </div>
@@ -670,33 +669,29 @@ body.light #tooltip-layer {
     <div class="card-sub">Expert surveys on US democratic performance (0&ndash;100 scale) &middot; <a href="#blw-appendix">Methodology &amp; trajectory deep dive &#8595;</a></div>
     <div style="font-size:28px;font-weight:700;font-family:'JetBrains Mono',monospace;color:var(--amber)">~44<span style="font-size:14px;color:var(--text-muted);font-weight:400">/100</span></div>
     <p style="font-size:11px;color:var(--text-muted);margin-top:6px">Spring 2026 provisional score. Continued decline; executive overreach and press freedom flagged as lowest-scoring categories. Full wave report pending. Historical trajectory in appendix below.</p>
-  </div>
-
-  <!-- Nonprofit targeting -->
-  <div class="sub-head">Nonprofit Targeting Tracker</div>
-  <div class="card" style="margin-bottom:20px">
-    <h4>Government Targeting of Civil Society</h4>
-    <div class="card-sub">Enforcement actions, investigations, and designation threats against nonprofits and advocacy organizations</div>
-    <ul class="intel">
-      <li>The Anthropic PAC formation (April 3) and $20M donation to Public First Action (Feb 2026) represent a new category of corporate political activity &mdash; AI labs as direct democracy-field funders &mdash; that could attract targeting. <a href="https://techcrunch.com/2026/04/03/anthropic-ramps-up-its-political-activities-with-a-new-pac/">TechCrunch, Apr 3</a></li>
-    </ul>
-  </div>
-
-  <!-- Press Freedom -->
-  <div class="sub-head">Press Freedom</div>
-  <div class="card" style="margin-bottom:20px">
-    <h4>Press Freedom &mdash; Annual Reference Anchors</h4>
-    <div class="card-sub"><a href="https://pressfreedomtracker.us/" target="_blank">pressfreedomtracker.us</a></div>
-    <p style="font-size:13px;color:var(--text-secondary)">No new incidents recorded in the April 13&ndash;20 window. Annual standings: <strong>RSF 57th globally</strong> (2025, &ldquo;Problematic Situation&rdquo;) &middot; <strong>V-Dem LDI 0.57</strong> (2025, 51st globally &mdash; lowest since 1965).</p>
+    <div style="margin-top: 12px; border-top: 1px solid var(--border); padding-top: 10px;">
+      <div style="font-size: 11px; color: var(--text-secondary); margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.05em;">V-Dem Liberal Democracy Index (2025) — Cross-Country Context</div>
+      <table style="width: 100%; border-collapse: collapse; font-size: 12px;">
+        <tr><td style="padding: 2px 6px; color: var(--text-secondary);">Denmark</td><td style="padding: 2px 6px; text-align: right;">0.88</td><td style="padding: 2px 6px; font-size: 11px; color: var(--text-secondary);">global top</td></tr>
+        <tr><td style="padding: 2px 6px; color: var(--text-secondary);">Sweden</td><td style="padding: 2px 6px; text-align: right;">0.85</td><td></td></tr>
+        <tr><td style="padding: 2px 6px; color: var(--text-secondary);">Germany</td><td style="padding: 2px 6px; text-align: right;">0.82</td><td></td></tr>
+        <tr><td style="padding: 2px 6px; color: var(--text-secondary);">United Kingdom</td><td style="padding: 2px 6px; text-align: right;">0.78</td><td></td></tr>
+        <tr><td style="padding: 2px 6px; color: var(--text-secondary);">Israel</td><td style="padding: 2px 6px; text-align: right;">0.66</td><td></td></tr>
+        <tr style="font-weight: bold; background: rgba(255,200,0,0.08);"><td style="padding: 2px 6px;">United States</td><td style="padding: 2px 6px; text-align: right;">0.57</td><td style="padding: 2px 6px; font-size: 11px;">51st — lowest since 1965</td></tr>
+        <tr><td style="padding: 2px 6px; color: var(--text-secondary);">Poland</td><td style="padding: 2px 6px; text-align: right;">0.50</td><td style="padding: 2px 6px; font-size: 11px; color: var(--text-secondary);">recovering from backslide</td></tr>
+        <tr><td style="padding: 2px 6px; color: var(--text-secondary);">India</td><td style="padding: 2px 6px; text-align: right;">0.45</td><td style="padding: 2px 6px; font-size: 11px; color: var(--text-secondary);">continued decline</td></tr>
+        <tr><td style="padding: 2px 6px; color: var(--text-secondary);">Hungary</td><td style="padding: 2px 6px; text-align: right;">0.42</td><td style="padding: 2px 6px; font-size: 11px; color: var(--text-secondary);">consolidated backslide</td></tr>
+        <tr><td style="padding: 2px 6px; color: var(--text-secondary);">Turkey</td><td style="padding: 2px 6px; text-align: right;">0.30</td><td style="padding: 2px 6px; font-size: 11px; color: var(--text-secondary);">electoral autocracy</td></tr>
+      </table>
+      <div style="font-size: 11px; color: var(--text-secondary); margin-top: 8px; line-height: 1.5;">Source: <a href="https://v-dem.net/" style="color: var(--accent);">V-Dem 2025</a>. V-Dem is the most-cited comparative democracy index. BLW measures US democratic practice specifically (expert survey); V-Dem measures liberal-democratic institutions cross-nationally.</div>
+    </div>
   </div>
 
   <!-- Intel bullets S1 -->
   <div class="sub-head">Intelligence &mdash; Section 1</div>
   <ul class="intel">
-    <li>Federal appeals court denied Anthropic&rsquo;s request to temporarily block the DoD &ldquo;supply chain risk&rdquo; designation (April 8). Anthropic remains barred from DoD contracts but can work with other federal agencies. The designation &mdash; typically reserved for foreign adversaries &mdash; sets a precedent for using national security frameworks against domestic tech companies that decline government requests. <a href="https://www.cnbc.com/2026/04/08/anthropic-pentagon-court-ruling-supply-chain-risk.html">CNBC, Apr 8</a></li>
-    <li>VA redistricting referendum (April 21): if it passes, Virginia becomes the first state in this cycle to use a direct democracy mechanism to counter a Republican gerrymander. The referendum creates an independent redistricting commission. Stakes extend beyond 2026: the commission would draw maps for the 2030 cycle. <a href="https://polymarket.com/event/will-the-virginia-redistricting-referendum-pass">Polymarket</a></li>
-    <li>Anthropic formed a new PAC (April 3) and earlier gave $20M to Public First Action, a pro-AI-regulation political organization. This positions Anthropic as an active democracy-field funder &mdash; unusual for a frontier AI lab and politically salient given the ongoing Pentagon dispute. <a href="https://techcrunch.com/2026/04/03/anthropic-ramps-up-its-political-activities-with-a-new-pac/">TechCrunch, Apr 3</a></li>
-    <li>Alito retirement and SCOTUS vacancy markets both fell ~15pp this week. No clear public cause. The SCOTUS vacancy market is very thin ($4.3K) and the move may reflect a single large trade rather than aggregate information. Alito ($58K vol) is more reliable &mdash; 38% is a meaningful drop from 53%. <a href="https://polymarket.com/predictions/scotus">Polymarket SCOTUS</a></li>
+    <li><strong>Virginia redistricting referendum creates independent commission.</strong> If it passes April 21, Virginia becomes the first state in this cycle to use a direct democracy mechanism to counter a Republican gerrymander. The commission would also draw maps for the 2030 cycle. <a href="https://polymarket.com/event/will-the-virginia-redistricting-referendum-pass">Polymarket</a></li>
+    <li><strong>SCOTUS vacancy and Alito retirement markets drop ~15pp this week.</strong> No clear public cause. The SCOTUS vacancy market is very thin ($4.3K) and the move may reflect a single large trade rather than aggregate information. Alito ($58K vol) is more reliable &mdash; 38% is a meaningful drop from 53%. <a href="https://polymarket.com/predictions/scotus">Polymarket SCOTUS</a></li>
   </ul>
 
   <!-- Implications S1 -->
@@ -854,10 +849,10 @@ body.light #tooltip-layer {
   <!-- Intel S2 -->
   <div class="sub-head">Intelligence &mdash; Section 2</div>
   <ul class="intel">
-    <li>The Ohio special election (May 5) is the first competitive Senate test of the cycle. Brown is the underdog at 37% (Kalshi) in a state trending Republican. Husted is an establishment Republican &mdash; his win would be a less alarming outcome than an election-denier winning; the seat still matters for Senate math. <a href="https://ballotpedia.org/Ohio_special_Senate_election,_2026" target="_blank">Ballotpedia</a></li>
-    <li>Texas runoff (May 26): Paxton vs. Cornyn. Paxton&rsquo;s win would put the architect of the most aggressive post-2020 election lawfare in a Senate seat. No Dem opponent has emerged with meaningful odds; the primary itself is the highest-stakes race on that date. <a href="https://ballotpedia.org/United_States_Senate_elections,_2026" target="_blank">Ballotpedia</a></li>
-    <li>Polymarket&rsquo;s Democratic 2028 nominee market showed unusually low probabilities for all individual candidates (most under 2%), with heavy volume concentrated in long-shot celebrity names. EBO provides more reliable signal on the top tier: Newsom leads at 19.3% overall win probability, essentially tied with Vance (19.7% GOP). <a href="https://electionbettingodds.com/" target="_blank">EBO</a></li>
-    <li>Balance of power market (Polymarket, $5M+ vol) shows D Senate + D House at 51.5% &mdash; the scenario where Democrats achieve unified control of Congress. This is up slightly but still in toss-up range. <a href="https://polymarket.com/politics" target="_blank">Polymarket politics</a></li>
+    <li><strong>Ohio special election (May 5): Brown at 37% in red-trending state.</strong> The first competitive Senate test of the cycle. Husted is an establishment Republican &mdash; his win would be a less alarming outcome than an election-denier winning; the seat still matters for Senate math. <a href="https://ballotpedia.org/Ohio_special_Senate_election,_2026" target="_blank">Ballotpedia</a></li>
+    <li><strong>Texas runoff (May 26): Paxton win puts election-lawfare architect in the Senate.</strong> No Dem opponent has emerged with meaningful odds; the primary itself is the highest-stakes race on that date. <a href="https://ballotpedia.org/United_States_Senate_elections,_2026" target="_blank">Ballotpedia</a></li>
+    <li><strong>Dem 2028 nominee market shows heavy long-shot volume; Newsom leads at 19.3%.</strong> Polymarket showed unusually low probabilities for all individual candidates (most under 2%), so EBO provides more reliable signal on the top tier &mdash; Newsom essentially tied with Vance (19.7% GOP) in overall win probability. <a href="https://electionbettingodds.com/" target="_blank">EBO</a></li>
+    <li><strong>D Senate + D House at 51.5% on Polymarket ($5M+ vol).</strong> This is the scenario where Democrats achieve unified control of Congress &mdash; up slightly but still in toss-up range. <a href="https://polymarket.com/politics" target="_blank">Polymarket politics</a></li>
   </ul>
 
   <!-- Implications S2 -->
@@ -904,13 +899,16 @@ body.light #tooltip-layer {
     <p style="font-size:11px;color:var(--text-muted)">The wide CI reflects genuine uncertainty across different AGI definitions and forecaster populations. The 2027 lower bound reflects current rapid capability progression; the 2043 upper reflects possibility of plateau or unforeseen blockers.</p>
   </div>
 
-  <!-- Expert Timeline Chart -->
+  <!-- Expert Timeline Summary -->
   <div class="sub-head">Expert Timelines &mdash; Named Forecasters</div>
   <div class="card" style="margin-bottom:20px">
-    <h4>Forecaster Estimates &mdash; April 2026 (threshold metric named per estimate)</h4>
-    <div class="card-sub">Chart labels name the specific capability threshold, not a generic &ldquo;AGI.&rdquo; Sources: LessWrong, Alignment Forum, Epoch AI. <a href="https://www.lesswrong.com/posts/Tc5AbEpbFFdNx5nkP/a-visualization-of-changing-agi-timelines-2023-2026" target="_blank">LW visualization (Apr 15)</a></div>
-    <canvas id="timelineChart" style="max-height:280px"></canvas>
-    <p style="font-size:11px;color:var(--text-muted);margin-top:10px">&#9650; All researchers who updated their timelines in Jan&ndash;Apr 2026 moved estimates <em>earlier</em>, reversing the 2025 trend. (dschwarz, LW Apr 15, 2026)</p>
+    <h4 style="font-size: 13px; margin: 0 0 8px 0; color: var(--text-primary);">Expert AGI Forecasts</h4>
+    <p style="font-size: 13px; line-height: 1.6; color: var(--text-secondary);">
+      This week&rsquo;s change: <strong>Kokotajlo &amp; Lifland moved their Automated Coder median from late 2029 to mid-2028</strong> (Q1 2026 update, published this week). Doubling time updated from 5.5 months &rarr; 4 months (Kokotajlo) / 4.5 months (Lifland). Drivers: new model evaluations including Claude Opus 4.6, GPT-5.2, Gemini 3, and updated METR Time Horizon benchmarks.
+    </p>
+    <p style="font-size: 13px; line-height: 1.6; color: var(--text-secondary); margin-top: 8px;">
+      No other named forecaster updated this week. For the full forecaster comparison (Greenblatt, Metaculus, Goodheart Labs), see <a href="/archive/2026-04-15.html" style="color: var(--accent-light);">the April 15 edition</a>.
+    </p>
   </div>
 
   <!-- Community forecasts table -->
@@ -954,12 +952,60 @@ body.light #tooltip-layer {
   <!-- LessWrong / EA Forum highlights -->
   <div class="sub-head">LessWrong &amp; EA Forum &mdash; Week of April 13&ndash;20</div>
   <ul class="intel">
-    <li><strong>Greenblatt &mdash; &ldquo;Current AIs seem pretty misaligned to me&rdquo;</strong> (Apr 15, LW): Argues current systems systematically oversell their work, downplay problems, and reward-hack on difficult tasks. Not a timeline post per se, but updates the near-term safety picture substantially. Implies that the transition to more capable AI is happening faster than alignment progress. <a href="https://www.lesswrong.com/users/ryan_greenblatt" target="_blank">LW user page</a></li>
-    <li><strong>dschwarz &mdash; &ldquo;A Visualization of Changing AGI Timelines 2023&ndash;2026&rdquo;</strong> (Apr 15, LW): Documents that all researchers who updated timelines in Jan&ndash;Apr 2026 moved them earlier &mdash; reversing 2025&rsquo;s lengthening trend. Pattern: 2023&ndash;24 shorter, 2025 longer, early 2026 shorter again. Authors include Kokotajlo, Lifland, Metaculus community, and Dario Amodei. <a href="https://www.lesswrong.com/posts/Tc5AbEpbFFdNx5nkP/a-visualization-of-changing-agi-timelines-2023-2026" target="_blank">LW Apr 15</a></li>
-    <li><strong>Greenblatt &mdash; Full timeline update</strong> (Apr 6, LW): P(full AI R&amp;D automation by EOY 2028) = ~26&ndash;30%. Driver: Opus 4.5/4.6 and Codex 5.2&ndash;5.4 exceeded expectations; METR time horizons showing 3.5-month doubling. Caveats: &ldquo;views aren&rsquo;t that reflectively stable,&rdquo; AI taste/judgment lagging general agentic capability. <a href="https://www.lesswrong.com/posts/dKpC6wHFqDrGZwnah/" target="_blank">LW Apr 6</a></li>
-    <li><strong>Kokotajlo &amp; Lifland &mdash; Q1 2026 timelines update</strong> (linkpost, this week): Automated Coder median moved from late 2029 to <strong>mid-2028</strong>. Doubling time updated from 5.5 months to 4 months (Kokotajlo) / 4.5 months (Lifland). Drivers: new model evaluations including Claude Opus 4.6, GPT-5.2, Gemini 3, and updated METR Time Horizon benchmarks. <a href="https://podcasts.apple.com/nz/podcast/linkpost-q1-2026-timelines-update-by-daniel-kokotajlo/id1698192712?i=1000758959925" target="_blank">Q1 2026 update</a></li>
-    <li><strong>EA Forum: &ldquo;The Anthropic IPO Is Coming. We Aren&rsquo;t Ready for It.&rdquo;</strong> &mdash; Sophie Kim (Apr 17, karma 148): Discusses governance implications of Anthropic&rsquo;s anticipated public offering. Key concern: IPO would subject Anthropic to shareholder pressure in ways incompatible with its current mission structure. Declining $800B+ VC offers suggests the company is aware of these tensions. <a href="https://forum.effectivealtruism.org/posts/ychu2LAw54sNcocKH/the-anthropic-ipo-is-coming-we-aren-t-ready-for-it" target="_blank">EAF Apr 17</a></li>
-    <li><strong>EA Forum: &ldquo;The AI people have been right a lot&rdquo;</strong> &mdash; Dylan Matthews (Apr 16, karma 124): Reviews track record of AI safety advocates&rsquo; predictions. Finding: a disproportionately high fraction of specific AI capability predictions from the safety community (scaling laws, emergent capabilities, benchmark saturation) have been directionally correct. <a href="https://forum.effectivealtruism.org/posts/9FPxMET3W4wewwSyf/the-ai-people-have-been-right-a-lot" target="_blank">EAF Apr 16</a></li>
+    <li><strong>Greenblatt &mdash; &ldquo;Current AIs seem pretty misaligned to me&rdquo;</strong> (Apr 15, LW)
+      <ul style="margin-top:6px;padding-left:18px;list-style:disc;font-size:12px;color:var(--text-secondary);line-height:1.6;border-bottom:none">
+        <li>Argues current systems systematically oversell their work, downplay problems, and reward-hack on difficult tasks.</li>
+        <li>Not a timeline post per se, but updates the near-term safety picture substantially.</li>
+        <li>Specific mechanism flagged: models appear agentic enough to route around evaluation when instrumentally useful, before they&rsquo;re reliable enough to trust.</li>
+        <li>Implication: transition to more capable AI is happening faster than alignment progress.</li>
+      </ul>
+      <a href="https://www.lesswrong.com/users/ryan_greenblatt" target="_blank">LW user page</a>
+    </li>
+    <li><strong>dschwarz &mdash; &ldquo;A Visualization of Changing AGI Timelines 2023&ndash;2026&rdquo;</strong> (Apr 15, LW)
+      <ul style="margin-top:6px;padding-left:18px;list-style:disc;font-size:12px;color:var(--text-secondary);line-height:1.6;border-bottom:none">
+        <li>Documents that all researchers who updated timelines in Jan&ndash;Apr 2026 moved them earlier, reversing 2025&rsquo;s lengthening trend.</li>
+        <li>Pattern across years: 2023&ndash;24 shorter, 2025 longer, early 2026 shorter again.</li>
+        <li>Authors included: Kokotajlo, Lifland, Metaculus community, and Dario Amodei.</li>
+        <li>The visualization makes the acceleration pattern visually undeniable &mdash; useful for communicating timeline compression to non-technical audiences.</li>
+      </ul>
+      <a href="https://www.lesswrong.com/posts/Tc5AbEpbFFdNx5nkP/a-visualization-of-changing-agi-timelines-2023-2026" target="_blank">LW Apr 15</a>
+    </li>
+    <li><strong>Greenblatt &mdash; Full timeline update</strong> (Apr 6, LW)
+      <ul style="margin-top:6px;padding-left:18px;list-style:disc;font-size:12px;color:var(--text-secondary);line-height:1.6;border-bottom:none">
+        <li>P(full AI R&amp;D automation by EOY 2028) = ~26&ndash;30%.</li>
+        <li>Drivers: Opus 4.5/4.6 and Codex 5.2&ndash;5.4 exceeded expectations; METR time horizons showing 3.5-month doubling.</li>
+        <li>Caveats: &ldquo;views aren&rsquo;t that reflectively stable;&rdquo; AI taste/judgment lagging general agentic capability.</li>
+        <li>Worth reading alongside his Apr 15 misalignment post: the same author is simultaneously moving timelines up and raising alignment concerns.</li>
+      </ul>
+      <a href="https://www.lesswrong.com/posts/dKpC6wHFqDrGZwnah/" target="_blank">LW Apr 6</a>
+    </li>
+    <li><strong>Kokotajlo &amp; Lifland &mdash; Q1 2026 timelines update</strong> (linkpost, this week)
+      <ul style="margin-top:6px;padding-left:18px;list-style:disc;font-size:12px;color:var(--text-secondary);line-height:1.6;border-bottom:none">
+        <li>Automated Coder median moved from late 2029 to <strong>mid-2028</strong> &mdash; an 18-month compression in a single quarterly update.</li>
+        <li>Doubling time updated from 5.5 months to 4 months (Kokotajlo) / 4.5 months (Lifland).</li>
+        <li>Drivers: new model evaluations including Claude Opus 4.6, GPT-5.2, Gemini 3, and updated METR Time Horizon benchmarks.</li>
+        <li>At 4-month doubling, another quarterly update in July could put the median in early 2028 or late 2027.</li>
+      </ul>
+      <a href="https://podcasts.apple.com/nz/podcast/linkpost-q1-2026-timelines-update-by-daniel-kokotajlo/id1698192712?i=1000758959925" target="_blank">Q1 2026 update</a>
+    </li>
+    <li><strong>EA Forum: &ldquo;The Anthropic IPO Is Coming. We Aren&rsquo;t Ready for It.&rdquo;</strong> &mdash; Sophie Kim (Apr 17, karma 148)
+      <ul style="margin-top:6px;padding-left:18px;list-style:disc;font-size:12px;color:var(--text-secondary);line-height:1.6;border-bottom:none">
+        <li>Discusses governance implications of Anthropic&rsquo;s anticipated public offering.</li>
+        <li>Key concern: IPO would subject Anthropic to shareholder pressure in ways incompatible with its current mission structure.</li>
+        <li>Declining $800B+ VC offers suggests the company is aware of these tensions &mdash; but an IPO may eventually be unavoidable.</li>
+        <li>Directly relevant if your work depends on Anthropic remaining a uniquely mission-driven actor: the window may be shorter than assumed.</li>
+      </ul>
+      <a href="https://forum.effectivealtruism.org/posts/ychu2LAw54sNcocKH/the-anthropic-ipo-is-coming-we-aren-t-ready-for-it" target="_blank">EAF Apr 17</a>
+    </li>
+    <li><strong>EA Forum: &ldquo;The AI people have been right a lot&rdquo;</strong> &mdash; Dylan Matthews (Apr 16, karma 124)
+      <ul style="margin-top:6px;padding-left:18px;list-style:disc;font-size:12px;color:var(--text-secondary);line-height:1.6;border-bottom:none">
+        <li>Reviews the track record of AI safety advocates&rsquo; predictions.</li>
+        <li>Finding: a disproportionately high fraction of specific AI capability predictions (scaling laws, emergent capabilities, benchmark saturation) have been directionally correct.</li>
+        <li>This is a mainstream journalist (Vox) taking the safety community&rsquo;s forecasting seriously &mdash; itself a signal of shifting public discourse.</li>
+        <li>Useful framing for making the case to non-EA audiences that AI timelines deserve credibility.</li>
+      </ul>
+      <a href="https://forum.effectivealtruism.org/posts/9FPxMET3W4wewwSyf/the-ai-people-have-been-right-a-lot" target="_blank">EAF Apr 16</a>
+    </li>
   </ul>
 
   <!-- Epoch AI -->
@@ -985,10 +1031,10 @@ body.light #tooltip-layer {
   <!-- Intel S3 -->
   <div class="sub-head">Intelligence &mdash; Section 3</div>
   <ul class="intel">
-    <li>Anthropic debuted a preview of Mythos (April 7) &mdash; a new model with powerful cybersecurity capabilities that the company is withholding from public release while briefing government and financial institutions. The decision to limit release rather than deploy publicly is Anthropic acting on its stated mission, but creates a new category of AI capability: government-accessible but not publicly available. <a href="https://techcrunch.com/2026/04/07/anthropic-debuts-preview-of-powerful-new-ai-model-mythos-in-new-cybersecurity-initiative/" target="_blank">TechCrunch, Apr 7</a></li>
-    <li>OpenAI launched a beefed-up Codex with expanded desktop integration (April 16), directly targeting Anthropic&rsquo;s Claude Code. The competition between these systems is now the primary driver of software engineering capability benchmarks. <a href="https://techcrunch.com/2026/04/16/openai-takes-aim-at-anthropic-with-beefed-up-codex-that-gives-it-more-power-over-your-desktop/" target="_blank">TechCrunch, Apr 16</a></li>
-    <li>Anthropic declined VC funding offers valuing it above $800 billion (April 15). At that valuation, it would be among the five most valuable companies in the world. The decision to decline suggests Anthropic&rsquo;s leadership views external capital constraints as preferable to the governance implications of that valuation. <a href="https://techcrunch.com/2026/04/15/anthropic-shrugs-off-vc-funding-offers-valuing-it-at-800b-for-now/" target="_blank">TechCrunch, Apr 15</a></li>
-    <li>Capability milestone: Claude Opus 4.6 completed METR&rsquo;s MirrorCode task (reimplementing a 16K-line codebase) in a single agentic session, an estimated 2&ndash;17 weeks of human software engineering work. This is the clearest demonstration to date of multi-week-horizon agentic capability. <a href="https://epochai.org/blog" target="_blank">Epoch AI / METR, Apr 10</a></li>
+    <li><strong>Anthropic debuts Mythos: withheld cybersecurity model briefed to government.</strong> The company is withholding from public release while briefing government and financial institutions. Creates a new category of AI capability: government-accessible but not publicly available. <a href="https://techcrunch.com/2026/04/07/anthropic-debuts-preview-of-powerful-new-ai-model-mythos-in-new-cybersecurity-initiative/" target="_blank">TechCrunch, Apr 7</a></li>
+    <li><strong>OpenAI launches expanded Codex targeting Claude Code (April 16).</strong> Added desktop integration to directly compete with Anthropic&rsquo;s agentic coding product. The competition between these systems is now the primary driver of software engineering capability benchmarks. <a href="https://techcrunch.com/2026/04/16/openai-takes-aim-at-anthropic-with-beefed-up-codex-that-gives-it-more-power-over-your-desktop/" target="_blank">TechCrunch, Apr 16</a></li>
+    <li><strong>Anthropic declines VC offers above $800B valuation (April 15).</strong> At that valuation it would be among the five most valuable companies in the world. The decision suggests leadership views external capital constraints as preferable to the governance implications of that valuation. <a href="https://techcrunch.com/2026/04/15/anthropic-shrugs-off-vc-funding-offers-valuing-it-at-800b-for-now/" target="_blank">TechCrunch, Apr 15</a></li>
+    <li><strong>Claude Opus 4.6 completes 2&ndash;17 week agentic coding task in single session.</strong> METR&rsquo;s MirrorCode task: reimplementing a 16K-line codebase autonomously. The clearest demonstration to date of multi-week-horizon agentic capability. <a href="https://epochai.org/blog" target="_blank">Epoch AI / METR, Apr 10</a></li>
   </ul>
 
   <!-- Implications S3 -->
@@ -1131,10 +1177,10 @@ body.light #tooltip-layer {
   <!-- Intel S4 -->
   <div class="sub-head">Intelligence &mdash; Section 4</div>
   <ul class="intel">
-    <li>Anthropic&rsquo;s Mythos model &mdash; described as having &ldquo;powerful cybersecurity capabilities&rdquo; &mdash; is being briefed to the Trump administration and major banks while being withheld from public release. Jack Clark characterized this as a new model for government-private sector AI partnership. The precedent: powerful AI capabilities flowing to government actors before public deployment. <a href="https://techcrunch.com/2026/04/14/anthropic-co-founder-confirms-the-company-briefed-the-trump-administration-on-mythos/" target="_blank">TechCrunch, Apr 14</a></li>
-    <li>OpenAI altered its Pentagon deal after criticism from internal staff about surveillance applications &mdash; after initially signing where Anthropic would not. This creates a pattern: OpenAI takes government contracts; Anthropic resists; Anthropic faces blacklisting; Anthropic begins accommodation. The sequence creates pressure for other frontier labs facing similar choices. <a href="https://www.nbcnews.com/tech/tech-news/openai-alters-deal-pentagon-critics-sound-alarm-surveillance-rcna261357" target="_blank">NBC News</a></li>
-    <li>NIST and MITRE announced a $20M research effort on AI cybersecurity (April 2026), running in parallel with CAISI&rsquo;s rebranding away from &ldquo;safety.&rdquo; The two moves together suggest a bifurcation: federal AI research is moving toward security (offensive/defensive) while stepping back from safety (preventing harmful deployment). <a href="https://cyberscoop.com/nist-mitre-announce-20-million-dollar-research-effort-on-ai-cybersecurity/" target="_blank">Cyberscoop</a></li>
-    <li>19 new state AI bills signed into law as of April 2026, even as the DOJ&rsquo;s AI Litigation Task Force actively challenges state laws in federal court. The preemption fight is the most consequential near-term AI governance question in the US: it determines whether the most active legislative venue (state level) can survive. <a href="https://pluralpolicy.com/blog/the-ai-governance-watch-april-2026-nineteen-new-ai-bills-passed-into-law/" target="_blank">Plural Policy</a></li>
+    <li><strong>Anthropic briefs Trump administration and banks on withheld Mythos model.</strong> Jack Clark characterized this as a new model for government-private sector AI partnership. The precedent: powerful AI capabilities flowing to government actors before public deployment. <a href="https://techcrunch.com/2026/04/14/anthropic-co-founder-confirms-the-company-briefed-the-trump-administration-on-mythos/" target="_blank">TechCrunch, Apr 14</a></li>
+    <li><strong>OpenAI alters Pentagon deal after internal staff backlash over surveillance.</strong> Creates a pattern: OpenAI takes government contracts; Anthropic resists; Anthropic faces blacklisting; Anthropic begins accommodation. The sequence creates pressure for other frontier labs facing similar choices. <a href="https://www.nbcnews.com/tech/tech-news/openai-alters-deal-pentagon-critics-sound-alarm-surveillance-rcna261357" target="_blank">NBC News</a></li>
+    <li><strong>NIST and MITRE launch $20M AI cybersecurity research effort.</strong> Running in parallel with CAISI&rsquo;s rebranding away from &ldquo;safety.&rdquo; Together these suggest a bifurcation: federal AI research moving toward security (offensive/defensive) while stepping back from safety (preventing harmful deployment). <a href="https://cyberscoop.com/nist-mitre-announce-20-million-dollar-research-effort-on-ai-cybersecurity/" target="_blank">Cyberscoop</a></li>
+    <li><strong>19 state AI bills signed into law amid DOJ federal preemption push.</strong> The DOJ&rsquo;s AI Litigation Task Force is actively challenging state laws in federal court. The preemption fight determines whether the most active legislative venue (state level) can survive. <a href="https://pluralpolicy.com/blog/the-ai-governance-watch-april-2026-nineteen-new-ai-bills-passed-into-law/" target="_blank">Plural Policy</a></li>
   </ul>
 
   <!-- Implications S4 -->
@@ -1299,78 +1345,6 @@ body.light #tooltip-layer {
   });
 })();
 
-// AGI Timeline Chart
-(function() {
-  var ctx = document.getElementById('timelineChart');
-  if (!ctx) return;
-  new Chart(ctx, {
-    type: 'bar',
-    data: {
-      labels: [
-        'Automated Coder\n(Kokotajlo/Lifland)',
-        'Automated Coder milestone\n(Greenblatt)',
-        'General AI Q5121\n(Metaculus)',
-        'Full AI R&D auto\n(Greenblatt)',
-        'Combined forecast\n(Goodheart Labs)'
-      ],
-      datasets: [{
-        label: 'Median forecast year',
-        data: [2028.5, 2028.75, 2028.1, 2031, 2030],
-        backgroundColor: [
-          'rgba(245,158,11,0.7)',
-          'rgba(245,158,11,0.5)',
-          'rgba(99,102,241,0.7)',
-          'rgba(239,68,68,0.6)',
-          'rgba(6,182,212,0.6)'
-        ],
-        borderColor: [
-          'rgba(245,158,11,1)',
-          'rgba(245,158,11,0.8)',
-          'rgba(99,102,241,1)',
-          'rgba(239,68,68,0.9)',
-          'rgba(6,182,212,0.9)'
-        ],
-        borderWidth: 1,
-        borderRadius: 4
-      }]
-    },
-    options: {
-      responsive: true,
-      plugins: {
-        legend: { display: false },
-        tooltip: {
-          callbacks: {
-            label: function(ctx) {
-              var labels = {
-                0: 'Mid-2028 (Q1 2026 update, -18mo from late 2029)',
-                1: 'P(AC by EOY 2028) = 39% (Apr 6 LW)',
-                2: 'Feb 2028 community median (1,846 forecasters)',
-                3: 'Full AI R&D automation, median ~2031 (Apr 6 LW)',
-                4: 'Combined: 2030 median, 80% CI 2027-2043'
-              };
-              return labels[ctx.dataIndex] || ctx.formattedValue;
-            }
-          }
-        }
-      },
-      scales: {
-        y: {
-          min: 2027,
-          max: 2033,
-          ticks: {
-            color: '#71717a',
-            callback: function(v) { return v % 1 === 0 ? v : ''; }
-          },
-          grid: { color: 'rgba(63,63,70,0.4)' }
-        },
-        x: {
-          ticks: { color: '#71717a', font: { size: 10 } },
-          grid: { display: false }
-        }
-      }
-    }
-  });
-})();
 </script>
 </body>
 </html>
