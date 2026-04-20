@@ -242,7 +242,7 @@ Week's developments in: democratic backsliding, Anthropic v. Pentagon, 2026 midt
 
 ### Electoral Calendar Data (for expanded calendar subsection in Section 2)
 Gather dates for ALL of the following, not just top-tier races:
-- State primary dates for every state holding competitive 2026 contests. **Always include Indiana state senate/house primaries** — Indiana's state primary is the first Tuesday of May (May 5, 2026); Alex has a personal stake. Include in Watching This Week and Key Dates when within the 4-week horizon.
+- State primary dates for every state holding competitive 2026 contests. **Always include Indiana state senate/house primaries** — Indiana's state primary is the first Tuesday of May (May 5, 2026). Include in Watching This Week and Key Dates when within the 4-week horizon.
 - Special elections: House vacancies, Senate specials, state-leg specials
 - Gubernatorial races: primary + general, all states holding them
 - Down-ballot statewide: AG, SoS, state Supreme Court
@@ -297,7 +297,7 @@ curl -s https://raw.githubusercontent.com/allintz/weekly-intel-brief-a9x/main/_a
    - MAX 2 lines of summary visible. Put extra detail in a tooltip (`<span class="has-tip" data-tip="...">`).
    - Gap between cards: `margin-bottom: 6px`
 
-   **Always include Indiana state senate/house primaries** (first Tuesday of May = May 5, 2026) when within the 4-week horizon. Alex has a personal stake.
+   **Always include Indiana state senate/house primaries** (first Tuesday of May = May 5, 2026) when within the 4-week horizon.
 
 4. **Key Dates & Deadlines** (near top, abbreviated): Two-column (This Month / Coming Up). High-signal items only. Include top primary dates, SCOTUS windows, FISA/legislation votes, AI conferences (ICLR/ICML/NeurIPS), EU AI Act milestones, Election Day. **Always include Indiana state senate/house primary (May 5, 2026)** when within the 4-week horizon.
 
@@ -439,6 +439,7 @@ Follow every instruction in that file. Key requirements:
 - If any items were removed, append details to pending_review in /tmp/audit.json (git commit provides the notification trail)
 - The edition still publishes — this step only removes content that fails verification, it never blocks publishing
 - Do NOT add any visible banners, notes, or QC messages to the HTML — the site is public-facing
+- **The site is public. Never reference Alex by name in the HTML body or include personal framing.** No "Alex's personal stake", "relevant to Alex's work", "per Alex", etc. The only exception is the pre-existing disclaimer paragraph near the hero ("Alex estimates about 97% accuracy. Message him...") which is deliberate — it identifies who to contact for corrections. Do not add new Alex references anywhere else. When a topic is included because it's relevant to Alex's interests (e.g., Indiana primaries), frame it generically ("state senate and house primary elections; watch for competitive district outcomes") — don't attribute the inclusion motivation.
 
 ## STEP 5: PUBLISH TO GITHUB (4 files)
 
