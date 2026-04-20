@@ -238,6 +238,9 @@ nav .container { display: flex; align-items: center; justify-content: space-betw
 /* ─── INTEL LIST ─── */
 .intel li { padding: 10px 0; border-bottom: 1px solid rgba(39,39,42,0.5); font-size: 13px; line-height: 1.7; list-style: none; }
 .intel li:last-child { border-bottom: none; }
+.intel ul { margin: 6px 0 0 20px; padding: 0; }
+.intel ul li { padding: 2px 0; border-bottom: none; list-style: disc; font-size: 13px; line-height: 1.55; color: var(--text-secondary); }
+.intel ul li:last-child { border-bottom: none; }
 .intel a { color: var(--accent-light); text-decoration: none; }
 .intel a:hover { text-decoration: underline; }
 .src { font-size: 10px; color: var(--text-muted); font-family: 'JetBrains Mono', monospace; }
@@ -684,20 +687,20 @@ body.light #tooltip-layer {
     <div style="font-size:28px;font-weight:700;font-family:'JetBrains Mono',monospace;color:var(--amber)">~44<span style="font-size:14px;color:var(--text-muted);font-weight:400">/100</span></div>
     <p style="font-size:11px;color:var(--text-muted);margin-top:6px">Spring 2026 provisional score. Continued decline; executive overreach and press freedom flagged as lowest-scoring categories. Full wave report pending. Historical trajectory in appendix below.</p>
     <div style="margin-top: 12px; border-top: 1px solid var(--border); padding-top: 10px;">
-      <div style="font-size: 11px; color: var(--text-secondary); margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.05em;">V-Dem Liberal Democracy Index (2025) — Cross-Country Context</div>
+      <div style="font-size: 11px; color: var(--text-secondary); margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.05em;">V-Dem Liberal Democracy Index (2025) — Cross-Country Context <span style="text-transform: none; color: var(--text-muted); font-weight: normal;">· rescaled to 0–100 for comparison with BLW</span></div>
       <table style="width: 100%; border-collapse: collapse; font-size: 12px;">
-        <tr><td style="padding: 2px 6px; color: var(--text-secondary);">Denmark</td><td style="padding: 2px 6px; text-align: right;">0.88</td><td style="padding: 2px 6px; font-size: 11px; color: var(--text-secondary);">global top</td></tr>
-        <tr><td style="padding: 2px 6px; color: var(--text-secondary);">Sweden</td><td style="padding: 2px 6px; text-align: right;">0.85</td><td></td></tr>
-        <tr><td style="padding: 2px 6px; color: var(--text-secondary);">Germany</td><td style="padding: 2px 6px; text-align: right;">0.82</td><td></td></tr>
-        <tr><td style="padding: 2px 6px; color: var(--text-secondary);">United Kingdom</td><td style="padding: 2px 6px; text-align: right;">0.78</td><td></td></tr>
-        <tr><td style="padding: 2px 6px; color: var(--text-secondary);">Israel</td><td style="padding: 2px 6px; text-align: right;">0.66</td><td></td></tr>
-        <tr style="font-weight: bold; background: rgba(255,200,0,0.08);"><td style="padding: 2px 6px;">United States</td><td style="padding: 2px 6px; text-align: right;">0.57</td><td style="padding: 2px 6px; font-size: 11px;">51st — lowest since 1965</td></tr>
-        <tr><td style="padding: 2px 6px; color: var(--text-secondary);">Poland</td><td style="padding: 2px 6px; text-align: right;">0.50</td><td style="padding: 2px 6px; font-size: 11px; color: var(--text-secondary);">recovering from backslide</td></tr>
-        <tr><td style="padding: 2px 6px; color: var(--text-secondary);">India</td><td style="padding: 2px 6px; text-align: right;">0.45</td><td style="padding: 2px 6px; font-size: 11px; color: var(--text-secondary);">continued decline</td></tr>
-        <tr><td style="padding: 2px 6px; color: var(--text-secondary);">Hungary</td><td style="padding: 2px 6px; text-align: right;">0.42</td><td style="padding: 2px 6px; font-size: 11px; color: var(--text-secondary);">consolidated backslide</td></tr>
-        <tr><td style="padding: 2px 6px; color: var(--text-secondary);">Turkey</td><td style="padding: 2px 6px; text-align: right;">0.30</td><td style="padding: 2px 6px; font-size: 11px; color: var(--text-secondary);">electoral autocracy</td></tr>
+        <tr><td style="padding: 2px 6px; color: var(--text-secondary);">Denmark</td><td style="padding: 2px 6px; text-align: right;">88</td><td style="padding: 2px 6px; font-size: 11px; color: var(--text-secondary);">global top</td></tr>
+        <tr><td style="padding: 2px 6px; color: var(--text-secondary);">Sweden</td><td style="padding: 2px 6px; text-align: right;">85</td><td></td></tr>
+        <tr><td style="padding: 2px 6px; color: var(--text-secondary);">Germany</td><td style="padding: 2px 6px; text-align: right;">82</td><td></td></tr>
+        <tr><td style="padding: 2px 6px; color: var(--text-secondary);">United Kingdom</td><td style="padding: 2px 6px; text-align: right;">78</td><td></td></tr>
+        <tr><td style="padding: 2px 6px; color: var(--text-secondary);">Israel</td><td style="padding: 2px 6px; text-align: right;">66</td><td></td></tr>
+        <tr style="font-weight: bold; background: rgba(255,200,0,0.08);"><td style="padding: 2px 6px;">United States</td><td style="padding: 2px 6px; text-align: right;">57</td><td style="padding: 2px 6px; font-size: 11px;">51st — lowest since 1965</td></tr>
+        <tr><td style="padding: 2px 6px; color: var(--text-secondary);">Poland</td><td style="padding: 2px 6px; text-align: right;">50</td><td style="padding: 2px 6px; font-size: 11px; color: var(--text-secondary);">recovering from backslide</td></tr>
+        <tr><td style="padding: 2px 6px; color: var(--text-secondary);">India</td><td style="padding: 2px 6px; text-align: right;">45</td><td style="padding: 2px 6px; font-size: 11px; color: var(--text-secondary);">continued decline</td></tr>
+        <tr><td style="padding: 2px 6px; color: var(--text-secondary);">Hungary</td><td style="padding: 2px 6px; text-align: right;">42</td><td style="padding: 2px 6px; font-size: 11px; color: var(--text-secondary);">consolidated backslide</td></tr>
+        <tr><td style="padding: 2px 6px; color: var(--text-secondary);">Turkey</td><td style="padding: 2px 6px; text-align: right;">30</td><td style="padding: 2px 6px; font-size: 11px; color: var(--text-secondary);">electoral autocracy</td></tr>
       </table>
-      <div style="font-size: 11px; color: var(--text-secondary); margin-top: 8px; line-height: 1.5;">Source: <a href="https://v-dem.net/" style="color: var(--accent);">V-Dem 2025</a>. V-Dem is the most-cited comparative democracy index. BLW measures US democratic practice specifically (expert survey); V-Dem measures liberal-democratic institutions cross-nationally.</div>
+      <div style="font-size: 11px; color: var(--text-secondary); margin-top: 8px; line-height: 1.5;"><strong>Why BLW 44 ≠ V-Dem 57 for the US:</strong> they measure different things. BLW (expert survey) measures democratic <em>practice</em> — how officials actually behave, norm-following, specific incidents. V-Dem measures institutional <em>structure</em> — elections, rights, constraints. US institutions score relatively higher than US current practice, a common signal of drift where rules are still on the books but not being followed. Source: <a href="https://v-dem.net/" style="color: var(--accent);">V-Dem 2025</a> (native scale 0–1, shown here ×100).</div>
     </div>
   </div>
 
