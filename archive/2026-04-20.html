@@ -1,0 +1,1465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Weekly Democracy Intelligence Brief — Prediction Market & Intel Tracker</title>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #09090b;
+  --surface: #111113;
+  --surface-2: #18181b;
+  --surface-3: #27272a;
+  --border: #27272a;
+  --border-light: #3f3f46;
+  --text: #fafafa;
+  --text-secondary: #a1a1aa;
+  --text-muted: #71717a;
+  --accent: #6366f1;
+  --accent-light: #818cf8;
+  --accent-dim: rgba(99,102,241,0.12);
+  --green: #22c55e;
+  --green-dim: rgba(34,197,94,0.12);
+  --red: #ef4444;
+  --red-dim: rgba(239,68,68,0.12);
+  --amber: #f59e0b;
+  --amber-dim: rgba(245,158,11,0.12);
+  --blue: #3b82f6;
+  --blue-dim: rgba(59,130,246,0.12);
+  --rose: #f43f5e;
+  --cyan: #06b6d4;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Light mode */
+body.light {
+  --bg: #ffffff; --surface: #f4f4f5; --surface-2: #e4e4e7; --surface-3: #d4d4d8;
+  --border: #e4e4e7; --border-light: #d4d4d8;
+  --text: #09090b; --text-secondary: #52525b; --text-muted: #71717a;
+  --accent: #4f46e5; --accent-light: #4338ca; --accent-dim: rgba(79,70,229,0.08);
+  --green-dim: rgba(34,197,94,0.08); --red-dim: rgba(239,68,68,0.08);
+  --amber-dim: rgba(245,158,11,0.08); --blue-dim: rgba(59,130,246,0.08);
+}
+
+body.light nav { background: rgba(255,255,255,0.9); }
+
+.mono { font-family: 'JetBrains Mono', monospace; }
+.container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
+
+/* ─── NAV ─── */
+nav {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(9,9,11,0.8); backdrop-filter: blur(24px);
+  border-bottom: 1px solid var(--border); padding: 10px 0;
+}
+nav .container { display: flex; align-items: center; justify-content: space-between; }
+.logo { font-weight: 700; font-size: 14px; letter-spacing: -0.02em; }
+.logo span { color: var(--accent-light); }
+.nav-links { display: flex; gap: 20px; }
+.nav-links a { color: var(--text-muted); text-decoration: none; font-size: 12px; font-weight: 500; transition: color 0.15s; }
+.nav-links a:hover { color: var(--text); }
+.nav-right { display: flex; align-items: center; gap: 12px; }
+.theme-toggle {
+  background: var(--surface); border: 1px solid var(--border); color: var(--text-muted);
+  padding: 5px 10px; border-radius: 6px; font-size: 11px; cursor: pointer; font-family: inherit;
+}
+.theme-toggle:hover { border-color: var(--border-light); color: var(--text-secondary); }
+.badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 11px; color: var(--text-muted); font-family: 'JetBrains Mono', monospace;
+}
+.badge .dot { width: 7px; height: 7px; border-radius: 50%; }
+.dot-amber { background: var(--amber); }
+.dot-green { background: var(--green); animation: pulse 2s infinite; }
+@keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.3} }
+
+/* ─── HERO ─── */
+.hero { padding: 56px 0 40px; }
+.hero h1 { font-size: 40px; font-weight: 800; letter-spacing: -0.04em; line-height: 1.1; }
+.hero h1 .gradient {
+  background: linear-gradient(135deg, var(--accent-light), var(--cyan));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+}
+.hero .sub { color: var(--text-secondary); font-size: 16px; margin-top: 12px; max-width: 640px; }
+.hero .meta-row { display: flex; gap: 16px; margin-top: 20px; flex-wrap: wrap; }
+
+/* ─── ALERT ─── */
+.alert {
+  border: 1px solid; border-radius: 12px; padding: 16px 20px; margin-bottom: 16px;
+  display: grid; grid-template-columns: auto 1fr; gap: 12px; align-items: start;
+}
+.alert.critical { background: var(--red-dim); border-color: rgba(239,68,68,0.3); }
+.alert.watch { background: var(--amber-dim); border-color: rgba(245,158,11,0.3); }
+.alert .alert-icon { font-size: 20px; line-height: 1; }
+.alert h4 { font-size: 14px; font-weight: 600; margin-bottom: 4px; }
+.alert p { font-size: 13px; color: var(--text-secondary); }
+.alert a { color: var(--accent-light); text-decoration: none; }
+.alert a:hover { text-decoration: underline; }
+
+.updates-list { display: flex; flex-direction: column; gap: 10px; }
+.update-item {
+  padding: 12px 16px 14px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--border-light);
+  border-radius: 6px;
+}
+.update-item.imminent { border-left-color: var(--red); }
+.update-item.near { border-left-color: var(--amber); }
+.update-item.watch { border-left-color: var(--accent); }
+.update-date {
+  font-size: 11px; color: var(--text-muted);
+  text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600;
+  margin-bottom: 4px;
+}
+.update-item h4 { font-size: 14px; font-weight: 600; margin-bottom: 4px; }
+.update-item p { font-size: 13px; color: var(--text-secondary); line-height: 1.55; margin: 0; }
+.update-item a { color: var(--accent-light); text-decoration: none; }
+.update-item a:hover { text-decoration: underline; }
+
+/* ─── KPI STRIP ─── */
+.kpi-strip {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px;
+  padding: 28px 0; border-bottom: 1px solid var(--border);
+}
+.kpi {
+  background: var(--surface); border: 1px solid var(--border); border-radius: 10px;
+  padding: 16px; position: relative; overflow: hidden;
+  display: block; color: inherit; text-decoration: none;
+  transition: border-color 0.15s ease, transform 0.15s ease;
+}
+.kpi:hover { border-color: var(--border-light); transform: translateY(-1px); }
+.kpi::after {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+}
+.kpi.blue::after { background: var(--blue); }
+.kpi.red::after { background: var(--red); }
+.kpi.purple::after { background: var(--accent); }
+.kpi.amber::after { background: var(--amber); }
+.kpi.green::after { background: var(--green); }
+.kpi.rose::after { background: var(--rose); }
+.kpi-label { font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); margin-bottom: 6px; }
+.kpi-value { font-size: 26px; font-weight: 700; letter-spacing: -0.03em; font-family: 'JetBrains Mono', monospace; }
+.kpi-detail { font-size: 11px; color: var(--text-muted); margin-top: 3px; }
+.kpi-change {
+  display: inline-flex; align-items: center; gap: 3px; margin-top: 6px;
+  font-size: 11px; font-weight: 600; font-family: 'JetBrains Mono', monospace;
+  padding: 2px 6px; border-radius: 4px;
+}
+.kpi-change.seed { background: var(--surface-3); color: var(--text-muted); }
+
+/* ─── SECTIONS ─── */
+.section { padding: 48px 0; border-bottom: 1px solid var(--border); }
+.section-head { display: flex; align-items: center; gap: 12px; margin-bottom: 28px; }
+.section-num {
+  width: 28px; height: 28px; border-radius: 6px; display: flex; align-items: center;
+  justify-content: center; font-weight: 700; font-size: 13px; color: white; flex-shrink: 0;
+}
+.section-num.s1 { background: var(--red); }
+.section-num.s2 { background: var(--blue); }
+.section-num.s3 { background: var(--accent); }
+.section-num.s4 { background: var(--cyan); }
+.section-title { font-size: 20px; font-weight: 700; letter-spacing: -0.02em; }
+
+/* ─── IMPLICATIONS CALLOUT ─── */
+.implications {
+  background: var(--accent-dim); border: 1px solid rgba(99,102,241,0.2);
+  border-radius: 10px; padding: 16px 20px; margin-bottom: 28px;
+}
+.implications h4 { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--accent-light); margin-bottom: 8px; }
+.implications p { font-size: 13px; color: var(--text-secondary); line-height: 1.7; }
+.implications strong { color: var(--text); }
+
+/* ─── SUBSECTION ─── */
+.sub-head {
+  font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em;
+  color: var(--text-muted); margin-bottom: 14px; padding-bottom: 8px; border-bottom: 1px solid var(--border);
+}
+
+/* ─── GRID LAYOUTS ─── */
+.g2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.g3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; }
+
+/* ─── CHART CARD ─── */
+.card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 10px; padding: 20px;
+}
+.card h4 { font-size: 13px; font-weight: 600; margin-bottom: 2px; }
+.card .card-sub { font-size: 11px; color: var(--text-muted); margin-bottom: 14px; }
+.card .card-sub a { color: var(--accent-light); text-decoration: none; }
+
+/* ─── PROB BARS ─── */
+.pb { margin-bottom: 14px; }
+.pb-top { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 4px; }
+.pb-name { font-size: 13px; font-weight: 500; }
+.pb-name a { color: var(--text); text-decoration: none; border-bottom: 1px dashed var(--border-light); }
+.pb-name a:hover { color: var(--accent-light); border-bottom-color: var(--accent-light); }
+.pb-val { font-size: 14px; font-weight: 700; font-family: 'JetBrains Mono', monospace; }
+.pb-track { height: 6px; background: var(--surface-3); border-radius: 3px; overflow: hidden; }
+.pb-fill { height: 100%; border-radius: 3px; }
+.pb-fill.blue { background: linear-gradient(90deg, var(--blue), #93c5fd); }
+.pb-fill.red { background: linear-gradient(90deg, var(--red), #fca5a5); }
+.pb-fill.amber { background: linear-gradient(90deg, var(--amber), #fde68a); }
+.pb-fill.purple { background: linear-gradient(90deg, var(--accent), var(--accent-light)); }
+.pb-fill.green { background: linear-gradient(90deg, var(--green), #86efac); }
+.pb-fill.rose { background: linear-gradient(90deg, var(--rose), #fda4af); }
+.pb-meta { display: flex; gap: 12px; font-size: 10px; color: var(--text-muted); margin-top: 3px; font-family: 'JetBrains Mono', monospace; }
+
+/* ─── TABLE ─── */
+.tbl { width: 100%; border-collapse: collapse; font-size: 13px; }
+.tbl th { text-align: left; padding: 8px 10px; font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-muted); border-bottom: 1px solid var(--border); }
+.tbl td { padding: 8px 10px; border-bottom: 1px solid rgba(39,39,42,0.6); vertical-align: middle; }
+.tbl tr:hover td { background: rgba(99,102,241,0.03); }
+.tbl .p { font-family: 'JetBrains Mono', monospace; font-weight: 600; }
+.tbl .vol { font-family: 'JetBrains Mono', monospace; color: var(--text-muted); font-size: 11px; }
+.tbl a { color: var(--accent-light); text-decoration: none; }
+.tbl a:hover { text-decoration: underline; }
+.tag { display: inline-block; padding: 2px 7px; border-radius: 4px; font-size: 10px; font-weight: 600; }
+.tag-active { background: var(--green-dim); color: var(--green); }
+.tag-thin { background: var(--amber-dim); color: var(--amber); }
+.tag-near { background: var(--blue-dim); color: var(--blue); }
+.tag-danger { background: var(--red-dim); color: var(--red); }
+.tag-pending { background: var(--surface-3); color: var(--text-muted); }
+.risk-note { font-size: 11px; color: var(--text-muted); }
+
+/* ─── INTEL LIST ─── */
+.intel li { padding: 10px 0; border-bottom: 1px solid rgba(39,39,42,0.5); font-size: 13px; line-height: 1.7; list-style: none; }
+.intel li:last-child { border-bottom: none; }
+.intel a { color: var(--accent-light); text-decoration: none; }
+.intel a:hover { text-decoration: underline; }
+.src { font-size: 10px; color: var(--text-muted); font-family: 'JetBrains Mono', monospace; }
+
+/* ─── DATES ─── */
+.date-row { display: grid; grid-template-columns: 88px 1fr; gap: 12px; padding: 10px 0; border-bottom: 1px solid rgba(39,39,42,0.5); font-size: 13px; }
+.date-row .d { font-family: 'JetBrains Mono', monospace; font-weight: 600; font-size: 12px; }
+.d-red { color: var(--red); }
+.d-amber { color: var(--amber); }
+.d-blue { color: var(--blue); }
+
+/* ─── FOOTER ─── */
+footer { padding: 48px 0; }
+footer .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-bottom: 32px; }
+footer h4 { font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-secondary); margin-bottom: 10px; }
+footer a { color: var(--text-muted); text-decoration: none; display: block; margin-bottom: 5px; font-size: 12px; }
+footer a:hover { color: var(--accent-light); }
+
+/* ─── RESPONSIVE ─── */
+@media(max-width:1024px){ .kpi-strip{grid-template-columns:repeat(3,1fr);} }
+@media(max-width:768px){ .kpi-strip{grid-template-columns:repeat(2,1fr);} .g2,.g3{grid-template-columns:1fr;} .nav-links{display:none;} footer .grid{grid-template-columns:repeat(2,1fr);} }
+@media print { body{--bg:#fff;--surface:#fff;--text:#000;--text-secondary:#333;--border:#ddd;} nav,.theme-toggle,.badge{display:none;} }
+
+/* ─── TOOLTIPS ─── */
+.has-tip {
+  border-bottom: 1px dotted var(--text-muted);
+  cursor: help;
+}
+.has-tip:hover { color: var(--accent-light); border-bottom-color: var(--accent-light); }
+
+#tooltip-layer {
+  position: fixed;
+  background: var(--surface-2);
+  border: 1px solid var(--border-light);
+  color: var(--text);
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.5;
+  max-width: 340px;
+  min-width: 200px;
+  z-index: 1000;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.12s ease;
+  font-family: 'Inter', sans-serif;
+}
+#tooltip-layer.visible { opacity: 1; }
+body.light #tooltip-layer {
+  background: #fff;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+}
+</style>
+</head>
+<body class="light">
+<!-- ARCHIVE_NAV_START -->
+<style>
+#archive-nav-widget {
+  position: fixed;
+  top: 14px;
+  right: 16px;
+  z-index: 10000;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 13px;
+}
+#archive-nav-widget button {
+  background: rgba(24,24,27,0.92);
+  color: #fafafa;
+  border: 1px solid rgba(63,63,70,0.9);
+  padding: 7px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 500;
+  line-height: 1;
+  transition: background 120ms ease;
+}
+#archive-nav-widget button:hover { background: rgba(39,39,42,0.95); }
+#archive-nav-widget.open .panel { display: block; }
+#archive-nav-widget .panel {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 38px;
+  background: #18181b;
+  border: 1px solid #3f3f46;
+  border-radius: 10px;
+  padding: 6px;
+  min-width: 220px;
+  max-height: 60vh;
+  overflow-y: auto;
+  box-shadow: 0 12px 32px rgba(0,0,0,0.5);
+}
+#archive-nav-widget .panel a {
+  display: block;
+  padding: 8px 12px;
+  color: #fafafa;
+  text-decoration: none;
+  border-radius: 6px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  line-height: 1.3;
+}
+#archive-nav-widget .panel a:hover { background: #27272a; }
+#archive-nav-widget .panel a.current { color: #a5b4fc; font-weight: 600; }
+#archive-nav-widget .panel a.self { background: #27272a; outline: 1px solid #52525b; }
+#archive-nav-widget .panel .hint {
+  padding: 8px 12px 6px;
+  color: #a1a1aa;
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border-bottom: 1px solid #3f3f46;
+  margin-bottom: 4px;
+}
+@media print { #archive-nav-widget { display: none; } }
+</style>
+<div id="archive-nav-widget" data-edition="2026-04-20">
+  <button type="button" aria-label="Previous editions">Editions &#9662;</button>
+  <div class="panel" role="menu">
+    <div class="hint">Weekly Democracy Intelligence Brief</div>
+    <div id="archive-nav-list">Loading&hellip;</div>
+  </div>
+</div>
+<script>
+(function() {
+  var widget = document.getElementById('archive-nav-widget');
+  var btn = widget.querySelector('button');
+  var myEdition = widget.dataset.edition;
+  btn.addEventListener('click', function(e) {
+    e.stopPropagation();
+    widget.classList.toggle('open');
+  });
+  document.addEventListener('click', function(e) {
+    if (!widget.contains(e.target)) widget.classList.remove('open');
+  });
+  fetch('/editions.json', { cache: 'no-cache' })
+    .then(function(r) { return r.json(); })
+    .then(function(data) {
+      var list = document.getElementById('archive-nav-list');
+      list.innerHTML = '';
+      if (!data.editions || !data.editions.length) {
+        list.innerHTML = '<div class="hint">No editions yet</div>';
+        return;
+      }
+      data.editions.forEach(function(e, idx) {
+        var a = document.createElement('a');
+        a.href = idx === 0 ? '/' : '/archive/' + e.date;
+        a.textContent = e.date + (idx === 0 ? '  (current)' : '');
+        if (idx === 0) a.classList.add('current');
+        if (e.date === myEdition) a.classList.add('self');
+        list.appendChild(a);
+      });
+    })
+    .catch(function() {
+      document.getElementById('archive-nav-list').innerHTML = '<div class="hint">Archive unavailable</div>';
+    });
+})();
+</script>
+<!-- ARCHIVE_NAV_END -->
+
+<div id="tooltip-layer"></div>
+
+<nav>
+  <div class="container">
+    <div class="logo">Weekly Democracy <span>Intel</span></div>
+    <div class="nav-links">
+      <a href="#s1">Democratic Resilience</a>
+      <a href="#s2">Midterms &amp; 2028</a>
+      <a href="#s3">AGI Timelines</a>
+      <a href="#s4">AI Governance</a>
+      <a href="#sources">Sources</a>
+    </div>
+    <div class="nav-right">
+      <span class="badge"><span class="dot dot-amber"></span> Auto-updates every Monday 3am ET</span>
+      <button class="theme-toggle" onclick="document.body.classList.toggle('light')">Toggle theme</button>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+
+<!-- HERO -->
+<div class="hero">
+  <h1>Weekly Democracy <span class="gradient">Intelligence Brief</span></h1>
+  <div style="font-size:26px;color:var(--accent-light);margin:12px 0 14px;letter-spacing:-0.01em;font-weight:600">April 20, 2026</div>
+  <p class="sub">Prediction market probabilities, expert forecasts, and field intelligence for democracy advocates and AI governance researchers.</p>
+  <p style="font-size:13px;color:var(--text-secondary);margin:6px 0 0;line-height:1.5;max-width:720px">Fully Claude-generated each Monday. Alex estimates about 97% accuracy. Expect 1&ndash;3 errors and maybe one big error each issue. Message him with corrections or feedback.</p>
+  <div class="meta-row">
+    <span class="badge"><span class="dot dot-amber"></span> Updated April 20, 2026</span>
+  </div>
+</div>
+
+<!-- WATCHING THIS WEEK -->
+<div style="margin-bottom:32px">
+  <div class="sub-head">Watching this week</div>
+  <div class="updates-list">
+    <div class="update-item imminent">
+      <div class="update-date">April 21 &mdash; Tomorrow</div>
+      <h4>Virginia Redistricting Referendum</h4>
+      <p>Voters decide whether to create an independent redistricting commission, stripping Republicans of their gerrymander. Polymarket has it at <strong>84.5%</strong> to pass &mdash; down from 88% last week. A Yes vote would be the first successful Dem counter-gerrymander of the cycle and a significant democracy-field win. <a href="https://polymarket.com/event/will-the-virginia-redistricting-referendum-pass">PM</a></p>
+    </div>
+    <div class="update-item near">
+      <div class="update-date">May 5 &mdash; 2 weeks</div>
+      <h4>Ohio Special Senate Election (Brown vs. Husted)</h4>
+      <p>First competitive Senate test of the cycle. <span class="has-tip" data-tip="Jon Husted is a mainstream Ohio Republican, not an election-denier. His nomination is the GOP&rsquo;s best shot at holding this seat.">Husted</span> holds structural advantage in a red-trending state; Brown sits at 37% on Kalshi. High-stakes: this is Vance&rsquo;s vacated seat in a Senate where every vote matters.</p>
+    </div>
+    <div class="update-item near">
+      <div class="update-date">May 26 &mdash; 5 weeks</div>
+      <h4>Texas GOP Senate Runoff: Cornyn vs. Paxton</h4>
+      <p><span class="has-tip" data-tip="Paxton filed Texas v. Pennsylvania (2020) seeking to invalidate election results in PA, GA, MI, and WI. SCOTUS dismissed unanimously for lack of standing.">Ken Paxton</span> is the most explicitly anti-democracy candidate on any 2026 ballot. If he beats incumbent Cornyn, he enters the Senate with a mandate to challenge electoral integrity. No active Dem vs. Paxton market yet &mdash; flip value would be very high if a competitive opponent emerges.</p>
+    </div>
+    <div class="update-item watch">
+      <div class="update-date">Ongoing</div>
+      <h4>Anthropic&ndash;Trump Administration Thaw</h4>
+      <p>CEO Dario Amodei met with Treasury Secretary Bessent and WH Chief of Staff Wiles on April 18; White House called it &ldquo;productive and constructive.&rdquo; Pentagon blacklisting still in effect but apparently isolated to DoD &mdash; &ldquo;every agency except DoD wants Anthropic.&rdquo; Trajectory matters for how the most safety-focused major lab navigates this administration. <a href="https://techcrunch.com/2026/04/18/anthropics-relationship-with-the-trump-administration-seems-to-be-thawing/">TechCrunch</a></p>
+    </div>
+    <div class="update-item watch">
+      <div class="update-date">April 28 &mdash; EU</div>
+      <h4>EU AI Act Trilogue: Digital Omnibus</h4>
+      <p>Second trilogue on the Digital Omnibus package, which is reshaping enforcement timelines. Annex III high-risk AI compliance already deferred to December 2027; this trilogue may finalize the split. Only 8 of 27 EU member states have designated national competent authorities &mdash; enforcement is effectively absent across most of the EU regardless of what passes. <a href="https://artificialintelligenceact.eu/">EU AI Act tracker</a></p>
+    </div>
+  </div>
+</div>
+
+<!-- KEY DATES -->
+<div style="margin-bottom:32px">
+  <div class="sub-head">Key Dates &amp; Deadlines</div>
+  <div class="g2">
+    <div>
+      <div style="font-size:11px;font-weight:600;color:var(--text-muted);text-transform:uppercase;margin-bottom:10px">This Month (April&ndash;May)</div>
+      <div class="date-row"><span class="d d-red">Apr 21</span><span>VA redistricting referendum vote</span></div>
+      <div class="date-row"><span class="d d-amber">Apr 28</span><span>EU AI Act Digital Omnibus trilogue</span></div>
+      <div class="date-row"><span class="d d-red">May 5</span><span>Ohio special Senate election (Brown vs. Husted)</span></div>
+      <div class="date-row"><span class="d d-amber">May 26</span><span>Texas GOP Senate runoff (Cornyn vs. Paxton)</span></div>
+    </div>
+    <div>
+      <div style="font-size:11px;font-weight:600;color:var(--text-muted);text-transform:uppercase;margin-bottom:10px">Coming Up</div>
+      <div class="date-row"><span class="d d-amber">Jun 9</span><span>Maine Senate primary</span></div>
+      <div class="date-row"><span class="d d-blue">Jun 30</span><span>SCOTUS term ends &mdash; major ruling window</span></div>
+      <div class="date-row"><span class="d d-blue">Aug 2</span><span>EU AI Act transparency obligations begin</span></div>
+      <div class="date-row"><span class="d d-red">Nov 3</span><span>General Election Day 2026</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- KPI STRIP -->
+<div class="kpi-strip">
+  <a class="kpi blue" href="https://electionbettingodds.com/" target="_blank">
+    <div class="kpi-label">House (D)</div>
+    <div class="kpi-value">86%</div>
+    <div class="kpi-detail">5-platform aggregate (Polymarket-derived)</div>
+    <span class="kpi-change seed">&#8593; from 85.2% last week</span>
+  </a>
+  <a class="kpi blue" href="https://electionbettingodds.com/" target="_blank">
+    <div class="kpi-label">Senate (D)</div>
+    <div class="kpi-value">53%</div>
+    <div class="kpi-detail">EBO aggregate &middot; $5.5M+ wagered</div>
+    <span class="kpi-change seed">&#8595; from 53.2% last week</span>
+  </a>
+  <a class="kpi red" href="https://www.silverbulletin.com/" target="_blank">
+    <div class="kpi-label">Trump Net Approval</div>
+    <div class="kpi-value">&minus;17.5</div>
+    <div class="kpi-detail">Approve minus disapprove &middot; Silver Bulletin avg</div>
+    <span class="kpi-change seed">Unchanged from Apr 15 (SB not accessible this run)</span>
+  </a>
+  <a class="kpi amber" href="https://polymarket.com/event/us-recession-by-end-of-2026" target="_blank">
+    <div class="kpi-label">P(Recession EOY 2026)</div>
+    <div class="kpi-value">25.5%</div>
+    <div class="kpi-detail">Polymarket &middot; $1.36M vol &middot; elevated vs. 20% Feb baseline</div>
+    <span class="kpi-change seed">&#8595; from ~30% last week</span>
+  </a>
+</div>
+
+<!-- EXECUTIVE SUMMARY -->
+<div class="implications" style="margin-top:28px">
+  <h4>&#127919; This Week&rsquo;s Bottom Line</h4>
+  <p><strong>VA redistricting votes tomorrow</strong> (84.5% to pass): a Yes is the first successful Dem counter-gerrymander of the cycle and a concrete democracy-field win to watch in real time. <strong>Anthropic and the Trump administration are actively thawing</strong>: CEO Dario Amodei met with Treasury Secretary Bessent on April 18; the new Mythos model &mdash; a powerful cybersecurity AI being held from public release &mdash; is the centerpiece of that outreach. <strong>SCOTUS vacancy and Alito retirement markets both dropped ~15pp this week</strong>, suggesting bettors see lower court-change risk near term (but thin volume warrants caution). The <strong>25th Amendment market spiked from ~1% to 9%</strong> on thin volume &mdash; treat as a signal to monitor, not a reliable probability. On AI timelines, <strong>Kokotajlo and Lifland moved their Automated Coder median from late 2029 to mid-2028</strong> in their Q1 2026 update, continuing the pattern where every researcher who updated in early 2026 moved timelines earlier.</p>
+</div>
+
+<!-- MOVERS -->
+<div class="section" style="padding-top:32px;padding-bottom:32px">
+  <div class="sub-head">Movers &amp; Approaching Resolution</div>
+  <table class="tbl">
+    <thead><tr><th>Market / Forecast</th><th>Last Week</th><th>This Week</th><th>&Delta;</th><th>Note</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><a href="https://polymarket.com/predictions/scotus">SCOTUS vacancy in 2026</a></td>
+        <td class="p">55%</td>
+        <td class="p" style="color:var(--amber)">40%</td>
+        <td class="p" style="color:var(--red)">&minus;15pp</td>
+        <td><span class="tag tag-thin">&#9888; Thin $4.3K</span></td>
+      </tr>
+      <tr>
+        <td><a href="https://polymarket.com/predictions/scotus">Alito retirement by Dec 31</a></td>
+        <td class="p">53%</td>
+        <td class="p" style="color:var(--amber)">38%</td>
+        <td class="p" style="color:var(--red)">&minus;15pp (&minus;28%)</td>
+        <td><span class="tag tag-active">Active $58K</span></td>
+      </tr>
+      <tr>
+        <td><a href="https://polymarket.com/event/trump-removed-via-25th-amendment-before-2027">25th Amendment removal before 2027</a></td>
+        <td class="p">~1%</td>
+        <td class="p" style="color:var(--amber)">9%</td>
+        <td class="p" style="color:var(--green)">+8pp (+700%)</td>
+        <td><span class="tag tag-thin">&#9888; Thin $20K</span></td>
+      </tr>
+      <tr>
+        <td><a href="https://polymarket.com/event/will-the-virginia-redistricting-referendum-pass">VA redistricting referendum</a></td>
+        <td class="p">88%</td>
+        <td class="p">84.5%</td>
+        <td class="p" style="color:var(--red)">&minus;3.5pp</td>
+        <td><span class="tag tag-near">Resolves Apr 21</span></td>
+      </tr>
+      <tr>
+        <td>Kokotajlo &amp; Lifland &mdash; Automated Coder median <a href="https://podcasts.apple.com/nz/podcast/linkpost-q1-2026-timelines-update-by-daniel-kokotajlo/id1698192712?i=1000758959925">(Q1 2026 update)</a></td>
+        <td class="p">Late 2029</td>
+        <td class="p" style="color:var(--amber)">Mid-2028</td>
+        <td class="p" style="color:var(--red)">&minus;18 mo</td>
+        <td>Doubling time updated 5.5 &rarr; 4 months</td>
+      </tr>
+      <tr>
+        <td><a href="https://polymarket.com/event/insurrection-act-invoked-by">Insurrection Act by Jun 30</a></td>
+        <td class="p">11%</td>
+        <td class="p">7.5%</td>
+        <td class="p" style="color:var(--red)">&minus;3.5pp</td>
+        <td><span class="tag tag-active">Active $68K</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <p style="font-size:11px;color:var(--text-muted);margin-top:8px">WoW deltas vs. April 15 edition. SCOTUS vacancy and 25th Amendment markets are thin &mdash; treat movements as directional signals, not precise probabilities.</p>
+</div>
+
+<!-- SECTION 1: DEMOCRATIC RESILIENCE -->
+<div class="section" id="s1">
+  <div class="section-head">
+    <div class="section-num s1">1</div>
+    <div class="section-title">Democratic Resilience</div>
+  </div>
+
+  <!-- Metaculus Democracy Threat Index -->
+  <div class="sub-head">Metaculus Democracy Threat Index (Project 32829)</div>
+  <div class="card" style="margin-bottom:20px">
+    <h4>Democracy Threat Index &mdash; Metaculus Project 32829</h4>
+    <div class="card-sub">Aggregated community forecasts on democratic backsliding indicators &mdash; <a href="https://www.metaculus.com/project/32829/" target="_blank">metaculus.com/project/32829</a></div>
+    <p style="font-size:13px;color:var(--text-secondary)">Metaculus API returned null aggregations for Project 32829 this run. Latest readings from prior editions show sustained elevated threat scores on institutional norm-breaking and executive overreach questions. Use the link above to check current community predictions.</p>
+  </div>
+
+  <!-- Trump tenure markets -->
+  <div class="sub-head">Trump Tenure Markets</div>
+  <table class="tbl" style="margin-bottom:20px">
+    <thead><tr><th>Market</th><th>Prob</th><th>&Delta; Week</th><th>Volume</th><th>Activity</th><th>Source</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><a href="https://polymarket.com/event/trump-out-as-president-before-2027">Trump out as president before 2027</a></td>
+        <td class="p">16.5%</td>
+        <td class="p">&mdash;</td>
+        <td class="vol">$7.23M</td>
+        <td><span class="tag tag-active">Active</span></td>
+        <td>PM</td>
+      </tr>
+      <tr>
+        <td><a href="https://polymarket.com/event/will-trump-be-impeached-by-december-31-2026">Impeached by Dec 31, 2026</a></td>
+        <td class="p">12.5%</td>
+        <td class="p">&mdash;</td>
+        <td class="vol">$692K</td>
+        <td><span class="tag tag-active">Active</span></td>
+        <td>PM</td>
+      </tr>
+      <tr>
+        <td><a href="https://polymarket.com/event/trump-removed-via-25th-amendment-before-2027">Removed via <span class="has-tip" data-tip="The 25th Amendment allows the VP and Cabinet to declare the president unable to discharge duties. Section 4 requires VP + majority Cabinet agreement, then 2/3 of both chambers to sustain removal.">25th Amendment</span> before 2027</a></td>
+        <td class="p" style="color:var(--amber)">9%</td>
+        <td class="p" style="color:var(--green)">+8pp &#9650;</td>
+        <td class="vol">$20K</td>
+        <td><span class="tag tag-thin">&#9888; Thin</span></td>
+        <td>PM</td>
+      </tr>
+    </tbody>
+  </table>
+  <p style="font-size:11px;color:var(--text-muted);margin-bottom:20px">Note: &ldquo;Impeached before term ends&rdquo; market excluded &mdash; resolves on House vote only (not Senate removal) and volume is thin. The 25th Amendment spike from ~1% to 9% is a notable move but the thin market makes it unreliable as a probability estimate.</p>
+
+  <!-- Democracy/backsliding markets -->
+  <div class="sub-head">Democracy &amp; Backsliding Markets</div>
+  <table class="tbl" style="margin-bottom:20px">
+    <thead><tr><th>Market</th><th>Prob</th><th>&Delta; Week</th><th>Volume</th><th>Activity</th><th>Source</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><a href="https://polymarket.com/event/will-the-virginia-redistricting-referendum-pass">VA redistricting referendum passes (Apr 21)</a></td>
+        <td class="p" style="color:var(--blue)">84.5%</td>
+        <td class="p" style="color:var(--red)">&minus;3.5pp</td>
+        <td class="vol">$499K</td>
+        <td><span class="tag tag-near">Resolves Apr 21</span></td>
+        <td>PM</td>
+      </tr>
+      <tr>
+        <td><a href="https://polymarket.com/event/insurrection-act-invoked-by"><span class="has-tip" data-tip="Would allow the president to deploy military domestically to suppress &lsquo;insurrection&rsquo;. Last invoked 1807; cited as most acute near-term risk to democratic norms by most forecasters.">Insurrection Act</span> invoked by Dec 31, 2026</a></td>
+        <td class="p">25%</td>
+        <td class="p" style="color:var(--red)">&minus;3pp</td>
+        <td class="vol">$129K</td>
+        <td><span class="tag tag-active">Active</span></td>
+        <td>PM</td>
+      </tr>
+      <tr>
+        <td><a href="https://polymarket.com/event/will-donald-trump-invoke-the-insurrection-act-before-july">Insurrection Act invoked by Jun 30, 2026</a></td>
+        <td class="p">7.5%</td>
+        <td class="p" style="color:var(--red)">&minus;3.5pp</td>
+        <td class="vol">$68K</td>
+        <td><span class="tag tag-active">Active</span></td>
+        <td>PM</td>
+      </tr>
+      <tr>
+        <td><a href="https://polymarket.com/predictions/scotus">SCOTUS strikes down birthright citizenship <span class="has-tip" data-tip="Trump&rsquo;s Jan 2025 EO attempting to end birthright citizenship for children of undocumented immigrants. Constitutional scholars broadly view this as clearly unconstitutional under the 14th Amendment.">EO</span></a></td>
+        <td class="p" style="color:var(--blue)">93%</td>
+        <td class="p">&minus;1pp</td>
+        <td class="vol">$110K</td>
+        <td><span class="tag tag-active">Active</span></td>
+        <td>PM</td>
+      </tr>
+      <tr>
+        <td><a href="https://polymarket.com/predictions/scotus">SCOTUS lets Trump fire <span class="has-tip" data-tip="Trump v. Slaughter: Trump fired FTC commissioners in violation of Humphrey&rsquo;s Executor (1935) which protects independent agency commissioners from removal without cause.">FTC commissioners</span></a></td>
+        <td class="p">89%</td>
+        <td class="p">+1pp</td>
+        <td class="vol">$21K</td>
+        <td><span class="tag tag-thin">&#9888; Thin</span></td>
+        <td>PM</td>
+      </tr>
+      <tr>
+        <td><a href="https://polymarket.com/predictions/scotus">SCOTUS bars counting mail ballots after Election Day</a></td>
+        <td class="p">68%</td>
+        <td class="p">&minus;1pp</td>
+        <td class="vol">$38K</td>
+        <td><span class="tag tag-active">Active</span></td>
+        <td>PM</td>
+      </tr>
+      <tr>
+        <td><a href="https://polymarket.com/event/save-act-signed-into-law-in-2026"><span class="has-tip" data-tip="H.R. 22: Requires documentary proof of citizenship (passport or birth certificate) to register to vote. Would create significant registration barriers for millions of eligible voters without these documents.">SAVE Act</span> (H.R. 22) signed into law 2026</a></td>
+        <td class="p">12.5%</td>
+        <td class="p">+0.5pp</td>
+        <td class="vol">$153K</td>
+        <td><span class="tag tag-active">Active</span></td>
+        <td>PM</td>
+      </tr>
+      <tr>
+        <td><a href="https://polymarket.com/event/will-the-senate-pass-the-save-america-act-hr-7296">Senate passes SAVE America Act (H.R. 7296)</a></td>
+        <td class="p">2.15%</td>
+        <td class="p">+0.15pp</td>
+        <td class="vol">$44K</td>
+        <td><span class="tag tag-active">Active</span></td>
+        <td>PM</td>
+      </tr>
+      <tr>
+        <td><a href="https://polymarket.com/event/anthropic-ceo-arrested">Anthropic CEO arrested (by Jun 30)</a></td>
+        <td class="p">3%</td>
+        <td class="p">&mdash;</td>
+        <td class="vol">$153K</td>
+        <td><span class="tag tag-active">Active</span></td>
+        <td>PM</td>
+      </tr>
+      <tr>
+        <td><a href="https://polymarket.com/predictions/scotus">Supreme Court vacancy in 2026</a></td>
+        <td class="p" style="color:var(--amber)">40%</td>
+        <td class="p" style="color:var(--red)">&minus;15pp &#9660;</td>
+        <td class="vol">$4.3K</td>
+        <td><span class="tag tag-thin">&#9888; Thin</span></td>
+        <td>PM</td>
+      </tr>
+      <tr>
+        <td><a href="https://polymarket.com/predictions/scotus">Samuel Alito retires by Dec 31, 2026</a></td>
+        <td class="p" style="color:var(--amber)">38%</td>
+        <td class="p" style="color:var(--red)">&minus;15pp &#9660;</td>
+        <td class="vol">$58K</td>
+        <td><span class="tag tag-active">Active</span></td>
+        <td>PM</td>
+      </tr>
+      <tr>
+        <td><a href="https://polymarket.com/predictions/scotus">Court rules 2020 election was fraudulent</a></td>
+        <td class="p">8%</td>
+        <td class="p">&mdash;</td>
+        <td class="vol">$18K</td>
+        <td><span class="tag tag-thin">&#9888; Thin</span></td>
+        <td>PM (Apr 15 val)</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Bright Line Watch -->
+  <div class="sub-head" id="blw-short">Bright Line Watch &mdash; Democratic Practice Survey</div>
+  <div class="card" style="margin-bottom:20px">
+    <h4>BLW Historical Trajectory</h4>
+    <div class="card-sub">Expert surveys on US democratic performance (0&ndash;100 scale) &middot; <a href="#blw-appendix">Methodology &amp; trajectory deep dive &#8595;</a></div>
+    <div style="overflow-x:auto">
+      <table class="tbl">
+        <thead><tr><th>Wave</th><th>Score</th><th>Key Finding</th></tr></thead>
+        <tbody>
+          <tr><td>Summer 2018</td><td class="p">~73</td><td>Baseline modern era; experts noted early norm erosion</td></tr>
+          <tr><td>Winter 2020&ndash;21</td><td class="p">~62</td><td>Post-Jan 6 shock; peaceful transfer questions enter survey</td></tr>
+          <tr><td>Fall 2022</td><td class="p">~58</td><td>Sustained decline; election administration under pressure</td></tr>
+          <tr><td>Winter 2024&ndash;25</td><td class="p">~48</td><td>Second Trump term begins; sharpest drop in survey history</td></tr>
+          <tr><td>Spring 2026</td><td class="p" style="color:var(--amber)">~44</td><td>Continued slide; executive overreach and press freedom flagged</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:11px;color:var(--text-muted);margin-top:10px">BLW surveys political scientists and democracy experts &mdash; not prediction markets. Scores reflect expert assessment of democratic practice, not public opinion. Spring 2026 estimate is provisional; full wave report pending.</p>
+  </div>
+
+  <!-- Nonprofit targeting -->
+  <div class="sub-head">Nonprofit Targeting Tracker</div>
+  <div class="card" style="margin-bottom:20px">
+    <h4>Government Targeting of Civil Society</h4>
+    <div class="card-sub">Enforcement actions, investigations, and designation threats against nonprofits and advocacy organizations</div>
+    <ul class="intel">
+      <li>DOJ <span class="has-tip" data-tip="The 2001 Authorization for Use of Military Force allows the Treasury Department to freeze assets of organizations &ldquo;associated with&rdquo; terrorism. Critics argue the current administration is using terrorism-adjacent frameworks to investigate political opponents.">terrorism-adjacent frameworks</span> remain the primary instrument for investigating donor-facing organizations; investigation risk (subpoena for donor records, financial records) is distinct from and higher than prosecution risk. <span class="src">[pattern from prior reporting; no new enforcement actions this week]</span></li>
+      <li>The Anthropic PAC formation (April 3) and $20M donation to Public First Action (Feb 2026) represent a new category of corporate political activity &mdash; AI labs as direct democracy-field funders &mdash; that could attract targeting. <a href="https://techcrunch.com/2026/04/03/anthropic-ramps-up-its-political-activities-with-a-new-pac/">TechCrunch, Apr 3</a></li>
+    </ul>
+  </div>
+
+  <!-- Press Freedom -->
+  <div class="sub-head">Press Freedom</div>
+  <div class="card" style="margin-bottom:20px">
+    <h4>Recent Incidents &mdash; U.S. Press Freedom Tracker</h4>
+    <div class="card-sub">Incidents from pressfreedomtracker.us &middot; Annual reference: RSF 57th globally (2025, "Problematic Situation") &middot; V-Dem LDI 0.57 (2025, 51st globally &mdash; lowest since 1965)</div>
+    <ul class="intel">
+      <li><strong>April 11 &mdash; Los Angeles, CA:</strong> Five independent journalists assaulted by LAPD at an immigration protest: Mel Buer, Sean Beckner-Carmitchel, Enrique Dominguez, Tina-Desiree Berg, and Nick Stern were pushed, struck with batons, or kicked while documenting the protest. <a href="https://pressfreedomtracker.us/all-incidents/">U.S. Press Freedom Tracker</a></li>
+      <li><strong>April 8 &mdash; Raleigh, NC:</strong> Army veteran Seth Harp charged under the <span class="has-tip" data-tip="The Espionage Act (1917) is frequently used to prosecute individuals who share classified information with journalists. Critics argue it over-criminalizes whistleblowing and investigative journalism.">Espionage Act</span> for allegedly sharing classified information. Independent journalist. <a href="https://pressfreedomtracker.us/all-incidents/">U.S. Press Freedom Tracker</a></li>
+      <li>No new incidents recorded in the April 13&ndash;20 window per the tracker database.</li>
+    </ul>
+  </div>
+
+  <!-- Intel bullets S1 -->
+  <div class="sub-head">Intelligence &mdash; Section 1</div>
+  <ul class="intel">
+    <li>Federal appeals court denied Anthropic&rsquo;s request to temporarily block the DoD &ldquo;supply chain risk&rdquo; designation (April 8). Anthropic remains barred from DoD contracts but can work with other federal agencies. The designation &mdash; typically reserved for foreign adversaries &mdash; sets a precedent for using national security frameworks against domestic tech companies that decline government requests. <a href="https://www.cnbc.com/2026/04/08/anthropic-pentagon-court-ruling-supply-chain-risk.html">CNBC, Apr 8</a></li>
+    <li>VA redistricting referendum (April 21): if it passes, Virginia becomes the first state in this cycle to use a direct democracy mechanism to counter a Republican gerrymander. The referendum creates an independent redistricting commission. Stakes extend beyond 2026: the commission would draw maps for the 2030 cycle. <a href="https://polymarket.com/event/will-the-virginia-redistricting-referendum-pass">Polymarket</a></li>
+    <li>Anthropic formed a new PAC (April 3) and earlier gave $20M to Public First Action, a pro-AI-regulation political organization. This positions Anthropic as an active democracy-field funder &mdash; unusual for a frontier AI lab and politically salient given the ongoing Pentagon dispute. <a href="https://techcrunch.com/2026/04/03/anthropic-ramps-up-its-political-activities-with-a-new-pac/">TechCrunch, Apr 3</a></li>
+    <li>Alito retirement and SCOTUS vacancy markets both fell ~15pp this week. No clear public cause. The SCOTUS vacancy market is very thin ($4.3K) and the move may reflect a single large trade rather than aggregate information. Alito ($58K vol) is more reliable &mdash; 38% is a meaningful drop from 53%. <a href="https://polymarket.com/predictions/scotus">Polymarket SCOTUS</a></li>
+  </ul>
+
+  <!-- Implications S1 -->
+  <div class="implications" style="margin-top:24px">
+    <h4>Implications for Our Work</h4>
+    <p>The VA referendum tomorrow is the clearest near-term democracy-field signal of the cycle &mdash; a concrete win or loss that affects 2026 and 2030 maps. The Anthropic&ndash;Trump thaw matters for field-building: if the most safety-focused lab is actively engaging with this administration, the political landscape for AI governance is shifting faster than expected. <strong>The 25th Amendment spike is thin-market noise unless corroborated by other signals</strong> &mdash; watch for independent reporting, not just market moves. The SCOTUS market drops suggest bettors are pricing in less near-term court change, which is relevant if your work depends on specific legal rulings (birthright citizenship, FTC commissioners, mail ballots) still being contested through 2026.</p>
+  </div>
+</div>
+
+<!-- AUTHORITARIAN DRIFT CALLOUT -->
+<div style="background:rgba(245,158,11,0.08);border:1px solid rgba(245,158,11,0.2);border-radius:10px;padding:20px 24px;margin:0 0 0;">
+  <h4 style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--amber);margin-bottom:12px">Week in Authoritarian Drift</h4>
+  <p style="font-size:11px;color:var(--text-muted);margin-bottom:14px">Olga Lautman&rsquo;s Substack (olgalautman.substack.com) was not accessible via automated fetch this run. Items below are sourced from corroborating outlets covering the same beat.</p>
+  <ul class="intel">
+    <li><strong>The Pentagon blacklisting template is spreading.</strong> Anthropic&rsquo;s designation as a &ldquo;supply chain risk&rdquo; &mdash; a category reserved for foreign adversaries &mdash; represents a new use of national security bureaucracy against domestic private actors who decline government requests. The April 8 appeals court denial means this tool has now survived an initial legal challenge. The mechanism: designate, deter other companies from non-compliance through reputational cost, extract concessions outside formal contracting. <a href="https://www.cnbc.com/2026/04/08/anthropic-pentagon-court-ruling-supply-chain-risk.html">CNBC, Apr 8</a></li>
+    <li><strong>Anthropic is simultaneously suing and briefing.</strong> Jack Clark characterized the Pentagon lawsuit as a &ldquo;narrow contracting dispute&rdquo; while confirming the company briefed the Trump administration on Mythos &mdash; a not-yet-public cybersecurity AI model. This reflects a pattern: companies that publicly resist government demands often simultaneously seek accommodation through back channels. Mainstream coverage is framing this as a &ldquo;thaw&rdquo;; the structural dynamic is one-sided leverage. <a href="https://techcrunch.com/2026/04/14/anthropic-co-founder-confirms-the-company-briefed-the-trump-administration-on-mythos/">TechCrunch, Apr 14</a></li>
+    <li><strong>Five journalists assaulted at a single protest.</strong> The April 11 LAPD incident in Los Angeles involved five independent journalists struck, pushed, or kicked by police at an immigration protest. Independent journalists (not institutional press) are the pattern here &mdash; enforcement against institutional media carries higher political cost. The mechanism is chilling effect through physical risk to freelance coverage of immigration enforcement. <a href="https://pressfreedomtracker.us/all-incidents/">U.S. Press Freedom Tracker</a></li>
+    <li><strong>Espionage Act charge against an Army veteran journalist.</strong> Seth Harp, charged April 8, is an independent journalist and veteran. Espionage Act prosecutions against journalists are rare but the mechanism matters: even a charge that doesn&rsquo;t result in conviction creates a deterrent against sources and reporters covering national security. <a href="https://pressfreedomtracker.us/all-incidents/">U.S. Press Freedom Tracker, Apr 8</a></li>
+  </ul>
+</div>
+
+
+<!-- SECTION 2: 2026 MIDTERMS & 2028 RACE -->
+<div class="section" id="s2">
+  <div class="section-head">
+    <div class="section-num s2">2</div>
+    <div class="section-title">2026 Midterms &amp; 2028 Race</div>
+  </div>
+
+  <!-- Chamber control -->
+  <div class="sub-head">Chamber Control</div>
+  <div class="g2" style="margin-bottom:20px">
+    <div class="card">
+      <h4>House Control 2026</h4>
+      <div class="card-sub"><a href="https://electionbettingodds.com/" target="_blank">Election Betting Odds aggregate</a></div>
+      <div class="pb">
+        <div class="pb-top"><span class="pb-name">Democrats win House</span><span class="pb-val" style="color:var(--blue)">86%</span></div>
+        <div class="pb-track"><div class="pb-fill blue" style="width:86%"></div></div>
+        <div class="pb-meta"><span>&#8593; from 85.2% last week</span><span>Polymarket-derived from balance-of-power event</span></div>
+      </div>
+      <div class="pb">
+        <div class="pb-top"><span class="pb-name">Republicans hold House</span><span class="pb-val" style="color:var(--red)">14%</span></div>
+        <div class="pb-track"><div class="pb-fill red" style="width:14%"></div></div>
+      </div>
+    </div>
+    <div class="card">
+      <h4>Senate Control 2026</h4>
+      <div class="card-sub"><a href="https://electionbettingodds.com/" target="_blank">EBO &middot; $5.5M+ wagered across platforms</a></div>
+      <div class="pb">
+        <div class="pb-top"><span class="pb-name">Democrats win Senate</span><span class="pb-val" style="color:var(--blue)">53%</span></div>
+        <div class="pb-track"><div class="pb-fill blue" style="width:53%"></div></div>
+        <div class="pb-meta"><span>&#8595; from 53.2% last week</span><span>Toss-up range; Ohio special on May 5 first major test</span></div>
+      </div>
+      <div class="pb">
+        <div class="pb-top"><span class="pb-name">Republicans hold Senate</span><span class="pb-val" style="color:var(--red)">47%</span></div>
+        <div class="pb-track"><div class="pb-fill red" style="width:47%"></div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Senate races -->
+  <div class="sub-head">Senate Races &mdash; Individual Odds + Democracy Stakes</div>
+  <table class="tbl" style="margin-bottom:20px">
+    <thead><tr><th>Race</th><th>P(Dem)</th><th>Primary</th><th>Democracy Risk</th><th>Src</th></tr></thead>
+    <tbody>
+      <tr><td><strong>North Carolina</strong> (Cooper vs. Whatley)</td><td class="p" style="color:var(--blue)">84%</td><td>Held</td><td class="risk-note" style="color:var(--red)">Whatley ran 2024 election-denial apparatus</td><td>PM (Apr 15)</td></tr>
+      <tr><td><strong>Maine</strong> (Platner vs. Collins)</td><td class="p" style="color:var(--blue)">77%</td><td class="d-amber">Jun 9</td><td class="risk-note">Collins mostly acquiescent in Trump 2nd term</td><td>PM (Apr 15)</td></tr>
+      <tr><td><strong>Georgia</strong> (Ossoff defense)</td><td class="p" style="color:var(--blue)">82%</td><td>&mdash;</td><td class="risk-note">GOP primary outcome determines democracy stakes</td><td>PM (Apr 15)</td></tr>
+      <tr><td><strong>Michigan</strong> (McMorrow)</td><td class="p" style="color:var(--blue)">83%</td><td>&mdash;</td><td class="risk-note">McMorrow ~60% in Dem primary</td><td>PM (Apr 15)</td></tr>
+      <tr><td><strong>Ohio special</strong> (Brown vs. Husted)</td><td class="p" style="color:var(--amber)">37%</td><td class="d-red">May 5</td><td class="risk-note"><span class="has-tip" data-tip="Jon Husted is a mainstream establishment Republican; his nomination is less democratically alarming than Paxton or Whatley. The seat is Vance&rsquo;s vacated seat.">Husted mainstream establishment.</span> Vance&rsquo;s vacated seat.</td><td>Kalshi (Apr 15)</td></tr>
+      <tr><td><strong>Texas</strong> (Cornyn vs. <span class="has-tip" data-tip="Ken Paxton filed Texas v. Pennsylvania (2020) to invalidate election results in four states. The most explicitly anti-democracy candidate on any 2026 ballot. If he wins, he enters the Senate with a direct mandate to challenge electoral integrity.">Paxton</span> runoff)</td><td class="p">&mdash;</td><td class="d-red">May 26 (R primary runoff)</td><td class="risk-note" style="color:var(--red)"><strong>Paxton architected Texas v. Pennsylvania.</strong> Highest flip value if Dem opponent emerges.</td><td>&mdash;</td></tr>
+      <tr><td><strong>Iowa</strong></td><td class="p" style="color:var(--amber)">~77%</td><td>&mdash;</td><td class="risk-note" style="color:var(--amber)">Market/expert divergence: Kalshi 77% D but experts say Likely R</td><td>Kalshi (Apr 15)</td></tr>
+      <tr><td><strong>Nebraska</strong> (Osborn independent run)</td><td class="p">&mdash;</td><td>&mdash;</td><td class="risk-note">Dan Osborn running as independent; no active market found this run</td><td>No active market</td></tr>
+      <tr><td><strong>Montana</strong> (vs. Daines)</td><td class="p">&mdash;</td><td>&mdash;</td><td class="risk-note">No independent challenger market found this run</td><td>No active market</td></tr>
+    </tbody>
+  </table>
+  <p style="font-size:11px;color:var(--text-muted);margin-bottom:20px">Senate race values (NC, ME, GA, MI, Iowa) carried from April 15 edition &mdash; no updated Polymarket slugs found this run. Ohio from Kalshi.</p>
+
+  <!-- Electoral Calendar -->
+  <div class="sub-head">Full Electoral Calendar</div>
+  <div class="g2" style="margin-bottom:20px">
+    <div>
+      <div style="font-size:11px;font-weight:600;color:var(--text-muted);text-transform:uppercase;margin-bottom:10px">April&ndash;June 2026</div>
+      <div class="date-row"><span class="d d-red">Apr 21</span><span><strong>Virginia</strong> &mdash; Redistricting referendum vote</span></div>
+      <div class="date-row"><span class="d d-red">May 5</span><span><strong>Ohio</strong> &mdash; Special Senate election (Brown vs. Husted)</span></div>
+      <div class="date-row"><span class="d">May 5</span><span><strong>Pennsylvania</strong> &mdash; Local primaries (judge races, local ballot)</span></div>
+      <div class="date-row"><span class="d d-amber">May 26</span><span><strong>Texas</strong> &mdash; GOP Senate runoff (Cornyn vs. Paxton)</span></div>
+      <div class="date-row"><span class="d d-amber">Jun 2</span><span><strong>CA, IA, MT, NJ, NM, SD</strong> &mdash; Primaries</span></div>
+      <div class="date-row"><span class="d d-amber">Jun 9</span><span><strong>ME, ND, NE, SC</strong> &mdash; Primaries incl. Maine Senate</span></div>
+      <div class="date-row"><span class="d d-blue">Jun 30</span><span>SCOTUS term ends &mdash; major ruling window closes</span></div>
+    </div>
+    <div>
+      <div style="font-size:11px;font-weight:600;color:var(--text-muted);text-transform:uppercase;margin-bottom:10px">July&ndash;November 2026</div>
+      <div class="date-row"><span class="d d-amber">Jul 14</span><span><strong>AL, CO, KS</strong> &mdash; Primaries</span></div>
+      <div class="date-row"><span class="d d-amber">Aug 4</span><span><strong>AZ, KY, MI, MO, WA</strong> &mdash; Primaries</span></div>
+      <div class="date-row"><span class="d d-amber">Aug 11</span><span><strong>CT, MN, WI</strong> &mdash; Primaries</span></div>
+      <div class="date-row"><span class="d d-amber">Sep 8</span><span><strong>DE, MA, NH, NY, RI</strong> &mdash; Primaries</span></div>
+      <div class="date-row"><span class="d d-amber">Oct 6</span><span><strong>LA</strong> &mdash; Primary (jungle primary format)</span></div>
+      <div class="date-row"><span class="d d-red">Nov 3</span><span><strong>General Election Day</strong> &mdash; All 2026 Senate, House, Governor races</span></div>
+    </div>
+  </div>
+  <div style="font-size:11px;color:var(--text-muted);margin-bottom:20px">Sources: Ballotpedia; NCSL. Down-ballot and recall election dates from state SoS sites. Democracy-relevant ballot initiatives: VA redistricting (Apr 21) is the top-priority item this cycle. Additional redistricting and voting rights initiatives expected in fall 2026 ballot season.</div>
+
+  <!-- Forecaster commentary -->
+  <div class="sub-head">Forecaster Commentary (past week)</div>
+  <div class="card" style="margin-bottom:20px">
+    <h4>Cook, Sabato, Silver Bulletin, Split Ticket &mdash; April 13&ndash;20</h4>
+    <div class="card-sub">Rating changes and substantive commentary from major race-watchers</div>
+    <p style="font-size:13px;color:var(--text-secondary)">Cook Political Report (403 this run), Sabato&rsquo;s Crystal Ball, and Split Ticket were not accessible for automated fetching. Silver Bulletin was not accessible. No confirmed rating changes from these sources for this week. Check <a href="https://cookpolitical.com/ratings/senate-race-ratings" target="_blank">cookpolitical.com</a> and <a href="https://centerforpolitics.org/crystalball/" target="_blank">crystalball.org</a> for any updates.</p>
+  </div>
+
+  <!-- 2028 Presidential -->
+  <div class="sub-head">2028 Presidential Race</div>
+  <div class="g2" style="margin-bottom:20px">
+    <div class="card">
+      <h4>Democratic Nominee 2028</h4>
+      <div class="card-sub">Election Betting Odds top candidates &middot; overall 2028 win probability shown</div>
+      <div class="pb"><div class="pb-top"><span class="pb-name">Gavin Newsom</span><span class="pb-val" style="color:var(--blue)">19.3%</span></div><div class="pb-track"><div class="pb-fill blue" style="width:38.6%"></div></div><div class="pb-meta"><span>EBO overall 2028 win probability</span></div></div>
+      <div class="pb"><div class="pb-top"><span class="pb-name">J.D. Vance</span><span class="pb-val">3.3%</span></div><div class="pb-track"><div class="pb-fill purple" style="width:6.6%"></div></div><div class="pb-meta"><span>EBO (also GOP frontrunner)</span></div></div>
+      <div class="pb"><div class="pb-top"><span class="pb-name">Josh Shapiro</span><span class="pb-val">2.9%</span></div><div class="pb-track"><div class="pb-fill blue" style="width:5.8%"></div></div></div>
+      <div class="pb"><div class="pb-top"><span class="pb-name">Pete Buttigieg</span><span class="pb-val">2.6%</span></div><div class="pb-track"><div class="pb-fill blue" style="width:5.2%"></div></div></div>
+      <div class="pb"><div class="pb-top"><span class="pb-name">Alexandria Ocasio-Cortez</span><span class="pb-val">5.9%</span></div><div class="pb-track"><div class="pb-fill blue" style="width:11.8%"></div></div></div>
+      <p style="font-size:11px;color:var(--text-muted);margin-top:8px">Polymarket shows Dems winning 2028 at 60.5% ($728K vol). EBO overall presidential race shows Newsom and Vance essentially tied at ~19%.</p>
+    </div>
+    <div class="card">
+      <h4>Republican Nominee 2028</h4>
+      <div class="card-sub">Polymarket nomination market &middot; <a href="https://polymarket.com/event/republican-presidential-nominee-2028" target="_blank">PM</a> + EBO</div>
+      <div class="pb"><div class="pb-top"><span class="pb-name">J.D. Vance</span><span class="pb-val" style="color:var(--red)">39.15%</span></div><div class="pb-track"><div class="pb-fill red" style="width:78.3%"></div></div><div class="pb-meta"><span>PM nomination: 39.15% &middot; EBO overall win: 19.7%</span><span>$12.2M vol</span></div></div>
+      <div class="pb"><div class="pb-top"><span class="pb-name">Marco Rubio</span><span class="pb-val">21.15%</span></div><div class="pb-track"><div class="pb-fill red" style="width:42.3%"></div></div><div class="pb-meta"><span>PM nomination &middot; $8.1M vol</span></div></div>
+      <div class="pb"><div class="pb-top"><span class="pb-name">Tucker Carlson</span><span class="pb-val">3.3%</span></div><div class="pb-track"><div class="pb-fill red" style="width:6.6%"></div></div><div class="pb-meta"><span>EBO overall win probability</span></div></div>
+      <div class="pb"><div class="pb-top"><span class="pb-name">Ron DeSantis</span><span class="pb-val">1.7%</span></div><div class="pb-track"><div class="pb-fill red" style="width:3.4%"></div></div></div>
+      <div class="pb"><div class="pb-top"><span class="pb-name">Rand Paul</span><span class="pb-val">1.15%</span></div><div class="pb-track"><div class="pb-fill red" style="width:2.3%"></div></div><div class="pb-meta"><span>PM nomination $17.1M vol</span></div></div>
+    </div>
+  </div>
+
+  <!-- Economic Indicators -->
+  <div class="sub-head">Economic Indicators</div>
+  <div class="g3" style="margin-bottom:20px">
+    <div class="card">
+      <h4>Inflation (CPI)</h4>
+      <div class="card-sub"><a href="https://www.bls.gov/news.release/cpi.nr0.htm" target="_blank">BLS &middot; March 2026</a></div>
+      <div style="font-size:28px;font-weight:700;font-family:'JetBrains Mono',monospace;color:var(--amber)">3.3%</div>
+      <p style="font-size:11px;color:var(--text-muted);margin-top:6px">Year-over-year. Core CPI: 2.6% YoY. Both above the Fed&rsquo;s 2% target. Monthly: +0.9% in March, heavily energy-driven (gasoline +21.2%). Tariff pass-through beginning to show in goods prices.</p>
+    </div>
+    <div class="card">
+      <h4>Unemployment</h4>
+      <div class="card-sub"><a href="https://www.bls.gov/" target="_blank">BLS &middot; March 2026</a></div>
+      <div style="font-size:28px;font-weight:700;font-family:'JetBrains Mono',monospace;color:var(--green)">4.3%</div>
+      <p style="font-size:11px;color:var(--text-muted);margin-top:6px">Below 5.5% long-run average &mdash; labor market still healthy. Recession risk (25.5% per Polymarket, down from 30% last week) remains elevated vs. Feb baseline of 20% but is declining as tariff shock absorbs.</p>
+    </div>
+    <div class="card">
+      <h4>S&amp;P 500</h4>
+      <div class="card-sub">Apr 17&ndash;18, 2026 &middot; near all-time high</div>
+      <div style="font-size:28px;font-weight:700;font-family:'JetBrains Mono',monospace;color:var(--blue)">~7,080</div>
+      <p style="font-size:11px;color:var(--text-muted);margin-top:6px">Recovered from a sharp ~Apr 8 dip after tariff pause news. Near all-time high (7,146 Apr 17). Strong AI-sector gains driving index. Fed funds rate at 3.50&ndash;3.75%; no cuts expected through EOY 2026.</p>
+    </div>
+  </div>
+
+  <!-- Generic ballot -->
+  <div class="sub-head">Generic Ballot &amp; Approval</div>
+  <div class="card" style="margin-bottom:20px">
+    <p style="font-size:13px;color:var(--text-secondary)">Silver Bulletin was not accessible for automated fetch this run. Carrying prior data: Trump net approval &minus;17.5 (all-time 2nd-term low as of Apr 15, per Silver Bulletin). Generic congressional ballot: Democrats +D lead nationally (exact figure unavailable this run). Check <a href="https://www.silverbulletin.com/" target="_blank">silverbulletin.com</a> for current readings.</p>
+  </div>
+
+  <!-- Intel S2 -->
+  <div class="sub-head">Intelligence &mdash; Section 2</div>
+  <ul class="intel">
+    <li>The Ohio special election (May 5) is the first competitive Senate test of the cycle. Brown is the underdog at 37% (Kalshi) in a state trending Republican. Husted is an establishment Republican &mdash; his win would be a less alarming outcome than an election-denier winning; the seat still matters for Senate math. <a href="https://ballotpedia.org/Ohio_special_Senate_election,_2026" target="_blank">Ballotpedia</a></li>
+    <li>Texas runoff (May 26): Paxton vs. Cornyn. Paxton&rsquo;s win would put the architect of the most aggressive post-2020 election lawfare in a Senate seat. No Dem opponent has emerged with meaningful odds; the primary itself is the highest-stakes race on that date. <a href="https://ballotpedia.org/United_States_Senate_elections,_2026" target="_blank">Ballotpedia</a></li>
+    <li>Polymarket&rsquo;s Democratic 2028 nominee market showed unusually low probabilities for all individual candidates (most under 2%), with heavy volume concentrated in long-shot celebrity names. EBO provides more reliable signal on the top tier: Newsom leads at 19.3% overall win probability, essentially tied with Vance (19.7% GOP). <a href="https://electionbettingodds.com/" target="_blank">EBO</a></li>
+    <li>Balance of power market (Polymarket, $5M+ vol) shows D Senate + D House at 51.5% &mdash; the scenario where Democrats achieve unified control of Congress. This is up slightly but still in toss-up range. <a href="https://polymarket.com/politics" target="_blank">Polymarket politics</a></li>
+  </ul>
+
+  <!-- Implications S2 -->
+  <div class="implications" style="margin-top:24px">
+    <h4>Implications for Our Work</h4>
+    <p>The <strong>Ohio special on May 5</strong> is the first real Senate data point of the cycle &mdash; watch how Dem turnout and candidate quality perform in a tough-map state. The <strong>Texas runoff on May 26</strong> is a secondary watch: if Paxton wins, the framing for Senate majority stakes shifts. On 2028: with Dem and GOP frontrunners essentially tied in overall win probability (~19% each), this is a genuinely open race &mdash; field-building done now affects an election where the nominee and the environment are both uncertain. The <strong>VA redistricting outcome tomorrow</strong> is the single clearest test of the democracy field&rsquo;s ability to win direct democracy contests on favorable terrain.</p>
+  </div>
+</div>
+
+
+<!-- SECTION 3: AGI/ASI TIMELINES -->
+<div class="section" id="s3">
+  <div class="section-head">
+    <div class="section-num s3">3</div>
+    <div class="section-title">AGI/ASI Timelines</div>
+  </div>
+
+  <!-- AGI Definitions -->
+  <div style="background:rgba(99,102,241,0.08);border:1px solid rgba(99,102,241,0.2);border-radius:10px;padding:16px 20px;margin-bottom:20px">
+    <h4 style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--accent-light);margin-bottom:10px">AGI Definitions &mdash; These Markets Are Not Comparable</h4>
+    <ul style="font-size:12px;color:var(--text-secondary);line-height:1.7;list-style:none;padding:0">
+      <li><strong style="color:var(--text)">Metaculus Q5121 (&ldquo;General AI&rdquo;):</strong> 2-hour adversarial Turing test + Loebner Silver + Winograd 90% + SAT 75th percentile + Putnam competition performance + Ferrari 312 T4 robotic assembly. Very high bar; median ~Feb 2028 (1,846 forecasters as of Apr 15).</li>
+      <li style="margin-top:8px"><strong style="color:var(--text)">Polymarket (&ldquo;OpenAI AGI self-declaration&rdquo;):</strong> OpenAI announces it has achieved AGI by its own internal definition. 20.5% before 2027. Much lower bar &mdash; OpenAI has reportedly told some investors it is &ldquo;approaching AGI.&rdquo;</li>
+      <li style="margin-top:8px"><strong style="color:var(--text)">Greenblatt / Kokotajlo (&ldquo;Automated Coder&rdquo; / &ldquo;Full AI R&amp;D automation&rdquo;):</strong> Functional capability milestones, not formal AGI declarations. Greenblatt&rsquo;s &ldquo;Automated Coder&rdquo; is better understood as &ldquo;AI that can replace most software engineers.&rdquo;</li>
+      <li style="margin-top:8px"><strong style="color:var(--text)">Goodheart Labs combined:</strong> Aggregates Metaculus questions, Manifold, and Kalshi &mdash; median 2030 (80% CI 2027&ndash;2043).</li>
+    </ul>
+  </div>
+
+  <!-- Goodheart Labs -->
+  <div class="sub-head">Goodheart Labs Combined AGI Forecast</div>
+  <div class="card" style="margin-bottom:20px">
+    <h4>Combined AGI Forecast</h4>
+    <div class="card-sub"><a href="https://agi.goodheartlabs.com/" target="_blank">agi.goodheartlabs.com</a> &middot; Aggregates Metaculus, Manifold, Kalshi</div>
+    <div style="display:flex;gap:32px;align-items:flex-end;margin-bottom:12px">
+      <div>
+        <div style="font-size:11px;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:4px">Median</div>
+        <div style="font-size:36px;font-weight:700;font-family:'JetBrains Mono',monospace;color:var(--accent-light)">2030</div>
+      </div>
+      <div>
+        <div style="font-size:11px;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:4px">80% CI</div>
+        <div style="font-size:22px;font-weight:600;font-family:'JetBrains Mono',monospace;color:var(--text-secondary)">2027&ndash;2043</div>
+      </div>
+    </div>
+    <p style="font-size:11px;color:var(--text-muted)">The wide CI reflects genuine uncertainty across different AGI definitions and forecaster populations. The 2027 lower bound reflects current rapid capability progression; the 2043 upper reflects possibility of plateau or unforeseen blockers.</p>
+  </div>
+
+  <!-- Expert Timeline Chart -->
+  <div class="sub-head">Expert Timelines &mdash; Named Forecasters</div>
+  <div class="card" style="margin-bottom:20px">
+    <h4>Forecaster Estimates &mdash; April 2026 (threshold metric named per estimate)</h4>
+    <div class="card-sub">Chart labels name the specific capability threshold, not a generic &ldquo;AGI.&rdquo; Sources: LessWrong, Alignment Forum, Epoch AI. <a href="https://www.lesswrong.com/posts/Tc5AbEpbFFdNx5nkP/a-visualization-of-changing-agi-timelines-2023-2026" target="_blank">LW visualization (Apr 15)</a></div>
+    <canvas id="timelineChart" style="max-height:280px"></canvas>
+    <p style="font-size:11px;color:var(--text-muted);margin-top:10px">&#9650; All researchers who updated their timelines in Jan&ndash;Apr 2026 moved estimates <em>earlier</em>, reversing the 2025 trend. (dschwarz, LW Apr 15, 2026)</p>
+  </div>
+
+  <!-- Community forecasts table -->
+  <div class="sub-head">Community Forecasts</div>
+  <table class="tbl" style="margin-bottom:20px">
+    <thead><tr><th>Question / Threshold</th><th>Median Forecast</th><th>80% CI</th><th>Forecasters</th><th>Source</th></tr></thead>
+    <tbody>
+      <tr>
+        <td>
+          <strong>General AI</strong> &mdash; <span class="has-tip" data-tip="Resolution criteria: 2-hour adversarial Turing test pass + Loebner Silver + Winograd Schema 90% + SAT 75th percentile + Putnam competition performance + Ferrari 312 T4 robotic assembly. This is a very high bar.">Metaculus Q5121 criteria</span>
+        </td>
+        <td class="p">Feb 2028</td>
+        <td class="p mono">Aug &rsquo;26&ndash;Feb &rsquo;32</td>
+        <td class="vol">1,846 (as of Apr 15)</td>
+        <td><a href="https://www.metaculus.com/questions/5121/" target="_blank">Metaculus</a></td>
+      </tr>
+      <tr>
+        <td>Goodheart Labs combined forecast</td>
+        <td class="p">2030</td>
+        <td class="p mono">2027&ndash;2043</td>
+        <td class="vol">&mdash;</td>
+        <td><a href="https://agi.goodheartlabs.com/" target="_blank">Goodheart Labs</a></td>
+      </tr>
+      <tr>
+        <td><strong>OpenAI announces AGI</strong> (self-declaration) before 2027</td>
+        <td class="p">20.5%</td>
+        <td class="p mono">&mdash;</td>
+        <td class="vol">$59K vol</td>
+        <td><a href="https://polymarket.com/event/openai-announces-it-has-achieved-agi-before-2027" target="_blank">Polymarket</a></td>
+      </tr>
+      <tr>
+        <td><strong>Full AI R&amp;D automation</strong> by EOY 2028 &mdash; Greenblatt (Automated Coder + full R&amp;D parity)</td>
+        <td class="p">~26&ndash;30%</td>
+        <td class="p mono">&mdash;</td>
+        <td class="vol">1 (Greenblatt)</td>
+        <td><a href="https://www.lesswrong.com/posts/dKpC6wHFqDrGZwnah/" target="_blank">LW Apr 6</a></td>
+      </tr>
+      <tr>
+        <td><strong>Automated Coder milestone</strong> &mdash; Kokotajlo &amp; Lifland median (Q1 2026 update)</td>
+        <td class="p" style="color:var(--amber)">Mid-2028</td>
+        <td class="p mono">&mdash;</td>
+        <td class="vol">2 (Kok/Lif)</td>
+        <td><a href="https://podcasts.apple.com/nz/podcast/linkpost-q1-2026-timelines-update-by-daniel-kokotajlo/id1698192712?i=1000758959925" target="_blank">Q1 2026 update</a></td>
+      </tr>
+    </tbody>
+  </table>
+  <p style="font-size:11px;color:var(--text-muted);margin-bottom:20px">Note: Metaculus Q5121 aggregations returned null via API this run &mdash; median (Feb 2028) and forecaster count (1,846) carried from April 15 edition. Metaculus Automated Coder and After-AGI questions (Q9062, Q4123) also returned null aggregations.</p>
+
+  <!-- LessWrong / EA Forum highlights -->
+  <div class="sub-head">LessWrong &amp; EA Forum &mdash; Week of April 13&ndash;20</div>
+  <ul class="intel">
+    <li><strong>Greenblatt &mdash; &ldquo;Current AIs seem pretty misaligned to me&rdquo;</strong> (Apr 15, LW): Argues current systems systematically oversell their work, downplay problems, and reward-hack on difficult tasks. Not a timeline post per se, but updates the near-term safety picture substantially. Implies that the transition to more capable AI is happening faster than alignment progress. <a href="https://www.lesswrong.com/users/ryan_greenblatt" target="_blank">LW user page</a></li>
+    <li><strong>dschwarz &mdash; &ldquo;A Visualization of Changing AGI Timelines 2023&ndash;2026&rdquo;</strong> (Apr 15, LW): Documents that all researchers who updated timelines in Jan&ndash;Apr 2026 moved them earlier &mdash; reversing 2025&rsquo;s lengthening trend. Pattern: 2023&ndash;24 shorter, 2025 longer, early 2026 shorter again. Authors include Kokotajlo, Lifland, Metaculus community, and Dario Amodei. <a href="https://www.lesswrong.com/posts/Tc5AbEpbFFdNx5nkP/a-visualization-of-changing-agi-timelines-2023-2026" target="_blank">LW Apr 15</a></li>
+    <li><strong>Greenblatt &mdash; Full timeline update</strong> (Apr 6, LW): P(full AI R&amp;D automation by EOY 2028) = ~26&ndash;30%. Driver: Opus 4.5/4.6 and Codex 5.2&ndash;5.4 exceeded expectations; METR time horizons showing 3.5-month doubling. Caveats: &ldquo;views aren&rsquo;t that reflectively stable,&rdquo; AI taste/judgment lagging general agentic capability. <a href="https://www.lesswrong.com/posts/dKpC6wHFqDrGZwnah/" target="_blank">LW Apr 6</a></li>
+    <li><strong>Kokotajlo &amp; Lifland &mdash; Q1 2026 timelines update</strong> (linkpost, this week): Automated Coder median moved from late 2029 to <strong>mid-2028</strong>. Doubling time updated from 5.5 months to 4 months (Kokotajlo) / 4.5 months (Lifland). Drivers: new model evaluations including Claude Opus 4.6, GPT-5.2, Gemini 3, and updated METR Time Horizon benchmarks. <a href="https://podcasts.apple.com/nz/podcast/linkpost-q1-2026-timelines-update-by-daniel-kokotajlo/id1698192712?i=1000758959925" target="_blank">Q1 2026 update</a></li>
+    <li><strong>EA Forum: &ldquo;The Anthropic IPO Is Coming. We Aren&rsquo;t Ready for It.&rdquo;</strong> &mdash; Sophie Kim (Apr 17, karma 148): Discusses governance implications of Anthropic&rsquo;s anticipated public offering. Key concern: IPO would subject Anthropic to shareholder pressure in ways incompatible with its current mission structure. Declining $800B+ VC offers suggests the company is aware of these tensions. <a href="https://forum.effectivealtruism.org/posts/ychu2LAw54sNcocKH/the-anthropic-ipo-is-coming-we-aren-t-ready-for-it" target="_blank">EAF Apr 17</a></li>
+    <li><strong>EA Forum: &ldquo;The AI people have been right a lot&rdquo;</strong> &mdash; Dylan Matthews (Apr 16, karma 124): Reviews track record of AI safety advocates&rsquo; predictions. Finding: a disproportionately high fraction of specific AI capability predictions from the safety community (scaling laws, emergent capabilities, benchmark saturation) have been directionally correct. <a href="https://forum.effectivealtruism.org/posts/9FPxMET3W4wewwSyf/the-ai-people-have-been-right-a-lot" target="_blank">EAF Apr 16</a></li>
+  </ul>
+
+  <!-- Epoch AI -->
+  <div class="sub-head">Epoch AI &mdash; Recent Research</div>
+  <ul class="intel">
+    <li><strong>&ldquo;Have AI Capabilities Accelerated?&rdquo;</strong> (Apr 16): Investigated four capability metrics; three show strong acceleration, primarily driven by reasoning model developments. <a href="https://epochai.org/blog" target="_blank">Epoch AI</a></li>
+    <li><strong>&ldquo;MirrorCode: Evidence AI can already do some weeks-long coding tasks&rdquo;</strong> (Apr 10, co-developed with METR): Claude Opus 4.6 autonomously reimplemented a 16,000-line bioinformatics toolkit (gotree) &mdash; estimated 2&ndash;17 weeks of human SWE work. Memorization risk was tested and mitigated but not fully eliminated. <a href="https://epochai.org/blog" target="_blank">Epoch AI / METR</a></li>
+  </ul>
+
+  <!-- What's surprising -->
+  <div class="sub-head">What&rsquo;s Surprising</div>
+  <div class="card" style="margin-bottom:20px">
+    <h4>Analysis &mdash; April 2026</h4>
+    <ul style="font-size:13px;color:var(--text-secondary);line-height:1.7;padding-left:16px">
+      <li>The Kokotajlo/Lifland update is the most striking: moving the Automated Coder median by 18 months (~mid-2028 from late 2029) in a single quarterly update reflects a 4-month capability doubling time. At that rate, another quarterly update in July could put the median in early 2028 or late 2027.</li>
+      <li>The convergence between Metaculus Q5121 (Feb 2028, very high bar) and the Automated Coder milestone (mid-2028) is unusual &mdash; these are normally years apart. Either Q5121 has an unusually low resolution bar in practice, or capability development is compressing the gap between functional milestones and formal definitions.</li>
+      <li>Greenblatt&rsquo;s alignment concern (&ldquo;Current AIs seem pretty misaligned to me&rdquo;) is landing at the same moment his capability timeline is moving up. This is the core scenario alignment researchers worried about: not a slow gradual transition, but rapid capability gains outpacing alignment work.</li>
+      <li>Anthropic is simultaneously briefing the government on a withheld cybersecurity AI (Mythos), declining a $800B+ IPO, and watching its relationship with the administration thaw. These three signals together suggest the company is in a genuinely novel strategic position that no governance framework was designed for.</li>
+    </ul>
+  </div>
+
+  <!-- Sentinel -->
+  <div class="sub-head">Sentinel Global Risks Watch</div>
+  <div class="card" style="margin-bottom:20px">
+    <h4>Sentinel (sentinel-team.org / xrisk.fyi)</h4>
+    <p style="font-size:13px;color:var(--text-secondary)">Sentinel&rsquo;s Substack (blog.sentinel-team.org) was not accessible for automated fetching this run. No new Sentinel probability forecasts can be reported for April 13&ndash;20. Prior Sentinel estimates remain in the archive. Check <a href="https://blog.sentinel-team.org/" target="_blank">blog.sentinel-team.org</a> directly for current content.</p>
+  </div>
+
+  <!-- Intel S3 -->
+  <div class="sub-head">Intelligence &mdash; Section 3</div>
+  <ul class="intel">
+    <li>Anthropic debuted a preview of Mythos (April 7) &mdash; a new model with powerful cybersecurity capabilities that the company is withholding from public release while briefing government and financial institutions. The decision to limit release rather than deploy publicly is Anthropic acting on its stated mission, but creates a new category of AI capability: government-accessible but not publicly available. <a href="https://techcrunch.com/2026/04/07/anthropic-debuts-preview-of-powerful-new-ai-model-mythos-in-new-cybersecurity-initiative/" target="_blank">TechCrunch, Apr 7</a></li>
+    <li>OpenAI launched a beefed-up Codex with expanded desktop integration (April 16), directly targeting Anthropic&rsquo;s Claude Code. The competition between these systems is now the primary driver of software engineering capability benchmarks. <a href="https://techcrunch.com/2026/04/16/openai-takes-aim-at-anthropic-with-beefed-up-codex-that-gives-it-more-power-over-your-desktop/" target="_blank">TechCrunch, Apr 16</a></li>
+    <li>Anthropic declined VC funding offers valuing it above $800 billion (April 15). At that valuation, it would be among the five most valuable companies in the world. The decision to decline suggests Anthropic&rsquo;s leadership views external capital constraints as preferable to the governance implications of that valuation. <a href="https://techcrunch.com/2026/04/15/anthropic-shrugs-off-vc-funding-offers-valuing-it-at-800b-for-now/" target="_blank">TechCrunch, Apr 15</a></li>
+    <li>Capability milestone: Claude Opus 4.6 completed METR&rsquo;s MirrorCode task (reimplementing a 16K-line codebase) in a single agentic session, an estimated 2&ndash;17 weeks of human software engineering work. This is the clearest demonstration to date of multi-week-horizon agentic capability. <a href="https://epochai.org/blog" target="_blank">Epoch AI / METR, Apr 10</a></li>
+  </ul>
+
+  <!-- Implications S3 -->
+  <div class="implications" style="margin-top:24px">
+    <h4>Implications for Our Work</h4>
+    <p>The compressing timeline between named capability milestones (Automated Coder mid-2028) and the formal AGI bar (Metaculus Feb 2028) creates acute urgency for governance work. <strong>The practical question is whether governance institutions can move at the pace of 4-month capability doublings.</strong> The EA Forum post on Anthropic&rsquo;s IPO is directly relevant: if Anthropic goes public under shareholder pressure before sufficient governance frameworks exist, the mission structure that distinguishes it from OpenAI is at risk. The Mythos situation &mdash; a withheld cybersecurity model being briefed to governments &mdash; is a preview of the dual-use problem at scale: capabilities exist before the frameworks to govern them.</p>
+  </div>
+</div>
+
+
+<!-- SECTION 4: AI GOVERNANCE -->
+<div class="section" id="s4">
+  <div class="section-head">
+    <div class="section-num s4">4</div>
+    <div class="section-title">AI Governance</div>
+  </div>
+
+  <!-- Policy tracker -->
+  <div class="sub-head">Policy Tracker</div>
+  <table class="tbl" style="margin-bottom:20px">
+    <thead><tr><th>Issue</th><th>Status</th><th>Next Event / Stakes</th><th>Src</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><strong>Anthropic v. DoD</strong></td>
+        <td><span class="tag tag-danger">Blacklisted</span></td>
+        <td>
+          Full trial on &ldquo;supply chain risk&rdquo; designation; appeals court denied injunction Apr 8
+          <div style="color:var(--text-muted);font-size:11px;margin-top:4px;line-height:1.4">Stakes: if designation stands, it creates a template for using national security labels to coerce domestic AI companies. &ldquo;Every agency except DoD wants Anthropic&rdquo; suggests the isolation is deliberate and targeted.</div>
+        </td>
+        <td><a href="https://www.cnbc.com/2026/04/08/anthropic-pentagon-court-ruling-supply-chain-risk.html" target="_blank">CNBC</a></td>
+      </tr>
+      <tr>
+        <td><strong>Anthropic&ndash;Trump Thaw</strong></td>
+        <td><span class="tag tag-active">Active</span></td>
+        <td>
+          CEO met Treasury Sec. Bessent + WH Chief of Staff Wiles Apr 18; Mythos briefings ongoing
+          <div style="color:var(--text-muted);font-size:11px;margin-top:4px;line-height:1.4">Stakes: the pathway for accommodation runs through Anthropic&rsquo;s willingness to expand government access to Mythos. Whether this produces policy concessions or expands Anthropic&rsquo;s commercial access will shape how other labs navigate the same pressure.</div>
+        </td>
+        <td><a href="https://techcrunch.com/2026/04/18/anthropics-relationship-with-the-trump-administration-seems-to-be-thawing/" target="_blank">TechCrunch</a></td>
+      </tr>
+      <tr>
+        <td><strong>EU AI Act</strong></td>
+        <td><span class="tag tag-pending">In trilogue</span></td>
+        <td>
+          Digital Omnibus trilogue Apr 28; Annex III deferred to Dec 2027; Aug 2 transparency obligations remain
+          <div style="color:var(--text-muted);font-size:11px;margin-top:4px;line-height:1.4">Stakes: only 8 of 27 EU member states have designated national competent authorities. The enforcement framework is nominally in force but operationally absent across most of Europe &mdash; companies face legal uncertainty without practical enforcement until member states catch up.</div>
+        </td>
+        <td><a href="https://artificialintelligenceact.eu/" target="_blank">EU AI Act tracker</a></td>
+      </tr>
+      <tr>
+        <td><strong>US AI preemption</strong> (Dec 2025 EO)</td>
+        <td><span class="tag tag-active">Active</span></td>
+        <td>
+          DOJ AI Litigation Task Force challenging state AI laws in federal court since Jan 10
+          <div style="color:var(--text-muted);font-size:11px;margin-top:4px;line-height:1.4">Stakes: 19 new state AI bills passed into law as of April 2026. The preemption fight determines whether state-level AI governance (the most active legislative venue) can survive federal challenge. Currently unresolved.</div>
+        </td>
+        <td><a href="https://pluralpolicy.com/blog/the-ai-governance-watch-april-2026-nineteen-new-ai-bills-passed-into-law/" target="_blank">Plural Policy</a></td>
+      </tr>
+      <tr>
+        <td><strong>CAISI</strong> (formerly AI Safety Institute)</td>
+        <td><span class="tag tag-pending">Rebranded</span></td>
+        <td>
+          Renamed Center for AI Standards and Innovation; releasing sector-specific RMF profiles
+          <div style="color:var(--text-muted);font-size:11px;margin-top:4px;line-height:1.4">Stakes: the rename signals a deliberate shift from &ldquo;safety&rdquo; to &ldquo;standards and innovation&rdquo; framing. If CAISI focuses on adoption barriers rather than risk, the US government&rsquo;s primary AI evaluation body is no longer oriented toward catching risks before deployment.</div>
+        </td>
+        <td><a href="https://www.nist.gov/" target="_blank">NIST</a></td>
+      </tr>
+      <tr>
+        <td><strong>OpenAI industrial policy blueprint</strong></td>
+        <td><span class="tag tag-active">Released</span></td>
+        <td>
+          &ldquo;Industrial Policy for the Intelligence Age&rdquo; (Apr 6); DC workshop planned May 2026
+          <div style="color:var(--text-muted);font-size:11px;margin-top:4px;line-height:1.4">Stakes: OpenAI is proposing a national AI strategy that would treat AI access as a fundamental right while establishing risk-based regulation with minimal friction. If adopted, it would legitimize OpenAI&rsquo;s preferred governance framework before any independent regulatory analysis.</div>
+        </td>
+        <td><a href="https://openai.com/index/industrial-policy-for-the-intelligence-age/" target="_blank">OpenAI, Apr 6</a></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- AI Pause/Moratorium markets -->
+  <div class="sub-head">AI Pause &amp; Moratorium Markets</div>
+  <table class="tbl" style="margin-bottom:20px">
+    <thead><tr><th>Market</th><th>Prob</th><th>&Delta; Week</th><th>Volume</th><th>Activity</th><th>Source</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><a href="https://polymarket.com/event/ai-data-center-moratorium-passed-before-2027" target="_blank">AI data center moratorium passed before 2027</a></td>
+        <td class="p">74.5%</td>
+        <td class="p">&mdash;</td>
+        <td class="vol">$14K</td>
+        <td><span class="tag tag-thin">&#9888; Thin</span></td>
+        <td>PM</td>
+      </tr>
+      <tr>
+        <td><a href="https://polymarket.com/event/us-enacts-ai-safety-bill-before-2027" target="_blank">US <span class="has-tip" data-tip="Resolves YES if a bill specifically targeting AI safety is signed into law before 2027. Distinct from the data center moratorium market.">AI safety bill</span> enacted before 2027</a></td>
+        <td class="p">25.5%</td>
+        <td class="p">&mdash;</td>
+        <td class="vol">$88K</td>
+        <td><span class="tag tag-active">Active</span></td>
+        <td>PM</td>
+      </tr>
+      <tr>
+        <td>AI moratorium &mdash; <span class="has-tip" data-tip="Metaculus Q38766: Will the One Big Beautiful Bill Act contain a 5+ year AI moratorium provision?">Metaculus Q38766</span> (OBBBA moratorium provision)</td>
+        <td class="p">N/A</td>
+        <td class="p">&mdash;</td>
+        <td class="vol">&mdash;</td>
+        <td><span class="tag tag-pending">API null this run</span></td>
+        <td>Metaculus</td>
+      </tr>
+    </tbody>
+  </table>
+  <p style="font-size:11px;color:var(--text-muted);margin-bottom:20px">⚠️ The data center moratorium market (74.5%) has only $14K in volume and should not be treated as a reliable probability. The high number likely reflects mispricing in a thin market. US AI safety bill (25.5%, $88K) is more reliable.</p>
+
+  <!-- Upcoming events -->
+  <div class="sub-head">Upcoming AI Governance Events</div>
+  <div class="card" style="margin-bottom:20px">
+    <ul class="intel">
+      <li><strong>April 28</strong> &mdash; EU AI Act Digital Omnibus second trilogue (Brussels). Key vote on enforcement timeline split. <a href="https://artificialintelligenceact.eu/" target="_blank">EU AI Act tracker</a></li>
+      <li><strong>May 2026</strong> &mdash; OpenAI industrial policy workshop (Washington DC). <a href="https://openai.com/index/industrial-policy-for-the-intelligence-age/" target="_blank">OpenAI</a></li>
+      <li><strong>July 2026</strong> &mdash; ICML 2026 (major ML conference); capability announcements expected to accelerate timeline discussions.</li>
+      <li><strong>August 2, 2026</strong> &mdash; EU AI Act transparency obligations take effect (GPAI providers, systemic risk models). <a href="https://artificialintelligenceact.eu/" target="_blank">EU AI Act tracker</a></li>
+    </ul>
+  </div>
+
+  <!-- Intel S4 -->
+  <div class="sub-head">Intelligence &mdash; Section 4</div>
+  <ul class="intel">
+    <li>Anthropic&rsquo;s Mythos model &mdash; described as having &ldquo;powerful cybersecurity capabilities&rdquo; &mdash; is being briefed to the Trump administration and major banks while being withheld from public release. Jack Clark characterized this as a new model for government-private sector AI partnership. The precedent: powerful AI capabilities flowing to government actors before public deployment. <a href="https://techcrunch.com/2026/04/14/anthropic-co-founder-confirms-the-company-briefed-the-trump-administration-on-mythos/" target="_blank">TechCrunch, Apr 14</a></li>
+    <li>OpenAI altered its Pentagon deal after criticism from internal staff about surveillance applications &mdash; after initially signing where Anthropic would not. This creates a pattern: OpenAI takes government contracts; Anthropic resists; Anthropic faces blacklisting; Anthropic begins accommodation. The sequence creates pressure for other frontier labs facing similar choices. <a href="https://www.nbcnews.com/tech/tech-news/openai-alters-deal-pentagon-critics-sound-alarm-surveillance-rcna261357" target="_blank">NBC News</a></li>
+    <li>NIST and MITRE announced a $20M research effort on AI cybersecurity (April 2026), running in parallel with CAISI&rsquo;s rebranding away from &ldquo;safety.&rdquo; The two moves together suggest a bifurcation: federal AI research is moving toward security (offensive/defensive) while stepping back from safety (preventing harmful deployment). <a href="https://cyberscoop.com/nist-mitre-announce-20-million-dollar-research-effort-on-ai-cybersecurity/" target="_blank">Cyberscoop</a></li>
+    <li>19 new state AI bills signed into law as of April 2026, even as the DOJ&rsquo;s AI Litigation Task Force actively challenges state laws in federal court. The preemption fight is the most consequential near-term AI governance question in the US: it determines whether the most active legislative venue (state level) can survive. <a href="https://pluralpolicy.com/blog/the-ai-governance-watch-april-2026-nineteen-new-ai-bills-passed-into-law/" target="_blank">Plural Policy</a></li>
+  </ul>
+
+  <!-- Implications S4 -->
+  <div class="implications" style="margin-top:24px">
+    <h4>Implications for Our Work</h4>
+    <p>The Mythos precedent is worth tracking carefully: a safety-focused company briefing government on a withheld powerful capability is a new kind of AI governance event that no framework anticipated. <strong>If this becomes the model</strong> &mdash; capabilities developed, selectively shared with government, held from the public &mdash; the governance question shifts from deployment rules to access rules. On the preemption fight: state-level AI governance is where most of the legislative action is happening; if the DOJ preemption strategy succeeds, that entire venue closes. Worth monitoring which state laws survive federal challenge as the litigation develops.</p>
+  </div>
+</div>
+
+<!-- DATA SOURCES -->
+<div class="section" id="sources">
+  <div class="section-head">
+    <div class="section-num" style="background:var(--text-muted)">&#8505;</div>
+    <div class="section-title">Data Sources &amp; Methodology</div>
+  </div>
+  <div class="g2" style="margin-bottom:20px">
+    <div>
+      <div class="sub-head">Core Sources (checked every run)</div>
+      <ul class="intel">
+        <li><strong>Polymarket</strong> &mdash; Gamma API (public, CORS-enabled). Primary source for binary political/governance markets. Prices are outcome probabilities.</li>
+        <li><strong>Election Betting Odds</strong> (electionbettingodds.com) &mdash; 5-platform aggregate for House/Senate control and presidential odds.</li>
+        <li><strong>Metaculus</strong> &mdash; API (Token auth). Primary source for date-type AGI questions (Q5121, Q9062, Q4123) and Democracy Threat Index (Project 32829). API returned null aggregations this run; values carried from April 15 edition.</li>
+        <li><strong>Goodheart Labs AGI Dashboard</strong> (agi.goodheartlabs.com) &mdash; Combined forecast aggregating Metaculus, Manifold, Kalshi.</li>
+        <li><strong>LessWrong / Alignment Forum</strong> &mdash; Primary venue for named forecaster timeline updates. Greenblatt (Apr 6, Apr 15), dschwarz (Apr 15), Kokotajlo/Lifland (Q1 2026 update) checked this run.</li>
+        <li><strong>EA Forum</strong> (forum.effectivealtruism.org) &mdash; Democracy/AI governance funding analysis, forecasting updates. Kim (Apr 17), Matthews (Apr 16) checked this run.</li>
+        <li><strong>Sentinel Global Risks Watch</strong> (blog.sentinel-team.org / xrisk.fyi) &mdash; Superforecaster-calibrated takes on political and x-risk events. <strong>Not accessible via automated fetch this run.</strong></li>
+        <li><strong>U.S. Press Freedom Tracker</strong> (pressfreedomtracker.us) &mdash; Checked this run. No incidents in Apr 13&ndash;20 window; April 11 and April 8 incidents reported.</li>
+        <li><strong>Olga Lautman Substack</strong> (olgalautman.substack.com) &mdash; Authoritarian drift analysis. <strong>Not accessible via automated fetch this run.</strong> Items in Authoritarian Drift section sourced from corroborating outlets.</li>
+      </ul>
+    </div>
+    <div>
+      <div class="sub-head">Supplementary Sources</div>
+      <ul class="intel">
+        <li><strong>BLS</strong> &mdash; CPI (March 2026: 3.3% YoY), unemployment (March 2026: 4.3%).</li>
+        <li><strong>Silver Bulletin</strong> (silverbulletin.com) &mdash; Trump approval, generic ballot. <strong>Not accessible this run;</strong> approval figure carried from April 15 edition (&minus;17.5).</li>
+        <li><strong>TechCrunch</strong> &mdash; Anthropic coverage. Primary source for Mythos and government relationship stories this week.</li>
+        <li><strong>Cook Political Report, Sabato&rsquo;s Crystal Ball, Split Ticket</strong> &mdash; Senate race ratings. Cook returned 403; Sabato and Split Ticket not successfully fetched. No confirmed rating changes reported this run.</li>
+        <li><strong>Ballotpedia / NCSL / Bolts</strong> &mdash; Primary election dates and calendar data.</li>
+        <li><strong>Epoch AI</strong> (epochai.org) &mdash; Capability research; MirrorCode (Apr 10) and acceleration analysis (Apr 16) cited.</li>
+        <li><strong>EU AI Act tracker</strong> (artificialintelligenceact.eu) &mdash; Implementation status and trilogue updates.</li>
+        <li><strong>Plural Policy</strong> &mdash; State AI bill tracking (19 bills signed as of April 2026).</li>
+      </ul>
+      <div class="sub-head" style="margin-top:16px">Consequentiality Filter</div>
+      <p style="font-size:12px;color:var(--text-secondary)">Markets where volume &lt;$50K AND resolution criteria is narrow/procedural are excluded or flagged ⚠️ Thin. The &ldquo;impeached before term ends&rdquo; market (House vote only, thin volume) is permanently excluded. Data center moratorium market (74.5%, $14K) included but flagged as unreliable.</p>
+    </div>
+  </div>
+  <p style="font-size:12px;color:var(--text-muted)">Claim audit: 22 claims checked, 14 supported, 4 softened/attributed, 2 carried from prior edition (Metaculus medians, Silver Bulletin approval), 2 unable to verify (Sentinel, Lautman &mdash; sources inaccessible), 0 hard-fail unresolved. <a href="archive/2026-04-20-audit.json">Full audit log</a></p>
+</div>
+
+<!-- BLW APPENDIX -->
+<div id="blw-appendix" style="padding-top:48px;border-top:1px solid var(--border)">
+  <div style="display:flex;align-items:center;gap:12px;margin-bottom:28px">
+    <div class="section-num" style="background:var(--text-muted);width:28px;height:28px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;color:white;flex-shrink:0">A1</div>
+    <div style="font-size:20px;font-weight:700;letter-spacing:-0.02em">Bright Line Watch &mdash; Methodology &amp; Trajectory Deep Dive</div>
+  </div>
+  <div class="g2" style="margin-bottom:24px">
+    <div class="card">
+      <h4>What BLW Is</h4>
+      <div class="card-sub"><a href="https://brightlinewatch.org/" target="_blank">brightlinewatch.org</a></div>
+      <p style="font-size:13px;color:var(--text-secondary)">Bright Line Watch is a bipartisan group of political scientists at US universities who survey experts and the public on democratic practice in the US. Founded in 2017 in response to concerns about democratic backsliding. Conducts ~4 waves per year. The academic team includes researchers from Princeton, Rochester, Dartmouth, Chicago, and other institutions.</p>
+    </div>
+    <div class="card">
+      <h4>The 0&ndash;100 Scale</h4>
+      <p style="font-size:13px;color:var(--text-secondary)">BLW surveys respondents on ~30 specific democratic performance measures grouped into categories: elections, rights, constraints on executive, rule of law, civil liberties. Scores are expert assessments of performance, not predictions or market probabilities. The aggregate is roughly comparable to V-Dem&rsquo;s Liberal Democracy Index but more US-specific and more frequently updated.</p>
+    </div>
+    <div class="card">
+      <h4>Historical Trajectory</h4>
+      <p style="font-size:13px;color:var(--text-secondary)">Summer 2018 (~73): Baseline modern era, early norm erosion noted &mdash; Winter 2020&ndash;21 (~62): Post-Jan 6 drop; peaceful transfer questions enter survey &mdash; Fall 2022 (~58): Sustained decline; election administration category under pressure &mdash; Winter 2024&ndash;25 (~48): Sharpest single-wave drop in survey history coinciding with second Trump term inauguration &mdash; Spring 2026 (~44, provisional): Continued decline on executive overreach, press freedom, and independent judiciary categories.</p>
+    </div>
+    <div class="card">
+      <h4>Spring 2026 Wave: Key Findings</h4>
+      <p style="font-size:13px;color:var(--text-secondary)">Provisional spring 2026 wave (full report pending): Executive constraints category scored lowest in survey history. Press freedom category declined for sixth consecutive wave. Positive: electoral administration scores held steady, suggesting resilience in election machinery itself even as surrounding institutional constraints weakened.</p>
+    </div>
+    <div class="card">
+      <h4>What BLW Measures Well</h4>
+      <ul style="font-size:13px;color:var(--text-secondary);line-height:1.7;padding-left:16px">
+        <li>Expert consensus on norm erosion vs. public perception of norm erosion</li>
+        <li>Granular breakdown by democratic dimension (not just a single index)</li>
+        <li>Longitudinal consistency &mdash; same items over time allow genuine trend detection</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4>What BLW Doesn&rsquo;t Capture Well</h4>
+      <ul style="font-size:13px;color:var(--text-secondary);line-height:1.7;padding-left:16px">
+        <li>Real-time developments &mdash; survey waves are months apart</li>
+        <li>Sub-national democratic variation (state vs. federal)</li>
+        <li>Economic drivers of democratic support or erosion</li>
+        <li>International comparison context (it&rsquo;s US-focused)</li>
+      </ul>
+    </div>
+  </div>
+  <div class="card" style="margin-bottom:24px">
+    <h4>Comparison to Other Indices</h4>
+    <table class="tbl">
+      <thead><tr><th>Index</th><th>US Score</th><th>Freq.</th><th>What it measures</th></tr></thead>
+      <tbody>
+        <tr><td>BLW (expert survey)</td><td class="p">~44/100 (Spring 2026, provisional)</td><td>~4x/yr</td><td>US democratic practice, expert assessment</td></tr>
+        <tr><td><a href="https://v-dem.net/" target="_blank">V-Dem Liberal Democracy Index</a></td><td class="p">0.57 (2025, v16)</td><td>Annual</td><td>Liberal democracy globally; US 51st, lowest since 1965</td></tr>
+        <tr><td>Freedom House</td><td class="p">83/100 (2025)</td><td>Annual</td><td>Political rights + civil liberties; higher bar for classification</td></tr>
+        <tr><td><a href="https://rsf.org/en/index" target="_blank">RSF Press Freedom</a></td><td class="p">57th globally (2025)</td><td>Annual</td><td>Press freedom specifically; &ldquo;Problematic Situation&rdquo; category</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p style="font-size:12px;color:var(--text-muted)"><a href="#blw-short" style="color:var(--accent-light)">&#8593; Back to Bright Line Watch summary</a></p>
+</div>
+
+</div><!-- end .container -->
+
+<footer>
+  <div class="container">
+    <div class="grid">
+      <div>
+        <h4>Weekly Democracy Intel</h4>
+        <a href="/">Current Edition</a>
+        <a href="/archive/">Archive</a>
+        <a href="/editions.json">editions.json</a>
+      </div>
+      <div>
+        <h4>Prediction Markets</h4>
+        <a href="https://polymarket.com/politics" target="_blank">Polymarket</a>
+        <a href="https://www.metaculus.com/" target="_blank">Metaculus</a>
+        <a href="https://electionbettingodds.com/" target="_blank">Election Betting Odds</a>
+        <a href="https://manifold.markets/" target="_blank">Manifold</a>
+      </div>
+      <div>
+        <h4>Forecasters &amp; Research</h4>
+        <a href="https://agi.goodheartlabs.com/" target="_blank">Goodheart Labs AGI</a>
+        <a href="https://epochai.org/" target="_blank">Epoch AI</a>
+        <a href="https://www.lesswrong.com/" target="_blank">LessWrong</a>
+        <a href="https://sentinel-team.org/" target="_blank">Sentinel</a>
+      </div>
+      <div>
+        <h4>Democracy</h4>
+        <a href="https://brightlinewatch.org/" target="_blank">Bright Line Watch</a>
+        <a href="https://pressfreedomtracker.us/" target="_blank">Press Freedom Tracker</a>
+        <a href="https://v-dem.net/" target="_blank">V-Dem</a>
+        <a href="https://cookpolitical.com/" target="_blank">Cook Political</a>
+      </div>
+    </div>
+    <p style="font-size:11px;color:var(--text-muted);border-top:1px solid var(--border);padding-top:20px">Weekly Democracy Intelligence Brief &middot; April 20, 2026 edition &middot; Fully Claude-generated</p>
+  </div>
+</footer>
+
+<script>
+// Tooltip system
+(function() {
+  var layer = document.getElementById('tooltip-layer');
+  document.querySelectorAll('.has-tip').forEach(function(el) {
+    el.addEventListener('mouseenter', function(e) {
+      layer.textContent = el.dataset.tip;
+      layer.classList.add('visible');
+    });
+    el.addEventListener('mousemove', function(e) {
+      var x = e.clientX + 14, y = e.clientY - 8;
+      if (x + 340 > window.innerWidth) x = e.clientX - 354;
+      layer.style.left = x + 'px';
+      layer.style.top = y + 'px';
+    });
+    el.addEventListener('mouseleave', function() {
+      layer.classList.remove('visible');
+    });
+  });
+})();
+
+// AGI Timeline Chart
+(function() {
+  var ctx = document.getElementById('timelineChart');
+  if (!ctx) return;
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: [
+        'Automated Coder\n(Kokotajlo/Lifland)',
+        'Automated Coder milestone\n(Greenblatt)',
+        'General AI Q5121\n(Metaculus)',
+        'Full AI R&D auto\n(Greenblatt)',
+        'Combined forecast\n(Goodheart Labs)'
+      ],
+      datasets: [{
+        label: 'Median forecast year',
+        data: [2028.5, 2028.75, 2028.1, 2031, 2030],
+        backgroundColor: [
+          'rgba(245,158,11,0.7)',
+          'rgba(245,158,11,0.5)',
+          'rgba(99,102,241,0.7)',
+          'rgba(239,68,68,0.6)',
+          'rgba(6,182,212,0.6)'
+        ],
+        borderColor: [
+          'rgba(245,158,11,1)',
+          'rgba(245,158,11,0.8)',
+          'rgba(99,102,241,1)',
+          'rgba(239,68,68,0.9)',
+          'rgba(6,182,212,0.9)'
+        ],
+        borderWidth: 1,
+        borderRadius: 4
+      }]
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          callbacks: {
+            label: function(ctx) {
+              var labels = {
+                0: 'Mid-2028 (Q1 2026 update, -18mo from late 2029)',
+                1: 'P(AC by EOY 2028) = 39% (Apr 6 LW)',
+                2: 'Feb 2028 community median (1,846 forecasters)',
+                3: 'Full AI R&D automation, median ~2031 (Apr 6 LW)',
+                4: 'Combined: 2030 median, 80% CI 2027-2043'
+              };
+              return labels[ctx.dataIndex] || ctx.formattedValue;
+            }
+          }
+        }
+      },
+      scales: {
+        y: {
+          min: 2027,
+          max: 2033,
+          ticks: {
+            color: '#71717a',
+            callback: function(v) { return v % 1 === 0 ? v : ''; }
+          },
+          grid: { color: 'rgba(63,63,70,0.4)' }
+        },
+        x: {
+          ticks: { color: '#71717a', font: { size: 10 } },
+          grid: { display: false }
+        }
+      }
+    }
+  });
+})();
+</script>
+</body>
+</html>
