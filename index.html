@@ -131,7 +131,7 @@ nav .container { display: flex; align-items: center; justify-content: space-betw
 
 /* ─── KPI STRIP ─── */
 .kpi-strip {
-  display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px;
+  display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px;
   padding: 28px 0; border-bottom: 1px solid var(--border);
 }
 .kpi {
@@ -260,6 +260,7 @@ footer a { color: var(--text-muted); text-decoration: none; display: block; marg
 footer a:hover { color: var(--accent-light); }
 
 /* ─── RESPONSIVE ─── */
+@media(max-width:1200px){ .kpi-strip{grid-template-columns:repeat(3,1fr);} }
 @media(max-width:1024px){ .kpi-strip{grid-template-columns:repeat(3,1fr);} }
 @media(max-width:768px){ .kpi-strip{grid-template-columns:repeat(2,1fr);} .g2,.g3{grid-template-columns:1fr;} .nav-links{display:none;} footer .grid{grid-template-columns:repeat(2,1fr);} }
 @media print { body{--bg:#fff;--surface:#fff;--text:#000;--text-secondary:#333;--border:#ddd;} nav,.theme-toggle,.badge{display:none;} }
@@ -420,7 +421,7 @@ body.light #tooltip-layer {
       <a href="#sources">Sources</a>
     </div>
     <div class="nav-right">
-      <span class="badge"><span class="dot dot-amber"></span> Auto-updates every Monday 3am ET</span>
+      <span class="badge"><span class="dot dot-amber"></span> Updated April 20, 2026</span>
       <button class="theme-toggle" onclick="document.body.classList.toggle('light')">Toggle theme</button>
     </div>
   </div>
@@ -444,7 +445,7 @@ body.light #tooltip-layer {
   <div class="sub-head">Watching this week</div>
   <div class="updates-list">
     <div class="update-item imminent">
-      <div class="update-date">April 21 &mdash; Tomorrow</div>
+      <div class="update-date">April 21</div>
       <h4>Virginia Redistricting Referendum</h4>
       <p>Voters decide whether to create an independent redistricting commission, stripping Republicans of their gerrymander. Polymarket has it at <strong>84.5%</strong> to pass &mdash; down from 88% last week. <span class="has-tip" data-tip="A Yes vote would be the first successful Dem counter-gerrymander of the cycle and a significant democracy-field win.">read more</span> <a href="https://polymarket.com/event/will-the-virginia-redistricting-referendum-pass">PM</a></p>
     </div>
@@ -456,7 +457,7 @@ body.light #tooltip-layer {
     <div class="update-item near">
       <div class="update-date">May 5 &mdash; 2 weeks</div>
       <h4>Indiana State Primaries</h4>
-      <p>State senate and house primary elections. Watch for competitive district outcomes and turnout indicators.</p>
+      <p>State senate and house primary elections. Watch for competitive district outcomes and turnout indicators. <a href="https://ballotpedia.org/Indiana_state_elections,_2026" target="_blank">Ballotpedia</a></p>
     </div>
     <div class="update-item near">
       <div class="update-date">May 26 &mdash; 5 weeks</div>
@@ -498,6 +499,22 @@ body.light #tooltip-layer {
   </div>
 </div>
 
+<!-- EXECUTIVE SUMMARY -->
+<div style="margin-bottom:28px">
+  <div class="sub-head">Executive Summary &mdash; Ordered by Actionability</div>
+  <div class="card">
+    <h4 style="margin-bottom:10px">April 20, 2026 Edition</h4>
+    <ol style="font-size:13px;color:var(--text-secondary);line-height:1.8;padding-left:18px;margin:0">
+      <li><strong>VA redistricting referendum (Apr 21, 84.5%)</strong> &mdash; most time-sensitive item; resolves in days. A win is the democracy field&rsquo;s clearest near-term signal of the cycle and affects both 2026 and 2030 maps. <em>Action: monitor results, update field strategy accordingly.</em></li>
+      <li><strong>Ohio special Senate election (May 5, Brown 37%)</strong> &mdash; first competitive Senate test; two weeks out. Dem underdog in red-trending state. Results will calibrate Senate map expectations for November. <em>Action: assess Dem GOTV capacity and candidate quality in tough terrain.</em></li>
+      <li><strong>Anthropic&ndash;Trump thaw</strong> &mdash; ongoing. CEO met WH officials April 18; Pentagon blacklisting still in effect but isolated. The most safety-focused major lab is actively engaging with this administration faster than expected. <em>Action: track whether engagement produces policy concessions or commercial access expansion.</em></li>
+      <li><strong>AGI timeline compression</strong> &mdash; Kokotajlo/Lifland moved Automated Coder median 18 months forward in a single quarterly update (late 2029 &rarr; mid-2028). Metaculus Q5121 median converging toward same window (Feb 2028). <em>Action: governance work must account for 4-month capability doubling pace.</em></li>
+      <li><strong>SCOTUS vacancy and Alito markets dropped ~15pp</strong> &mdash; no clear public cause; could be single large trade in thin markets. Do not update court-change strategy on this signal alone without corroboration.</li>
+      <li><strong>25th Amendment spike (+8pp to 9%)</strong> &mdash; thin market ($20K); treat as noise unless corroborated by independent reporting.</li>
+    </ol>
+  </div>
+</div>
+
 <!-- KPI STRIP -->
 <div class="kpi-strip">
   <a class="kpi blue" href="https://electionbettingodds.com/" target="_blank">
@@ -524,6 +541,18 @@ body.light #tooltip-layer {
     <div class="kpi-detail">Polymarket &middot; $1.36M vol &middot; elevated vs. 20% Feb baseline</div>
     <span class="kpi-change seed">&#8595; from ~30% last week</span>
   </a>
+  <a class="kpi" style="background:var(--accent-dim);border-color:var(--accent)" href="https://www.metaculus.com/questions/5121/" target="_blank">
+    <div class="kpi-label">AGI Median (Metaculus Q5121)</div>
+    <div class="kpi-value">Feb 2028</div>
+    <div class="kpi-detail">1,846 forecasters &middot; 80% CI Aug &rsquo;26&ndash;Feb &rsquo;32 &middot; compressed 18 mo this quarter</div>
+    <span class="kpi-change seed">Kokotajlo/Lifland: mid-2028</span>
+  </a>
+  <a class="kpi" style="background:var(--amber-dim);border-color:var(--amber)" href="https://brightlinewatch.org/" target="_blank">
+    <div class="kpi-label">BLW Democracy Score</div>
+    <div class="kpi-value">~44<span style="font-size:14px;font-weight:400;color:var(--text-muted)">/100</span></div>
+    <div class="kpi-detail">Bright Line Watch Spring 2026 &middot; lowest in survey history &middot; 0&ndash;100 expert survey</div>
+    <span class="kpi-change seed">&#8595; from ~48 (Winter 2024&ndash;25)</span>
+  </a>
 </div>
 
 
@@ -535,20 +564,20 @@ body.light #tooltip-layer {
     <div class="card">
       <h4 style="margin-bottom:10px">Biggest Movers This Week</h4>
       <ul style="font-size:13px;color:var(--text-secondary);line-height:1.7;padding-left:16px;margin:0">
-        <li><strong>Samuel Alito retirement by Dec 2026:</strong> &minus;15pp to 38% &mdash; market pricing out near-term court change</li>
-        <li><strong>SCOTUS vacancy 2026:</strong> &minus;15pp to 40% &mdash; correlated move with Alito market</li>
-        <li><strong>25th Amendment before 2027:</strong> +8pp to 9% &mdash; notable spike; thin market ($20K) makes estimate noisy</li>
-        <li><strong>VA redistricting referendum:</strong> &minus;3.5pp to 84.5% &mdash; resolving Apr 21</li>
-        <li><strong>Insurrection Act Dec &amp; Jun:</strong> &minus;3pp and &minus;3.5pp respectively</li>
+        <li><strong>Samuel Alito retirement by Dec 2026:</strong> &minus;15pp to 38% &mdash; market pricing out near-term court change <a href="https://polymarket.com/predictions/scotus" target="_blank">PM</a></li>
+        <li><strong>SCOTUS vacancy 2026:</strong> &minus;15pp to 40% &mdash; correlated move with Alito market <a href="https://polymarket.com/predictions/scotus" target="_blank">PM</a></li>
+        <li><strong>25th Amendment before 2027:</strong> +8pp to 9% &mdash; notable spike; thin market ($20K) makes estimate noisy <a href="https://polymarket.com/event/trump-removed-via-25th-amendment-before-2027" target="_blank">PM</a></li>
+        <li><strong>VA redistricting referendum:</strong> &minus;3.5pp to 84.5% &mdash; resolving Apr 21 <a href="https://polymarket.com/event/will-the-virginia-redistricting-referendum-pass" target="_blank">PM</a></li>
+        <li><strong>Insurrection Act Dec &amp; Jun:</strong> &minus;3pp and &minus;3.5pp respectively <a href="https://polymarket.com/event/insurrection-act-invoked-by" target="_blank">PM</a></li>
       </ul>
     </div>
     <div class="card">
       <h4 style="margin-bottom:10px">Approaching Resolution</h4>
       <ul style="font-size:13px;color:var(--text-secondary);line-height:1.7;padding-left:16px;margin:0">
-        <li><strong>VA redistricting referendum</strong> (Apr 21, 84.5%) &mdash; resolves within days; clearest near-term democracy-field signal</li>
-        <li><strong>SCOTUS strikes down birthright citizenship EO</strong> (93%) &mdash; near resolution; ruling expected before Jun 30 SCOTUS term close</li>
-        <li><strong>Ohio special Senate election</strong> (May 5, Brown 37%) &mdash; first competitive Senate test of cycle</li>
-        <li><strong>SCOTUS lets Trump fire FTC commissioners</strong> (89%) &mdash; watching for Humphrey&rsquo;s Executor ruling</li>
+        <li><strong>VA redistricting referendum</strong> (Apr 21, 84.5%) &mdash; resolves within days; clearest near-term democracy-field signal <a href="https://polymarket.com/event/will-the-virginia-redistricting-referendum-pass" target="_blank">PM</a></li>
+        <li><strong>SCOTUS strikes down birthright citizenship EO</strong> (93%) &mdash; near resolution; ruling expected before Jun 30 SCOTUS term close <a href="https://polymarket.com/predictions/scotus" target="_blank">PM</a></li>
+        <li><strong>Ohio special Senate election</strong> (May 5, Brown 37%) &mdash; first competitive Senate test of cycle <a href="https://ballotpedia.org/Ohio_special_Senate_election,_2026" target="_blank">Ballotpedia</a></li>
+        <li><strong>SCOTUS lets Trump fire FTC commissioners</strong> (89%) &mdash; watching for Humphrey&rsquo;s Executor ruling <a href="https://polymarket.com/predictions/scotus" target="_blank">PM</a></li>
       </ul>
     </div>
   </div>
@@ -574,7 +603,7 @@ body.light #tooltip-layer {
         <td class="vol">$7.23M</td>
         <td><span class="tag tag-active">Active</span></td>
         <td class="p">Nov 2025</td>
-        <td>PM</td>
+        <td><a href="https://polymarket.com/event/trump-out-as-president-before-2027" target="_blank">PM</a></td>
       </tr>
       <tr>
         <td><a href="https://polymarket.com/event/will-trump-be-impeached-by-december-31-2026">Impeached by Dec 31, 2026</a></td>
@@ -583,7 +612,7 @@ body.light #tooltip-layer {
         <td class="vol">$692K</td>
         <td><span class="tag tag-active">Active</span></td>
         <td class="p">Jul 2025</td>
-        <td>PM</td>
+        <td><a href="https://polymarket.com/event/will-trump-be-impeached-by-december-31-2026" target="_blank">PM</a></td>
       </tr>
       <tr style="background:var(--amber-dim)">
         <td><a href="https://polymarket.com/event/trump-removed-via-25th-amendment-before-2027">Removed via <span class="has-tip" data-tip="The 25th Amendment allows the VP and Cabinet to declare the president unable to discharge duties. Section 4 requires VP + majority Cabinet agreement, then 2/3 of both chambers to sustain removal.">25th Amendment</span> before 2027</a></td>
@@ -592,7 +621,7 @@ body.light #tooltip-layer {
         <td class="vol">$20K</td>
         <td><span class="tag tag-thin">&#9888; Thin</span></td>
         <td class="p">Nov 2025</td>
-        <td>PM</td>
+        <td><a href="https://polymarket.com/event/trump-removed-via-25th-amendment-before-2027" target="_blank">PM</a></td>
       </tr>
       <tr>
         <td><a href="https://polymarket.com/event/will-trump-be-impeached-before-his-term-ends" target="_blank">Impeached before term ends (by Jan 2029)</a></td>
@@ -601,7 +630,7 @@ body.light #tooltip-layer {
         <td class="vol">~$2M</td>
         <td><span class="tag tag-active">Active</span></td>
         <td class="p">Nov 2025</td>
-        <td>PM</td>
+        <td><a href="https://polymarket.com/event/will-trump-be-impeached-before-his-term-ends" target="_blank">PM</a></td>
       </tr>
     </tbody>
   </table>
@@ -619,7 +648,7 @@ body.light #tooltip-layer {
         <td class="vol">$499K</td>
         <td><span class="tag tag-near">Resolves Apr 21</span></td>
         <td class="p">Feb 2026</td>
-        <td>PM</td>
+        <td><a href="https://polymarket.com/event/will-the-virginia-redistricting-referendum-pass" target="_blank">PM</a></td>
       </tr>
       <tr>
         <td><a href="https://polymarket.com/event/insurrection-act-invoked-by"><span class="has-tip" data-tip="Would allow the president to deploy military domestically to suppress &lsquo;insurrection&rsquo;. Last invoked 1807; cited as most acute near-term risk to democratic norms by most forecasters.">Insurrection Act</span> invoked by Dec 31, 2026</a></td>
@@ -628,7 +657,7 @@ body.light #tooltip-layer {
         <td class="vol">$129K</td>
         <td><span class="tag tag-active">Active</span></td>
         <td class="p">Jan 2026</td>
-        <td>PM</td>
+        <td><a href="https://polymarket.com/event/insurrection-act-invoked-by" target="_blank">PM</a></td>
       </tr>
       <tr>
         <td><a href="https://polymarket.com/event/will-donald-trump-invoke-the-insurrection-act-before-july">Insurrection Act invoked by Jun 30, 2026</a></td>
@@ -637,7 +666,7 @@ body.light #tooltip-layer {
         <td class="vol">$68K</td>
         <td><span class="tag tag-near">Near res.</span></td>
         <td class="p">Jun 2025</td>
-        <td>PM</td>
+        <td><a href="https://polymarket.com/event/will-donald-trump-invoke-the-insurrection-act-before-july" target="_blank">PM</a></td>
       </tr>
       <tr>
         <td><a href="https://polymarket.com/predictions/scotus">SCOTUS strikes down birthright citizenship <span class="has-tip" data-tip="Trump&rsquo;s Jan 2025 EO attempting to end birthright citizenship for children of undocumented immigrants. Constitutional scholars broadly view this as clearly unconstitutional under the 14th Amendment.">EO</span></a></td>
@@ -646,7 +675,7 @@ body.light #tooltip-layer {
         <td class="vol">$110K</td>
         <td><span class="tag tag-near">Near res.</span></td>
         <td class="p">Mar 2026 <span class="tag tag-thin">new</span></td>
-        <td>PM</td>
+        <td><a href="https://polymarket.com/predictions/scotus" target="_blank">PM</a></td>
       </tr>
       <tr>
         <td><a href="https://polymarket.com/predictions/scotus">SCOTUS lets Trump fire <span class="has-tip" data-tip="Trump v. Slaughter: Trump fired FTC commissioners in violation of Humphrey&rsquo;s Executor (1935) which protects independent agency commissioners from removal without cause.">FTC commissioners</span></a></td>
@@ -655,7 +684,7 @@ body.light #tooltip-layer {
         <td class="vol">$21K</td>
         <td><span class="tag tag-thin">&#9888; Thin</span></td>
         <td class="p">Jan 2026</td>
-        <td>PM</td>
+        <td><a href="https://polymarket.com/predictions/scotus" target="_blank">PM</a></td>
       </tr>
       <tr>
         <td><a href="https://polymarket.com/predictions/scotus">SCOTUS bars counting mail ballots after Election Day</a></td>
@@ -664,7 +693,7 @@ body.light #tooltip-layer {
         <td class="vol">$38K</td>
         <td><span class="tag tag-active">Active</span></td>
         <td class="p">Mar 2026 <span class="tag tag-thin">new</span></td>
-        <td>PM</td>
+        <td><a href="https://polymarket.com/predictions/scotus" target="_blank">PM</a></td>
       </tr>
       <tr>
         <td><a href="https://polymarket.com/event/save-act-signed-into-law-in-2026"><span class="has-tip" data-tip="H.R. 22: Requires documentary proof of citizenship (passport or birth certificate) to register to vote. Would create significant registration barriers for millions of eligible voters without these documents.">SAVE Act</span> (H.R. 22) signed into law 2026</a></td>
@@ -673,7 +702,7 @@ body.light #tooltip-layer {
         <td class="vol">$153K</td>
         <td><span class="tag tag-active">Active</span></td>
         <td class="p">Feb 2026</td>
-        <td>PM</td>
+        <td><a href="https://polymarket.com/event/save-act-signed-into-law-in-2026" target="_blank">PM</a></td>
       </tr>
       <tr>
         <td><a href="https://polymarket.com/event/will-the-senate-pass-the-save-america-act-hr-7296">Senate passes SAVE America Act (H.R. 7296)</a></td>
@@ -682,7 +711,7 @@ body.light #tooltip-layer {
         <td class="vol">$44K</td>
         <td><span class="tag tag-active">Active</span></td>
         <td class="p">Mar 2026</td>
-        <td>PM</td>
+        <td><a href="https://polymarket.com/event/will-the-senate-pass-the-save-america-act-hr-7296" target="_blank">PM</a></td>
       </tr>
       <tr style="background:var(--amber-dim)">
         <td><a href="https://polymarket.com/predictions/scotus">Supreme Court vacancy in 2026</a></td>
@@ -691,7 +720,7 @@ body.light #tooltip-layer {
         <td class="vol">$4.3K</td>
         <td><span class="tag tag-thin">&#9888; Thin</span></td>
         <td class="p">Dec 2025</td>
-        <td>PM</td>
+        <td><a href="https://polymarket.com/predictions/scotus" target="_blank">PM</a></td>
       </tr>
       <tr style="background:var(--amber-dim)">
         <td><a href="https://polymarket.com/predictions/scotus">Samuel Alito retires by Dec 31, 2026</a></td>
@@ -700,7 +729,7 @@ body.light #tooltip-layer {
         <td class="vol">$58K</td>
         <td><span class="tag tag-active">Active</span></td>
         <td class="p">Feb 2026</td>
-        <td>PM</td>
+        <td><a href="https://polymarket.com/predictions/scotus" target="_blank">PM</a></td>
       </tr>
       <tr>
         <td><a href="https://polymarket.com/predictions/scotus">Court rules 2020 election was fraudulent</a></td>
@@ -709,7 +738,7 @@ body.light #tooltip-layer {
         <td class="vol">$18K</td>
         <td><span class="tag tag-near">Near res.</span></td>
         <td class="p">Feb 2026</td>
-        <td>PM (Apr 15 val)</td>
+        <td><a href="https://polymarket.com/predictions/scotus" target="_blank">PM</a> (Apr 15 val)</td>
       </tr>
     </tbody>
   </table>
@@ -749,7 +778,7 @@ body.light #tooltip-layer {
   <!-- Implications S1 -->
   <div class="implications" style="margin-top:24px">
     <h4>Implications for Our Work</h4>
-    <p>The VA referendum tomorrow is the clearest near-term democracy-field signal of the cycle &mdash; a concrete win or loss that affects 2026 and 2030 maps. The Anthropic&ndash;Trump thaw matters for field-building: if the most safety-focused lab is actively engaging with this administration, the political landscape for AI governance is shifting faster than expected. <strong>The 25th Amendment spike is thin-market noise unless corroborated by other signals</strong> &mdash; watch for independent reporting, not just market moves. The SCOTUS market drops suggest bettors are pricing in less near-term court change, which is relevant if your work depends on specific legal rulings (birthright citizenship, FTC commissioners, mail ballots) still being contested through 2026.</p>
+    <p>The VA referendum (April 21) is the clearest near-term democracy-field signal of the cycle &mdash; a concrete win or loss that affects 2026 and 2030 maps. The Anthropic&ndash;Trump thaw matters for field-building: if the most safety-focused lab is actively engaging with this administration, the political landscape for AI governance is shifting faster than expected. <strong>The 25th Amendment spike is thin-market noise unless corroborated by other signals</strong> &mdash; watch for independent reporting, not just market moves. The SCOTUS market drops suggest bettors are pricing in less near-term court change, which is relevant if your work depends on specific legal rulings (birthright citizenship, FTC commissioners, mail ballots) still being contested through 2026.</p>
   </div>
 </div>
 
@@ -834,6 +863,20 @@ body.light #tooltip-layer {
   </table>
   <p style="font-size:11px;color:var(--text-muted);margin-bottom:20px">Senate race values (NC, ME, GA, MI, Iowa) carried from April 15 edition &mdash; no updated Polymarket slugs found this run. Ohio from Kalshi.</p>
 
+  <!-- Governor Races -->
+  <div class="sub-head">Governor Races 2026 &mdash; Democracy-Relevant</div>
+  <table class="tbl" style="margin-bottom:20px">
+    <thead><tr><th>State</th><th>P(Dem Gov)</th><th>Incumbent</th><th>Democracy Stake</th><th>Src</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Michigan</strong></td><td class="p" style="color:var(--blue)">~60%</td><td>Whitmer (D, term-limited)</td><td class="risk-note">Open seat; key battleground for election administration oversight</td><td><a href="https://electionbettingodds.com/" target="_blank">EBO</a></td></tr>
+      <tr><td><strong>Pennsylvania</strong></td><td class="p" style="color:var(--blue)">~62%</td><td>Shapiro (D)</td><td class="risk-note">Shapiro running for president; if he wins nom, open Dem governor seat in swing state</td><td><a href="https://electionbettingodds.com/" target="_blank">EBO</a></td></tr>
+      <tr><td><strong>Florida</strong></td><td class="p" style="color:var(--red)">~20%</td><td>DeSantis (R, term-limited)</td><td class="risk-note" style="color:var(--red)">Open seat; GOP primary likely determines next cycle of voting rights enforcement</td><td><a href="https://electionbettingodds.com/" target="_blank">EBO</a></td></tr>
+      <tr><td><strong>Georgia</strong></td><td class="p" style="color:var(--amber)">~35%</td><td>Kemp (R, term-limited)</td><td class="risk-note">Open seat; Kemp acted as norm guardrail in 2020/2024; successor race matters</td><td><a href="https://electionbettingodds.com/" target="_blank">EBO</a></td></tr>
+      <tr><td><strong>Texas</strong></td><td class="p">~18%</td><td>Abbott (R)</td><td class="risk-note" style="color:var(--red)">Abbott up for reelection; highest-turnout governor race with major voting rights implications</td><td><a href="https://electionbettingodds.com/" target="_blank">EBO</a></td></tr>
+    </tbody>
+  </table>
+  <p style="font-size:11px;color:var(--text-muted);margin-bottom:20px">Governor odds estimated from EBO aggregate April 15. Thin markets in many states &mdash; treat as directional only. Full governor map: 36 states holding races in 2026. <a href="https://ballotpedia.org/Gubernatorial_elections,_2026" target="_blank">Ballotpedia</a></p>
+
   <!-- Electoral Calendar -->
   <div class="sub-head">Full Electoral Calendar</div>
   <div class="g2" style="margin-bottom:20px">
@@ -863,6 +906,19 @@ body.light #tooltip-layer {
 
   <!-- 2028 Presidential -->
   <div class="sub-head">2028 Presidential Race</div>
+  <div class="card" style="margin-bottom:16px">
+    <h4>2028 Presidential Election Winner</h4>
+    <div class="card-sub"><a href="https://polymarket.com/event/2028-presidential-election-winner" target="_blank">Polymarket &middot; $728K vol &middot; as of Apr 15</a></div>
+    <div class="pb">
+      <div class="pb-top"><span class="pb-name">Democrats win 2028</span><span class="pb-val" style="color:var(--blue)">60.5%</span></div>
+      <div class="pb-track"><div class="pb-fill blue" style="width:60.5%"></div></div>
+      <div class="pb-meta"><span>Dem frontrunner Newsom essentially tied with Vance in win prob (~19% each)</span><span>$728K vol on Polymarket</span></div>
+    </div>
+    <div class="pb">
+      <div class="pb-top"><span class="pb-name">Republicans win 2028</span><span class="pb-val" style="color:var(--red)">39.5%</span></div>
+      <div class="pb-track"><div class="pb-fill red" style="width:39.5%"></div></div>
+    </div>
+  </div>
   <div class="g2" style="margin-bottom:20px">
     <div class="card">
       <h4>Democratic Nominee 2028</h4>
@@ -888,7 +944,7 @@ body.light #tooltip-layer {
   <div class="sub-head">Economic Indicators</div>
   <div class="g3" style="margin-bottom:20px">
     <div class="card">
-      <h4>Inflation (CPI)</h4>
+      <h4>Inflation (CPI, YoY)</h4>
       <div class="card-sub"><a href="https://www.bls.gov/news.release/cpi.nr0.htm" target="_blank">BLS &middot; March 2026</a></div>
       <div style="font-size:28px;font-weight:700;font-family:'JetBrains Mono',monospace;color:var(--amber)">3.3%</div>
       <div style="font-size:12px;color:var(--text-muted);font-family:'JetBrains Mono',monospace;margin-top:4px">WoW: 0pp (unchanged)</div>
@@ -923,7 +979,7 @@ body.light #tooltip-layer {
   <!-- Implications S2 -->
   <div class="implications" style="margin-top:24px">
     <h4>Implications for Our Work</h4>
-    <p>The <strong>Ohio special on May 5</strong> is the first real Senate data point of the cycle &mdash; watch how Dem turnout and candidate quality perform in a tough-map state. The <strong>Texas runoff on May 26</strong> is a secondary watch: if Paxton wins, the framing for Senate majority stakes shifts. On 2028: with Dem and GOP frontrunners essentially tied in overall win probability (~19% each), this is a genuinely open race &mdash; field-building done now affects an election where the nominee and the environment are both uncertain. The <strong>VA redistricting outcome tomorrow</strong> is the single clearest test of the democracy field&rsquo;s ability to win direct democracy contests on favorable terrain.</p>
+    <p>The <strong>Ohio special on May 5</strong> is the first real Senate data point of the cycle &mdash; watch how Dem turnout and candidate quality perform in a tough-map state. The <strong>Texas runoff on May 26</strong> is a secondary watch: if Paxton wins, the framing for Senate majority stakes shifts. On 2028: with Dem and GOP frontrunners essentially tied in overall win probability (~19% each), this is a genuinely open race &mdash; field-building done now affects an election where the nominee and the environment are both uncertain. The <strong>VA redistricting outcome (April 21)</strong> is the single clearest test of the democracy field&rsquo;s ability to win direct democracy contests on favorable terrain.</p>
   </div>
 </div>
 
@@ -967,13 +1023,64 @@ body.light #tooltip-layer {
   <!-- Expert Timeline Summary -->
   <div class="sub-head">Expert Timelines &mdash; Named Forecasters</div>
   <div class="card" style="margin-bottom:20px">
-    <h4 style="font-size: 13px; margin: 0 0 8px 0; color: var(--text-primary);">Expert AGI Forecasts</h4>
-    <p style="font-size: 13px; line-height: 1.6; color: var(--text-secondary);">
-      This week&rsquo;s change: <strong>Kokotajlo &amp; Lifland moved their Automated Coder median from late 2029 to mid-2028</strong> (Q1 2026 update, published this week). Doubling time updated from 5.5 months &rarr; 4 months (Kokotajlo) / 4.5 months (Lifland). Drivers: new model evaluations including Claude Opus 4.6, GPT-5.2, Gemini 3, and updated METR Time Horizon benchmarks.
+    <h4 style="font-size: 13px; margin: 0 0 8px 0;">Expert AGI Forecasts &mdash; Comparison Table</h4>
+    <p style="font-size: 12px; line-height: 1.5; color: var(--text-secondary); margin-bottom: 12px;">
+      April 20, 2026 update: <strong>Kokotajlo &amp; Lifland moved their Automated Coder median from late 2029 to mid-2028</strong> (Q1 2026 update). Doubling time updated 5.5 months &rarr; 4 months (Kokotajlo) / 4.5 months (Lifland). Drivers: Claude Opus 4.6, GPT-5.2, Gemini 3, updated METR Time Horizon benchmarks.
     </p>
-    <p style="font-size: 13px; line-height: 1.6; color: var(--text-secondary); margin-top: 8px;">
-      No other named forecaster updated this week. For the full forecaster comparison (Greenblatt, Metaculus, Goodheart Labs), see <a href="/archive/2026-04-15.html" style="color: var(--accent-light);">the April 15 edition</a>.
-    </p>
+    <table class="tbl" style="font-size:12px">
+      <thead><tr><th>Forecaster</th><th>Org</th><th>Milestone</th><th>Estimate</th><th>Forecast Date</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><strong>Kokotajlo &amp; Lifland</strong></td>
+          <td>Independent</td>
+          <td>Automated Coder</td>
+          <td class="p" style="color:var(--amber)">Mid-2028</td>
+          <td>Q1 2026 (Apr 2026)</td>
+          <td><span class="tag tag-active">Current</span></td>
+        </tr>
+        <tr>
+          <td><strong>Ryan Greenblatt</strong></td>
+          <td>Redwood Research</td>
+          <td>Full AI R&amp;D automation by EOY 2028</td>
+          <td class="p">~26&ndash;30%</td>
+          <td>April 6, 2026</td>
+          <td><span class="tag tag-active">Current</span></td>
+        </tr>
+        <tr>
+          <td><strong>Metaculus community</strong></td>
+          <td>Metaculus</td>
+          <td>General AI (Q5121 criteria)</td>
+          <td class="p">Feb 2028</td>
+          <td>As of Apr 15, 2026 (1,846 forecasters)</td>
+          <td><span class="tag tag-active">Current</span></td>
+        </tr>
+        <tr>
+          <td><strong>Goodheart Labs</strong></td>
+          <td>Goodheart Labs</td>
+          <td>AGI (aggregated)</td>
+          <td class="p">2030</td>
+          <td>As of Apr 2026</td>
+          <td><span class="tag tag-active">Current</span></td>
+        </tr>
+        <tr style="opacity:0.65">
+          <td><strong>Ajeya Cotra</strong></td>
+          <td>Open Philanthropy</td>
+          <td>Transformative AI (PASTA)</td>
+          <td class="p">2030s</td>
+          <td>2024 update</td>
+          <td><span class="tag tag-thin">&#9888; Stale (&gt;6 mo)</span></td>
+        </tr>
+        <tr style="opacity:0.65">
+          <td><strong>Leopold Aschenbrenner</strong></td>
+          <td>Independent</td>
+          <td>AGI (Situational Awareness)</td>
+          <td class="p">2025&ndash;2027</td>
+          <td>Mid-2024</td>
+          <td><span class="tag tag-thin">&#9888; Stale (&gt;6 mo)</span></td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="font-size:11px;color:var(--text-muted);margin-top:8px">Stale = forecast made &gt;6 months before this edition. Greyed forecasters have not updated since mid-2024; treat their numbers as directionally informative only.</p>
   </div>
 
   <!-- Community forecasts table -->
@@ -1015,6 +1122,26 @@ body.light #tooltip-layer {
         <td></td>
         <td><a href="https://podcasts.apple.com/nz/podcast/linkpost-q1-2026-timelines-update-by-daniel-kokotajlo/id1698192712?i=1000758959925" target="_blank">Q1 2026 update</a></td>
       </tr>
+      <tr>
+        <td>
+          <strong>Weakly general AI publicly deployed</strong> &mdash; <span class="has-tip" data-tip="Metaculus Q9062: When will a weakly general AI system be first publicly deployed? Lower bar than Q5121 — requires capability across a broad range of tasks without necessarily passing formal benchmarks.">Metaculus Q9062</span>
+        </td>
+        <td class="p">2027</td>
+        <td class="p mono">2026&ndash;2030</td>
+        <td class="vol">1,200+ (est. Apr 15)</td>
+        <td></td>
+        <td><a href="https://www.metaculus.com/questions/9062/" target="_blank">Metaculus</a></td>
+      </tr>
+      <tr>
+        <td>
+          <strong>Transformative AI created</strong> &mdash; <span class="has-tip" data-tip="Metaculus Q4123: When will the first transformative AI be created? Defined as AI whose economic impact rivals or exceeds the Industrial Revolution.">Metaculus Q4123</span>
+        </td>
+        <td class="p">2035</td>
+        <td class="p mono">2028&ndash;2060</td>
+        <td class="vol">800+ (est. Apr 15)</td>
+        <td></td>
+        <td><a href="https://www.metaculus.com/questions/4123/" target="_blank">Metaculus</a></td>
+      </tr>
     </tbody>
   </table>
 
@@ -1048,7 +1175,7 @@ body.light #tooltip-layer {
       </ul>
       <a href="https://www.lesswrong.com/posts/dKpC6wHFqDrGZwnah/" target="_blank">LW Apr 6</a>
     </li>
-    <li><strong>Kokotajlo &amp; Lifland &mdash; Q1 2026 timelines update</strong> (linkpost, this week)
+    <li><strong>Kokotajlo &amp; Lifland &mdash; Q1 2026 timelines update</strong> (linkpost, April 20, 2026)
       <ul style="margin-top:6px;padding-left:18px;list-style:disc;font-size:12px;color:var(--text-secondary);line-height:1.6;border-bottom:none">
         <li>Automated Coder median moved from late 2029 to <strong>mid-2028</strong> &mdash; an 18-month compression in a single quarterly update.</li>
         <li>Doubling time updated from 5.5 months to 4 months (Kokotajlo) / 4.5 months (Lifland).</li>
@@ -1195,7 +1322,7 @@ body.light #tooltip-layer {
         <td class="vol">$14K</td>
         <td><span class="tag tag-thin">&#9888; Thin</span></td>
         <td class="p">Dec 2025</td>
-        <td>PM</td>
+        <td><a href="https://polymarket.com/event/ai-data-center-moratorium-passed-before-2027" target="_blank">PM</a></td>
       </tr>
       <tr>
         <td><a href="https://polymarket.com/event/us-enacts-ai-safety-bill-before-2027" target="_blank">US <span class="has-tip" data-tip="Resolves YES if a bill specifically targeting AI safety is signed into law before 2027. Distinct from the data center moratorium market.">AI safety bill</span> enacted before 2027</a></td>
@@ -1204,16 +1331,16 @@ body.light #tooltip-layer {
         <td class="vol">$88K</td>
         <td><span class="tag tag-active">Active</span></td>
         <td class="p">Nov 2025</td>
-        <td>PM</td>
+        <td><a href="https://polymarket.com/event/us-enacts-ai-safety-bill-before-2027" target="_blank">PM</a></td>
       </tr>
       <tr>
-        <td>AI moratorium &mdash; <span class="has-tip" data-tip="Metaculus Q38766: Will the One Big Beautiful Bill Act contain a 5+ year AI moratorium provision?">Metaculus Q38766</span> (OBBBA moratorium provision)</td>
-        <td class="p">&mdash;</td>
-        <td class="p">&mdash;</td>
-        <td class="vol">&mdash;</td>
+        <td><a href="https://www.metaculus.com/questions/38766/" target="_blank">AI moratorium</a> &mdash; <span class="has-tip" data-tip="Metaculus Q38766: Will the One Big Beautiful Bill Act contain a 5+ year AI moratorium provision?">Metaculus Q38766</span> (OBBBA moratorium provision)</td>
+        <td class="p">N/A</td>
+        <td class="p">N/A</td>
+        <td class="vol">No liquidity yet</td>
         <td><span class="tag tag-pending">Pending</span></td>
         <td></td>
-        <td>Metaculus</td>
+        <td><a href="https://www.metaculus.com/questions/38766/" target="_blank">Metaculus</a></td>
       </tr>
       <tr>
         <td><a href="https://polymarket.com/event/openai-announces-it-has-achieved-agi-before-2027" target="_blank">OpenAI announces AGI (self-declaration) before 2027</a></td>
@@ -1222,7 +1349,7 @@ body.light #tooltip-layer {
         <td class="vol">$59K</td>
         <td><span class="tag tag-active">Active</span></td>
         <td class="p">Oct 2025</td>
-        <td>PM</td>
+        <td><a href="https://polymarket.com/event/openai-announces-it-has-achieved-agi-before-2027" target="_blank">PM</a></td>
       </tr>
       <tr>
         <td><a href="https://polymarket.com/event/anthropic-ceo-arrested" target="_blank">Anthropic CEO arrested (by Jun 30)</a></td>
@@ -1231,7 +1358,7 @@ body.light #tooltip-layer {
         <td class="vol">$153K</td>
         <td><span class="tag tag-active">Active</span></td>
         <td class="p">Feb 2026</td>
-        <td>PM</td>
+        <td><a href="https://polymarket.com/event/anthropic-ceo-arrested" target="_blank">PM</a></td>
       </tr>
     </tbody>
   </table>
