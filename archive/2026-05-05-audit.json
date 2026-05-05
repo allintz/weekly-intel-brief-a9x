@@ -1,0 +1,160 @@
+{
+  "edition_date": "2026-05-05",
+  "run_timestamp": "2026-05-05T18:30:00Z",
+  "total_claims_extracted": 28,
+  "audited": 24,
+  "skipped_self_verifying": 4,
+  "supported": 18,
+  "partially_supported_softened": 4,
+  "not_supported_fixed": 1,
+  "not_supported_removed": 0,
+  "unable_to_verify": 2,
+  "hard_fail_unresolved": 0,
+  "pending_review": [],
+  "items": [
+    {
+      "claim": "Silver Bulletin Trump net approval -18.4, 39.3% approve",
+      "source": "https://www.natesilver.net/p/trump-approval-ratings-nate-silver-bulletin",
+      "status": "SUPPORTED",
+      "note": "Verified via WebFetch — net approval -18.4 confirmed"
+    },
+    {
+      "claim": "Metaculus Q5121 community median ~March 2028, 4,648 forecasters",
+      "source": "https://www.metaculus.com/questions/5121/",
+      "status": "SUPPORTED",
+      "note": "Forecaster count verified via API (4,648). Median from web search result citing Metaculus directly"
+    },
+    {
+      "claim": "Goodheart Labs combined AGI forecast 2030 median, 80% CI 2027-2042",
+      "source": "https://agi.goodheartlabs.com/",
+      "status": "SUPPORTED",
+      "note": "WebFetch confirmed median 2030, CI 2027-2042, updated May 5 2026"
+    },
+    {
+      "claim": "Kokotajlo Q1 2026 Timelines Update: AC median moved from late 2029 to mid 2028",
+      "source": "https://www.lesswrong.com/posts/XLLjqMxETva3ABtsK/q1-2026-timelines-update",
+      "status": "SUPPORTED",
+      "note": "WebFetch confirmed authors (Kokotajlo, elifland, bhalstead), date April 2, 2026, and mid-2028 median"
+    },
+    {
+      "claim": "Doubling time revised from 5.5 months to 4-4.5 months in Q1 update",
+      "source": "https://www.lesswrong.com/posts/XLLjqMxETva3ABtsK/q1-2026-timelines-update",
+      "status": "SUPPORTED",
+      "note": "Confirmed in LW post WebFetch"
+    },
+    {
+      "claim": "Claude Code reached $2.5B annualized revenue within 9 months",
+      "source": "https://www.lesswrong.com/posts/XLLjqMxETva3ABtsK/q1-2026-timelines-update",
+      "status": "SUPPORTED",
+      "note": "Cited in LW post as evidence of commercial deployment pace"
+    },
+    {
+      "claim": "Sentinel assigns 6% probability to Congress constraining Iran via War Powers Act by June 1",
+      "source": "https://blog.sentinel-team.org/p/iran-says-it-will-target-us-naval",
+      "status": "SUPPORTED",
+      "note": "WebFetch of Sentinel #18/2026 confirmed the 6% (CI 5-7%) forecast"
+    },
+    {
+      "claim": "Sentinel assigns 7% probability to OpenAI de-deploying GPT-5.5 before 2027",
+      "source": "https://blog.sentinel-team.org/p/iran-says-it-will-target-us-naval",
+      "status": "SUPPORTED",
+      "note": "WebFetch confirmed 7% (CI 5-8%)"
+    },
+    {
+      "claim": "GPT-5.5 performs comparably to Mythos on offensive cyber tasks",
+      "source": "https://blog.sentinel-team.org/p/iran-says-it-will-target-us-naval",
+      "status": "SUPPORTED",
+      "note": "Sentinel post title and content confirm this finding"
+    },
+    {
+      "claim": "CAISI renamed from NIST AI Safety Institute on June 12, 2025",
+      "source": "https://ssti.org/blog/us-ai-safety-institute-has-been-renamed-center-ai-standards-and-innovation",
+      "status": "SUPPORTED",
+      "note": "WebFetch confirmed June 12, 2025 announcement date; HTML updated from 'early 2026' to correct date"
+    },
+    {
+      "claim": "OpenAI and Anthropic briefed House Homeland Security on April 28",
+      "source": "https://www.axios.com/2026/04/28/openai-anthropic-congress-cyber-briefings",
+      "status": "SUPPORTED",
+      "note": "Axios URL and date confirmed by web search"
+    },
+    {
+      "claim": "OpenAI/Anthropic $125M rival AI super PAC networks in 2026 midterms",
+      "source": "https://awesomeagents.ai/news/openai-anthropic-125m-battle-congress-2026/",
+      "status": "SUPPORTED",
+      "note": "Web search confirms figure; source is lower-authority aggregator but figure corroborated"
+    },
+    {
+      "claim": "Anthropic $20M pro-regulation PAC for 2026 elections",
+      "source": "https://www.techbuzz.ai/articles/anthropic-drops-20m-on-pro-regulation-pac-for-2026-elections",
+      "status": "SUPPORTED",
+      "note": "Source is low-authority tech blog; claim flagged as approximate — marked softened"
+    },
+    {
+      "claim": "Trump endorsed challengers against 7 state senators who blocked redistricting in Indiana",
+      "source": "https://ballotpedia.org/Indiana_elections,_2026",
+      "status": "SUPPORTED",
+      "note": "Multiple sources including PBS, Washington Examiner confirm this figure"
+    },
+    {
+      "claim": "V-Dem classifies US as electoral democracy for first time in 50 years",
+      "source": "https://www.v-dem.net/democracy_reports/democracy-report-2026/",
+      "status": "SUPPORTED",
+      "note": "Web search results from multiple credible sources confirm V-Dem 2026 report finding"
+    },
+    {
+      "claim": "US dropped from 20th to 51st place in V-Dem global rankings",
+      "source": "https://www.v-dem.net/",
+      "status": "SUPPORTED",
+      "note": "Confirmed by multiple search results citing V-Dem 2026 report"
+    },
+    {
+      "claim": "TCF Democracy Meter: US scored 57/100 in 2025, down from 79/100 in 2024 (28% drop)",
+      "source": "https://tcf.org/content/report/centurys-new-democracy-meter-shows-america-took-an-authoritarian-turn-in-2025/",
+      "status": "SUPPORTED",
+      "note": "Web search confirmed exact scores: 57/100 (2025) and 79/100 (2024). WebFetch returned 403 but scores corroborated by multiple sources"
+    },
+    {
+      "claim": "Georgia GOP primary: Collins 22%, Carter 13%, Dooley 11%, 54% undecided",
+      "source": "Web search citing AJC/UGA poll April 18-26",
+      "status": "SUPPORTED",
+      "note": "Cited in web search results from search on Georgia senate race"
+    },
+    {
+      "claim": "Trump net approval rating qualifies as worst midterm entry since 2006 (Bush)",
+      "source": "https://www.natesilver.net/p/sbsq-31-trump-is-super-unpopular",
+      "status": "SOFTENED",
+      "note": "Silver Bulletin article says 'among last nine midterm cycles, only GWB in 2006 had lower rating at this stage' — HTML uses 'worst midterm entry in decades except 2006' which is accurate"
+    },
+    {
+      "claim": "Illinois SB 3444 would shield from liability for 100+ deaths or $1B property damage",
+      "source": "https://fortune.com/2026/04/17/illinois-openai-anthropic-ai-catastrophe-liability-bills/",
+      "status": "SUPPORTED",
+      "note": "Confirmed by web search"
+    },
+    {
+      "claim": "ICE DNA collection from protesters: systematic, applied to misdemeanor/uncharged arrestees",
+      "source": "https://olgalautman.substack.com/",
+      "status": "SOFTENED",
+      "note": "Lautman is primary source for the misdemeanor specification; web search confirms DNA collection pattern but specific detail about misdemeanor-only targeting is Lautman's framing. HTML notes mechanism from Lautman."
+    },
+    {
+      "claim": "DOGE data used for AI-enhanced dossiers on Americans, per Lautman",
+      "source": "https://olgalautman.substack.com/p/the-authoritarian-playbook-doge-surveillance",
+      "status": "SOFTENED",
+      "note": "Lautman is primary source; claim is attributed in HTML. Mechanism claim is analytic interpretation, appropriately sourced to Lautman."
+    },
+    {
+      "claim": "SCOTUS markets (birthright citizenship ~93%, FTC ~89%, mail ballot ~68%)",
+      "source": "Prior edition (April 20, 2026)",
+      "status": "UNABLE_TO_VERIFY",
+      "note": "Polymarket API returned no data for these slugs; values carried from prior edition baseline. Logged to issues.md. HTML explicitly notes these are prior-edition baselines."
+    },
+    {
+      "claim": "Metaculus Q38766 AI moratorium probability ~2%",
+      "source": "https://www.metaculus.com/questions/38766/",
+      "status": "UNABLE_TO_VERIFY",
+      "note": "Metaculus API returned null predictions despite 196 forecasters count. Estimate (~2%) is analyst inference from question context and market sentiment, appropriately hedged in HTML."
+    }
+  ]
+}
