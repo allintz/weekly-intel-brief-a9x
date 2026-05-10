@@ -1,9 +1,9 @@
 {
-  "step": "html_generated",
+  "step": "audit_complete",
   "msg": "Polymarket/Metaculus/Kalshi/Manifold done",
   "timestamp": "2026-05-10T23:31:31Z",
   "edition_date": "2026-05-10",
   "edition": "2026-05-10",
-  "message": "HTML generated to /tmp/new.html",
-  "updated_at": "2026-05-10T23:41:52.874322+00:00"
+  "message": "claim audit complete \u2014 2 errors corrected (BLW 44\u219257, FH 83\u219281), 4 softened, 4 unable to verify, 0 hard fails",
+  "updated_at": "2026-05-10T23:56:53.431668+00:00"
 }
