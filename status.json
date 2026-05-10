@@ -1,1 +1,9 @@
-{"step": "markets_gathered", "msg": "Polymarket/Metaculus/Kalshi/Manifold done", "timestamp": "2026-05-10T23:31:31Z", "edition_date": "2026-05-10"}
+{
+  "step": "html_generated",
+  "msg": "Polymarket/Metaculus/Kalshi/Manifold done",
+  "timestamp": "2026-05-10T23:31:31Z",
+  "edition_date": "2026-05-10",
+  "edition": "2026-05-10",
+  "message": "HTML generated to /tmp/new.html",
+  "updated_at": "2026-05-10T23:41:52.874322+00:00"
+}
