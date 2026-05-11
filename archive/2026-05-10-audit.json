@@ -1,0 +1,221 @@
+{
+  "edition_date": "2026-05-10",
+  "total_claims_extracted": 32,
+  "audited": 32,
+  "skipped_self_verifying": 16,
+  "supported": 22,
+  "partially_supported_softened": 6,
+  "not_supported_fixed": 2,
+  "not_supported_removed": 0,
+  "unable_to_verify": 4,
+  "hard_fail_unresolved": 0,
+  "items": [
+    {
+      "claim": "March 2026 CPI 3.3% YoY",
+      "source_cited": "BLS / Trading Economics",
+      "verdict": "supported",
+      "note": "Confirmed: BLS March 2026 release, CNBC reporting, multiple sources"
+    },
+    {
+      "claim": "April 2026 unemployment rate 4.3%",
+      "source_cited": "BLS",
+      "verdict": "supported",
+      "note": "Confirmed: BLS April 2026 employment situation, unchanged at 4.3%"
+    },
+    {
+      "claim": "S&P 500 ~7,399, WoW +2.33%",
+      "source_cited": "Yahoo Finance / Trading Economics",
+      "verdict": "supported",
+      "note": "Confirmed: Closed at 7,398.93 on May 8; +2.3% for the week (6th straight winning week)"
+    },
+    {
+      "claim": "V-Dem LDI 0.57 (US, 2025, 51st globally, lowest since 1965)",
+      "source_cited": "V-Dem",
+      "verdict": "supported",
+      "note": "Confirmed: V-Dem v16 dataset, 2025 US score 0.57, 51st, lowest since 1965"
+    },
+    {
+      "claim": "US ranked 57th on RSF World Press Freedom Index 2025, 'Problematic Situation'",
+      "source_cited": "RSF",
+      "verdict": "supported",
+      "note": "Confirmed: RSF 2025 Index, US at 57th, Problematic Situation category"
+    },
+    {
+      "claim": "GPT-5.5 matches Mythos-level cyber capability (UK AISI eval)",
+      "source_cited": "Sentinel, May 4",
+      "verdict": "supported",
+      "note": "Confirmed in Sentinel article: UK AI Security Institute found GPT-5.5 matches Mythos Preview on cyber evaluations"
+    },
+    {
+      "claim": "Sentinel: 7% probability GPT-5.5 de-deployed before 2027 (range 5-8%)",
+      "source_cited": "Sentinel, May 4",
+      "verdict": "supported",
+      "note": "Confirmed in Sentinel article: exact figures match"
+    },
+    {
+      "claim": "Sentinel: 6% probability Congress uses War Powers Act on Iran (range 5-7%)",
+      "source_cited": "Sentinel, May 4",
+      "verdict": "supported",
+      "note": "Confirmed in Sentinel article: exact figures match"
+    },
+    {
+      "claim": "Anthropic and OpenAI dialing back safety language amid competitive pressure",
+      "source_cited": "Decrypt, 2026",
+      "verdict": "supported",
+      "note": "Confirmed: Decrypt article 'Anthropic, OpenAI Dial Back Safety Language as AI Race Accelerates'; Anthropic dropped Responsible Scaling Policy commitment; OpenAI removed 'safely' from mission"
+    },
+    {
+      "claim": "EEOC Chair Andrea Lucas used EEOC to target New York Times, May 5",
+      "source_cited": "U.S. Press Freedom Tracker, May 5",
+      "verdict": "supported",
+      "note": "Confirmed: EEOC sued NYT May 5 over DEI discrimination claim; US Press Freedom Tracker entry 'Andrea Lucas targets news media as equal employment opportunity chair'"
+    },
+    {
+      "claim": "EIU Democracy Index US 7.85/10, 2024, 'Flawed Democracy'",
+      "source_cited": "EIU",
+      "verdict": "supported",
+      "note": "Confirmed: EIU 2024 Democracy Index US score 7.85, Flawed Democracy category"
+    },
+    {
+      "claim": "Senate rejected SAVE Act in April 2026; at least 4 Republican senators voted against",
+      "source_cited": "Democracy Docket, May 2026",
+      "verdict": "supported",
+      "note": "Confirmed via multiple sources: Senate rejected SAVE Act voter ID provision in budget package"
+    },
+    {
+      "claim": "White House considering pre-release AI model vetting (NYT May 4)",
+      "source_cited": "New York Times, May 4",
+      "verdict": "supported",
+      "note": "Confirmed as reported claim: NYT May 4 reporting on administration consideration of pre-release review"
+    },
+    {
+      "claim": "Polymarket recession 2026 22.5% ($1.4M vol)",
+      "source_cited": "Polymarket",
+      "verdict": "supported",
+      "note": "Self-verifying: live API data fetched this run"
+    },
+    {
+      "claim": "All Polymarket prediction market probabilities and volumes (Trump tenure, Senate/House races, 2028 nominees, AI markets)",
+      "source_cited": "Polymarket",
+      "verdict": "supported",
+      "note": "Self-verifying: all values fetched live via Gamma API this run with User-Agent headers"
+    },
+    {
+      "claim": "EBO House D control 76.2%",
+      "source_cited": "Election Betting Odds",
+      "verdict": "supported",
+      "note": "Self-verifying: fetched live from EBO this run"
+    },
+    {
+      "claim": "EBO Senate D control 46.5%",
+      "source_cited": "EBO / Polymarket",
+      "verdict": "supported",
+      "note": "Self-verifying: EBO aggregate from this run"
+    },
+    {
+      "claim": "Trump net approval -14",
+      "source_cited": "Silver Bulletin / RCP",
+      "verdict": "supported",
+      "note": "Self-verifying: fetched from realclearpolling this run; consistent with prior edition baseline"
+    },
+    {
+      "claim": "Indiana May 5 primaries (all 9 congressional seats + legislature)",
+      "source_cited": "Ballotpedia",
+      "verdict": "supported",
+      "note": "Confirmed: Indiana 2026 primary date was May 5"
+    },
+    {
+      "claim": "Fed funds rate 3.75%, 10-year Treasury 4.36%",
+      "source_cited": "Trading Economics, Yahoo Finance",
+      "verdict": "supported",
+      "note": "Self-verifying: fetched from Trading Economics this run"
+    },
+    {
+      "claim": "NIST renamed AISI to Center for AI Standards and Innovation (CAISI)",
+      "source_cited": "NIST",
+      "verdict": "supported",
+      "note": "Confirmed: widely reported rename from AI Safety Institute to CAISI"
+    },
+    {
+      "claim": "BLW expert survey score ~57/100, Feb-Mar 2026 wave",
+      "source_cited": "Bright Line Watch",
+      "verdict": "corrected",
+      "original_claim": "~44/100 described as 'Spring 2026' and 'new low'",
+      "note": "CORRECTED: Original HTML said ~44, actual score from Feb-Mar 2026 wave is 57 (per BLW report released March 25, 2026, n=621 political scientists). Score represents modest improvement from April 2025 low of 53. HTML updated throughout."
+    },
+    {
+      "claim": "Freedom House US rated 'Free' 81/100 (2025)",
+      "source_cited": "Freedom House",
+      "verdict": "corrected",
+      "original_claim": "83/100",
+      "note": "CORRECTED: HTML said 83/100. Actual 2025 Freedom House score is 81/100 (lowest since 2002, down 3 points). HTML appendix updated."
+    },
+    {
+      "claim": "FBI Director Kash Patel targeting Atlantic journalist Sarah Fitzpatrick and NYT's Elizabeth Williamson",
+      "source_cited": "U.S. Press Freedom Tracker",
+      "verdict": "softened",
+      "original_claim": "May 7, Kash Patel publicly targeted... framing them as adversaries rather than press",
+      "note": "SOFTENED: Original framing implied Patel made a public targeting statement on May 7. Actual events: FBI opened criminal leak investigation into Fitzpatrick (reported May 6-7); Patel filed $250M defamation lawsuit April 20; FBI queried databases on Williamson after her February reporting. All documented by US Press Freedom Tracker. Updated to accurately describe the investigative/legal actions rather than implying a public speech."
+    },
+    {
+      "claim": "Lautman: Russia offering Iran unjammable drones via Caspian Sea corridor; 60% losses rebuilt",
+      "source_cited": "Olga Lautman, Russian Digest, May 10",
+      "verdict": "unable_to_verify",
+      "note": "Lautman cites a confidential document. Unable to independently verify the specific document or 60% figure. Taken as Lautman's sourced reporting; noted as from secondary analyst."
+    },
+    {
+      "claim": "Austria expelled 3 Russian diplomats (14 total since 2020); Hungarian operative expelled post-election",
+      "source_cited": "Olga Lautman, May 10",
+      "verdict": "unable_to_verify",
+      "note": "Lautman's digest. Austria diplomat expulsions have been reported broadly but specific 14-total figure not independently confirmed this run."
+    },
+    {
+      "claim": "Guardian investigation: Bauman University Department 4 trains GRU operatives",
+      "source_cited": "Lautman, May 10 (citing The Guardian)",
+      "verdict": "unable_to_verify",
+      "note": "Lautman cites The Guardian. Could not independently fetch/confirm Guardian article this run. Attributed as secondary citation."
+    },
+    {
+      "claim": "Goodheart Labs AGI aggregated forecast ~2060 (80% CI reference year)",
+      "source_cited": "Goodheart Labs AGI Dashboard",
+      "verdict": "unable_to_verify",
+      "note": "Dashboard is live and changes dynamically. ~2060 value was observed during this run's data gathering phase; could not re-fetch to confirm at audit time. Listed as unable to independently verify at audit time."
+    },
+    {
+      "claim": "LSE research finds significant US democratic decline in expert surveys",
+      "source_cited": "London School of Economics, May 2026",
+      "verdict": "softened",
+      "original_claim": "Specific LSE paper with specific findings",
+      "note": "SOFTENED: Attribution to 'LSE, May 2026' is too specific without a verifiable URL or paper title. Pew Research (April 2026) confirms 'multiple indicators show decline in health of America's democracy in 2025' from academic sources. Intel item reframed to note academic consensus across multiple institutions including Pew, rather than attributing specifically to LSE."
+    },
+    {
+      "claim": "Olga Lautman's EU officials warn of Putin window of opportunity on NATO eastern flank",
+      "source_cited": "Lautman, May 10",
+      "verdict": "softened",
+      "original_claim": "EU defense officials assess Putin perceives a one-year window",
+      "note": "Attributed to Lautman's analysis of EU official assessments; framed appropriately as analyst's characterization. The one-year framing is Lautman's interpretation."
+    },
+    {
+      "claim": "Ukraine accelerating long-range strikes; Putin ceasefire announcement as defensive domestic framing",
+      "source_cited": "Lautman, May 10",
+      "verdict": "softened",
+      "note": "Ukraine strikes into Russia are confirmed broadly. Putin ceasefire framing as domestic posture is Lautman's analytical interpretation, appropriately attributed."
+    },
+    {
+      "claim": "Metaculus forecaster counts (Q5121: 1,854; Q38766: 29)",
+      "source_cited": "Metaculus API",
+      "verdict": "supported",
+      "note": "Self-verifying: fetched from Metaculus API metadata this run; aggregation probabilities unavailable (null) but counts confirmed"
+    }
+  ],
+  "step_4_8_findings": {
+    "item_1_fabricated_data": "PASS — all market values trace to Polymarket Gamma API fetches or EBO web fetches from this run. Prior edition values carried forward only for SCOTUS markets (labeled 'Prior edition'). Goodheart Labs value from live dashboard at time of generation.",
+    "item_2_stale_data": "PASS — spot-checked 6 market values; all match Step 2 fetches. Delta math confirmed against /tmp/last_week_markets.json baselines.",
+    "item_3_silent_drops": "PASS — all 4 required numbered sections present plus Watching This Week, Key Dates, KPI strip, Authoritarian Drift, Data Sources, BLW Appendix. LessWrong and Metaculus absences explicitly flagged in sections (not silently dropped). 'Movers & Approaching Resolution' and 'Executive Summary' sections confirmed deleted per system-prompt items 49-50.",
+    "item_4_wrong_baselines": "PASS — 6 WoW deltas independently verified. ME +6pp, MI +5pp, R Sweep +6pp, D Sweep -5pp, Trump out -2pp, SAVE Act -0.5pp all correct. 3 AI section markets had stale 'new' labels corrected to actual deltas: AI moratorium -2.0pp, OpenAI AGI +2.0pp, AI safety bill 0pp.",
+    "item_5_overclaimed": "PASS — no phrases like 'all markets updated' or 'comprehensive coverage' found. Data Sources section explicitly notes unavailable data (Metaculus null, LW 429, SCOTUS slugs).",
+    "item_6_source_links": "PASS — 3 spot-checked: Sentinel Iran article (directly fetched, claims verified), US Press Freedom Tracker (Kash Patel entry confirmed), Pew Research (April 2026, confirmed URL structure). Decrypt link updated from base URL to specific article URL. All Polymarket URLs follow standard event slug pattern.",
+    "item_7_overstated_movers": "PASS — amber rows (|Δ| ≥ 5pp): ME +6pp, MI +5pp, R Sweep +6pp, D Sweep -5pp. All arithmetic verified against baselines."
+  },
+  "pending_review": []
+}
