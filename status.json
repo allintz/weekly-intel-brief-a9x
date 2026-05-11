@@ -1,9 +1,9 @@
 {
-  "step": "verification_complete",
+  "step": "published",
   "msg": "Polymarket/Metaculus/Kalshi/Manifold done",
   "timestamp": "2026-05-10T23:31:31Z",
   "edition_date": "2026-05-10",
   "edition": "2026-05-10",
-  "message": "independent verification complete \u2014 all 7 taxonomy items pass; 3 delta labels corrected; 2 fact errors fixed; Decrypt link made specific",
-  "updated_at": "2026-05-11T00:00:53.752396+00:00"
+  "message": "4 GitHub PUTs succeeded: archive/2026-05-10.html, archive/2026-05-10-audit.json, index.html, editions.json",
+  "updated_at": "2026-05-11T00:01:40.923227+00:00"
 }
