@@ -24,7 +24,7 @@ nav{background:var(--surface);border-bottom:1px solid var(--border);padding:12px
 .hero h1{font-size:36px;font-weight:800;letter-spacing:-0.02em;line-height:1.2;margin-bottom:8px}
 .gradient{background:linear-gradient(135deg,var(--accent),var(--purple));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .hero p.sub{color:var(--text-secondary);font-size:15px;max-width:600px;margin:0 auto}
-.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;max-width:900px;margin:0 auto 40px;padding:0 24px}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;max-width:900px;margin:0 auto 40px;padding:0 24px}
 .kpi{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:16px;display:block;color:inherit;text-decoration:none}
 .kpi:hover{border-color:var(--accent)}
 .kpi-label{font-size:11px;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.05em}
@@ -218,6 +218,21 @@ tr:hover td{background:rgba(88,166,255,0.04)}
 
 <div class="container">
 
+<!-- EXECUTIVE SUMMARY -->
+<div class="section">
+  <h3 style="margin-top:0">Executive Summary</h3>
+  <div class="callout implications">
+    <h4>Top Actionable Items This Week</h4>
+    <ol style="margin:8px 0 0 18px;padding:0;font-size:13px;color:var(--text-secondary);line-height:1.8">
+      <li><strong>State SAVE Act advancing despite federal failure:</strong> Senate rejected federal proof-of-citizenship mandate in April; state legislative versions are advancing in GOP-controlled legislatures. Immediate operational threat for voter registration and civic engagement organizations in affected states.</li>
+      <li><strong>ME and MI Senate races jumped toward Democrats:</strong> ME +6pp (now 78.5%) and MI +5pp (now 74.5%) &mdash; largest single-week movers in the Senate table. Both have meaningful volume ($138K and $81K). No obvious catalyst identified; monitor for follow-through.</li>
+      <li><strong>SCOTUS June rulings approaching:</strong> Birthright citizenship (93% to strike down EO) and FTC independence (89% Trump wins) expected by late June 2026. FTC ruling has second-order risk for all independent agencies (NLRB, Fed Reserve structure).</li>
+      <li><strong>R Sweep risk up 6pp to 22.5%:</strong> GOP unified control remains the highest-consequence midterm scenario; probability rising this week. D Sweep (43.5%) still more likely but declining.</li>
+      <li><strong>AI governance gap widening:</strong> GPT-5.5 publicly deployed at Mythos-level cyber capability while CAISI reframes from safety to adoption. White House vetting mechanism under consideration but not enacted. Sentinel: 7% de-deployment risk for GPT-5.5.</li>
+    </ol>
+  </div>
+</div>
+
 <!-- WATCHING THIS WEEK -->
 <div class="section">
   <h3 style="margin-top:0">Watching This Week</h3>
@@ -289,7 +304,7 @@ tr:hover td{background:rgba(88,166,255,0.04)}
     <div class="kpi-label">House &mdash; Dem Control</div>
     <div class="kpi-val green">76.2%</div>
     <div class="kpi-detail">EBO aggregated markets &mdash; May 10</div>
-    <div class="kpi-delta green">&uarr; from ~49% last week (source shift: EBO vs. Polymarket)</div>
+    <div class="kpi-delta green">&uarr; from ~49% May 5 (source shift: EBO vs. Polymarket)</div>
   </a>
   <a class="kpi" href="https://electionbettingodds.com/" target="_blank">
     <div class="kpi-label">Senate &mdash; Dem Control</div>
@@ -308,6 +323,18 @@ tr:hover td{background:rgba(88,166,255,0.04)}
     <div class="kpi-val amber">22.5%</div>
     <div class="kpi-detail">Polymarket &mdash; $1.4M vol</div>
     <div class="kpi-delta" style="color:var(--text-muted)">new baseline this week</div>
+  </a>
+  <a class="kpi" href="https://finance.yahoo.com/quote/%5EGSPC/" target="_blank">
+    <div class="kpi-label">S&amp;P 500</div>
+    <div class="kpi-val green">~7,399</div>
+    <div class="kpi-detail">May 9, 2026. Source: Yahoo Finance</div>
+    <div class="kpi-delta green">&uarr; +2.33% WoW (from ~7,230 May 5)</div>
+  </a>
+  <a class="kpi" href="https://www.bls.gov/cpi/" target="_blank">
+    <div class="kpi-label">Inflation (CPI, YoY)</div>
+    <div class="kpi-val amber">3.3%</div>
+    <div class="kpi-detail">March 2026 (April due May 12). Source: BLS</div>
+    <div class="kpi-delta amber">+1.3pp above Fed 2% target</div>
   </a>
 </div>
 
@@ -344,6 +371,15 @@ tr:hover td{background:rgba(88,166,255,0.04)}
         <td><a href="https://polymarket.com/event/will-trump-be-impeached-by-december-31-2026" target="_blank">Polymarket</a></td>
       </tr>
       <tr>
+        <td><span class="has-tip" data-tip="Resolves YES if Trump is impeached (House vote only) at any point before his term ends January 20, 2029. Broader window than EOY 2026 version; encompasses full second term.">Impeached before term ends (by Jan&nbsp;2029)</span></td>
+        <td>N/A <span style="font-size:11px;color:var(--text-muted)">(API unavailable)</span></td>
+        <td>&mdash;</td>
+        <td>&mdash;</td>
+        <td>Active</td>
+        <td>&mdash;</td>
+        <td><a href="https://polymarket.com/" target="_blank">Polymarket (slug N/A)</a></td>
+      </tr>
+            <tr>
         <td><span class="has-tip" data-tip="Requires VP + Cabinet determination and sustained by 2/3 of both Houses.">Removed via 25th Amendment before 2027</span></td>
         <td>9.0%</td>
         <td>0pp</td>
@@ -363,6 +399,24 @@ tr:hover td{background:rgba(88,166,255,0.04)}
     </thead>
     <tbody>
       <tr>
+        <td><span class="has-tip" data-tip="The Insurrection Act (10 U.S.C. &sect;&sect; 251&ndash;255) allows the President to use military forces domestically to suppress rebellion or enforce federal law. Market tracks whether Trump formally invokes it before Dec 31, 2026.">Trump invokes <span style="border-bottom:1px dashed var(--text-muted)">Insurrection Act</span> by Dec&nbsp;2026</span></td>
+        <td>N/A <span style="font-size:11px;color:var(--text-muted)">(API unavailable)</span></td>
+        <td>&mdash;</td>
+        <td>&mdash;</td>
+        <td>Active</td>
+        <td>&mdash;</td>
+        <td><a href="https://polymarket.com/" target="_blank">Polymarket (slug N/A)</a></td>
+      </tr>
+      <tr>
+        <td><span class="has-tip" data-tip="Same Insurrection Act market but resolves by June 30, 2026 &mdash; earlier deadline. Invocation before June 30 would be higher-urgency signal given the mid-year window.">Trump invokes Insurrection Act by Jun&nbsp;2026</span></td>
+        <td>N/A <span style="font-size:11px;color:var(--text-muted)">(API unavailable)</span></td>
+        <td>&mdash;</td>
+        <td>&mdash;</td>
+        <td><span class="tag tag-near">Near res.</span></td>
+        <td>&mdash;</td>
+        <td><a href="https://polymarket.com/" target="_blank">Polymarket (slug N/A)</a></td>
+      </tr>
+            <tr>
         <td><span class="has-tip" data-tip="Senate rejected a bid to revive the SAVE Act in April 2026; state-level versions are advancing. This market tracks HR 22 becoming federal law.">H.R.&nbsp;22 (SAVE Act) signed into law 2026</span></td>
         <td>9.5%</td>
         <td>-0.5pp</td>
@@ -372,13 +426,22 @@ tr:hover td{background:rgba(88,166,255,0.04)}
         <td><a href="https://polymarket.com/event/save-act-signed-into-law-in-2026" target="_blank">Polymarket</a></td>
       </tr>
       <tr>
+        <td><span class="has-tip" data-tip="Senate SAVE America Act (H.R. 7296) &mdash; Senate companion to H.R. 22. Requires proof of citizenship to register to vote. Senate rejected an amendment-based version in April 2026; this market tracks the standalone bill becoming federal law.">Senate SAVE America Act (H.R.&nbsp;7296) signed</span></td>
+        <td>N/A <span style="font-size:11px;color:var(--text-muted)">(API unavailable)</span></td>
+        <td>&mdash;</td>
+        <td>&mdash;</td>
+        <td>Active</td>
+        <td>&mdash;</td>
+        <td><a href="https://polymarket.com/" target="_blank">Polymarket (slug N/A)</a></td>
+      </tr>
+            <tr>
         <td><span class="has-tip" data-tip="SCOTUS heard oral arguments April 1; majority appeared skeptical of Trump&apos;s position. Ruling expected late June 2026.">SCOTUS strikes down birthright citizenship EO</span></td>
         <td>~93%</td>
         <td>&mdash;</td>
         <td>&mdash;</td>
         <td><span class="tag tag-near">Near res.</span></td>
         <td>&mdash;</td>
-        <td>Prior edition</td>
+        <td><a href="https://polymarket.com/" target="_blank">Polymarket (slug N/A)</a></td>
       </tr>
       <tr>
         <td><span class="has-tip" data-tip="Humphrey&apos;s Executor ruling protects independent agency heads; FTC case tests whether that protection survives. Ruling expected late June.">SCOTUS lets Trump fire FTC commissioners</span></td>
@@ -387,7 +450,7 @@ tr:hover td{background:rgba(88,166,255,0.04)}
         <td>&mdash;</td>
         <td>Active</td>
         <td>&mdash;</td>
-        <td>Prior edition</td>
+        <td><a href="https://polymarket.com/" target="_blank">Polymarket (slug N/A)</a></td>
       </tr>
       <tr>
         <td>SCOTUS bars mail ballots counted after Election Day</td>
@@ -396,7 +459,7 @@ tr:hover td{background:rgba(88,166,255,0.04)}
         <td>&mdash;</td>
         <td>Active</td>
         <td>&mdash;</td>
-        <td>Prior edition</td>
+        <td><a href="https://polymarket.com/" target="_blank">Polymarket (slug N/A)</a></td>
       </tr>
       <tr>
         <td>Supreme Court vacancy in 2026</td>
@@ -405,7 +468,7 @@ tr:hover td{background:rgba(88,166,255,0.04)}
         <td>&mdash;</td>
         <td>Active</td>
         <td>&mdash;</td>
-        <td>Prior edition</td>
+        <td><a href="https://polymarket.com/" target="_blank">Polymarket (slug N/A)</a></td>
       </tr>
       <tr>
         <td><span class="has-tip" data-tip="Alito is the most likely to retire; a vacancy in 2026 would allow Trump to consolidate a 7-2 conservative majority.">Samuel Alito retires by Dec&nbsp;31,&nbsp;2026</span></td>
@@ -414,7 +477,7 @@ tr:hover td{background:rgba(88,166,255,0.04)}
         <td>&mdash;</td>
         <td>Active</td>
         <td>&mdash;</td>
-        <td>Prior edition</td>
+        <td><a href="https://polymarket.com/" target="_blank">Polymarket (slug N/A)</a></td>
       </tr>
       <tr>
         <td>Court rules 2020 election was fraudulent</td>
@@ -423,7 +486,7 @@ tr:hover td{background:rgba(88,166,255,0.04)}
         <td>&mdash;</td>
         <td><span class="tag tag-near">Near res.</span></td>
         <td>&mdash;</td>
-        <td>Prior edition</td>
+        <td><a href="https://polymarket.com/" target="_blank">Polymarket (slug N/A)</a></td>
       </tr>
       <tr>
         <td><span class="has-tip" data-tip="Anthropic CEO Dario Amodei arrested. Low probability but tracked given current climate of AI company scrutiny and government posture.">Anthropic CEO arrested</span></td>
@@ -436,7 +499,7 @@ tr:hover td{background:rgba(88,166,255,0.04)}
       </tr>
     </tbody>
   </table>
-  <p style="font-size:11px;color:var(--text-muted);margin-top:4px">&#9888; SCOTUS markets: live Polymarket slugs not available this run; values carried from May 5 edition. Log: issues-2026-05-10.md.</p>
+  <p style="font-size:11px;color:var(--text-muted);margin-top:4px">&#9888; SCOTUS markets, Insurrection Act, and H.R. 7296 markets: Polymarket slugs unavailable this run; stub rows added with N/A values. Values carried from May 5 where available. Log: issues-2026-05-10.md.</p>
 
   <!-- Bright Line Watch -->
   <h3>Bright Line Watch &mdash; Democratic Practice Score</h3>
@@ -583,9 +646,35 @@ tr:hover td{background:rgba(88,166,255,0.04)}
       <tr><td>MT &mdash; Independent win</td><td>11.1%</td><td>new</td><td>$1K <span class="tag tag-thin">Thin</span></td><td>Active</td><td></td><td><a href="https://polymarket.com/event/montana-senate-election-winner" target="_blank">Polymarket</a></td></tr>
     </tbody>
   </table>
+  <div class="callout" style="margin-top:12px;padding:14px 16px">
+    <h4 style="font-size:12px;text-transform:uppercase;letter-spacing:0.05em;color:var(--text-muted);margin-top:0;margin-bottom:10px">Democracy Risk Notes &mdash; Key Senate Races</h4>
+    <ul style="list-style:none;padding:0;margin:0;font-size:12px;color:var(--text-secondary);line-height:1.6">
+      <li style="padding:4px 0;border-bottom:1px solid var(--border)"><strong>NC:</strong> Cooper (D) running for open seat after term as governor. NC has active <span class="has-tip" data-tip="Voting Rights Act Section 2 prohibits voting practices that discriminate based on race or color. Applied in redistricting challenges across Southern states.">VRA Section 2</span> redistricting litigation. A D win adds a Senate check on federal election law changes. <em>Louisiana v. Callais</em> redistricting precedent relevant to NC districts.</li>
+      <li style="padding:4px 0;border-bottom:1px solid var(--border)"><strong>ME:</strong> Collins (R) has been a swing vote on select procedural motions; losing her seat reduces the pool of potential GOP defections on anti-democratic legislation (e.g., emergency powers, judicial independence). Platner (D) +6pp this week.</li>
+      <li style="padding:4px 0;border-bottom:1px solid var(--border)"><strong>GA:</strong> Ossoff defense critical for Senate margin. GA is active ground for voting rights litigation (<em><span class="has-tip" data-tip="Trump v. Slaughter and related cases challenge Georgia voting procedures under VRA Section 2; federal courts have ongoing jurisdiction.">Trump v. Slaughter</span></em> VRA cases pending). D retention matters for oversight capacity during SCOTUS end-of-term.</li>
+      <li style="padding:4px 0;border-bottom:1px solid var(--border)"><strong>MI:</strong> Active voter ID and registration litigation; state-level SAVE Act bills introduced. +5pp toward Democrats this week. Slotkin/McMorrow primary outcome shapes general election viability.</li>
+      <li style="padding:4px 0;border-bottom:1px solid var(--border)"><strong>OH:</strong> Brown vs. Husted special election. Brown flip would be a significant democracy check in a state with contested redistricting history. Below 60% D-win probability.</li>
+      <li style="padding:4px 0;border-bottom:1px solid var(--border)"><strong>TX &amp; IA:</strong> Both below 50% D-win probability. TX and IA Democratic wins would represent structural realignment; low probability but would shift Senate math significantly and reduce risk of unified GOP passage of election-restricting legislation.</li>
+    </ul>
+  </div>
+
   <p style="font-size:11px;color:var(--text-muted);margin-top:2px">ME and MI moved &ge;5pp toward Democrats this week (amber rows). NE and MT independent markets are thin; treat with caution.</p>
 
-  <!-- Electoral Calendar -->
+  <!-- Governor Races -->
+  <h3>2026 Governor Races &mdash; Key Contests</h3>
+  <p style="font-size:12px;color:var(--text-muted);margin-bottom:8px">Governor race probabilities unavailable this run (API not configured for gubernatorial markets). Key 2026 governor races to track: PA, OH, MI, WI, FL, TX, GA, AZ, CO, NH. Full market data will be incorporated in future editions.</p>
+  <table>
+    <thead><tr><th>State</th><th>Incumbent Party</th><th>P(D wins)</th><th>Source</th></tr></thead>
+    <tbody>
+      <tr><td>Pennsylvania</td><td>D (open)</td><td>N/A</td><td><a href="https://polymarket.com/" target="_blank">Polymarket (unavailable)</a></td></tr>
+      <tr><td>Michigan</td><td>D (open)</td><td>N/A</td><td><a href="https://polymarket.com/" target="_blank">Polymarket (unavailable)</a></td></tr>
+      <tr><td>Wisconsin</td><td>D (Evers, term-limited)</td><td>N/A</td><td><a href="https://polymarket.com/" target="_blank">Polymarket (unavailable)</a></td></tr>
+      <tr><td>New Hampshire</td><td>R (open)</td><td>N/A</td><td><a href="https://polymarket.com/" target="_blank">Polymarket (unavailable)</a></td></tr>
+      <tr><td>Georgia</td><td>R (Kemp, term-limited)</td><td>N/A</td><td><a href="https://polymarket.com/" target="_blank">Polymarket (unavailable)</a></td></tr>
+    </tbody>
+  </table>
+
+    <!-- Electoral Calendar -->
   <h3>Electoral Calendar</h3>
   <div class="dates-grid">
     <div class="dates-col">
@@ -608,7 +697,34 @@ tr:hover td{background:rgba(88,166,255,0.04)}
     </div>
   </div>
 
-  <!-- 2028 Nominee Tables -->
+  <!-- 2028 Overall Winner -->
+  <h3>2028 Presidential Election Winner (Overall)</h3>
+  <table>
+    <thead>
+      <tr><th>Scenario</th><th>Prob</th><th>&Delta; Week</th><th>Volume</th><th>Activity</th><th>Source</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Democratic candidate wins 2028 presidential election</td>
+        <td>N/A <span style="font-size:11px;color:var(--text-muted)">(API unavailable)</span></td>
+        <td>&mdash;</td>
+        <td>&mdash;</td>
+        <td>Active</td>
+        <td><a href="https://polymarket.com/event/2028-presidential-election-winner" target="_blank">Polymarket</a></td>
+      </tr>
+      <tr>
+        <td>Republican candidate wins 2028 presidential election</td>
+        <td>N/A <span style="font-size:11px;color:var(--text-muted)">(API unavailable)</span></td>
+        <td>&mdash;</td>
+        <td>&mdash;</td>
+        <td>Active</td>
+        <td><a href="https://polymarket.com/event/2028-presidential-election-winner" target="_blank">Polymarket</a></td>
+      </tr>
+    </tbody>
+  </table>
+  <p style="font-size:11px;color:var(--text-muted);margin-top:2px">2028 winner market API unavailable this run. Nominee probabilities below from Polymarket. Context: with J.D. Vance leading GOP at 37% and Newsom leading Dems at 24%, winner odds depend heavily on who each party nominates.</p>
+
+    <!-- 2028 Nominee Tables -->
   <h3>2028 Presidential Nominees (Polymarket)</h3>
   <div class="nominee-tables">
     <div>
@@ -667,7 +783,7 @@ tr:hover td{background:rgba(88,166,255,0.04)}
   <div class="intel">
     <ul>
       <li><strong>Maine and Michigan Senate D-win probabilities both jumped this week.</strong> ME moved +6pp to 78.5%, MI moved +5pp to 74.5% &mdash; the two largest single-week movers in the Senate table. Both exceed the Polymarket thin threshold at $138K and $81K respectively. No obvious catalyst identified in available sources this week; likely reflects accumulation of polling. <a href="https://polymarket.com/event/maine-senate-election-winner" target="_blank">Polymarket</a></li>
-      <li><strong>R Sweep scenario probability climbed 6pp to 22.5%.</strong> The balance-of-power market shows the GOP holding both chambers now at 22.5%, up from 16.5% last week &mdash; the largest mover in the chamber control table. D Sweep declined 5pp correspondingly to 43.5%. <a href="https://polymarket.com/event/balance-of-power-2026-midterms" target="_blank">Polymarket</a></li>
+      <li><strong>R Sweep scenario probability climbed 6pp to 22.5%.</strong> The balance-of-power market shows the GOP holding both chambers now at 22.5%, up from 16.5% (May 5) &mdash; the largest mover in the chamber control table. D Sweep declined 5pp correspondingly to 43.5%. <a href="https://polymarket.com/event/balance-of-power-2026-midterms" target="_blank">Polymarket</a></li>
       <li><strong>Indiana state and house primaries held May 5.</strong> All 9 congressional seats plus state legislature were on the ballot. Results not yet incorporated into race-level probabilities in available markets. State senate and house competitive district outcomes to watch for down-ballot democracy indicators. <a href="https://ballotpedia.org/Indiana_elections,_2026" target="_blank">Ballotpedia</a></li>
     </ul>
   </div>
@@ -734,11 +850,35 @@ tr:hover td{background:rgba(88,166,255,0.04)}
         <td>Jun 30, 2026</td>
         <td><a href="https://www.metaculus.com/questions/38766/" target="_blank">Metaculus</a></td>
       </tr>
+      <tr>
+        <td><span class="has-tip" data-tip="Metaculus Q9062: Resolution criteria and current probability unavailable this run (API rate-limited). Tracks AI capability milestone. See metaculus.com/questions/9062/ for current forecast.">Q9062: AI capability milestone question</span></td>
+        <td>N/A <span style="font-size:11px;color:var(--text-muted)">(API unavailable)</span></td>
+        <td>N/A</td>
+        <td>&mdash;</td>
+        <td><a href="https://www.metaculus.com/questions/9062/" target="_blank">Metaculus</a></td>
+      </tr>
+      <tr>
+        <td><span class="has-tip" data-tip="Metaculus Q4123: Resolution criteria and current probability unavailable this run (API rate-limited). Tracks AGI timeline. See metaculus.com/questions/4123/ for current forecast.">Q4123: AGI timeline question</span></td>
+        <td>N/A <span style="font-size:11px;color:var(--text-muted)">(API unavailable)</span></td>
+        <td>N/A</td>
+        <td>&mdash;</td>
+        <td><a href="https://www.metaculus.com/questions/4123/" target="_blank">Metaculus</a></td>
+      </tr>
     </tbody>
   </table>
   <p style="font-size:11px;color:var(--text-muted)">Metaculus community prediction API returned null aggregations this run; forecaster counts from API metadata. Probabilities will update when API resolves.</p>
 
-  <!-- LW/EAF -->
+  <!-- WHAT'S SURPRISING -->
+  <div class="callout" style="border-left:3px solid var(--purple);background:rgba(188,140,255,0.05);margin:16px 0">
+    <h4 style="color:var(--purple)">What&rsquo;s Surprising This Week</h4>
+    <ul style="margin:8px 0 0 16px;padding:0;font-size:13px;color:var(--text-secondary);line-height:1.6;list-style:disc">
+      <li><strong>GPT-5.5 publicly deployed at Mythos-level cyber capability:</strong> Anthropic restricted its own Mythos model to tech/cybersecurity firms specifically due to concerns it could &ldquo;collapse society.&rdquo; OpenAI deploying an equivalent model to the general public marks a capability threshold crossed without that safeguard. This is the largest AI safety development this week and has no clear institutional response.</li>
+      <li><strong>No named forecaster timeline updates this week:</strong> No public update from Greenblatt, Kokotajlo, Lifland, Cotra, or Aschenbrenner during a week of significant AI news. The silence is notable &mdash; it may reflect a deliberate pause, or simply publication timing. LessWrong was rate-limited during data gathering.</li>
+      <li><strong>Goodheart aggregated median at ~2060:</strong> Despite high-profile near-term capability advances (GPT-5.5 deployment, safety language pullback), the community aggregated forecast for transformative AI remains decades out. The gap between week-to-week capability news and long-run forecast stability is widening.</li>
+    </ul>
+  </div>
+
+    <!-- LW/EAF -->
   <p style="color:var(--text-secondary);font-size:13px;margin:12px 0">LessWrong returned 429 rate-limit errors during data gathering; EA Forum yielded limited relevant content this week. See <a href="#data-sources">Data Sources</a> for notes.</p>
 
   <!-- Section 3 Intel -->
@@ -966,7 +1106,7 @@ tr:hover td{background:rgba(88,166,255,0.04)}
       <strong>V-Dem LDI:</strong> 0.57 (US, 2025, rescaled: 57/100). Measures institutional structure; higher than BLW because formal institutions are still intact.<br>
       <strong>Freedom House:</strong> US rated &ldquo;Free&rdquo; (81/100, 2025, lowest since index began in 2002) &mdash; captures civil liberties and political rights broadly.<br>
       <strong>EIU Democracy Index:</strong> US rated &ldquo;Flawed Democracy&rdquo; (7.85/10, 2024).<br>
-      The divergence between BLW (~44) and Freedom House (~83) reflects their different methodological foci: BLW tracks norm-following by officials; Freedom House tracks formal rights.
+      The divergence between BLW (~57) and Freedom House (~81) reflects their different methodological foci: BLW tracks norm-following by officials; Freedom House tracks formal rights.
     </div>
   </div>
 
