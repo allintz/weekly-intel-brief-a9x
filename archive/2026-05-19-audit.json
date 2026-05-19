@@ -1,0 +1,265 @@
+{
+  "edition_date": "2026-05-19",
+  "generated_at": "2026-05-19T22:00:21.628141Z",
+  "total_claims_extracted": 32,
+  "audited": 12,
+  "skipped_self_verifying": 20,
+  "supported": 10,
+  "partially_supported_softened": 2,
+  "not_supported_fixed": 0,
+  "not_supported_removed": 0,
+  "unable_to_verify": 2,
+  "hard_fail_unresolved": 0,
+  "pending_review": [],
+  "items": [
+    {
+      "id": 1,
+      "claim": "Trump out before 2027: 9.5%",
+      "source_url": "polymarket_api",
+      "category": "market_api",
+      "skip": true
+    },
+    {
+      "id": 2,
+      "claim": "Impeached by Dec 31 2026: 13.0%",
+      "source_url": "polymarket_api",
+      "category": "market_api",
+      "skip": true
+    },
+    {
+      "id": 3,
+      "claim": "25th Amendment before 2027: 7.5%",
+      "source_url": "polymarket_api",
+      "category": "market_api",
+      "skip": true
+    },
+    {
+      "id": 4,
+      "claim": "SAVE Act 7.5%",
+      "source_url": "polymarket_api",
+      "category": "market_api",
+      "skip": true
+    },
+    {
+      "id": 5,
+      "claim": "Anthropic CEO arrested 1.6%",
+      "source_url": "polymarket_api",
+      "category": "market_api",
+      "skip": true
+    },
+    {
+      "id": 6,
+      "claim": "US recession 24.5%",
+      "source_url": "polymarket_api",
+      "category": "market_api",
+      "skip": true
+    },
+    {
+      "id": 7,
+      "claim": "OpenAI AGI before 2027: 12.0%",
+      "source_url": "polymarket_api",
+      "category": "market_api",
+      "skip": true
+    },
+    {
+      "id": 8,
+      "claim": "Data center moratorium 93.3%",
+      "source_url": "polymarket_api",
+      "category": "market_api",
+      "skip": true
+    },
+    {
+      "id": 9,
+      "claim": "US AI safety bill 26.0%",
+      "source_url": "polymarket_api",
+      "category": "market_api",
+      "skip": true
+    },
+    {
+      "id": 10,
+      "claim": "D+D 45.5% balance of power",
+      "source_url": "polymarket_api",
+      "category": "market_api",
+      "skip": true
+    },
+    {
+      "id": 11,
+      "claim": "R+R 18.5%",
+      "source_url": "polymarket_api",
+      "category": "market_api",
+      "skip": true
+    },
+    {
+      "id": 12,
+      "claim": "SCOTUS vacancy 33.0%",
+      "source_url": "polymarket_api",
+      "category": "market_api",
+      "skip": true
+    },
+    {
+      "id": 13,
+      "claim": "House D 75.8% EBO",
+      "source_url": "ebo_live",
+      "category": "market_api",
+      "skip": true
+    },
+    {
+      "id": 14,
+      "claim": "Senate D 47.5%",
+      "source_url": "polymarket_api",
+      "category": "market_api",
+      "skip": true
+    },
+    {
+      "id": 15,
+      "claim": "S&P 500 ~7,354 WoW -1.22%",
+      "source_url": "yahoo_finance_api",
+      "category": "market_api",
+      "skip": true
+    },
+    {
+      "id": 16,
+      "claim": "CPI 3.8% YoY April 2026",
+      "source_url": "bls_api",
+      "category": "market_api",
+      "skip": true
+    },
+    {
+      "id": 17,
+      "claim": "Unemployment 4.3% March 2026",
+      "source_url": "bls_api",
+      "category": "market_api",
+      "skip": true
+    },
+    {
+      "id": 18,
+      "claim": "Sentinel: US-China bilateral AI arrangement before 2027: 21% probability",
+      "source_url": "https://blog.sentinel-team.org/p/us-and-china-discuss-ai-guardrails",
+      "category": "expert_forecast",
+      "skip": false,
+      "verified": true,
+      "notes": "Directly fetched from Sentinel Substack May 18 post; agent confirmed this specific probability"
+    },
+    {
+      "id": 19,
+      "claim": "Sentinel: US public support for international AI governance with China: 8.7%",
+      "source_url": "https://blog.sentinel-team.org/p/us-and-china-discuss-ai-guardrails",
+      "category": "expert_forecast",
+      "skip": false,
+      "verified": true,
+      "notes": "Directly fetched from Sentinel Substack May 18 post"
+    },
+    {
+      "id": 20,
+      "claim": "Sentinel: 63% probability of 3+ US or Israeli strikes against Iran before June 18",
+      "source_url": "https://blog.sentinel-team.org/p/us-and-china-discuss-ai-guardrails",
+      "category": "expert_forecast",
+      "skip": false,
+      "verified": true,
+      "notes": "Directly fetched from Sentinel Substack May 18 post"
+    },
+    {
+      "id": 21,
+      "claim": "LW Negation Neglect: fine-tuned on negated claims, belief rate 88.6% vs 92.4% vs 2.5% baseline",
+      "source_url": "https://www.lesswrong.com/posts/kYzcevrxer6SJPEdG/negation-neglect-when-models-fail-to-learn-negations-in",
+      "category": "research_claim",
+      "skip": false,
+      "verified": true,
+      "notes": "Directly fetched from LW post by agent; specific statistics confirmed"
+    },
+    {
+      "id": 22,
+      "claim": "Classifier context rot: 2-30x increase in successful attacks with 800K token prepend",
+      "source_url": "https://www.lesswrong.com/posts/7vpvNM7viJqNWAdG7/classifier-context-rot-monitor-performance-degrades-with",
+      "category": "research_claim",
+      "skip": false,
+      "verified": true,
+      "notes": "Directly fetched from LW post by agent; specific statistics confirmed"
+    },
+    {
+      "id": 23,
+      "claim": "Quinnipiac poll: 55% of Americans think AI will do more harm than good (up from 44%)",
+      "source_url": "https://www.lesswrong.com/posts/9WPfkYDZCacnbhprX/voters-are-surprisingly-open-to-talking-about-ai-risk",
+      "category": "poll_data",
+      "skip": false,
+      "verified": true,
+      "notes": "LW post reports this as Quinnipiac March 2026 data; agent confirmed from LW post"
+    },
+    {
+      "id": 24,
+      "claim": "Coefficient Giving expects to move ~$1 billion in AI safety grantmaking from Good Ventures in 2026",
+      "source_url": "https://forum.effectivealtruism.org/posts/B6d8Wzk4gNzHsXvdi/ai-safety-is-extremely-bottlenecked-on-grantmakers",
+      "category": "factual_claim",
+      "skip": false,
+      "verified": true,
+      "notes": "Agent fetched EAF post directly; specific numbers from post"
+    },
+    {
+      "id": 25,
+      "claim": "Todd Blanche statement: 'prosecuting leakers who share our nation's secrets with reporters is a priority'",
+      "source_url": "https://pressfreedomtracker.us/all-incidents/todd-blanche-targets-press-leakers-as-acting-attorney-general/",
+      "category": "direct_quote",
+      "skip": false,
+      "verified": true,
+      "notes": "Agent fetched from Press Freedom Tracker directly; quote confirmed"
+    },
+    {
+      "id": 26,
+      "claim": "Texas Paxton primary at 93.5% Polymarket, $16.5M volume",
+      "source_url": "polymarket_api_live",
+      "category": "market_api",
+      "skip": true
+    },
+    {
+      "id": 27,
+      "claim": "Silver Bulletin: Trump net approval -20.1 (was -19.1)",
+      "source_url": "https://www.natesilver.net/p/trump-approval-ratings-nate-silver-bulletin",
+      "category": "poll_aggregate",
+      "skip": false,
+      "verified": true,
+      "notes": "Agent fetched Silver Bulletin directly; confirmed -20.1 current, -19.1 prior week"
+    },
+    {
+      "id": 28,
+      "claim": "SCOTUS birthright ~93%, FTC ~89%, mail ballots ~68%",
+      "source_url": "last_week_baseline",
+      "category": "estimated_from_prior",
+      "skip": false,
+      "verified": false,
+      "notes": "Could not find fresh Polymarket slugs; using last week's values. Softened to ~93%, ~89%, ~68% to signal estimates not live prices."
+    },
+    {
+      "id": 29,
+      "claim": "Alito retire ~38%, Court rules 2020 fraudulent ~8%",
+      "source_url": "last_week_baseline",
+      "category": "estimated_from_prior",
+      "skip": false,
+      "verified": false,
+      "notes": "Carried from last week; slugs not found in API"
+    },
+    {
+      "id": 30,
+      "claim": "Goodheart Labs: Median 2031, 80% CI 2027-2044",
+      "source_url": "https://agi.goodheartlabs.com/",
+      "category": "aggregated_forecast",
+      "skip": false,
+      "verified": true,
+      "notes": "Agent fetched Goodheart Labs dashboard directly; confirmed median 2031, 80% CI 2027-2044"
+    },
+    {
+      "id": 31,
+      "claim": "Mike Collins at 67% to win Georgia GOP Senate primary",
+      "source_url": "polymarket_api_live",
+      "category": "market_api",
+      "skip": true
+    },
+    {
+      "id": 32,
+      "claim": "Michigan primary: El-Sayed 55.5%, McMorrow 28%, Stevens 15.5%",
+      "source_url": "polymarket_api_live",
+      "category": "market_api",
+      "skip": true
+    }
+  ],
+  "notes": "Metaculus API returned no aggregated probabilities this run (all None); several SCOTUS Polymarket slugs not found, values carried from last week with ~ tilde softening."
+}
