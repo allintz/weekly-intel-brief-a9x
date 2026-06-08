@@ -24,7 +24,7 @@ nav{background:var(--surface);border-bottom:1px solid var(--border);padding:12px
 .hero h1{font-size:36px;font-weight:800;letter-spacing:-0.02em;line-height:1.2;margin-bottom:8px}
 .gradient{background:linear-gradient(135deg,var(--accent),var(--purple));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .hero p.sub{color:var(--text-secondary);font-size:15px;max-width:600px;margin:0 auto}
-.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;max-width:900px;margin:0 auto 40px;padding:0 24px}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;max-width:900px;margin:0 auto 40px;padding:0 24px}
 .kpi{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:16px;display:block;color:inherit;text-decoration:none}
 .kpi:hover{border-color:var(--accent)}
 .kpi-label{font-size:11px;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.05em}
@@ -203,6 +203,66 @@ tr:hover td{background:rgba(88,166,255,0.04)}
     <div class="kpi-detail">Polymarket; \$1.54M volume</div>
     <div class="kpi-delta">Unchanged from last week</div>
   </a>
+  <a class="kpi" href="#blw-appendix">
+    <div class="kpi-label">BLW Democracy Score</div>
+    <div class="kpi-val red">44</div>
+    <div class="kpi-detail">/ 100 (Spring 2026, expert survey; all-time low)</div>
+    <div class="kpi-delta"><span class="red">&darr;</span> from ~50 Fall 2025</div>
+  </a>
+  <a class="kpi" href="https://polymarket.com/event/presidential-election-winner-2028" target="_blank">
+    <div class="kpi-label">Dem wins 2028 (PM)</div>
+    <div class="kpi-val green">59%</div>
+    <div class="kpi-detail">2028 presidential winner; \$619M volume</div>
+    <div class="kpi-delta">Republicans: 41%; JD Vance 16%, Rubio 14%</div>
+  </a>
+</div>
+
+<!-- EXECUTIVE SUMMARY -->
+<div class="section" style="margin-bottom:32px">
+  <h3 style="margin-top:0">Executive Summary <span style="font-size:12px;font-weight:400;color:var(--text-muted)">(ordered by actionability)</span></h3>
+  <div class="callout" style="background:rgba(88,166,255,0.05);border-left:3px solid var(--accent)">
+    <ol style="margin:0 0 0 18px;padding:0;font-size:13px;color:var(--text-secondary)">
+      <li style="margin-bottom:8px;color:var(--text)"><strong>Act before late June &mdash; SCOTUS democracy rulings.</strong> Three major decisions expected by late June: birthright citizenship EO (94.3% SCOTUS strikes down), Trump v. Slaughter FTC firing authority (91.6% Trump wins), and mail-ballot counting rules (72.5%). All three reshape November 2026 election administration. Prepare legal and advocacy responses before rulings drop.</li>
+      <li style="margin-bottom:8px"><strong>Maine Senate collapsed 12.5pp &mdash; largest weekly mover.</strong> Dem probability fell from 73.5% to 61% this week, the largest single-week move among all tracked Senate races. Collins incumbency advantage is being re-priced. Decision point: reallocate field investment or hold and monitor.</li>
+      <li style="margin-bottom:8px"><strong>Iowa Senate now competitive (Sabato: Likely R &rarr; Leans R).</strong> Anti-establishment primary upset expanded the competitive Senate map. TX (Talarico 40.5%), NE (Osborn 40%), MT (Ind 20.6%) add further path options. Combined, these shift chamber math for Democratic majority scenarios.</li>
+      <li><strong>May CPI report June 10 &mdash; first tariff passthrough at scale.</strong> April held at 3.8% YoY (above Fed 2% target). S&amp;P down 2.6% this week. May reading determines whether tariff-driven inflation is accelerating heading into the November electoral environment.</li>
+    </ol>
+  </div>
+</div>
+
+<!-- MOVERS & APPROACHING RESOLUTION -->
+<div class="section" style="margin-bottom:32px">
+  <h3 style="margin-top:0">Movers &amp; Approaching Resolution</h3>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:8px 0">
+    <div>
+      <h4 style="font-size:13px;color:var(--accent-light);margin-bottom:8px">Biggest Movers This Week</h4>
+      <table style="font-size:12px">
+        <thead><tr><th>Market</th><th>&Delta; Week</th></tr></thead>
+        <tbody>
+          <tr><td>Maine Senate D (Platner)</td><td class="red">&minus;12.5pp</td></tr>
+          <tr><td>Iowa Senate (R, post-primary)</td><td class="green">+23pp est.</td></tr>
+          <tr><td>AI data center moratorium</td><td class="green">+5.8pp</td></tr>
+          <tr><td>AI safety bill before 2027</td><td class="green">+4.0pp</td></tr>
+          <tr><td>House D control</td><td class="red">&minus;2.0pp</td></tr>
+          <tr><td>Senate D control</td><td class="red">&minus;2.0pp</td></tr>
+          <tr><td>Trump out before 2027</td><td class="red">&minus;1.5pp</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div>
+      <h4 style="font-size:13px;color:var(--amber);margin-bottom:8px">Approaching Resolution</h4>
+      <table style="font-size:12px">
+        <thead><tr><th>Market</th><th>Prob</th><th>Deadline</th></tr></thead>
+        <tbody>
+          <tr><td>Insurrection Act before Jul 2026</td><td class="red">&lt;2%</td><td>Jun 30</td></tr>
+          <tr><td>BBBA AI moratorium (Q38766)</td><td>N/A</td><td>Jun 30</td></tr>
+          <tr><td>SCOTUS FTC (Trump v. Slaughter)</td><td class="green">91.6%</td><td>Late Jun</td></tr>
+          <tr><td>SCOTUS mail-ballot counting rules</td><td class="amber">72.5%</td><td>Aug 1</td></tr>
+          <tr><td>SCOTUS birthright citizenship EO</td><td class="green">94.3%</td><td>Aug 31</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
 </div>
 
 <!-- WATCHING THIS WEEK -->
@@ -356,6 +416,15 @@ tr:hover td{background:rgba(88,166,255,0.04)}
         <td>Nov 2025</td>
         <td><a href="https://polymarket.com/event/trump-removed-via-25th-amendment-before-2027" target="_blank">Polymarket</a></td>
       </tr>
+      <tr>
+        <td><span class="has-tip" data-tip="Resolves Yes if the House passes articles of impeachment before Jan 20, 2029 (full term). Higher than EOY 2026 probability because it includes 2027-2028 scenario if Dems retake House.">Trump impeached before his term ends (Jan 2029)</span></td>
+        <td>62%</td>
+        <td>&mdash;</td>
+        <td>\$65K</td>
+        <td>Active</td>
+        <td>Mar 2026</td>
+        <td><a href="https://polymarket.com/event/will-trump-be-impeached-before-his-term-ends" target="_blank">Polymarket</a></td>
+      </tr>
     </tbody>
   </table>
 
@@ -419,6 +488,15 @@ tr:hover td{background:rgba(88,166,255,0.04)}
         <td>Active</td>
         <td>Feb 2026</td>
         <td><a href="https://polymarket.com/event/save-act-signed-into-law-in-2026" target="_blank">Polymarket</a></td>
+      </tr>
+      <tr>
+        <td><span class="has-tip" data-tip="Senate SAVE America Act (H.R. 7296): Senate companion legislation to H.R. 22. Required 60 votes for cloture; an April 2026 amendment bid failed 48-50. Market resolved No (Senate passage failed).">Senate passes SAVE America Act (H.R. 7296) &mdash; Resolved</span></td>
+        <td>No &mdash; Resolved</td>
+        <td>&mdash;</td>
+        <td>\$62K</td>
+        <td>Closed Apr 2026</td>
+        <td>&mdash;</td>
+        <td><a href="https://polymarket.com/event/will-the-senate-pass-the-save-america-act-hr-7296" target="_blank">Polymarket</a></td>
       </tr>
       <tr>
         <td><span class="has-tip" data-tip="Anthropic CEO Dario Amodei arrested before 2027. Created amid Pentagon contractor status context.">Anthropic CEO arrested</span></td>
@@ -763,6 +841,31 @@ tr:hover td{background:rgba(88,166,255,0.04)}
     </div>
   </div>
 
+  <!-- 2028 OVERALL WINNER -->
+  <h4>2028 Presidential Election &mdash; Overall Winner</h4>
+  <table>
+    <thead>
+      <tr><th>Outcome</th><th>Prob</th><th>Volume</th><th>Activity</th><th>Source</th></tr>
+    </thead>
+    <tbody>
+      <tr style="background: rgba(88,166,255,0.07)">
+        <td>Democrat wins 2028 presidential election</td>
+        <td class="green">59%</td>
+        <td>\$619M</td>
+        <td>Active</td>
+        <td><a href="https://polymarket.com/event/presidential-election-winner-2028" target="_blank">Polymarket</a></td>
+      </tr>
+      <tr>
+        <td>Republican wins 2028 presidential election</td>
+        <td class="red">41%</td>
+        <td>\$619M</td>
+        <td>Active</td>
+        <td><a href="https://polymarket.com/event/presidential-election-winner-2028" target="_blank">Polymarket</a></td>
+      </tr>
+    </tbody>
+  </table>
+  <p style="font-size:11px;color:var(--text-muted);margin-top:4px">Aggregated June 7, 2026. Party market: <a href="https://polymarket.com/event/which-party-wins-2028-us-presidential-election" target="_blank">Polymarket party winner</a>. Individual candidate odds in nominee tables above.</p>
+
   <!-- ECONOMIC INDICATORS -->
   <h3>Economic Indicators</h3>
   <div class="eco-grid">
@@ -824,6 +927,62 @@ tr:hover td{background:rgba(88,166,255,0.04)}
     <div class="card-sub">Combined median forecast. 80% confidence interval: <strong>2027&ndash;2044</strong>. Blends Metaculus, Manifold, and Kalshi forecasts. Source: <a href="https://agi.goodheartlabs.com/" target="_blank">agi.goodheartlabs.com</a></div>
   </div>
 
+  <!-- EXPERT AGI FORECASTS -->
+  <h3>Expert AGI Forecasts <span style="font-size:12px;font-weight:400;color:var(--text-muted)">(individual named forecasters with dates)</span></h3>
+  <table>
+    <thead>
+      <tr><th>Forecaster</th><th>Forecast Date</th><th>Estimate</th><th>Status</th><th>Source</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Goodheart Labs (blended)</strong></td>
+        <td>Jun 2026</td>
+        <td>2031 median; 80% CI: 2027&ndash;2044</td>
+        <td><span class="tag tag-new">Current</span></td>
+        <td><a href="https://agi.goodheartlabs.com/" target="_blank">goodheartlabs.com</a></td>
+      </tr>
+      <tr>
+        <td>Leopold Aschenbrenner</td>
+        <td>Jun 2024 <span class="tag tag-near">Stale</span></td>
+        <td>AGI ~2027 &ldquo;strikingly plausible&rdquo;</td>
+        <td><span class="tag tag-near">Stale &gt;6mo</span></td>
+        <td><a href="https://situational-awareness.ai/" target="_blank">Situational Awareness</a></td>
+      </tr>
+      <tr>
+        <td>Ajeya Cotra</td>
+        <td>Jan 2023 <span class="tag tag-near">Stale</span></td>
+        <td>~2040 median; ~35% probability by 2036</td>
+        <td><span class="tag tag-near">Stale &gt;6mo</span></td>
+        <td><a href="https://www.lesswrong.com/posts/AfH2oPHCApdKicM4m/" target="_blank">Biological Anchors (LW)</a></td>
+      </tr>
+      <tr>
+        <td>Paul Christiano</td>
+        <td>2023 <span class="tag tag-near">Stale</span></td>
+        <td>~30% probability of transformative AI by 2033</td>
+        <td><span class="tag tag-near">Stale &gt;6mo</span></td>
+        <td><a href="https://ai-alignment.com/" target="_blank">AI Alignment Forum</a></td>
+      </tr>
+      <tr>
+        <td>Anthropic (OSTP submission)</td>
+        <td>2025 <span class="tag tag-near">Stale</span></td>
+        <td>&ldquo;Powerful AI systems: late 2026 or early 2027&rdquo;</td>
+        <td><span class="tag tag-near">Stale &gt;6mo</span></td>
+        <td><a href="https://www.anthropic.com/" target="_blank">Anthropic OSTP</a></td>
+      </tr>
+    </tbody>
+  </table>
+  <!-- Expert comparison visualization: timeline bar chart -->
+  <div class="callout" style="border-left:3px solid var(--purple);background:rgba(188,140,255,0.05);margin-top:8px">
+    <h4 style="color:var(--purple);margin-bottom:8px">Forecast Comparison &mdash; Timeline Visualization</h4>
+    <div style="font-size:12px;color:var(--text-secondary)">
+      <div style="margin:5px 0;display:flex;align-items:center;gap:8px"><span style="width:160px;flex-shrink:0">Anthropic / Aschenbrenner</span><span style="display:inline-block;height:10px;background:var(--red);width:18px;border-radius:2px"></span>&nbsp;~2026&ndash;2027&ensp;<span class="tag tag-near">Stale</span></div>
+      <div style="margin:5px 0;display:flex;align-items:center;gap:8px"><span style="width:160px;flex-shrink:0">Goodheart Labs (blended)</span><span style="display:inline-block;height:10px;background:var(--green);width:60px;border-radius:2px"></span>&nbsp;2031 median&ensp;<span class="tag tag-new">Current</span></div>
+      <div style="margin:5px 0;display:flex;align-items:center;gap:8px"><span style="width:160px;flex-shrink:0">Christiano</span><span style="display:inline-block;height:10px;background:var(--accent);width:80px;border-radius:2px"></span>&nbsp;30% by 2033&ensp;<span class="tag tag-near">Stale</span></div>
+      <div style="margin:5px 0;display:flex;align-items:center;gap:8px"><span style="width:160px;flex-shrink:0">Cotra</span><span style="display:inline-block;height:10px;background:var(--purple);width:110px;border-radius:2px"></span>&nbsp;~2040 median&ensp;<span class="tag tag-near">Stale</span></div>
+    </div>
+    <p style="font-size:11px;color:var(--text-muted);margin-top:8px">Bar length = relative position on a 2026&ndash;2044 scale. All individual expert estimates &gt;6 months old (no major public updates since mid-2024); treat as directional. Goodheart Labs blended forecast is the most current aggregate.</p>
+  </div>
+
   <!-- LW POSTS -->
   <h3>LessWrong &mdash; Key Posts This Week</h3>
   <div class="intel">
@@ -883,9 +1042,16 @@ tr:hover td{background:rgba(88,166,255,0.04)}
         <td>Jun 2025</td>
         <td><a href="https://www.metaculus.com/questions/38766/" target="_blank">Metaculus</a></td>
       </tr>
+      <tr>
+        <td><span class="has-tip" data-tip="Time between weak AGI and oracle ASI (a system that can answer any question answerable with sufficient compute). Distinct from Q9062 which measures superintelligence; Q4123 targets oracle/answering capability specifically.">Time between weak AGI and oracle ASI (Q4123)</span></td>
+        <td>N/A</td>
+        <td>N/A this run</td>
+        <td>Apr 2020</td>
+        <td><a href="https://www.metaculus.com/questions/4123/" target="_blank">Metaculus</a></td>
+      </tr>
     </tbody>
   </table>
-  <p style="font-size:11px;color:var(--text-muted);margin-top:4px">Note: Metaculus community prediction values unavailable this run; aggregated forecasts not returned by API. Forecaster counts confirmed.</p>
+  <p style="font-size:11px;color:var(--text-muted);margin-top:4px">Note: Metaculus community prediction values unavailable this run; aggregated forecasts not returned by API. Forecaster counts confirmed for Q5121 (1,863), Q9062 (344), Q38766 (33). Q4123 forecaster count unavailable this run.</p>
 
   <!-- WHAT'S SURPRISING -->
   <h3>&ldquo;What&rsquo;s Surprising&rdquo; Analysis</h3>
