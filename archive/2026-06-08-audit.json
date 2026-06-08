@@ -1,0 +1,197 @@
+{
+  "edition_date": "2026-06-08",
+  "generated_at": "2026-06-08T02:24:28Z",
+  "total_claims_extracted": 30,
+  "audited": 30,
+  "skipped_self_verifying": 9,
+  "supported": 28,
+  "partially_supported_softened": 1,
+  "not_supported_fixed": 0,
+  "not_supported_removed": 0,
+  "unable_to_verify": 1,
+  "hard_fail_unresolved": 0,
+  "items": [
+    {
+      "claim": "Trump out before 2027: 10.0%",
+      "source": "polymarket_api",
+      "status": "supported",
+      "url": "https://gamma-api.polymarket.com/markets?slug=trump-out-as-president-before-2027"
+    },
+    {
+      "claim": "Trump impeached by Dec 31, 2026: 6.5%",
+      "source": "polymarket_api",
+      "status": "supported",
+      "url": "https://gamma-api.polymarket.com/markets?slug=will-trump-be-impeached-by-december-31-2026"
+    },
+    {
+      "claim": "25th Amendment: 5.0%",
+      "source": "polymarket_api",
+      "status": "supported",
+      "url": "https://gamma-api.polymarket.com/markets?slug=trump-removed-via-25th-amendment-before-2027"
+    },
+    {
+      "claim": "SAVE Act: 8.0%",
+      "source": "polymarket_api",
+      "status": "supported",
+      "url": "https://gamma-api.polymarket.com/markets?slug=save-act-signed-into-law-in-2026"
+    },
+    {
+      "claim": "Anthropic CEO arrested: 0.6%",
+      "source": "polymarket_api",
+      "status": "supported",
+      "url": "https://gamma-api.polymarket.com/markets?slug=anthropic-ceo-arrested"
+    },
+    {
+      "claim": "Recession by end 2026: 18.5%",
+      "source": "polymarket_api",
+      "status": "supported",
+      "url": "https://gamma-api.polymarket.com/markets?slug=us-recession-by-end-of-2026"
+    },
+    {
+      "claim": "OpenAI announces AGI before 2027: 12.5%",
+      "source": "polymarket_api",
+      "status": "supported",
+      "url": "https://gamma-api.polymarket.com/markets?slug=openai-announces-it-has-achieved-agi-before-2027"
+    },
+    {
+      "claim": "AI data center moratorium: 91.8%",
+      "source": "polymarket_api",
+      "status": "supported",
+      "url": "https://gamma-api.polymarket.com/markets?slug=ai-data-center-moratorium-passed-before-2027"
+    },
+    {
+      "claim": "US AI safety bill: 14.5%",
+      "source": "polymarket_api",
+      "status": "supported",
+      "url": "https://gamma-api.polymarket.com/markets?slug=us-enacts-ai-safety-bill-before-2027"
+    },
+    {
+      "claim": "D House control: ~78%",
+      "source": "ebo_html_scrape",
+      "status": "supported",
+      "url": "https://electionbettingodds.com/House-Control-2026.html"
+    },
+    {
+      "claim": "D Senate control: ~44%",
+      "source": "ebo_html_scrape",
+      "status": "supported",
+      "url": "https://electionbettingodds.com/Senate-Control-2026.html"
+    },
+    {
+      "claim": "NC Cooper (D) 85.0%",
+      "source": "polymarket_api",
+      "status": "supported",
+      "url": "https://gamma-api.polymarket.com/events?slug=north-carolina-senate-election-winner"
+    },
+    {
+      "claim": "ME Dem 61.0%",
+      "source": "polymarket_api",
+      "status": "supported",
+      "url": "https://gamma-api.polymarket.com/events?slug=maine-senate-election-winner"
+    },
+    {
+      "claim": "SCOTUS birthright citizenship 94.3%",
+      "source": "polymarket_api",
+      "status": "supported",
+      "url": "https://gamma-api.polymarket.com/events?slug=scotus-strikes-down-trumps-birthright-citizenship-eo"
+    },
+    {
+      "claim": "SCOTUS FTC 91.6%",
+      "source": "polymarket_api",
+      "status": "supported",
+      "url": "https://gamma-api.polymarket.com/events?slug=scotus-lets-trump-fire-ftc-commissioners-in-trump-v-slaughter"
+    },
+    {
+      "claim": "SCOTUS mail ballots 72.5%",
+      "source": "polymarket_api",
+      "status": "supported",
+      "url": "https://gamma-api.polymarket.com/events?slug=scotus-bars-counting-mail-ballots-after-election-day"
+    },
+    {
+      "claim": "S&P 500: 7,384, WoW -2.6%",
+      "source": "yahoo_finance_api",
+      "status": "supported",
+      "url": "https://finance.yahoo.com/"
+    },
+    {
+      "claim": "CPI April 2026: 3.8% YoY",
+      "source": "bls_api",
+      "status": "supported",
+      "url": "https://api.bls.gov/publicAPI/v2/timeseries/data/CUUR0000SA0"
+    },
+    {
+      "claim": "Unemployment May 2026: 4.3%",
+      "source": "bls_api",
+      "status": "supported",
+      "url": "https://api.bls.gov/publicAPI/v2/timeseries/data/LNS14000000"
+    },
+    {
+      "claim": "Goodheart Labs AGI median 2031, 80% CI 2027-2044",
+      "source": "goodheart_labs_html",
+      "status": "supported",
+      "url": "https://agi.goodheartlabs.com/"
+    },
+    {
+      "claim": "Anthropic valuation $965B after $65B round",
+      "source": "sentinel_html",
+      "status": "supported",
+      "url": "https://blog.sentinel-team.org/p/russian-drone-hits-romanian-apartment"
+    },
+    {
+      "claim": "Federal court allowed mail-in ballot restrictions",
+      "source": "sentinel_html",
+      "status": "supported",
+      "url": "https://blog.sentinel-team.org/p/russian-drone-hits-romanian-apartment"
+    },
+    {
+      "claim": "Russian drone hit Romanian apartment building",
+      "source": "sentinel_html",
+      "status": "supported",
+      "url": "https://blog.sentinel-team.org/p/russian-drone-hits-romanian-apartment"
+    },
+    {
+      "claim": "Sabato Iowa Senate: Likely R -> Leans R (June 3)",
+      "source": "sabato_rss",
+      "status": "supported",
+      "url": "https://centerforpolitics.org/crystalball/rating-changes-in-iowa-following-tuesdays-primary/"
+    },
+    {
+      "claim": "Iowa Governor: Leans R -> Toss-up",
+      "source": "sabato_rss",
+      "status": "supported",
+      "url": "https://centerforpolitics.org/crystalball/rating-changes-in-iowa-following-tuesdays-primary/"
+    },
+    {
+      "claim": "ARC White-Box Estimation Challenge, $100K+ prize, warm-up June 2",
+      "source": "lw_graphql",
+      "status": "supported",
+      "url": "https://www.lesswrong.com/posts/Kben8CzS4awCwNw5c/announcing-the-arc-white-box-estimation-challenge"
+    },
+    {
+      "claim": "PauseAI UK: 63 UK politicians signed open letter",
+      "source": "lw_graphql",
+      "status": "supported",
+      "url": "https://www.lesswrong.com/posts/i2rCbxuskrarrprwA/one-year-of-pauseai-uk"
+    },
+    {
+      "claim": "Trump net approval ~-14",
+      "source": "silver_bulletin",
+      "status": "partially_supported_softened",
+      "url": "https://www.silver-bulletin.com/",
+      "note": "Silver Bulletin not accessible this run; estimate from prior week. Presented with explicit caveat in HTML."
+    },
+    {
+      "claim": "Press freedom incidents at Newark (May 27-29)",
+      "source": "press_freedom_tracker",
+      "status": "supported",
+      "url": "https://pressfreedomtracker.us/"
+    },
+    {
+      "claim": "Metaculus Q38766 probability for AI moratorium BBBA",
+      "source": "metaculus_api",
+      "status": "unable_to_verify",
+      "note": "Metaculus API returned empty community_prediction. Presented as N/A."
+    }
+  ],
+  "pending_review": []
+}
