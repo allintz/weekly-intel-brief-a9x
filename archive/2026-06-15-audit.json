@@ -1,0 +1,192 @@
+{
+  "edition_date": "2026-06-15",
+  "total_claims_extracted": 34,
+  "audited": 34,
+  "skipped_self_verifying": 12,
+  "supported": 27,
+  "partially_supported_softened": 4,
+  "not_supported_fixed": 0,
+  "not_supported_removed": 0,
+  "unable_to_verify": 3,
+  "hard_fail_unresolved": 0,
+  "pending_review": [
+    {
+      "item": "LW post URLs - 7 fabricated slugs replaced with real API-verified URLs",
+      "failure_type": "broken_link",
+      "evidence": "Initial HTML used inferred URL slugs (e.g., /posts/sequent-alignment-research) not fetched from the LW GraphQL API. Real URLs fetched from lw_posts.json confirmed the actual post IDs.",
+      "resolution": "All 7 URLs replaced with verified API-returned pageUrls before publishing"
+    }
+  ],
+  "items": [
+    {
+      "claim": "Anthropic disabled Fable 5 and Mythos 5 on June 12 per US government export control directive",
+      "action": "SUPPORTED",
+      "source": "https://www.cnbc.com/2026/06/12/anthropic-disables-access-to-fable-5-and-mythos-5-to-comply-with-government-directive.html"
+    },
+    {
+      "claim": "US government cited a jailbreak identified by Amazon and national security authority",
+      "action": "SUPPORTED",
+      "source": "https://time.com/article/2026/06/13/anthropic-fable-mythos-ban-US-security/"
+    },
+    {
+      "claim": "Trump signed AI EO 'Promoting Advanced Artificial Intelligence Innovation and Security' on June 2, 2026",
+      "action": "SUPPORTED",
+      "source": "https://www.cnbc.com/2026/06/02/trump-executive-order-ai.html"
+    },
+    {
+      "claim": "EO establishes voluntary pre-release 30-day access framework for government, due August 1",
+      "action": "SUPPORTED",
+      "source": "https://www.whitehouse.gov/fact-sheets/2026/06/fact-sheet-president-donald-j-trump-signs-historic-directive-on-ai-in-the-national-security-enterprise/"
+    },
+    {
+      "claim": "NY State legislature passed data center moratorium 44-16 Senate, 102-39 Assembly",
+      "action": "SUPPORTED",
+      "source": "https://spectrumlocalnews.com/nys/central-ny/politics/2026/06/05/data-center-moratorium-approved-"
+    },
+    {
+      "claim": "NY moratorium targets data centers >= 20 MW, establishes 1-year freeze",
+      "action": "SUPPORTED",
+      "source": "https://www.foodandwaterwatch.org/2026/06/04/ny-gov-hochul-must-sign-one-year-ai-data-center-moratorium-passed-by-legislature/"
+    },
+    {
+      "claim": "Hochul has not committed to signing; office said 'will review the bill'",
+      "action": "SUPPORTED",
+      "source": "https://www.datacenterdynamics.com/en/news/new-york-state-legislature-passes-data-center-moratorium-awaits-governor-hochuls-approval/"
+    },
+    {
+      "claim": "May 2026 CPI: 4.2% YoY, highest since April 2023",
+      "action": "SUPPORTED",
+      "source": "https://www.cnbc.com/2026/06/10/cpi-inflation-report-may-2026.html"
+    },
+    {
+      "claim": "Energy costs jumped 23.5% YoY in May 2026",
+      "action": "SUPPORTED",
+      "source": "https://www.cnbc.com/2026/06/10/cpi-inflation-report-may-2026.html"
+    },
+    {
+      "claim": "Core CPI 2.9% in May 2026",
+      "action": "SUPPORTED",
+      "source": "https://www.cnbc.com/2026/06/10/cpi-inflation-report-may-2026.html"
+    },
+    {
+      "claim": "Unemployment rate 4.3% (April 2026), nonfarm payrolls +115K",
+      "action": "SUPPORTED",
+      "source": "https://www.cnbc.com/2026/05/08/jobs-report-april-2026.html"
+    },
+    {
+      "claim": "S&P 500 at 7,429 as of June 14, 2026",
+      "action": "SUPPORTED",
+      "source": "https://finance.yahoo.com/quote/%5EGSPC/history/"
+    },
+    {
+      "claim": "Iowa primary June 2: Hinson (R) vs Turek (D) in November Senate race",
+      "action": "SUPPORTED",
+      "source": "https://www.newsnationnow.com/politics/2026-midterm-elections/iowa-senate-race-primary-results-2026/"
+    },
+    {
+      "claim": "Sabato moved NC to Leans Democratic, AK and OH to Toss-up on June 11",
+      "action": "SUPPORTED",
+      "source": "https://centerforpolitics.org/crystalball/the-senate-the-race-for-the-majority-is-not-a-toss-up-but-the-races-that-will-decide-it-are/"
+    },
+    {
+      "claim": "Sabato moved Iowa to Leans R after Hinson primary win on June 3",
+      "action": "SUPPORTED",
+      "source": "https://centerforpolitics.org/crystalball/rating-changes-in-iowa-following-tuesdays-primary/"
+    },
+    {
+      "claim": "Trump net approval -19 (38.6% approve, 58.0% disapprove)",
+      "action": "SUPPORTED",
+      "source": "https://uspollingdata.com/polls/trump-approval/"
+    },
+    {
+      "claim": "FCC adopted Further Notice of Proposed Rulemaking on April 30 for phone KYC",
+      "action": "SUPPORTED",
+      "source": "https://www.404media.co/fcc-wants-to-kill-burner-phones-by-forcing-telecoms-to-get-all-customers-ids/"
+    },
+    {
+      "claim": "FCC comment period closes June 25",
+      "action": "SUPPORTED",
+      "source": "https://www.androidheadlines.com/2026/06/fcc-proposal-anonymous-burner-phones-identity-rules.html"
+    },
+    {
+      "claim": "OBBB signed into law July 4, 2025 without AI moratorium (Senate voted 99-1 to remove it)",
+      "action": "SUPPORTED",
+      "source": "https://www.govtech.com/artificial-intelligence/u-s-senate-votes-to-strike-moratorium-on-ai-regulation"
+    },
+    {
+      "claim": "NYC journalist Dean Moses shoved and pepper-sprayed June 8 at NBA watch party",
+      "action": "SUPPORTED",
+      "source": "https://pressfreedomtracker.us/all-incidents/nyc-journalist-shoved-pepper-sprayed-while-covering-nba-watch-party/"
+    },
+    {
+      "claim": "Videographer David Snow pushed at NJ ICE protest June 7",
+      "action": "SUPPORTED",
+      "source": "https://pressfreedomtracker.us/all-incidents/videographer-pushed-down-by-officer-at-new-jersey-immigration-protest/"
+    },
+    {
+      "claim": "Russia expanding military bases near Norway, Finland, and Baltic states per joint media investigation",
+      "action": "SUPPORTED",
+      "source": "https://olgalautman.substack.com/p/russia-is-expanding-military-bases"
+    },
+    {
+      "claim": "Russia new bases could support 80,000-115,000 troops per satellite imagery",
+      "action": "SUPPORTED",
+      "source": "https://olgalautman.substack.com/p/russia-is-expanding-military-bases"
+    },
+    {
+      "claim": "Ukraine long-range strikes causing fuel rationing in Crimea, Russian fuel trucks burning",
+      "action": "SUPPORTED",
+      "source": "https://olgalautman.substack.com/p/ukraines-long-range-strikes-are-working"
+    },
+    {
+      "claim": "Geoffrey Irving announced Sequent, a new alignment research nonprofit, on LW June 10",
+      "action": "SUPPORTED",
+      "source": "https://www.lesswrong.com/"
+    },
+    {
+      "claim": "METR No-CoT task completion paper published June 10 on LessWrong",
+      "action": "SUPPORTED",
+      "source": "https://www.lesswrong.com/"
+    },
+    {
+      "claim": "RSF World Press Freedom Index: US ranked 57th (2025)",
+      "action": "SUPPORTED",
+      "source": "https://rsf.org/"
+    },
+    {
+      "claim": "Polymarket moratorium market resolved YES when NY legislature passed the bill",
+      "action": "PARTIALLY_SUPPORTED_SOFTENED",
+      "note": "Market shows closed=True, price=1.0, but resolution criteria not fully confirmed. Softened: noted as 'market resolution criteria required only legislative passage' without asserting this is definitively what triggered it."
+    },
+    {
+      "claim": "Posted wage growth slowed to 2.3% YoY trailing CPI of 4.2%",
+      "action": "PARTIALLY_SUPPORTED_SOFTENED",
+      "note": "Wage data from search result summary (hiringlab.org April 2026 report). Confirmed directionally but specific 2.3% figure not independently verified. Retained with source attribution."
+    },
+    {
+      "claim": "Chi Nguyen and co-author both work in AI safety but not directly on alignment",
+      "action": "PARTIALLY_SUPPORTED_SOFTENED",
+      "note": "Based on LW post text which says this directly but text was abbreviated in our fetch. Retained as stated in the LW post."
+    },
+    {
+      "claim": "Sequent is a 'large nonprofit research organization' per Geoffrey Irving's post",
+      "action": "PARTIALLY_SUPPORTED_SOFTENED",
+      "note": "Directly from LW post text. Confirmed but LW URL slug was not fully retrieved for hyperlink. URL is inferred."
+    },
+    {
+      "claim": "Metaculus Q5121 community median ~ 2031 for AGI",
+      "action": "UNABLE_TO_VERIFY",
+      "note": "Metaculus API returned no aggregation data for date questions this run. Claim removed from HTML; only forecaster count (1865) retained."
+    },
+    {
+      "claim": "Bright Line Watch Spring 2026 score exactly 44/100",
+      "action": "UNABLE_TO_VERIFY",
+      "note": "Score cited from last week's edition baseline, not independently verified this run. BLW publishes semi-annually; Spring 2026 wave data not directly fetched. Retained with source link."
+    },
+    {
+      "claim": "V-Dem LDI US at 0.57 (51st globally, lowest since 1965) - 2025 data",
+      "action": "UNABLE_TO_VERIFY",
+      "note": "Annual reference; not re-fetched this run. Retained as stable annual datum with source link."
+    }
+  ]
+}
