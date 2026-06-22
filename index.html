@@ -24,7 +24,7 @@ nav{background:var(--surface);border-bottom:1px solid var(--border);padding:12px
 .hero h1{font-size:36px;font-weight:800;letter-spacing:-0.02em;line-height:1.2;margin-bottom:8px}
 .gradient{background:linear-gradient(135deg,var(--accent),var(--purple));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .hero p.sub{color:var(--text-secondary);font-size:15px;max-width:600px;margin:0 auto}
-.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;max-width:900px;margin:0 auto 40px;padding:0 24px}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;max-width:900px;margin:0 auto 40px;padding:0 24px}
 .kpi{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:16px;display:block;color:inherit;text-decoration:none}
 .kpi:hover{border-color:var(--accent)}
 .kpi-label{font-size:11px;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.05em}
@@ -171,8 +171,8 @@ tr:hover td{background:rgba(88,166,255,0.04)}
   <h1>Weekly Democracy <span class="gradient">Intelligence Brief</span></h1>
   <div style="font-size:26px;color:var(--accent-light);margin:12px 0 14px;letter-spacing:-0.01em;font-weight:600">June 15, 2026</div>
   <p class="sub">Prediction markets, forecaster takes, and democracy intel &mdash; aggregated weekly.</p>
-  <p style="font-size:12px;color:var(--text-muted);margin:8px 0 0;line-height:1.4">Auto-updates every Sunday 7pm ET</p>
-  <p style="font-size:13px;color:var(--text-secondary);margin:6px 0 0;line-height:1.5;max-width:720px">Fully Claude-generated each Sunday. Alex estimates about 97% accuracy. Expect 1&ndash;3 errors and maybe one big error each issue. Message him with corrections or feedback.</p>
+  <p style="font-size:12px;color:var(--text-muted);margin:8px 0 0;line-height:1.4">Auto-updates every Monday 3am ET</p>
+  <p style="font-size:13px;color:var(--text-secondary);margin:6px 0 0;line-height:1.5;max-width:720px">Fully Claude-generated each Monday. Alex estimates about 97% accuracy. Expect 1&ndash;3 errors and maybe one big error each issue. Message him with corrections or feedback.</p>
 </div>
 
 <div class="container">
@@ -203,6 +203,30 @@ tr:hover td{background:rgba(88,166,255,0.04)}
     <div class="kpi-detail">Polymarket; \$1.58M volume</div>
     <div class="kpi-delta"><span class="red">&darr;</span> from 18.5% last week</div>
   </a>
+  <a class="kpi" href="https://brightlinewatch.org/" target="_blank">
+    <div class="kpi-label">Democracy Score (BLW)</div>
+    <div class="kpi-val amber">57<span style="font-size:16px">/100</span></div>
+    <div class="kpi-detail">Expert assessment, May 2026 report</div>
+    <div class="kpi-delta"><span class="green">&uarr;</span> from 53 in Apr 2025</div>
+  </a>
+  <a class="kpi" href="https://finance.yahoo.com/quote/%5EGSPC/" target="_blank">
+    <div class="kpi-label">S&amp;P 500</div>
+    <div class="kpi-val">7,429</div>
+    <div class="kpi-detail">As of June 14, 2026</div>
+    <div class="kpi-delta"><span class="text-muted">&mdash;</span> WoW data unavailable</div>
+  </a>
+</div>
+
+<!-- EXECUTIVE SUMMARY -->
+<div class="section">
+  <h3>Executive Summary</h3>
+  <div class="callout">
+    <p><strong>1. AI governance flashpoint (act now):</strong> US government export-control directive suspended Anthropic Fable 5 / Mythos 5 for all foreign nationals (June 12). Timeline for reinstatement unknown. Civil-society orgs with international staff face immediate access disruption.</p>
+    <p><strong>2. SCOTUS rulings imminent (late June):</strong> Birthright citizenship EO (94% strikes down), FTC commissioner firing (92% Trump wins), mail-ballot counting rules (75% SCOTUS bars post-Election Day ballots). All three reshape November 2026 election landscape.</p>
+    <p><strong>3. Senate majority turning point:</strong> House D 79%, Senate D 43% after Sabato moved NC, AK, OH this week. Democratic Senate majority now a genuine probability, not a tail scenario.</p>
+    <p><strong>4. Economic headwinds building:</strong> CPI 4.2% YoY (highest since Apr 2023), driven by Iran-related energy shock. P(Recession 2026) fell to 15.5% but structural midterm headwind for Republicans increasing.</p>
+    <p><strong>5. AGI timeline unchanged:</strong> No forecaster updates this week. Expert consensus median ~2031 (Greenblatt full R&D automation threshold); Metaculus community distribution unavailable this run.</p>
+  </div>
 </div>
 
 <!-- WATCHING THIS WEEK -->
@@ -252,6 +276,20 @@ tr:hover td{background:rgba(88,166,255,0.04)}
       <p>75% market probability that SCOTUS bars counting mail ballots received after Election Day. <span class="has-tip" data-tip="If SCOTUS bars post-Election Day mail ballots, state boards of elections will need to change ballot-receipt rules before November. States with high mail ballot reliance (PA, MI, WI) would face the largest operational impact.">Resolution deadline August 1; immediate electoral administration consequences if SCOTUS rules for change.</span></p>
     </div>
 
+  </div>
+</div>
+
+<!-- MOVERS & APPROACHING RESOLUTION -->
+<div class="section">
+  <h3>Movers &amp; Approaching Resolution</h3>
+  <div class="callout" style="font-size:13px">
+    <p><strong>No market moved &gt;5pp this week.</strong> Largest moves: Court rules 2020 election fraudulent <span class="green">+5.0pp</span> (23.5%, Thin &mdash; treat with caution); SCOTUS bars mail ballots after Election Day <span class="green">+2.5pp</span> (75.0%).</p>
+    <p><strong>Approaching resolution:</strong></p>
+    <ul style="margin:4px 0;padding-left:20px">
+      <li><strong>June 30</strong> &mdash; Insurrection Act invoked before July resolves (&lt;2%, Near resolution)</li>
+      <li><strong>Late June</strong> &mdash; SCOTUS term end: birthright (94%), FTC (92%), mail ballots (75%) decisions expected</li>
+      <li><strong>Dec 31, 2026</strong> &mdash; Trump impeached by EOY 2026, Insurrection Act Dec, Alito retirement, several economic markets</li>
+    </ul>
   </div>
 </div>
 
@@ -364,6 +402,14 @@ tr:hover td{background:rgba(88,166,255,0.04)}
       <li><strong>Iowa Senate moves to Leans Republican after Hinson primary win.</strong> Following Ashley Hinson&rsquo;s win in the June 2 Iowa Republican primary, Sabato changed Iowa&rsquo;s rating. Hinson (IA-02) had Trump&rsquo;s endorsement; she faces state Rep. Josh Turek (D) in November. Sabato&rsquo;s June 3 update: Iowa moves from Likely R to Leans R, reflecting a more competitive race than expected given Turek&rsquo;s stronger-than-expected primary performance. <a href="https://centerforpolitics.org/crystalball/rating-changes-in-iowa-following-tuesdays-primary/" target="_blank">Sabato&rsquo;s Crystal Ball, June 3</a></li>
       <li><strong>House map update: Democrats expanding the competitive field.</strong> Crystal Ball&rsquo;s June 9 House update reports Democrats are &ldquo;taking stock&rdquo; of an expanding map, with multiple seats shifting from Safe R to competitive. Full rating table not reproduced here; see source. <a href="https://centerforpolitics.org/crystalball/taking-stock-of-the-2026-house-map-an-update/" target="_blank">Sabato&rsquo;s Crystal Ball, June 9</a></li>
     </ul>
+  </div>
+
+  <!-- 2028 Winner Market -->
+  <h3>2028 Presidential Race (Overall)</h3>
+  <div class="card">
+    <div class="card-title"><a href="https://polymarket.com/event/presidential-election-winner-2028" target="_blank">2028 Presidential Election Winner (Polymarket)</a></div>
+    <div class="card-val" style="font-size:18px">\$635M+ volume</div>
+    <div class="card-sub">Overall 2028 winner market. Probability extraction unavailable this run &mdash; API returned no individual-candidate aggregation for this edition. See <a href="https://polymarket.com/event/presidential-election-winner-2028" target="_blank">Polymarket live odds</a>. Nominee-level breakdown below.</div>
   </div>
 
   <!-- 2028 Nominee Tables -->
@@ -504,6 +550,18 @@ tr:hover td{background:rgba(88,166,255,0.04)}
         <td><a href="https://polymarket.com/event/will-a-us-court-rule-that-the-2020-election-was-fradulent" target="_blank"><span class="has-tip" data-tip="Note: 'fradulent' is misspelled in the Polymarket slug; this is the correct market.">Court rules 2020 election fraudulent</span></a> <span class="tag tag-thin">Thin</span></td>
         <td>23.5%</td><td class="green">+5.0pp</td><td>\$0.02M</td><td>Active</td><td>2025</td><td>Polymarket</td>
       </tr>
+      <tr>
+        <td><a href="https://polymarket.com/event/will-donald-trump-invoke-the-insurrection-act-before-july" target="_blank"><span class="has-tip" data-tip="Resolves YES if Trump formally invokes the Insurrection Act before July 1, 2026. Thin market.">Insurrection Act invoked before July 2026</span></a> <span class="tag tag-near">Near res.</span> <span class="tag tag-thin">Thin</span></td>
+        <td>&lt;2%</td><td>&mdash;</td><td>&lt;\$0.1M</td><td>Active</td><td>Jan 2026</td><td>Polymarket</td>
+      </tr>
+      <tr>
+        <td><a href="https://polymarket.com/event/will-trump-be-impeached-before-his-term-ends" target="_blank"><span class="has-tip" data-tip="Resolves YES if House approves articles of impeachment before Jan 20, 2029. Includes post-2026 Dem House scenario.">Trump impeached before term ends (Jan 2029)</span></a> <span class="tag tag-thin">Thin</span></td>
+        <td>&#x2014; <small style="color:var(--text-muted)">(API unavail.)</small></td><td>&mdash;</td><td>\$0.07M</td><td>Active</td><td>2025</td><td>Polymarket</td>
+      </tr>
+      <tr>
+        <td><a href="https://polymarket.com/event/will-the-senate-pass-the-save-america-act-hr-7296" target="_blank"><span class="has-tip" data-tip="Senate SAVE America Act (H.R. 7296). Requires 60 votes to overcome filibuster; Democrats uniformly oppose. 99.9% No per market consensus.">Senate passes SAVE America Act (H.R. 7296)</span></a> <span class="tag tag-thin">Thin</span></td>
+        <td>~0.1%</td><td>&mdash;</td><td>\$0.05M</td><td>Active</td><td>2025</td><td>Polymarket</td>
+      </tr>
     </tbody>
   </table>
 
@@ -601,7 +659,20 @@ tr:hover td{background:rgba(88,166,255,0.04)}
   <!-- AGI chart placeholder -->
   <h3>Expert AGI Timeline Estimates</h3>
   <div class="callout" style="font-size:13px;color:var(--text-secondary)">
-    No named forecaster (Greenblatt, Kokotajlo, Lifland, Cotra, Aschenbrenner, Epoch AI) published a new timeline update in the past 7 days. The chart from the <a href="/archive/2026-06-08" target="_blank">June 8 edition</a> reflects the current consensus. Median estimate for full AI R&amp;D automation (Greenblatt&rsquo;s threshold) remains approximately 2031; Metaculus Q5121 community median (1,865 forecasters) reflects the broader community&rsquo;s distribution but probability extraction was unavailable this run.
+    <p style="margin-top:0">No named forecaster published a new timeline update in the past 7 days. <a href="/archive/2026-06-08" target="_blank">June 8 edition</a> chart reflects current consensus.</p>
+    <table style="font-size:12px;width:100%;border-collapse:collapse;margin:8px 0">
+      <thead><tr style="border-bottom:1px solid var(--border)"><th style="text-align:left;padding:3px 6px">Forecaster</th><th style="padding:3px 6px">Estimate</th><th style="padding:3px 6px">Last Updated</th><th style="padding:3px 6px">Status</th></tr></thead>
+      <tbody>
+        <tr><td style="padding:3px 6px">Greenblatt (Epoch AI)</td><td style="padding:3px 6px">~2031 (full AI R&amp;D automation)</td><td style="padding:3px 6px">Q2 2026</td><td style="padding:3px 6px;color:var(--green)">&#x2705; Current</td></tr>
+        <tr><td style="padding:3px 6px">Kokotajlo</td><td style="padding:3px 6px">~2027</td><td style="padding:3px 6px">May 2026</td><td style="padding:3px 6px;color:var(--green)">&#x2705; Current</td></tr>
+        <tr><td style="padding:3px 6px">Lifland</td><td style="padding:3px 6px">~2028</td><td style="padding:3px 6px">May 2026</td><td style="padding:3px 6px;color:var(--green)">&#x2705; Current</td></tr>
+        <tr><td style="padding:3px 6px">Cotra (Ajeya)</td><td style="padding:3px 6px">Transformative AI 2040s median</td><td style="padding:3px 6px;color:var(--amber)">2024</td><td style="padding:3px 6px;color:var(--amber)">&#x26A0;&#xFE0F; Stale (&gt;6 mo)</td></tr>
+        <tr><td style="padding:3px 6px">Aschenbrenner</td><td style="padding:3px 6px">AGI by ~2027</td><td style="padding:3px 6px;color:var(--amber)">mid-2024</td><td style="padding:3px 6px;color:var(--amber)">&#x26A0;&#xFE0F; Stale (&gt;6 mo)</td></tr>
+        <tr><td style="padding:3px 6px">Metaculus Q5121</td><td style="padding:3px 6px">Community distribution (1,865 forecasters)</td><td style="padding:3px 6px">Ongoing</td><td style="padding:3px 6px;color:var(--green)">&#x2705; Current</td></tr>
+        <tr><td style="padding:3px 6px">Goodheart Labs</td><td style="padding:3px 6px">Combined forecast &mdash; see <a href="https://agi.goodheartlabs.com/" target="_blank">AGI dashboard</a></td><td style="padding:3px 6px">Ongoing</td><td style="padding:3px 6px;color:var(--green)">&#x2705; Current</td></tr>
+      </tbody>
+    </table>
+    <p><strong>What&rsquo;s surprising this week:</strong> Despite the Anthropic Fable 5 export-control directive &mdash; arguably the strongest signal yet that frontier AI capabilities have entered the national-security threat model &mdash; no expert updated their timeline. The government&rsquo;s use of existing national-security authority to classify a single model (without new legislation) is a qualitatively new governance capability. That this triggered no timeline adjustments from named forecasters suggests either (a) they already priced in government awareness of frontier capabilities, or (b) governance signals are systematically underweighted in current forecasting frameworks.</p>
   </div>
 
   <!-- Community Forecasts -->
@@ -610,6 +681,18 @@ tr:hover td{background:rgba(88,166,255,0.04)}
     <div class="card-title">When will the first general AI system be devised, tested, and publicly announced? (Metaculus Q5121)</div>
     <div class="card-val" style="font-size:18px">1,865 forecasters</div>
     <div class="card-sub">Date question (not binary); community probability distribution over time. Probability extraction unavailable this run &mdash; API returned no aggregation data. Full distribution at <a href="https://www.metaculus.com/questions/5121/" target="_blank">Metaculus Q5121</a>. Resolution criteria: 2hr adversarial Turing + Loebner Silver + Winograd 90% + SAT 75th + Putnam + Ferrari 312 T4 robotic assembly.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Time from weak AGI to superintelligence &mdash; Metaculus Q9062</div>
+    <div class="card-val" style="font-size:18px">Q9062</div>
+    <div class="card-sub">Conditional on weak AGI arriving: how long until superintelligence emerges? Community median &mdash; see <a href="https://www.metaculus.com/questions/9062/" target="_blank">Metaculus Q9062</a>. Probability extraction unavailable this run &mdash; API returned no aggregation data.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Time from weak AGI to oracle ASI &mdash; Metaculus Q4123</div>
+    <div class="card-val" style="font-size:18px">~22 mo</div>
+    <div class="card-sub">After weak AGI: community median ~22.4 months until first superintelligent oracle (240 forecasters). See <a href="https://www.metaculus.com/questions/4123/" target="_blank">Metaculus Q4123</a>. Note: this is a duration estimate, not a calendar date.</div>
   </div>
 
   <!-- Capability milestones -->
