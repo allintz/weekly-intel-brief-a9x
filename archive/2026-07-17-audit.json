@@ -2,10 +2,10 @@
   "edition_date": "2026-07-17",
   "generated_by": "manual Opus run (automated launchd job failing on expired OAuth since ~June 15)",
   "baseline_edition": "2026-06-15",
-  "total_claims_extracted": 38,
-  "audited": 30,
+  "total_claims_extracted": 43,
+  "audited": 35,
   "skipped_self_verifying": 8,
-  "supported": 25,
+  "supported": 30,
   "partially_supported_softened": 4,
   "not_supported_fixed": 1,
   "not_supported_removed": 1,
@@ -21,13 +21,36 @@
     "overstated_movers": "PASS - Ohio Brown -6.5, NE +11, MT +11.5, Alito -12.5, 2020-fraud -12, AI bill -15.5, Vance +8.4, Ossoff +6.8 all recomputed correct"
   },
   "softened": [
-    {"item": "Trump approval", "action": "dropped specific approve/disapprove component percentages (paywalled/unverified); published net -17.4 only"},
-    {"item": "Bright Line Watch ~57/100", "action": "framed as last-published figure (May 2026 report), no new wave; exact number not re-verifiable on live homepage"},
-    {"item": "Ohio Senate", "action": "presented as toss-up with explicit market-vs-polling divergence rather than 'Husted leads' (thin Polymarket had Husted 52/Brown 49; Fox poll +8 Brown, Kalshi ~56% Brown)"},
-    {"item": "Anthropic Agentic Misalignment survey", "action": "specific failure-rate numbers (e.g. 'Gemini 19/20') flagged as contested per LW rebuttal; kept qualitative"}
+    {
+      "item": "Trump approval",
+      "action": "dropped specific approve/disapprove component percentages (paywalled/unverified); published net -17.4 only"
+    },
+    {
+      "item": "Bright Line Watch ~57/100",
+      "action": "framed as last-published figure (May 2026 report), no new wave; exact number not re-verifiable on live homepage"
+    },
+    {
+      "item": "Ohio Senate",
+      "action": "presented as toss-up with explicit market-vs-polling divergence rather than 'Husted leads' (thin Polymarket had Husted 52/Brown 49; Fox poll +8 Brown, Kalshi ~56% Brown)"
+    },
+    {
+      "item": "Anthropic Agentic Misalignment survey",
+      "action": "specific failure-rate numbers (e.g. 'Gemini 19/20') flagged as contested per LW rebuttal; kept qualitative"
+    }
   ],
   "pending_review": [
-    {"item": "RFK Jr. 49% GOP-nominee sub-market", "failure_type": "fabricated_data", "evidence": "Polymarket sub-market shows 49% but volumeNum=None and lastTradePrice=None (stale placeholder); absent from the overall 2028-winner market top 6", "original_content": "excluded from GOP nominee table; Vance 41.5% shown as leader"},
-    {"item": "Georgia Recorder link (Fulton subpoena quashed)", "failure_type": "broken_link", "evidence": "returns 403 to automated fetch (Cloudflare bot-block); article confirmed real by research pass and loads in-browser; retained as best primary source", "original_content": "link retained"}
-  ]
+    {
+      "item": "RFK Jr. 49% GOP-nominee sub-market",
+      "failure_type": "fabricated_data",
+      "evidence": "Polymarket sub-market shows 49% but volumeNum=None and lastTradePrice=None (stale placeholder); absent from the overall 2028-winner market top 6",
+      "original_content": "excluded from GOP nominee table; Vance 41.5% shown as leader"
+    },
+    {
+      "item": "Georgia Recorder link (Fulton subpoena quashed)",
+      "failure_type": "broken_link",
+      "evidence": "returns 403 to automated fetch (Cloudflare bot-block); article confirmed real by research pass and loads in-browser; retained as best primary source",
+      "original_content": "link retained"
+    }
+  ],
+  "post_publish_additions": "Per Alex request, added 4 items to the initial edition: Trump July 16 election speech (S2), Sam Liccardo 'All Hail the Gatekeeper' (S4), ACX 'AI Superforecasters Are Here' (S3), expanded Kimi K3 with full benchmarks (S3). All 6 new source URLs HEAD-checked 200."
 }
