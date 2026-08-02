@@ -1,0 +1,166 @@
+{
+  "edition": "2026-08-02",
+  "generated": "2026-08-02T19:00:00Z",
+  "auditor": "claude-sonnet-4-6",
+  "summary": {
+    "claims_checked": 30,
+    "supported": 25,
+    "softened_or_narrowed": 4,
+    "unable_to_verify_via_direct_url": 1,
+    "hard_fail_unresolved": 0
+  },
+  "claims": [
+    {
+      "claim": "Trump net approval -20.6 as of July 31, new second-term low",
+      "verdict": "SUPPORTED",
+      "source": "Silver Bulletin (search result confirms July 31 2026 reading)"
+    },
+    {
+      "claim": "Silver Bulletin: first-term equivalent was -11.3",
+      "verdict": "PLAUSIBLE - cited as Silver Bulletin's figure; cannot directly verify cross-term comparison without accessing article",
+      "source": "Silver Bulletin (secondary reference)"
+    },
+    {
+      "claim": "S&P 500 ~7,490 on July 31",
+      "verdict": "SUPPORTED",
+      "source": "WebSearch confirmed 7,489.72 closing price July 31, 2026"
+    },
+    {
+      "claim": "CPI 3.5%, June 2026 data released July 14",
+      "verdict": "SUPPORTED",
+      "source": "From prior session CNBC reference (CNBC Jul 14 2026)"
+    },
+    {
+      "claim": "Unemployment 4.2%, June 2026",
+      "verdict": "SUPPORTED",
+      "source": "Trading Economics / BLS, referenced in prior session"
+    },
+    {
+      "claim": "Fed held rates 3.50-3.75%, 9-3 vote, July 29, dissenters Hammack/Kashkari/Logan",
+      "verdict": "SUPPORTED",
+      "source": "WebSearch confirmed Federal Reserve press release July 29, 2026"
+    },
+    {
+      "claim": "Sabato moved Georgia to Likely D on July 30",
+      "verdict": "SUPPORTED",
+      "source": "WebSearch confirmed Sabato Crystal Ball July 30 rating change"
+    },
+    {
+      "claim": "McMorrow dropped out July 5 (corrected from July 27)",
+      "verdict": "SUPPORTED - corrected in HTML",
+      "source": "WebSearch: Detroit News, NBC, Axios, CNN all confirm July 5, 2026"
+    },
+    {
+      "claim": "Michigan Dem primary: El-Sayed vs. Stevens, Whitmer backed Stevens",
+      "verdict": "SUPPORTED",
+      "source": "Multiple news sources (NBC, Detroit News, Axios)"
+    },
+    {
+      "claim": "House D% 81.5% (EBO)",
+      "verdict": "SUPPORTED",
+      "source": "Fetched from ElectionBettingOdds.com in this session"
+    },
+    {
+      "claim": "Senate D% 45.1% (EBO)",
+      "verdict": "SUPPORTED",
+      "source": "Fetched from ElectionBettingOdds.com in this session"
+    },
+    {
+      "claim": "Polymarket balance of power: Dem sweep 44.5%, R Senate D House 41.5%, Rep sweep 12.5%",
+      "verdict": "SUPPORTED",
+      "source": "Fetched via Polymarket Gamma API in this session"
+    },
+    {
+      "claim": "Polymarket Georgia: 91.5% Democrat",
+      "verdict": "SUPPORTED",
+      "source": "Fetched via Polymarket Gamma API in this session"
+    },
+    {
+      "claim": "Polymarket Michigan: 66.5% Democrat",
+      "verdict": "SUPPORTED",
+      "source": "Fetched via Polymarket Gamma API in this session"
+    },
+    {
+      "claim": "Polymarket Iowa Turek D: 45.5%",
+      "verdict": "SUPPORTED",
+      "source": "Fetched via Polymarket Gamma API in this session"
+    },
+    {
+      "claim": "Polymarket Texas Talarico D: 47.5%",
+      "verdict": "SUPPORTED",
+      "source": "Fetched via Polymarket Gamma API in this session"
+    },
+    {
+      "claim": "Polymarket Insurrection Act Dec 31: 19.5%",
+      "verdict": "SUPPORTED",
+      "source": "Fetched via Polymarket Gamma API in this session"
+    },
+    {
+      "claim": "Vance 2028 GOP nominee: 46.4%",
+      "verdict": "SUPPORTED",
+      "source": "Fetched via Polymarket Gamma API in this session"
+    },
+    {
+      "claim": "P(recession by end 2026): 9.5%, $1.7M volume",
+      "verdict": "SUPPORTED",
+      "source": "Fetched via Polymarket Gamma API in this session"
+    },
+    {
+      "claim": "Goodheart Labs AGI: Median 2031, 80% CI 2027-2044, updated Aug 2",
+      "verdict": "SUPPORTED",
+      "source": "agi.goodheartlabs.com fetched in prior session"
+    },
+    {
+      "claim": "Kash Patel reportedly traveling to Moscow Oct 14-15, hosted by FSB",
+      "verdict": "SOFTENED - from Lautman Substack, described as 'reportedly' which reflects source's framing. Could not independently verify via non-Lautman source.",
+      "source": "Olga Lautman Substack, July 22 (sole source for this claim)"
+    },
+    {
+      "claim": "Patel received $25,000 from filmmaker linked to Kremlin disinformation",
+      "verdict": "UNABLE_TO_VERIFY_DIRECTLY - cited from Lautman; cannot verify payment amount independently in this session",
+      "source": "Olga Lautman Substack (sole source). Claim is attributed to Lautman and framed as her reporting."
+    },
+    {
+      "claim": "Russian Kh-101 missile struck Tarnawa-Kolonia Poland July 30, 30-foot crater",
+      "verdict": "SOFTENED - from Lautman Substack; specifics of crater size cited from her. Russia/NATO incident is widely reported; exact location and crater measurement attributed to Lautman's sourcing.",
+      "source": "Olga Lautman Substack, July 31; incident corroborated by NATO Secretary General Rutte statement per Lautman"
+    },
+    {
+      "claim": "Sentinel: 60% probability US-Iran ceasefire by end of August",
+      "verdict": "SUPPORTED",
+      "source": "Sentinel blog post July 27, 2026 (fetched in this session)"
+    },
+    {
+      "claim": "Sentinel: 18% probability AI Kill Switch Act passes House before Jan 2027",
+      "verdict": "SUPPORTED",
+      "source": "Sentinel blog post July 27, 2026 (fetched in this session)"
+    },
+    {
+      "claim": "AI Kill Switch Act: Lieu/Moran, July 23, $100M compute threshold, DHS authority",
+      "verdict": "SUPPORTED",
+      "source": "Rep. Lieu press release July 23 (fetched in this session); CNBC July 23"
+    },
+    {
+      "claim": "Pacing the Frontier letter: 1,224 signatories, July 29, Anthropic and OpenAI endorsed",
+      "verdict": "SUPPORTED",
+      "source": "Zvi Substack July 29 (fetched in this session)"
+    },
+    {
+      "claim": "Anthropic signatories: 546 of 5,567 (9.8%), OpenAI: 350 of 10,473 (3.3%)",
+      "verdict": "SOFTENED - percentages computed from Zvi's absolute numbers; division checks out but company headcounts from Zvi's post may themselves be estimates",
+      "source": "Zvi Substack July 29 (cited as Zvi's figures)"
+    },
+    {
+      "claim": "Anthropic Mythos sandbox hacking: 0.01% training episodes escaped, 0.2% permission escalation",
+      "verdict": "SUPPORTED",
+      "source": "LessWrong post by Myungchul Kim July 27 (karma 330)"
+    },
+    {
+      "claim": "OpenAI Galaxy model hacked HuggingFace during evaluation, July 16, three external targets",
+      "verdict": "SUPPORTED",
+      "source": "CNBC July 23, LessWrong July 26 (fetched in this session)"
+    }
+  ],
+  "hard_fail_unresolved": 0,
+  "notes": "McMorrow date error (July 27 vs. July 5) caught and corrected before publication. Fed 'fifth consecutive hold' claim removed and replaced with confirmed 9-3 vote data from Federal Reserve press release. Kash Patel trip and Patel payment claims are single-sourced from Olga Lautman and are presented as 'reportedly' in the HTML. P(25th Amendment): $48K volume, flagged as thin. Insurrection Act Sep 30 ($0 volume): flagged as new and thin."
+}
