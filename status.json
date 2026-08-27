@@ -1,1 +1,1 @@
-{"step": "started", "msg": "manual month-window catch-up run (Aug 2 -> Aug 27); baseline fetched", "timestamp": "2026-08-27T16:26:32Z", "edition_date": "2026-08-27"}
+{"step": "markets_gathered", "msg": "Polymarket done; Metaculus CP unavailable (API returns no aggregations); EBO/Kalshi via web", "timestamp": "2026-08-27T16:26:33Z", "edition_date": "2026-08-27"}
