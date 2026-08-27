@@ -1,1 +1,1 @@
-{"step": "audit_complete", "msg": "claim audit complete: 63 audited, 0 hard-fail unresolved, 2 items removed to pending_review", "timestamp": "2026-08-27T16:43:17Z", "edition_date": "2026-08-27"}
+{"step": "verification_complete", "msg": "step 4.8 complete: 7-point taxonomy checked, 94 URLs link-checked, 12 mover recomputations reconciled", "timestamp": "2026-08-27T16:43:18Z", "edition_date": "2026-08-27"}
