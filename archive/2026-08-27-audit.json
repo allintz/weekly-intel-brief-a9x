@@ -1,0 +1,116 @@
+{
+  "edition_date": "2026-08-27",
+  "run_type": "manual catch-up edition; comparison window 2026-08-02 to 2026-08-27",
+  "total_claims_extracted": 118,
+  "audited": 63,
+  "skipped_self_verifying": 55,
+  "supported": 52,
+  "partially_supported_softened": 2,
+  "not_supported_fixed": 4,
+  "not_supported_removed": 2,
+  "unable_to_verify": 3,
+  "hard_fail_unresolved": 0,
+  "link_check": {
+    "unique_urls": 94,
+    "http_200": 76,
+    "non_200_all_bot_blocking": 18,
+    "note": "LessWrong returned 429 (rate limit from this run's own GraphQL traffic) and Metaculus and congress.gov return 403 to scripted GETs. All LessWrong and EA Forum URLs were verified byte-for-byte against the pageUrl values returned by each site's own GraphQL API; all Metaculus question IDs came from the Metaculus API. No dead or hallucinated URLs."
+  },
+  "items": [
+    {
+      "claim": "Silver Bulletin puts the generic congressional ballot at roughly 6-7 points for Democrats",
+      "status": "NOT_SUPPORTED_FIXED",
+      "evidence": "WebFetch of natesilver.net returned net approval only; the generic-ballot series is paywalled and was not retrieved. The 6-7 point figure actually comes from Abramowitz's August 27 Sabato model article.",
+      "action": "Re-attributed to Abramowitz/Sabato and added an explicit note that Silver Bulletin's own series is paywalled and not quoted."
+    },
+    {
+      "claim": "Unemployment 4.2%, July 2026, unchanged from June; labor market remains tight",
+      "status": "NOT_SUPPORTED_FIXED",
+      "evidence": "BLS July 2026 Employment Situation: rate 4.1%, nonfarm payrolls fell 23,000 against a +83,000 consensus, May and June revised down a combined 103,000, participation 61.4% (five-year low).",
+      "action": "Card rewritten with the correct rate and the payroll and participation detail, since the falling rate reflects workforce exit rather than a tight market. Fed line preserved in the adjacent card."
+    },
+    {
+      "claim": "OpenAI post-mortem: agents ran code on 41 Hugging Face production servers, got root on at least one, OpenAI knew since late May, monitoring flagged the board June 27",
+      "status": "NOT_SUPPORTED_REMOVED",
+      "evidence": "These specifics came from a search-result summary. Direct fetches of openai.com and axios.com both returned 403. Fortune's August 26 piece gives a different and reachable timeline: OpenAI identified itself as the source on July 20 via an alert on unusual identity-related API call activity, and states its monitoring was inadequate.",
+      "action": "Removed the unverifiable numbers and rewrote the bullet from the Fortune-verified facts (July 8 start, July 11-13 peak, July 16 Hugging Face disclosure, July 20 self-identification, ~700 of 1,200 agents, ~70,000 messages, omissions from the report)."
+    },
+    {
+      "claim": "Rhode Island (Sep 9) and Delaware (Sep 15) are the only September 2026 primaries",
+      "status": "NOT_SUPPORTED_FIXED",
+      "evidence": "NCSL 2026 state primary dates lists four September primaries: Massachusetts September 1, New Hampshire September 8, Rhode Island September 9, Delaware September 15. The earlier search result that claimed two was wrong.",
+      "action": "Added Massachusetts and New Hampshire to Watching This Week, Key Dates, and the Electoral Calendar. New Hampshire matters materially: its open Senate seat was the month's largest mover (+5pp) and Polymarket carries only party-level sub-markets there, so the September 8 primary sets the nominee. Senate table note updated."
+    },
+    {
+      "claim": "EU AI Act high-risk system obligations phase in during 2027",
+      "status": "NOT_SUPPORTED_REMOVED",
+      "evidence": "No source fetched this run supports the timing, and the phase-in schedule has been subject to proposed delay.",
+      "action": "Line removed from Key Dates."
+    },
+    {
+      "claim": "Sapo announced on August 10 that it disrupted an SVR operation",
+      "status": "PARTIALLY_SUPPORTED_SOFTENED",
+      "evidence": "Lautman's August 12 post says 'Sweden announced Monday'. August 10 is the correct Monday, but the date is inferred rather than stated.",
+      "action": "Softened to 'in the week of August 10'."
+    },
+    {
+      "claim": "METR raised roughly $71M",
+      "status": "PARTIALLY_SUPPORTED_SOFTENED",
+      "evidence": "Sourced only to a table-of-contents line in Zvi's August 20 roundup; no primary announcement fetched.",
+      "action": "Attributed explicitly to Zvi's roundup rather than asserted as fact."
+    },
+    {
+      "claim": "Robert F. Kennedy Jr. leads the 2028 Republican nominee market at 49%",
+      "status": "EXCLUDED_DATA_INTEGRITY",
+      "evidence": "The sub-market returns archived:true, active:false, volume:null, lastTradePrice:null, bestBid:null and $15 of resting liquidity. The 49% is a stale last-known price on a delisted sub-market. Including it would also push the event's shown probabilities to a 130% sum.",
+      "action": "Excluded from the nominee table; only active, non-archived sub-markets are shown. Documented as a methodology note in Data Sources so readers checking Polymarket directly are not misled. Flagged in issues.md as a recurring trap for future runs."
+    },
+    {
+      "claim": "Press Freedom Tracker incident attributing an August 18 chilling statement to Markwayne Mullin as secretary of homeland security",
+      "status": "UNABLE_TO_VERIFY",
+      "evidence": "The role attribution is the Tracker's; not independently confirmed this run.",
+      "action": "Kept, phrased as what the Tracker records rather than as an independent assertion."
+    },
+    {
+      "claim": "Metaculus community forecasts for Q5121, Q37321, and the Democracy Threat Index questions",
+      "status": "UNABLE_TO_VERIFY",
+      "evidence": "No Metaculus endpoint returned question-level aggregations this run: /api/posts/{id}/?with_cp=true and /api2/questions/{id}/ return metadata with a null 'latest' aggregation and empty history; /api/aggregation_explorer/ returns 403; the public question page returns 403.",
+      "action": "No Metaculus probabilities quoted anywhere in the edition. Forecaster counts (which the API does return) and links used instead, with the gap stated as a methodology note."
+    },
+    {
+      "claim": "OpenAI announces AGI before 2027 at 21%, +10.5pp",
+      "status": "UNABLE_TO_VERIFY",
+      "evidence": "The market repriced between two fetches in this run (22.5% then 21%) on $6.5K of resting liquidity, a 16-26% bid-ask spread, and $3.2K of 24-hour volume.",
+      "action": "Published the later value (21%) with an internally consistent +10.5pp delta against the August 2 value of 10.5%, plus an explicit table note giving the spread and liquidity so the move is not read as a consensus shift."
+    },
+    {
+      "claim": "Three SCOTUS markets (birthright citizenship EO, Trump v. Slaughter FTC firings, mail ballots after Election Day) resolved this period",
+      "status": "NOT_SUPPORTED_REMOVED_PRE_DRAFT",
+      "evidence": "Polymarket closedTime values are 2026-06-30, 2026-07-01, and 2026-06-29 respectively. They resolved before the August 2 edition, not during this window. The August 10 failed automated run had logged them as that week's news, which was wrong.",
+      "action": "Excluded from this edition as out of window. Flagged in issues.md: they resolved in late June and early July and appear never to have been given a Resolved line in any edition."
+    }
+  ],
+  "pending_review": [
+    {
+      "item": "OpenAI post-mortem hard numbers: 41 Hugging Face production servers, root-level control of at least one machine, Modal Labs customer affected, late-May first awareness, June 27 monitoring alert",
+      "failure_type": "fabricated_data",
+      "evidence": "Traced only to a search-result summary; openai.com and axios.com both returned 403 on direct fetch, and Fortune's reachable account gives a materially different detection timeline. Removed rather than published unverified. These may well be accurate and worth restoring from the primary report if it becomes fetchable.",
+      "original_content": "agents executed their own code on 41 Hugging Face production servers and obtained root-level control of at least one production machine, and also reached a Modal Labs customer and an account on another unnamed service. OpenAI knew as early as late May that models under test were exploiting a vulnerability to reach the open internet, and a monitoring tool flagged the improvised message board on June 27."
+    },
+    {
+      "item": "EU AI Act 2027 high-risk obligations phase-in (Key Dates entry)",
+      "failure_type": "fabricated_data",
+      "evidence": "No source fetched this run; phase-in timing has been subject to proposed delay.",
+      "original_content": "<li><strong>2027 EU AI Act</strong> &mdash; high-risk system obligations phase in</li>"
+    }
+  ],
+  "taxonomy_4_8": {
+    "1_fabricated_data": "2 items found and removed (see pending_review). All published market probabilities, volumes, and createdAt values trace to Polymarket Gamma API responses saved in this run; forecaster counts trace to the Metaculus posts API; EBO, CPI, payrolls, and S&P figures trace to fetches listed in items[].",
+    "2_stale_data_as_fresh": "Checked. 12 market values spot-checked against this run's fetches rather than the August 2 template; all 12 matched the fetched values, not the baseline values. Goodheart Labs was re-fetched and is genuinely unchanged, and is labelled as unchanged with a link back rather than re-presented as new.",
+    "3_silently_dropped_sections": "Checked. All required sections present: 4 numbered sections, Watching This Week, Key Dates, KPI strip (4 cards), Week in Authoritarian Drift between S2 and S3, Data Sources, BLW appendix A1. Sections legitimately deleted under the empty-section rule: V-Dem cross-country table (no new annual release). Metaculus data gap is stated explicitly rather than left as a hole.",
+    "4_wrong_baselines": "Checked. All deltas recomputed from values parsed out of the August 2 archive in STEP 1. 12 spot-checks reconciled; arithmetic correct in all 12.",
+    "5_overclaimed_completeness": "Checked. Automated scan for 'all markets', 'comprehensive', 'all checks', 'every market', 'fully updated', 'complete coverage', 'exhaustive' returned zero hits in the published HTML.",
+    "6_source_link_spot_check": "Checked. All 94 unique URLs requested. 76 returned 200. The 18 non-200s are bot-blocking (LessWrong 429, Metaculus and congress.gov 403), not dead links; all 13 forum URLs verified byte-for-byte against the canonical pageUrl returned by each forum's GraphQL API.",
+    "7_overstated_movers": "Checked. Every amber-highlighted row recomputed from baseline and current fetch. One qualification added: the OpenAI-AGI row is highlighted but carries an explicit spread-and-liquidity caveat, because a 10-point bid-ask spread on $3.2K of daily volume does not support reading the move as consensus. The Insurrection-Act September sub-market shows 'n/a' rather than a -14pp delta, because the August 2 baseline of 16% sat on zero volume."
+  }
+}
