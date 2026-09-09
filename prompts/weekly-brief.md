@@ -538,6 +538,7 @@ Rules:
 
 - Every intel bullet MUST have a source link
 - **Bold intel bullet leads**: every intel bullet across all sections (S1, S2, Authoritarian Drift) and every `ol.changes` item must start with a bolded lead of 4–10 words capturing WHAT it is about, followed by the detail. Example: `<strong>Missouri Supreme Court voids Republican congressional map.</strong> The court ruled… <a href="...">Silver Bulletin, September 4</a>`. This is the skimmable handle.
+- **Assume the reader has no background.** Every `ol.changes` item, intel bullet, and dates row must stand on its own for a smart reader who has not followed the story: say what the thing is, what is at stake in concrete units (seats, votes, dollars, a named office), and the current status, before any analysis. A reader should not need last edition or outside news to understand why an item is here. Example of the failure: "Missouri's map is out, pending the Supreme Court." Example of the fix: "Missouri's map is worth one House seat: the redraw was built to erase Emanuel Cleaver's Kansas City district, turning a 6–2 map into 7–1." Alex flagged this on September 9, 2026.
 - **Headline discipline**: `h1.headline` states the week's conclusion in one or two plain sentences and is backed by a figure or dated source in the body. It is audited in STEP 4.5 before anything else. No questions, no puns, no "what to watch" framing.
 - **What changed = numbers, not summary**: each `ol.changes` item names the specific market delta, rating change, or dated event it rests on. Three to five items. This list is the only summary-like element allowed; there is no Executive Summary paragraph and no Bottom Line box.
 - **Market table columns** in this order: Market | Since Apr (trend) | Now | Δ since [prior edition date] | Volume. Source, created date and activity live in the `.meta` line under the market name (STEP 4.2). The old Activity/Created/Source columns are retired.
@@ -631,3 +632,4 @@ Rules:
 45. No standalone 'Movers & Approaching Resolution' section in the HTML
 46. Page renders in a 390px viewport with no horizontal scroll outside `div.wide` (check by reasoning about fixed widths: none outside the Senate `<colgroup>`)
 47. Every prose paragraph free of em dashes and of "not X but Y" constructions
+48. Every What changed item, intel bullet and dates row names what the thing is and the concrete stake (seats, votes, offices, dollars) for a reader with no background; none rely on the reader knowing the prior edition
