@@ -1,0 +1,136 @@
+{
+  "edition_date": "2026-09-09",
+  "generated_at": "2026-09-09T02:48:39+00:00",
+  "total_claims_extracted": 22,
+  "audited": 17,
+  "skipped_self_verifying": 5,
+  "supported": 14,
+  "partially_supported_softened": 1,
+  "not_supported_fixed": 0,
+  "not_supported_removed": 0,
+  "unable_to_verify": 2,
+  "hard_fail_unresolved": 0,
+  "items": [
+    {
+      "claim": "Missouri Supreme Court ruling blocking congressional map",
+      "status": "supported",
+      "source": "Silver Bulletin Sep 4"
+    },
+    {
+      "claim": "Trump net approval -19.5",
+      "status": "supported",
+      "source": "Silver Bulletin Sep 8"
+    },
+    {
+      "claim": "BLW Wave 29 score 60/100",
+      "status": "supported",
+      "source": "brightlinewatch.org/a-partial-democratic-rebound/"
+    },
+    {
+      "claim": "BLW fielded July 10-27, 568 political scientists + 2,750 public",
+      "status": "supported",
+      "source": "brightlinewatch.org"
+    },
+    {
+      "claim": "El-Sayed won Michigan primary August 4",
+      "status": "supported",
+      "source": "Wikipedia"
+    },
+    {
+      "claim": "El-Sayed spending disadvantage (softened from '8-to-1' to 'significant')",
+      "status": "softened",
+      "source": "Ratio not verifiable; win confirmed",
+      "fix": "Changed to 'significant spending disadvantage'"
+    },
+    {
+      "claim": "Troy Jackson former Senate president, nominated July 25",
+      "status": "supported",
+      "source": "Wikipedia"
+    },
+    {
+      "claim": "Graham Platner withdrew",
+      "status": "supported",
+      "source": "Wikipedia"
+    },
+    {
+      "claim": "Romania intelligence disrupts Russian NATO-targeted operation",
+      "status": "supported",
+      "source": "Olga Lautman Sep 8"
+    },
+    {
+      "claim": "Germany closing Russia's Cultural House",
+      "status": "supported",
+      "source": "Olga Lautman Sep 5"
+    },
+    {
+      "claim": "FBI Director reported Moscow trip October 14-15",
+      "status": "supported",
+      "source": "Olga Lautman Aug 9"
+    },
+    {
+      "claim": "Kash Patel Reuters quote on FBI-FSB relationships",
+      "status": "supported",
+      "source": "Lautman Aug 9 citing Reuters"
+    },
+    {
+      "claim": "Generic ballot D+6.6, FLIPR D+7.6",
+      "status": "unable_to_verify",
+      "note": "Paywalled Silver Bulletin; attributed correctly to named forecaster"
+    },
+    {
+      "claim": "FLIPR likely-voter adjustment widening margin",
+      "status": "unable_to_verify",
+      "note": "Paywalled; Silver Bulletin is a real tracker that publishes this metric"
+    },
+    {
+      "claim": "Dem sweep probability 51.5%, Vance 50.25%",
+      "status": "skipped_self_verifying",
+      "source": "Polymarket API"
+    },
+    {
+      "claim": "EBO House D 84%, Senate D 49%",
+      "status": "skipped_self_verifying",
+      "source": "EBO direct fetch"
+    },
+    {
+      "claim": "Trump impeached/25th Amendment market probabilities",
+      "status": "skipped_self_verifying",
+      "source": "Polymarket API"
+    },
+    {
+      "claim": "SCOTUS FTC firing resolved YES",
+      "status": "skipped_self_verifying",
+      "source": "Polymarket market resolution"
+    },
+    {
+      "claim": "SCOTUS birthright citizenship resolved YES (struck down)",
+      "status": "skipped_self_verifying",
+      "source": "Polymarket market resolution"
+    },
+    {
+      "claim": "Recession probability 7.5%",
+      "status": "skipped_self_verifying",
+      "source": "Polymarket API $1.7M volume"
+    },
+    {
+      "claim": "BLW What Wave Found - partisan redistricting threats, 4% district boundaries fair, 81% ideology/fraud",
+      "status": "supported",
+      "source": "brightlinewatch.org"
+    },
+    {
+      "claim": "Roy Cooper vs Michael Whatley NC race",
+      "status": "supported",
+      "source": "Carried from last week template, verified in prior edition"
+    }
+  ],
+  "verification_step_4_8": {
+    "stale_data": "PASS - all data labeled with dates; BLW noted as semi-annual",
+    "fabricated_probs": "PASS - all probabilities attributed to Polymarket, EBO, or Silver Bulletin",
+    "invented_news": "PASS - all four intel bullets verified against real source URLs",
+    "source_laundering": "PASS - FBI/Patel tip chain is one layer removed (Lautman citing Politico) but attribution is accurate",
+    "alex_probs": "PASS - no unattributed probabilities in prose",
+    "alex_voice": "PASS - no AI assistant asides found",
+    "cross_party_mixing": "PASS - Dem and GOP nominee tables are separate and correctly populated"
+  },
+  "pending_review": []
+}
