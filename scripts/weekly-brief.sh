@@ -16,6 +16,11 @@
 #   4. Real status notifications: macOS banner + iMessage on any non-ok result,
 #      and a machine-readable "=== weekly-brief status: X ===" log line. Exit 0
 #      without a published edition (Aug 9) now counts as a failure.
+#   5. (2026-09-09) Slack announcement: the prompt's STEP 7 writes
+#      /tmp/slack-blurb.txt; on a successful publish post_slack() sends it to
+#      the Ironsides #news channel via $SLACK_NEWS_WEBHOOK (incoming webhook
+#      URL in secrets.env). If the webhook is unset or the POST fails, the
+#      blurb is texted to Alex instead so he can paste it by hand.
 
 set -e
 set -o pipefail
@@ -44,6 +49,31 @@ notify() {
   osascript -e "display notification \"$short\" with title \"Weekly Brief\" sound name \"Glass\"" >> "$LOG" 2>&1 || true
   if [ -x "$IMESSAGE" ]; then
     "$IMESSAGE" "$long" >> "$LOG" 2>&1 || echo "(iMessage send failed)" >> "$LOG"
+  fi
+}
+
+BLURB="/tmp/slack-blurb.txt"
+
+post_slack() {
+  # Post the STEP 7 blurb to #news. Never fails the run.
+  if [ ! -s "$BLURB" ]; then
+    echo "post_slack: no blurb at $BLURB; texting Alex" >> "$LOG"
+    [ -x "$IMESSAGE" ] && "$IMESSAGE" "Weekly brief published but no Slack blurb was written; post to #news by hand." >> "$LOG" 2>&1 || true
+    return 0
+  fi
+  if [ -z "${SLACK_NEWS_WEBHOOK:-}" ]; then
+    echo "post_slack: SLACK_NEWS_WEBHOOK unset; texting blurb to Alex" >> "$LOG"
+    [ -x "$IMESSAGE" ] && "$IMESSAGE" "Weekly brief published. Slack webhook not configured, paste this to #news: $(cat "$BLURB")" >> "$LOG" 2>&1 || true
+    return 0
+  fi
+  local payload code
+  payload=$(python3 -c 'import json,sys;print(json.dumps({"text":open(sys.argv[1]).read().strip(),"unfurl_links":False}))' "$BLURB")
+  code=$(curl -s -o /dev/null -w '%{http_code}' -X POST -H 'Content-type: application/json' --data "$payload" "$SLACK_NEWS_WEBHOOK" || echo 000)
+  if [ "$code" = "200" ]; then
+    echo "post_slack: posted to #news (HTTP 200)" >> "$LOG"
+  else
+    echo "post_slack: webhook POST failed (HTTP $code); texting blurb to Alex" >> "$LOG"
+    [ -x "$IMESSAGE" ] && "$IMESSAGE" "Weekly brief published but the Slack post failed (HTTP $code). Paste this to #news: $(cat "$BLURB")" >> "$LOG" 2>&1 || true
   fi
 }
 
@@ -173,6 +203,7 @@ if [ "$EXIT" -ne 0 ]; then
   finish fail "$EXIT"
 fi
 if edition_published; then
+  post_slack
   finish ok 0
 else
   finish unpublished 1

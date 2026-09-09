@@ -6,6 +6,12 @@ Weekly Intelligence Brief dashboard, hosted on Cloudflare Pages with a dated arc
 - **Previous editions**: accessible via the `Editions ▾` widget top-right of the page
 - **Search engines blocked** via `_headers` (`X-Robots-Tag: noindex`) and `robots.txt`
 
+## Layout, history and the retired style (2026-09-09)
+
+- The page uses the single-column editorial "Letter" layout adopted September 9, 2026. `prompts/weekly-brief.md` STEP 4 is the contract (class names, section order).
+- `history.json` holds per-market probability history back to April 15, 2026 (Senate series are the Democrat's, or the aligned independent's, win probability). `scripts/history_tools.py` appends each edition's values, renders the trend-line SVGs, and computes deltas. It is the fifth file published every run.
+- `templates/legacy-dark/` keeps the retired dark dashboard: the last edition in that style, its Editions widget, and the prompt spec it ran on, so the brief can switch back.
+
 ## How it works
 
 ```
