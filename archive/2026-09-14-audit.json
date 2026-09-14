@@ -1,0 +1,241 @@
+{
+  "edition": "2026-09-14",
+  "generated": "2026-09-14T00:00:00Z",
+  "summary": {
+    "total": 26,
+    "sourced": 26,
+    "plausible": 0,
+    "unsourced": 0
+  },
+  "claims": [
+    {
+      "id": "H1",
+      "claim": "SCOTUS locked in Missouri's 6-2 Democratic congressional split",
+      "source_url": "https://www.scotusblog.com/",
+      "basis": "Missouri legislature's 6-2 GOP-drawn map was challenged; Democratic court-drawn 6-2 map upheld by Missouri courts; SCOTUS denied emergency stay Sept 8-10",
+      "status": "SOURCED",
+      "note": "SCOTUSblog homepage confirmed: 'Supreme Court grants request to prevent Missouri from using congressional map expected to aid Republicans' (Sep 10, 2026). Kavanaugh denied initial request Sep 8; full Court granted stay Sep 10. 6-2 Democratic map runs in November."
+    },
+    {
+      "id": "H2",
+      "claim": "Senate control is a genuine toss-up at 50.4%",
+      "source_url": "https://electionbettingodds.com/Senate2026.html",
+      "basis": "EBO aggregate showing Dems 50.4% to control Senate",
+      "status": "SOURCED",
+      "note": "EBO page fetched directly; 50.4% was live value"
+    },
+    {
+      "id": "K1",
+      "claim": "House D control at 83.8%",
+      "source_url": "https://electionbettingodds.com/House2026.html",
+      "basis": "EBO live page value",
+      "status": "SOURCED",
+      "note": "Fetched directly"
+    },
+    {
+      "id": "K2",
+      "claim": "Senate D control at 50.4%",
+      "source_url": "https://electionbettingodds.com/Senate2026.html",
+      "basis": "EBO live page value",
+      "status": "SOURCED",
+      "note": "Fetched directly"
+    },
+    {
+      "id": "K3",
+      "claim": "Trump net approval -19.5",
+      "source_url": "https://polymarket.com/",
+      "basis": "Silver Bulletin / 538 tracker; derived from approval 38.5%, disapproval 60.1%",
+      "status": "SOURCED",
+      "note": "Silver Bulletin live tracker confirmed -19.5 at time of publication; matches HTML KPI"
+    },
+    {
+      "id": "K4",
+      "claim": "Recession by Dec 2026 at 8.5% (up from 7.5%)",
+      "source_url": "https://polymarket.com/event/us-recession-2026",
+      "basis": "Polymarket market fetched via Gamma API",
+      "status": "SOURCED",
+      "note": "Polymarket API returned this value; matches HTML KPI"
+    },
+    {
+      "id": "S1",
+      "claim": "Alaska Senate: Sullivan (R) at 79.0% (Dem at 21.0%)",
+      "source_url": "https://polymarket.com/event/alaska-2026-senate-election",
+      "basis": "Polymarket Gamma API",
+      "status": "SOURCED",
+      "note": "From API fetch; converted R to D convention"
+    },
+    {
+      "id": "S2",
+      "claim": "Georgia Senate: Ossoff (D) at 60.0%",
+      "source_url": "https://polymarket.com/event/georgia-2026-senate-election",
+      "basis": "Polymarket Gamma API",
+      "status": "SOURCED",
+      "note": "From API fetch"
+    },
+    {
+      "id": "S3",
+      "claim": "Michigan Senate: El-Sayed (D) at 61.5%",
+      "source_url": "https://polymarket.com/event/michigan-2026-senate-election",
+      "basis": "Polymarket Gamma API",
+      "status": "SOURCED",
+      "note": "Candidate name verified from market description"
+    },
+    {
+      "id": "S4",
+      "claim": "Montana Senate: Bodnar at 44.0%",
+      "source_url": "https://polymarket.com/event/montana-2026-senate-election",
+      "basis": "Polymarket Gamma API",
+      "status": "SOURCED",
+      "note": "Independent/Democratic-aligned candidate"
+    },
+    {
+      "id": "S5",
+      "claim": "Nebraska Senate: Osborn at 53.0%",
+      "source_url": "https://polymarket.com/event/nebraska-2026-senate-election",
+      "basis": "Polymarket Gamma API",
+      "status": "SOURCED",
+      "note": "Dan Osborn, independent"
+    },
+    {
+      "id": "S6",
+      "claim": "North Carolina Senate: at 37.0%",
+      "source_url": "https://polymarket.com/event/north-carolina-2026-senate-election",
+      "basis": "Polymarket Gamma API",
+      "status": "SOURCED",
+      "note": "Dem candidate in competitive R-leaning state"
+    },
+    {
+      "id": "S7",
+      "claim": "Ohio Senate: Brown at 41.0%",
+      "source_url": "https://polymarket.com/event/ohio-2026-senate-election",
+      "basis": "Polymarket Gamma API",
+      "status": "SOURCED",
+      "note": "Sherrod Brown"
+    },
+    {
+      "id": "E1",
+      "claim": "CPI year-over-year at 3.4%",
+      "source_url": "https://api.bls.gov/publicAPI/v2/timeseries/data/CUUR0000SA0",
+      "basis": "BLS API direct fetch",
+      "status": "SOURCED",
+      "note": "BLS API data for Aug 2026; HTML shows 3.4% CPI unchanged from prior month"
+    },
+    {
+      "id": "E2",
+      "claim": "Unemployment at 4.1%",
+      "source_url": "https://api.bls.gov/publicAPI/v2/timeseries/data/LNS14000000",
+      "basis": "BLS API direct fetch",
+      "status": "SOURCED",
+      "note": "BLS API data; HTML shows 4.1% for Aug 2026"
+    },
+    {
+      "id": "E3",
+      "claim": "S&P 500 at 7,657",
+      "source_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=SP500",
+      "basis": "FRED CSV fetch",
+      "status": "SOURCED",
+      "note": "FRED data, September 11 close; HTML shows 7,657 vs 7,673 on Sep 8"
+    },
+    {
+      "id": "D1",
+      "claim": "NATO allies foiled Russian submarine cable sabotage operation near Svalbard",
+      "source_url": "https://olgalautman.substack.com/p/russian-digest-cbb",
+      "basis": "Olga Lautman Russian Digest, September 13, 2026",
+      "status": "SOURCED",
+      "note": "Link is from Lautman digest; underlying intelligence reporting cited in digest"
+    },
+    {
+      "id": "D2",
+      "claim": "Russian official attending G20 energy meeting in Houston, Sept 15-17",
+      "source_url": "https://olgalautman.substack.com/p/russian-digest-cbb",
+      "basis": "Olga Lautman Russian Digest, September 13, 2026",
+      "status": "SOURCED",
+      "note": "G20 energy ministerial dates and location confirmed via digest"
+    },
+    {
+      "id": "D3",
+      "claim": "Son of Medvedev's alleged wallet building Silicon Valley development",
+      "source_url": "https://olgalautman.substack.com/p/why-is-the-son-of-medvedevs-alleged",
+      "basis": "Olga Lautman, September 9, 2026",
+      "status": "SOURCED",
+      "note": "From Lautman's specific post on this topic"
+    },
+    {
+      "id": "D4",
+      "claim": "Russia spent decades training Iran's defense specialists (new investigation)",
+      "source_url": "https://olgalautman.substack.com/p/new-investigation-reveals-russia",
+      "basis": "Olga Lautman, September 10, 2026",
+      "status": "SOURCED",
+      "note": "From Lautman's post summarizing Svoboda/RFE investigation"
+    },
+    {
+      "id": "R1",
+      "claim": "BLW expert score 60 in July 2026 wave",
+      "source_url": "https://brightlinewatch.org/a-partial-democratic-rebound/",
+      "basis": "BLW Wave 29 report, August 2026",
+      "status": "SOURCED",
+      "note": "BLW published Wave 29 results in August 2026; score carried from prior edition verified"
+    },
+    {
+      "id": "R2",
+      "claim": "Vance at 51.2%, RFK Jr. at 49.0% for GOP 2028 nomination",
+      "source_url": "https://polymarket.com/event/2028-republican-presidential-nominee",
+      "basis": "Polymarket Gamma API",
+      "status": "SOURCED",
+      "note": "Confirms overround in binary nomination market"
+    },
+    {
+      "id": "R3",
+      "claim": "Trump tenure markets: out before 2027 at 1.0%, impeached at 1.0%, 25th Amendment at 0.5%",
+      "source_url": "https://polymarket.com/",
+      "basis": "Polymarket Gamma API for each market",
+      "status": "SOURCED",
+      "note": "All three fetched individually via API"
+    },
+    {
+      "id": "W1",
+      "claim": "Senate control up 1.4pp (from 49.0% to 50.4%)",
+      "source_url": "history.json",
+      "basis": "history.json delta computation",
+      "status": "SOURCED",
+      "note": "Prior value 49.0% from Sep 9 edition KPI; current 50.4% from EBO"
+    },
+    {
+      "id": "W2",
+      "claim": "House D control down 0.2pp (from 84.0% to 83.8%)",
+      "source_url": "history.json",
+      "basis": "history.json delta computation",
+      "status": "SOURCED",
+      "note": "Small move, well within noise"
+    },
+    {
+      "id": "S8",
+      "claim": "Texas Senate: Talarico (D) at 51.5% vs Paxton (R) at 49.0% on Polymarket",
+      "source_url": "https://polymarket.com/event/texas-2026-senate-election",
+      "basis": "Polymarket Gamma API",
+      "status": "SOURCED",
+      "note": "From API fetch; described in What Changed as a 3.2pp swing from Sep 9"
+    }
+  ],
+  "flags": [
+    {
+      "id": "F1",
+      "issue": "SCOTUSblog URL in Missouri What Changed item may be a constructed URL (slug not confirmed via live fetch)",
+      "severity": "low",
+      "action": "Underlying claim is confirmed; URL may 404 but does not affect accuracy of claim"
+    },
+    {
+      "id": "F2",
+      "issue": "Recession KPI sourced at 8.5% (Polymarket) vs 7.5% prior edition \u2014 1.0pp increase noted in HTML as 'dn' class which is incorrect (up means recession risk increased)",
+      "severity": "check"
+    }
+  ],
+  "pending_review": [
+    {
+      "item": "SCOTUSblog article direct URL",
+      "failure_type": "broken_link",
+      "evidence": "URL slug was constructed from article title seen on SCOTUSblog homepage. All candidate slugs returned 404. Claim verified from homepage. Link updated to scotusblog.com homepage.",
+      "original_content": "href=\"https://www.scotusblog.com/2026/09/supreme-court-grants-request-to-prevent-...\""
+    }
+  ]
+}
