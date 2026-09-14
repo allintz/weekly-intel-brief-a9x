@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>Weekly Democracy Intelligence Brief &mdash; September 14, 2026</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#x1F5F3;</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+:root{
+  --paper:#f6f2ea; --paper2:#fbf9f4; --ink:#1c1a17; --sec:#5b564e; --mut:#8a847a; --rule:#e4ded2; --rule2:#cfc8ba;
+  --accent:#7a2f2b; --accent-dark:#4f1d1a; --up:#2f6b3a; --dn:#9b3535; --spark:#a39d92;
+  --serif:'Newsreader','Iowan Old Style',Georgia,serif; --sans:'IBM Plex Sans','Helvetica Neue',Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{color-scheme:light}
+body{background:var(--paper);color:var(--ink);font-family:var(--serif);font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
+a:hover{color:var(--accent-dark)}
+.page{max-width:660px;margin:0 auto;padding:40px 20px 56px}
+.masthead{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding-bottom:9px;border-bottom:1px solid var(--ink)}
+.masthead::after{content:none}
+.rule2{height:3px;border-top:1px solid var(--ink);margin-top:2px}
+.k{font-family:var(--sans);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);font-weight:600}
+.masthead .ed{font-family:var(--sans);font-size:12px;color:var(--sec)}
+h1.headline{font-size:34px;font-weight:500;line-height:1.12;letter-spacing:-.01em;margin:36px 0 12px;text-wrap:pretty}
+p.dek{font-size:17px;line-height:1.45;color:var(--sec);font-style:italic;margin:0 0 30px}
+ol.changes{font-size:16.5px;line-height:1.5;margin:8px 0 34px;padding-left:22px}
+ol.changes li{margin:0 0 12px}
+ol.changes strong{font-weight:600}
+.figures{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;padding:18px 0;border-top:1px solid var(--ink);border-bottom:1px solid var(--rule);margin-bottom:40px}
+.figure{display:flex;flex-direction:column;gap:3px;color:inherit;text-decoration:none}
+.figure .l{font-family:var(--sans);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--mut)}
+.figure .v{font-size:30px;font-weight:500;line-height:1;font-variant-numeric:tabular-nums}
+.figure .s{font-family:var(--sans);font-size:11.5px;color:var(--sec);line-height:1.35}
+.figure .c{font-family:var(--sans);font-size:11.5px}
+.figure:hover .v{color:var(--accent)}
+h2{font-size:26px;font-weight:500;letter-spacing:-.005em;margin:0 0 10px}
+h3{font-size:21px;font-weight:500;margin:34px 0 4px}
+h4{font-family:var(--sans);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--mut);font-weight:500;margin:0 0 4px}
+section{margin-bottom:44px}
+p{font-size:16.5px;line-height:1.55;margin:0 0 14px}
+p.intro{font-size:14.5px;line-height:1.45;color:var(--sec);margin:0 0 10px}
+p.fn,.fn{font-family:var(--sans);font-size:11px;line-height:1.45;color:var(--mut);margin:6px 0 0}
+.mut{color:var(--mut)} .up{color:var(--up)} .dn{color:var(--dn)} .mover{font-weight:600}
+.mark{display:inline-block;width:6px;height:6px;background:var(--accent);margin-right:7px;vertical-align:2px}
+.tag{font-family:var(--sans);font-size:9px;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);border:1px solid var(--rule2);padding:1px 4px;margin-left:5px;vertical-align:1px;white-space:nowrap}
+.tip{border-bottom:1px dotted var(--rule2);cursor:help}
+.month{font-family:var(--sans);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--mut);margin:14px 0 0;padding-bottom:4px;border-bottom:1px solid var(--ink)}
+ul.dates{list-style:none}
+ul.dates li{display:grid;grid-template-columns:92px minmax(0,1fr);gap:0 14px;padding:6px 0;border-bottom:1px solid var(--rule)}
+ul.dates .d{font-family:var(--sans);font-size:12px;color:var(--accent);font-weight:600;font-variant-numeric:tabular-nums;padding-top:1px}
+ul.dates .h{font-family:var(--sans);font-size:13px;font-weight:600;display:block}
+ul.dates .b{font-size:13px;color:var(--sec);line-height:1.4;display:block;margin-top:1px}
+ul.dates .x{font-family:var(--sans);font-size:11px;color:var(--mut);line-height:1.4;display:block;margin-top:2px}
+table{width:100%;border-collapse:collapse;font-family:var(--sans)}
+th{text-align:left;padding:0 0 5px;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--mut);font-weight:500;border-bottom:1px solid var(--ink);white-space:nowrap}
+th.r{text-align:right;padding-left:10px} th.l{padding-left:10px}
+td{padding:7px 0 7px 10px;border-bottom:1px solid var(--rule);vertical-align:top;font-size:13px}
+td:first-child{padding-left:0}
+td.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;font-size:13.5px}
+td.num .up,td.num .dn,td.num .mut{font-size:12.5px}
+td.vol{font-size:12px;color:var(--sec)}
+td.sp{padding-top:9px;padding-right:0;color:var(--ink)}
+td.sp svg{display:block}
+.mname a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--rule2)}
+.mname a:hover{color:var(--accent)}
+.meta{font-family:var(--sans);font-size:10.5px;color:var(--mut);margin-top:2px;font-weight:400}
+.meta a{color:var(--mut);text-decoration:none}
+.compact td{padding-top:6px;padding-bottom:6px}
+.wide{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.only-phone{display:none}
+@media (min-width:940px){.wide{width:880px;margin-left:-110px}}
+table.senate{table-layout:fixed;min-width:820px}
+table.senate col.c1{width:118px} table.senate col.c2{width:110px} table.senate col.c3{width:60px} table.senate col.c4{width:100px} table.senate col.c5{width:80px} table.senate col.c6{width:120px}
+table.senate td{font-size:12.5px;padding:7px 10px 7px 0}
+table.senate td.st strong{font-weight:600}
+table.senate td.opp{color:var(--sec);font-variant-numeric:tabular-nums;line-height:1.35}
+table.senate td.note{font-family:var(--serif);font-size:12.5px;line-height:1.4;color:var(--sec);padding-right:0}
+table.senate td.sp{padding-right:12px}
+table.senate tr.band td{padding:14px 0 4px;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--mut);border-bottom:1px solid var(--rule2)}
+.noms{display:flex;gap:28px;margin-top:8px}
+.nom{flex:1;min-width:0}
+.eco{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;margin-top:8px}
+.eco>div{display:flex;flex-direction:column;gap:3px;padding-top:10px;border-top:1px solid var(--ink)}
+.eco .l{font-family:var(--sans);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--mut)}
+.eco .v{font-size:28px;font-weight:500;line-height:1;font-variant-numeric:tabular-nums}
+.eco .c{font-family:var(--sans);font-size:11.5px}
+.eco p{font-size:13px;line-height:1.4;color:var(--sec);margin:4px 0 0}
+.pull{display:flex;gap:28px;align-items:flex-start;margin-bottom:6px}
+.pull .body{flex:1;min-width:0}
+.pull .fig{width:150px;flex:none;padding-top:12px;border-top:1px solid var(--ink);display:flex;flex-direction:column;gap:4px}
+.pull .fig .l{font-family:var(--sans);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--mut)}
+.pull .fig .v{font-size:40px;font-weight:500;line-height:1;font-variant-numeric:tabular-nums}
+.pull .fig .s{font-family:var(--sans);font-size:11.5px;color:var(--sec);line-height:1.4}
+ul.intel{list-style:none;margin:6px 0 0}
+ul.intel li{padding:8px 0;border-bottom:1px solid var(--rule);font-size:15px;line-height:1.5}
+ul.intel li strong{font-weight:600}
+ul.intel ul{list-style:disc;margin:4px 0 0 20px}
+ul.intel ul li{padding:2px 0;border:0;font-size:14.5px;color:var(--sec)}
+.sowhat{margin-top:26px;padding-top:12px;border-top:1px solid var(--ink)}
+.sowhat p{font-size:16px}
+.sources p,.sources li{font-family:var(--sans);font-size:13px;line-height:1.5;color:var(--sec)}
+.sources ul{list-style:disc;padding-left:20px;margin:0 0 12px}
+.sources li{margin-bottom:4px}
+.sources h4{margin-top:14px}
+.appx{padding-top:36px;border-top:1px solid var(--ink)}
+.appx h4{margin-top:22px}
+.appx p,.appx li{font-size:14.5px;line-height:1.5;color:var(--sec)}
+.appx ul{list-style:disc;padding-left:20px}
+.appx td.note{font-family:var(--serif);font-size:13.5px;color:var(--sec);line-height:1.4;padding-left:14px}
+footer{border-top:1px solid var(--rule);padding-top:12px;margin-top:20px}
+footer p{font-family:var(--sans);font-size:12px;line-height:1.55;color:var(--mut);margin:0}
+@media (max-width:640px){
+  .page{padding:60px 16px 44px}
+  .only-phone{display:block}
+  th{white-space:normal}
+  td.sp svg{width:48px}
+  h1.headline{font-size:28px}
+  .figures{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .noms{flex-direction:column;gap:20px}
+  .eco{grid-template-columns:1fr}
+  .pull{flex-direction:column}
+  .pull .fig{width:100%}
+  ul.dates li{grid-template-columns:76px minmax(0,1fr)}
+}
+@media print{#archive-nav-widget{display:none}.page{max-width:none}}
+</style>
+</head>
+<body>
+<!-- ARCHIVE_NAV_START -->
+<style>
+#archive-nav-widget {
+  position: fixed; top: 12px; right: 16px; z-index: 10000;
+  font-family: 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif; font-size: 12px;
+}
+#archive-nav-widget button {
+  background: #f6f2ea; color: #1c1a17;
+  border: 1px solid #cfc8ba; padding: 6px 11px;
+  border-radius: 2px; cursor: pointer; font-family: inherit;
+  font-size: inherit; font-weight: 500; line-height: 1; letter-spacing: 0.02em;
+}
+#archive-nav-widget button:hover { border-color: #1c1a17; }
+#archive-nav-widget.open .panel { display: block; }
+#archive-nav-widget .panel {
+  display: none; position: absolute; right: 0; top: 34px;
+  background: #fbf9f4; border: 1px solid #cfc8ba; border-radius: 2px;
+  padding: 4px; min-width: 220px; max-height: 60vh; overflow-y: auto;
+  box-shadow: 0 8px 24px rgba(28,26,23,0.12);
+}
+#archive-nav-widget .panel a {
+  display: block; padding: 7px 10px; color: #1c1a17; text-decoration: none;
+  font-variant-numeric: tabular-nums; font-size: 12px; line-height: 1.3;
+}
+#archive-nav-widget .panel a:hover { background: #f0ebe1; }
+#archive-nav-widget .panel a.current { color: #7a2f2b; font-weight: 600; }
+#archive-nav-widget .panel a.self { background: #f0ebe1; }
+#archive-nav-widget .panel .hint {
+  padding: 8px 10px 6px; color: #8a847a; font-size: 10.5px;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  border-bottom: 1px solid #e4ded2; margin-bottom: 4px;
+}
+@media print { #archive-nav-widget { display: none; } }
+</style>
+<div id="archive-nav-widget" data-edition="2026-09-14">
+  <button type="button" aria-label="Previous editions">Editions &#9662;</button>
+  <div class="panel" role="menu">
+    <div class="hint">Weekly Democracy Intelligence Brief</div>
+    <div id="archive-nav-list">Loading&hellip;</div>
+  </div>
+</div>
+<script>
+(function() {
+  var widget = document.getElementById('archive-nav-widget');
+  var btn = widget.querySelector('button');
+  var myEdition = widget.dataset.edition;
+  btn.addEventListener('click', function(e) { e.stopPropagation(); widget.classList.toggle('open'); });
+  document.addEventListener('click', function(e) { if (!widget.contains(e.target)) widget.classList.remove('open'); });
+  fetch('/editions.json', { cache: 'no-cache' })
+    .then(function(r) { return r.json(); })
+    .then(function(data) {
+      var list = document.getElementById('archive-nav-list');
+      list.innerHTML = '';
+      if (!data.editions || !data.editions.length) { list.innerHTML = '<div class="hint">No editions yet</div>'; return; }
+      data.editions.forEach(function(e, idx) {
+        var a = document.createElement('a');
+        a.href = idx === 0 ? '/' : '/archive/' + e.date;
+        a.textContent = e.date + (idx === 0 ? '  (current)' : '');
+        if (idx === 0) a.classList.add('current');
+        if (e.date === myEdition) a.classList.add('self');
+        list.appendChild(a);
+      });
+    })
+    .catch(function() { document.getElementById('archive-nav-list').innerHTML = '<div class="hint">Archive unavailable</div>'; });
+})();
+</script>
+<!-- ARCHIVE_NAV_END -->
+
+<main class="page">
+
+<!-- MASTHEAD -->
+<header class="masthead">
+  <span class="k">Weekly Democracy Intelligence Brief</span>
+  <span class="ed">No. 3 &middot; September 14, 2026</span>
+</header>
+<div class="rule2"></div>
+
+<!-- LEDE -->
+<section id="lede">
+  <h1 class="headline">SCOTUS locked in Missouri&rsquo;s 6&ndash;2 Democratic congressional split. Senate control is a genuine toss-up at 50.4%.</h1>
+  <p class="dek">Covering September 9 to 14. Three things moved materially. The primary calendar closes tomorrow.</p>
+
+  <div class="k">What changed</div>
+  <ol class="changes">
+    <li><strong>Missouri&rsquo;s Republican map is blocked.</strong> The Supreme Court issued an emergency stay on September 10 halting a federal district court order that would have allowed Missouri to use a Republican-drawn congressional map adding a seventh GOP seat. The existing map, which gives Democrats a 6&ndash;2 advantage, runs in November. <a href="https://www.scotusblog.com/" target="_blank" rel="noopener">SCOTUSblog, September 10</a></li>
+    <li><strong>Texas Senate tilts Democratic for the first time this cycle.</strong> James Talarico (D) leads Ken Paxton (R) 51.5% to 49.0% on Polymarket, a 3.2-point swing from September 9. A Talarico win would be a historic pickup in a state Republicans have held since 1993. Volume is $1.2M, well above the thin threshold.</li>
+    <li><strong>Senate majority probability crosses 50%.</strong> Election Betting Odds moved the Democratic Senate control aggregate from 49.0% to 50.4%, crossing the toss-up line for the first time. Polymarket separately shows Democrats at 52&ndash;53%, Kalshi at 50&ndash;51%.</li>
+    <li><strong>Silver Bulletin launched FLIPR, its 2026 midterm election forecast.</strong> The model&rsquo;s initial run shows Democrats favored to hold the Senate. Generic ballot average shows Democrats +5.8 as of September 12. <a href="https://www.natesilver.net/p/september-polling-has-been-very-good-for-democrats" target="_blank" rel="noopener">Silver Bulletin, September 12</a></li>
+    <li><strong>Recession probability climbed to 8.5%.</strong> Polymarket moved from 7.5% (September 9) to 8.5% on $1.75M volume. CPI is 3.4% year-over-year; unemployment held at 4.1%; S&amp;P 500 down roughly 0.5% from the September 9 close.</li>
+  </ol>
+
+  <div class="figures" id="kpis">
+    <a class="figure" href="https://electionbettingodds.com/House-Control-2026.html" target="_blank" rel="noopener"><span class="l">House, Dem control</span><span class="v">83.8%</span><span class="s">Election Betting Odds</span><span class="c mut">84.0 on Sep 9</span></a>
+    <a class="figure" href="https://electionbettingodds.com/Senate-Control-2026.html" target="_blank" rel="noopener"><span class="l">Senate, Dem control</span><span class="v">50.4%</span><span class="s">Election Betting Odds</span><span class="c up">49.0 on Sep 9</span></a>
+    <a class="figure" href="https://www.natesilver.net/p/trump-approval-ratings-nate-silver-bulletin" target="_blank" rel="noopener"><span class="l">Trump net approval</span><span class="v">&minus;19.5</span><span class="s">Silver Bulletin, September 11</span><span class="c mut">unchanged</span></a>
+    <a class="figure" href="https://polymarket.com/market/us-recession-by-end-of-2026" target="_blank" rel="noopener"><span class="l">Recession in 2026</span><span class="v">8.5%</span><span class="s">Polymarket, $1.75M volume</span><span class="c dn">7.5 on Sep 9</span></a>
+  </div>
+</section>
+
+<!-- DATES -->
+<section id="dates">
+  <div class="k">Dates that matter</div>
+  <div class="month">September</div>
+  <ul class="dates">
+    <li><span class="d">Sep 9, past</span><span class="t"><span class="h">Rhode Island primary</span><span class="b">Federal races, governor, and state-legislative seats settled.</span><span class="x">Rhode Island holds the Democratic Senate seat reliably; the primary produces nominees for all November races.</span></span></li>
+    <li><span class="d">Sep 14, today</span><span class="t"><span class="h">Final week before Delaware primary</span><span class="b">Preparation for the cycle&rsquo;s last primary, which closes the entire 2026 nomination calendar.</span></span></li>
+    <li><span class="d">Sep 15</span><span class="t"><span class="h">Delaware primary closes the 2026 cycle</span><span class="b">The final primary in the 2026 calendar. All 50 states have nominees from this point forward. Expect a burst of Sabato and Cook rating revisions in the following two weeks.</span><span class="x">Delaware holds a safe Democratic Senate seat (Incumbent Christopher Coons running, Polymarket 95.8% Democrat); the primary sets the nominee for the general but does not change the race rating.</span></span></li>
+    <li><span class="d">Sep 16</span><span class="t"><span class="h">FOMC rate decision</span><span class="b">First Fed decision since the July 29 hold. CPI is 3.4% year-over-year (August); unemployment held at 4.1% for the third straight month. Markets are pricing a cut or hold.</span><span class="x">Three Fed officials dissented in July in favor of a hike. A cut before the midterms would be politically salient; so would a hike in a weakening labor market. The FOMC statement will be parsed for November election implications.</span></span></li>
+    <li><span class="d">Sep 30</span><span class="t"><span class="h">Alito retirement-by-September market resolves</span><span class="b">Polymarket gives 0.8% odds Samuel Alito announces retirement by this date. The June&ndash;2027 window at 38.5% is the active watch.</span></span></li>
+    <li><span class="d">Sep 30</span><span class="t"><span class="h">Insurrection Act-by-September market resolves</span><span class="b">Market at 1.9% on thin volume. The December 31 deadline at 16.5% carries the actionable probability.</span></span></li>
+  </ul>
+  <div class="month">October</div>
+  <ul class="dates">
+    <li><span class="d">Oct&ndash;Nov</span><span class="t"><span class="h">Voter registration deadlines</span><span class="b">Most states require registration 15&ndash;30 days before Election Day. Key competitive state deadlines: Georgia (Oct 7), Texas (Oct 7), North Carolina (Oct 11), Michigan (Oct 21), Ohio (Oct 7), Iowa (Oct 25).</span><span class="x">Registration deadline dates affect which voters can participate on November 3. SAVE Act voter-registration litigation is still active; court outcomes could shift which ID requirements apply.</span></span></li>
+    <li><span class="d">Oct&ndash;Nov</span><span class="t"><span class="h">Early voting opens in most states</span><span class="b">Key battleground states begin absentee and early in-person voting in October. Wisconsin early voting opens October 22; North Carolina and Georgia start in mid-October.</span></span></li>
+  </ul>
+  <div class="month">November</div>
+  <ul class="dates">
+    <li><span class="d">Nov 3</span><span class="t"><span class="h">Election Day</span><span class="b">All Senate, House, and gubernatorial races on the ballot. Senate races to watch: Texas (toss-up at 51.5&ndash;49.0), Ohio (toss-up at 53.5&ndash;46.5), Michigan (lean D, 61.5%). Polymarket balance-of-power market resolves this date.</span><span class="x">Two-seat chamber swing flips Senate control. Democrats need to hold existing seats and pick up at least one: the math currently favors maintaining control but not expanding it without Texas or Iowa.</span></span></li>
+    <li><span class="d">Nov 3</span><span class="t"><span class="h">Balance-of-power Polymarket market resolves</span><span class="b">Dem Sweep currently at 52.5% on $3M volume. R Senate D House at 32.5%.</span></span></li>
+    <li><span class="d">Dec 31</span><span class="t"><span class="h">Alito retirement-by-December, SAVE Act, Insurrection Act markets resolve</span><span class="b">Three Polymarket markets with December 31 deadlines: Alito retirement 5.5%, SAVE Act signed 6.0%, Insurrection Act invoked 16.5%.</span></span></li>
+  </ul>
+</section>
+
+<!-- SECTION 1: MIDTERMS AND 2028 -->
+<section id="s1">
+  <h2>Midterms and 2028</h2>
+
+  <h3>Chamber control</h3>
+  <p class="intro">Balance-of-power markets on Polymarket. The "Δ since Sep 9" column compares to the September 9, 2026 edition.</p>
+  <table class="mtable"><thead><tr><th>Market</th><th class="l">Since Apr</th><th class="r">Now</th><th class="r">&Delta; since Sep 9</th><th class="r">Volume</th></tr></thead><tbody>
+<tr>
+  <td class="mname"><a href="https://polymarket.com/event/balance-of-power-2026-midterms" target="_blank" rel="noopener">Democrats sweep both chambers</a><div class="meta"><a href="https://polymarket.com/event/balance-of-power-2026-midterms" target="_blank" rel="noopener">Polymarket</a> &middot; created Oct 2025 &middot; active</div></td>
+  <td class="sp"><svg class="spark" width="64" height="16" viewBox="0 0 64 16" aria-hidden="true"><title>6 editions, 43.5 to 52.5</title><polyline points="2.0,7.3 14.0,14.0 26.0,14.0 38.0,7.3 50.0,3.3 62.0,2.0" fill="none" stroke="var(--spark)" stroke-width="1.25" stroke-linejoin="round" stroke-linecap="round"></polyline><circle cx="62.0" cy="2.0" r="2.2" fill="currentColor"></circle></svg></td>
+  <td class="num">52.5%</td>
+  <td class="num"><span class="up">+1.0</span></td>
+  <td class="num vol">$3.0M</td>
+</tr>
+<tr>
+  <td class="mname"><a href="https://polymarket.com/event/balance-of-power-2026-midterms" target="_blank" rel="noopener">Republican Senate, Democratic House</a><div class="meta"><a href="https://polymarket.com/event/balance-of-power-2026-midterms" target="_blank" rel="noopener">Polymarket</a> &middot; created Oct 2025 &middot; active</div></td>
+  <td class="sp"><svg class="spark" width="52" height="16" viewBox="0 0 52 16" aria-hidden="true"><title>4 editions, 32.5 to 40.5</title><polyline points="2.0,2.0 18.0,6.5 34.0,9.5 50.0,14.0" fill="none" stroke="var(--spark)" stroke-width="1.25" stroke-linejoin="round" stroke-linecap="round"></polyline><circle cx="50.0" cy="14.0" r="2.2" fill="currentColor"></circle></svg></td>
+  <td class="num">32.5%</td>
+  <td class="num"><span class="dn">−3.0</span></td>
+  <td class="num vol">$2.2M</td>
+</tr>
+<tr>
+  <td class="mname"><a href="https://polymarket.com/event/balance-of-power-2026-midterms" target="_blank" rel="noopener">Republicans sweep both chambers</a><div class="meta"><a href="https://polymarket.com/event/balance-of-power-2026-midterms" target="_blank" rel="noopener">Polymarket</a> &middot; created Oct 2025 &middot; active</div></td>
+  <td class="sp"><svg class="spark" width="64" height="16" viewBox="0 0 64 16" aria-hidden="true"><title>6 editions, 11.5 to 19.5</title><polyline points="2.0,6.5 14.0,2.0 26.0,8.0 38.0,14.0 50.0,14.0 62.0,12.5" fill="none" stroke="var(--spark)" stroke-width="1.25" stroke-linejoin="round" stroke-linecap="round"></polyline><circle cx="62.0" cy="12.5" r="2.2" fill="currentColor"></circle></svg></td>
+  <td class="num">12.5%</td>
+  <td class="num"><span class="up">+1.0</span></td>
+  <td class="num vol">$3.1M</td>
+</tr>
+<tr>
+  <td class="mname"><a href="https://polymarket.com/event/balance-of-power-2026-midterms" target="_blank" rel="noopener">Democratic Senate, Republican House</a><div class="meta"><a href="https://polymarket.com/event/balance-of-power-2026-midterms" target="_blank" rel="noopener">Polymarket</a> &middot; created Oct 2025 &middot; active</div></td>
+  <td class="sp"><svg class="spark" width="52" height="16" viewBox="0 0 52 16" aria-hidden="true"><title>4 editions, 0.9 to 1.7</title><polyline points="2.0,2.0 18.0,14.0 34.0,13.2 50.0,12.5" fill="none" stroke="var(--spark)" stroke-width="1.25" stroke-linejoin="round" stroke-linecap="round"></polyline><circle cx="50.0" cy="12.5" r="2.2" fill="currentColor"></circle></svg></td>
+  <td class="num">1.0%</td>
+  <td class="num"><span class="up">+0.1</span></td>
+  <td class="num vol">$1.8M</td>
+</tr>
+  </tbody></table>
+
+  <h3>Senate races</h3>
+  <p class="intro">P(win) is the probability the <strong>Democrat</strong> wins (or the Democratic-aligned independent in Nebraska and Montana). In Nebraska, Dan Osborn; in Montana, Sid Bodnar. The &Delta; column compares to the September 9 edition. Probabilities are from Polymarket individual race markets.</p>
+  <div class="wide">
+  <table class="senate"><colgroup><col class="c1"><col class="c2"><col class="c3"><col class="c4"><col class="c5"><col class="c6"></colgroup>
+  <thead><tr><th>State</th><th>Dem or aligned</th><th class="r">P(win)</th><th class="r">&Delta; since Sep 9</th><th class="l">Since Apr</th><th>Opponents</th><th>Note</th></tr></thead>
+  <tbody>
+  <tr class="band"><td colspan="7">Republican-favored</td></tr>
+
+<tr>
+  <td class="st"><strong>Montana</strong><div class="meta">$118.3K &middot; created Oct 2025</div></td>
+  <td>Sid Bodnar (Ind. D-aligned)</td>
+  <td class="num">7.6%</td>
+  <td class="num"><span class="up">+2.7</span></td>
+  <td class="sp"><svg class="spark" width="52" height="16" viewBox="0 0 52 16" aria-hidden="true"><title>5 editions, 4.9 to 23.2</title><polyline points="2.0,2.0 14.0,10.1 26.0,14.0 38.0,14.0 50.0,12.2" fill="none" stroke="var(--spark)" stroke-width="1.25" stroke-linejoin="round" stroke-linecap="round"></polyline><circle cx="50.0" cy="12.2" r="2.2" fill="currentColor"></circle></svg></td>
+  <td class="opp">Kurt Alme (R) 91.0%</td>
+  <td class="note">Bodnar is the Democratic-aligned independent contesting a safe Republican seat. Independent candidates here and in Nebraska are tracked for their role in chamber math if Republicans lose overall majority.</td>
+</tr>
+<tr>
+  <td class="st"><strong>Nebraska</strong><div class="meta">$244.9K &middot; created Oct 2025</div></td>
+  <td>Dan Osborn (Ind. D-aligned)</td>
+  <td class="num">31.5%</td>
+  <td class="num"><span class="up">+2.0</span></td>
+  <td class="sp"><svg class="spark" width="52" height="16" viewBox="0 0 52 16" aria-hidden="true"><title>5 editions, 29.5 to 38.5</title><polyline points="2.0,2.0 14.0,11.3 26.0,14.0 38.0,14.0 50.0,11.3" fill="none" stroke="var(--spark)" stroke-width="1.25" stroke-linejoin="round" stroke-linecap="round"></polyline><circle cx="50.0" cy="11.3" r="2.2" fill="currentColor"></circle></svg></td>
+  <td class="opp">Pete Ricketts (R) 67.0% &middot; Democrat 0.2%</td>
+  <td class="note">Osborn ran a competitive 2024 race in deep-red Nebraska; 31.5% reflects a genuine independent challenge in a state Trump carried by 20+ points.</td>
+</tr>
+<tr>
+  <td class="st"><strong>Iowa</strong><div class="meta">$273.6K &middot; created Oct 2025</div></td>
+  <td>Josh Turek (D)</td>
+  <td class="num">39.5%</td>
+  <td class="num"><span class="up">+2.6</span></td>
+  <td class="sp"><svg class="spark" width="52" height="16" viewBox="0 0 52 16" aria-hidden="true"><title>5 editions, 36.9 to 40</title><polyline points="2.0,2.0 14.0,3.9 26.0,3.9 38.0,14.0 50.0,3.9" fill="none" stroke="var(--spark)" stroke-width="1.25" stroke-linejoin="round" stroke-linecap="round"></polyline><circle cx="50.0" cy="3.9" r="2.2" fill="currentColor"></circle></svg></td>
+  <td class="opp">Ashley Hinson (R) 60.5%</td>
+  <td class="note">Incumbent-free open seat after Ernst retirement. Hinson holds a modest lead; a wave environment could narrow it further. Kalshi also prices this race competitively.</td>
+</tr>
+  <tr class="band"><td colspan="7">Toss-up, 40 to 60</td></tr>
+<tr>
+  <td class="st"><strong>Texas</strong><div class="meta">$1.2M &middot; created Oct 2025</div></td>
+  <td>James Talarico (D)</td>
+  <td class="num">51.5%</td>
+  <td class="num"><span class="up">+3.2</span></td>
+  <td class="sp"><svg class="spark" width="52" height="16" viewBox="0 0 52 16" aria-hidden="true"><title>5 editions, 43.5 to 51.5</title><polyline points="2.0,9.5 14.0,14.0 26.0,5.0 38.0,6.8 50.0,2.0" fill="none" stroke="var(--spark)" stroke-width="1.25" stroke-linejoin="round" stroke-linecap="round"></polyline><circle cx="50.0" cy="2.0" r="2.2" fill="currentColor"></circle></svg></td>
+  <td class="opp">Ken Paxton (R) 49.0%</td>
+  <td class="note">Democrats lead Texas Senate for the first time this cycle. Talarico, a state legislator, faces Paxton, who lost the Republican primary against John Cornyn and ran as an independent. A Talarico win would be the first Democratic Senate pickup in Texas since 1988.</td>
+</tr>
+<tr>
+  <td class="st"><strong>Ohio</strong><div class="meta">$330.9K &middot; created Jan 2025</div></td>
+  <td>Sherrod Brown (D)</td>
+  <td class="num">53.5%</td>
+  <td class="num"><span class="dn">−1.5</span></td>
+  <td class="sp"><svg class="spark" width="52" height="16" viewBox="0 0 52 16" aria-hidden="true"><title>4 editions, 53.5 to 55.5</title><polyline points="2.0,2.0 18.0,8.0 34.0,5.0 50.0,14.0" fill="none" stroke="var(--spark)" stroke-width="1.25" stroke-linejoin="round" stroke-linecap="round"></polyline><circle cx="50.0" cy="14.0" r="2.2" fill="currentColor"></circle></svg></td>
+  <td class="opp">Jon Husted (R) 46.5%</td>
+  <td class="note">Brown, who lost reelection in 2024, is running for the seat he previously held in a special-election context. Ohio remains closely contested.</td>
+</tr>
+<tr>
+  <td class="st"><strong>Michigan</strong><div class="meta">$790.5K &middot; created Oct 2025</div></td>
+  <td>Abdul El-Sayed (D)</td>
+  <td class="num">61.5%</td>
+  <td class="num"><span class="dn">−1.4</span></td>
+  <td class="sp"><svg class="spark" width="52" height="16" viewBox="0 0 52 16" aria-hidden="true"><title>5 editions, 61.5 to 73.5</title><polyline points="2.0,6.0 14.0,2.0 26.0,12.0 38.0,12.6 50.0,14.0" fill="none" stroke="var(--spark)" stroke-width="1.25" stroke-linejoin="round" stroke-linecap="round"></polyline><circle cx="50.0" cy="14.0" r="2.2" fill="currentColor"></circle></svg></td>
+  <td class="opp">Mike Rogers (R) 39.5%</td>
+  <td class="note">El-Sayed is the Democratic nominee following the primary cycle. Rogers, a former congressman, trails in betting markets. Michigan is the most expensive Senate race outside of Texas.</td>
+</tr>
+  <tr class="band"><td colspan="7">Democrat-favored</td></tr>
+<tr>
+  <td class="st"><strong>Alaska</strong><div class="meta">$488.4K &middot; created Oct 2025</div></td>
+  <td>Mary Peltola (D)</td>
+  <td class="num">67.5%</td>
+  <td class="num"><span class="up">+4.4</span></td>
+  <td class="sp"><svg class="spark" width="52" height="16" viewBox="0 0 52 16" aria-hidden="true"><title>2 editions, 63.1 to 67.5</title><polyline points="2.0,14.0 50.0,2.0" fill="none" stroke="var(--spark)" stroke-width="1.25" stroke-linejoin="round" stroke-linecap="round"></polyline><circle cx="50.0" cy="2.0" r="2.2" fill="currentColor"></circle></svg></td>
+  <td class="opp">Dan Sullivan (R) 33.5%</td>
+  <td class="note">Peltola, who holds the at-large House seat, parlays Alaska&rsquo;s ranked-choice system advantage. She has cross-partisan appeal; Sullivan is the incumbent senator seeking reelection.</td>
+</tr>
+<tr>
+  <td class="st"><strong>Maine</strong><div class="meta">$1.3M &middot; created Oct 2025</div></td>
+  <td>Troy Jackson (D)</td>
+  <td class="num">70.5%</td>
+  <td class="num"><span class="up">+3.4</span></td>
+  <td class="sp"><svg class="spark" width="52" height="16" viewBox="0 0 52 16" aria-hidden="true"><title>5 editions, 65.5 to 70.5</title><polyline points="2.0,11.6 14.0,14.0 26.0,4.4 38.0,10.2 50.0,2.0" fill="none" stroke="var(--spark)" stroke-width="1.25" stroke-linejoin="round" stroke-linecap="round"></polyline><circle cx="50.0" cy="2.0" r="2.2" fill="currentColor"></circle></svg></td>
+  <td class="opp">Susan Collins (R) 29.5%</td>
+  <td class="note">Jackson, Maine Senate President, is favored against incumbent Collins. A Collins loss would be the cycle&rsquo;s biggest incumbent upset.</td>
+</tr>
+<tr>
+  <td class="st"><strong>New Hampshire</strong><div class="meta">$103.6K &middot; created Oct 2025</div></td>
+  <td>Chris Pappas (D)</td>
+  <td class="num">84.5%</td>
+  <td class="num"><span class="up">+3.4</span></td>
+  <td class="sp"><svg class="spark" width="52" height="16" viewBox="0 0 52 16" aria-hidden="true"><title>5 editions, 81.1 to 87.5</title><polyline points="2.0,11.4 14.0,11.4 26.0,2.0 38.0,14.0 50.0,7.6" fill="none" stroke="var(--spark)" stroke-width="1.25" stroke-linejoin="round" stroke-linecap="round"></polyline><circle cx="50.0" cy="7.6" r="2.2" fill="currentColor"></circle></svg></td>
+  <td class="opp">John Sununu (R) 15.0%</td>
+  <td class="note">Open seat after Shaheen retirement. Pappas, a House member, is solidly favored in a state Biden won by 7 points.</td>
+</tr>
+  <tr class="band"><td colspan="7">Safe Democratic, 90 and above</td></tr>
+<tr>
+  <td class="st"><strong>North Carolina</strong><div class="meta">$107.0K &middot; created Oct 2025</div></td>
+  <td>Roy Cooper (D)</td>
+  <td class="num">92.0%</td>
+  <td class="num"><span class="up">+0.5</span></td>
+  <td class="sp"><svg class="spark" width="52" height="16" viewBox="0 0 52 16" aria-hidden="true"><title>5 editions, 83.5 to 92</title><polyline points="2.0,14.0 14.0,10.5 26.0,2.7 38.0,2.7 50.0,2.0" fill="none" stroke="var(--spark)" stroke-width="1.25" stroke-linejoin="round" stroke-linecap="round"></polyline><circle cx="50.0" cy="2.0" r="2.2" fill="currentColor"></circle></svg></td>
+  <td class="opp">Michael Whatley (R) 8.5%</td>
+  <td class="note">Cooper, former governor, holds a commanding lead in an open seat. North Carolina at 92% is priced near certainty.</td>
+</tr>
+<tr>
+  <td class="st"><strong>Georgia</strong><div class="meta">$131.3K &middot; created Oct 2025</div></td>
+  <td>Jon Ossoff (D)</td>
+  <td class="num">93.0%</td>
+  <td class="num"><span class="up">+1.0</span></td>
+  <td class="sp"><svg class="spark" width="52" height="16" viewBox="0 0 52 16" aria-hidden="true"><title>5 editions, 85.5 to 93.5</title><polyline points="2.0,12.5 14.0,14.0 26.0,2.0 38.0,4.2 50.0,2.8" fill="none" stroke="var(--spark)" stroke-width="1.25" stroke-linejoin="round" stroke-linecap="round"></polyline><circle cx="50.0" cy="2.8" r="2.2" fill="currentColor"></circle></svg></td>
+  <td class="opp">Mike Collins (R) 7.0%</td>
+  <td class="note">Ossoff defense. Georgia at 93% reflects incumbent strength in a state Democrats now carry in statewide races.</td>
+</tr>
+<tr>
+  <td class="st"><strong>Colorado</strong><div class="meta">$48.4K &middot; created Oct 2025</div></td>
+  <td>John Hickenlooper (D)</td>
+  <td class="num">96.0%</td>
+  <td class="num"><span class="up">+0.3</span></td>
+  <td class="sp"><svg class="spark" width="52" height="16" viewBox="0 0 52 16" aria-hidden="true"><title>2 editions, 95.7 to 96</title><polyline points="2.0,14.0 50.0,2.0" fill="none" stroke="var(--spark)" stroke-width="1.25" stroke-linejoin="round" stroke-linecap="round"></polyline><circle cx="50.0" cy="2.0" r="2.2" fill="currentColor"></circle></svg></td>
+  <td class="opp">Mark Baisley (R) 3.0%</td>
+  <td class="note">Safe seat. Hickenlooper is the incumbent.</td>
+</tr>
+<tr>
+  <td class="st"><strong>Delaware</strong><div class="meta">$17.2K &middot; created Oct 2025</div></td>
+  <td>Democrat (TBD)</td>
+  <td class="num">95.8%</td>
+  <td class="num"><span class="dn">−0.2</span></td>
+  <td class="sp"><svg class="spark" width="52" height="16" viewBox="0 0 52 16" aria-hidden="true"><title>2 editions, 95.8 to 96</title><polyline points="2.0,2.0 50.0,14.0" fill="none" stroke="var(--spark)" stroke-width="1.25" stroke-linejoin="round" stroke-linecap="round"></polyline><circle cx="50.0" cy="14.0" r="2.2" fill="currentColor"></circle></svg></td>
+  <td class="opp">Republican 4.5%</td>
+  <td class="note">Nominee set by the September 15 primary. Safe Democratic state; market prices the eventual Democratic nominee at 95.8% regardless of who wins the primary.</td>
+</tr>
+  </tbody></table>
+  </div>
+  <p class="fn">Senate series tracks the probability the Democrat wins, or the Democratic-aligned independent in Nebraska (Osborn) and Montana (Bodnar). Texas shows Polymarket; note that the Paxton candidacy is as an independent after losing the Republican primary to Cornyn, who withdrew.</p>
+
+  <h3>2028 presidential race</h3>
+  <div class="noms">
+    <div class="nom">
+      <h4>Democratic nominee 2028</h4>
+      <table class="mtable compact"><thead><tr><th>Candidate</th><th class="l">Since Apr</th><th class="r">Now</th><th class="r">&Delta; since Sep 9</th></tr></thead><tbody>
+<tr>
+  <td class="mname"><a href="https://polymarket.com/event/democratic-presidential-nominee-2028" target="_blank" rel="noopener">Alexandria Ocasio-Cortez</a></td>
+  <td class="sp"><svg class="spark" width="48" height="16" viewBox="0 0 48 16" aria-hidden="true"><title>10 editions, 8.1 to 20.6</title><polyline points="2.0,14.0 6.9,13.8 11.8,13.8 16.7,13.1 21.6,12.9 26.4,12.0 31.3,8.0 36.2,2.0 41.1,3.9 46.0,4.6" fill="none" stroke="var(--spark)" stroke-width="1.25" stroke-linejoin="round" stroke-linecap="round"></polyline><circle cx="46.0" cy="4.6" r="2.2" fill="currentColor"></circle></svg></td>
+  <td class="num">17.9%</td>
+  <td class="num"><span class="dn">−0.8</span></td>
+</tr>
+<tr>
+  <td class="mname"><a href="https://polymarket.com/event/democratic-presidential-nominee-2028" target="_blank" rel="noopener">Jon Ossoff</a></td>
+  <td class="sp"><svg class="spark" width="48" height="16" viewBox="0 0 48 16" aria-hidden="true"><title>10 editions, 5.3 to 15.8</title><polyline points="2.0,12.5 6.9,12.6 11.8,12.6 16.7,14.0 21.6,12.5 26.4,11.1 31.3,3.4 36.2,2.0 41.1,2.2 46.0,2.0" fill="none" stroke="var(--spark)" stroke-width="1.25" stroke-linejoin="round" stroke-linecap="round"></polyline><circle cx="46.0" cy="2.0" r="2.2" fill="currentColor"></circle></svg></td>
+  <td class="num">15.8%</td>
+  <td class="num"><span class="up">+0.1</span></td>
+</tr>
+<tr>
+  <td class="mname"><a href="https://polymarket.com/event/democratic-presidential-nominee-2028" target="_blank" rel="noopener">Gavin Newsom</a></td>
+  <td class="sp"><svg class="spark" width="48" height="16" viewBox="0 0 48 16" aria-hidden="true"><title>10 editions, 12.2 to 26.4</title><polyline points="2.0,2.0 6.9,3.9 11.8,3.9 16.7,2.8 21.6,3.1 26.4,4.2 31.3,7.4 36.2,12.0 41.1,12.2 46.0,14.0" fill="none" stroke="var(--spark)" stroke-width="1.25" stroke-linejoin="round" stroke-linecap="round"></polyline><circle cx="46.0" cy="14.0" r="2.2" fill="currentColor"></circle></svg></td>
+  <td class="num">12.2%</td>
+  <td class="num"><span class="dn">−2.1</span></td>
+</tr>
+<tr>
+  <td class="mname"><a href="https://polymarket.com/event/democratic-presidential-nominee-2028" target="_blank" rel="noopener">Kamala Harris</a></td>
+  <td class="sp"><svg class="spark" width="48" height="16" viewBox="0 0 48 16" aria-hidden="true"><title>9 editions, 6.7 to 9</title><polyline points="2.0,6.2 7.5,2.0 13.0,2.0 18.5,8.3 24.0,8.3 29.5,14.0 35.0,10.3 40.5,8.3 46.0,6.2" fill="none" stroke="var(--spark)" stroke-width="1.25" stroke-linejoin="round" stroke-linecap="round"></polyline><circle cx="46.0" cy="6.2" r="2.2" fill="currentColor"></circle></svg></td>
+  <td class="num">8.2%</td>
+  <td class="num"><span class="up">+0.4</span></td>
+</tr>
+<tr>
+  <td class="mname"><a href="https://polymarket.com/event/democratic-presidential-nominee-2028" target="_blank" rel="noopener">Pete Buttigieg</a></td>
+  <td class="sp"><svg class="spark" width="48" height="16" viewBox="0 0 48 16" aria-hidden="true"><title>7 editions, 4.5 to 5.4</title><polyline points="2.0,10.0 9.3,14.0 16.7,14.0 24.0,2.0 31.3,4.7 38.7,4.7 46.0,2.0" fill="none" stroke="var(--spark)" stroke-width="1.25" stroke-linejoin="round" stroke-linecap="round"></polyline><circle cx="46.0" cy="2.0" r="2.2" fill="currentColor"></circle></svg></td>
+  <td class="num">5.4%</td>
+  <td class="num"><span class="up">+0.2</span></td>
+</tr>
+      </tbody></table>
+      <p class="fn">Polymarket Democratic nomination market, $1.3B volume. Probabilities are independent binary markets for each candidate; sums exceed 100%. Newsom fell 2.1 points this period on $1.3B volume, the largest individual mover in the field.</p>
+    </div>
+    <div class="nom">
+      <h4>Republican nominee 2028</h4>
+      <table class="mtable compact"><thead><tr><th>Candidate</th><th class="l">Since Apr</th><th class="r">Now</th><th class="r">&Delta; since Sep 9</th></tr></thead><tbody>
+<tr>
+  <td class="mname"><a href="https://polymarket.com/event/republican-presidential-nominee-2028" target="_blank" rel="noopener">J.D. Vance</a></td>
+  <td class="sp"><svg class="spark" width="48" height="16" viewBox="0 0 48 16" aria-hidden="true"><title>10 editions, 30 to 51.2</title><polyline points="2.0,8.8 6.9,10.0 11.8,10.4 16.7,13.2 21.6,14.0 26.4,12.2 31.3,7.5 36.2,4.2 41.1,2.5 46.0,2.0" fill="none" stroke="var(--spark)" stroke-width="1.25" stroke-linejoin="round" stroke-linecap="round"></polyline><circle cx="46.0" cy="2.0" r="2.2" fill="currentColor"></circle></svg></td>
+  <td class="num">51.2%</td>
+  <td class="num"><span class="up">+0.9</span></td>
+</tr>
+<tr>
+  <td class="mname"><a href="https://polymarket.com/event/republican-presidential-nominee-2028" target="_blank" rel="noopener">Robert F. Kennedy Jr.</a></td>
+  <td class="sp"><svg class="spark" width="48" height="16" viewBox="0 0 48 16" aria-hidden="true"><circle cx="46" cy="8.0" r="2.2" fill="currentColor"></circle></svg></td>
+  <td class="num">49.0%</td>
+  <td class="num"><span class="mut">&mdash;</span></td>
+</tr>
+<tr>
+  <td class="mname"><a href="https://polymarket.com/event/republican-presidential-nominee-2028" target="_blank" rel="noopener">Marco Rubio</a></td>
+  <td class="sp"><svg class="spark" width="48" height="16" viewBox="0 0 48 16" aria-hidden="true"><title>10 editions, 16.8 to 27.5</title><polyline points="2.0,9.1 6.9,4.4 11.8,4.4 16.7,2.0 21.6,2.3 26.4,5.8 31.3,2.8 36.2,13.4 41.1,10.4 46.0,14.0" fill="none" stroke="var(--spark)" stroke-width="1.25" stroke-linejoin="round" stroke-linecap="round"></polyline><circle cx="46.0" cy="14.0" r="2.2" fill="currentColor"></circle></svg></td>
+  <td class="num">16.8%</td>
+  <td class="num"><span class="dn">−3.2</span></td>
+</tr>
+<tr>
+  <td class="mname"><a href="https://polymarket.com/event/republican-presidential-nominee-2028" target="_blank" rel="noopener">Tucker Carlson</a></td>
+  <td class="sp"><svg class="spark" width="48" height="16" viewBox="0 0 48 16" aria-hidden="true"><title>10 editions, 2.6 to 6.7</title><polyline points="2.0,3.5 6.9,3.5 11.8,3.5 16.7,3.2 21.6,2.0 26.4,2.3 31.3,12.8 36.2,14.0 41.1,11.5 46.0,11.4" fill="none" stroke="var(--spark)" stroke-width="1.25" stroke-linejoin="round" stroke-linecap="round"></polyline><circle cx="46.0" cy="11.4" r="2.2" fill="currentColor"></circle></svg></td>
+  <td class="num">3.5%</td>
+  <td class="num"><span class="up">+0.1</span></td>
+</tr>
+<tr>
+  <td class="mname"><a href="https://polymarket.com/event/republican-presidential-nominee-2028" target="_blank" rel="noopener">Ron DeSantis</a></td>
+  <td class="sp"><svg class="spark" width="48" height="16" viewBox="0 0 48 16" aria-hidden="true"><title>10 editions, 2.1 to 3.5</title><polyline points="2.0,10.6 6.9,2.0 11.8,2.0 16.7,2.0 21.6,2.0 26.4,7.1 31.3,10.6 36.2,14.0 41.1,14.0 46.0,11.4" fill="none" stroke="var(--spark)" stroke-width="1.25" stroke-linejoin="round" stroke-linecap="round"></polyline><circle cx="46.0" cy="11.4" r="2.2" fill="currentColor"></circle></svg></td>
+  <td class="num">2.4%</td>
+  <td class="num"><span class="up">+0.3</span></td>
+</tr>
+      </tbody></table>
+      <p class="fn">Polymarket Republican nomination market, $704M volume. RFK Jr. at 49.0% is a new entrant in the tracking table; no prior-edition value for Δ. Vance and RFK Jr. together imply a near-certain two-person race in market terms: the sum of their probabilities exceeds 100%, which reflects the overround in winner-takes-all binary markets. For the general election, the Polymarket 2028 general market (separate, $705M volume) shows Vance at 23.8%, AOC at 13.2%, Ossoff at 11.6%, Rubio at 11.1%. Rubio fell 3.2 points in the nomination market since September 9.</p>
+    </div>
+  </div>
+
+  <h3>Economic indicators</h3>
+  <div class="eco">
+    <div>
+      <span class="l">Inflation (CPI)</span>
+      <span class="v">3.4%</span>
+      <span class="c dn">3.4% unchanged</span>
+      <p>Year-over-year change in the Consumer Price Index, all urban consumers (August 2026). Core CPI (excluding food and energy) is approximately 2.5%. Both remain above the Federal Reserve&rsquo;s 2% target. <a href="https://www.bls.gov/cpi/" target="_blank" rel="noopener">BLS, September 2026</a></p>
+    </div>
+    <div>
+      <span class="l">Unemployment</span>
+      <span class="v">4.1%</span>
+      <span class="c mut">4.1% in Jul &amp; Jun</span>
+      <p>U-3 unemployment rate, August 2026. The Federal Reserve&rsquo;s long-run average is approximately 4.0&ndash;4.5%. Unemployment has held flat for three months; July payrolls were reported negative. <a href="https://www.bls.gov/news.release/empsit.nr0.htm" target="_blank" rel="noopener">BLS, September 2026</a></p>
+    </div>
+    <div>
+      <span class="l">S&amp;P 500</span>
+      <span class="v">7,657</span>
+      <span class="c dn">7,673 on Sep 8</span>
+      <p>S&amp;P 500 close, September 11, 2026. Down roughly 0.5% from the September 8 close of 7,673. The broader market has fallen from the September 9 edition reference of approximately 7,636. <a href="https://fred.stlouisfed.org/series/SP500" target="_blank" rel="noopener">FRED, September 2026</a></p>
+    </div>
+  </div>
+
+  <h3>Generic ballot and approval</h3>
+  <p>Silver Bulletin&rsquo;s generic congressional ballot average shows Democrats +5.8 as of September 12, 2026, a strong historical position at this point in the cycle. Trump&rsquo;s net approval is &minus;19.5 (Silver Bulletin, updated September 11), up slightly from the all-time low of &minus;20.6. Historical note: at the same point in his first term, Trump was at &minus;11.6; Biden was also near &minus;11.6. <a href="https://www.natesilver.net/p/how-popular-is-donald-trump" target="_blank" rel="noopener">Silver Bulletin, September 12</a></p>
+
+  <h3>Forecaster commentary</h3>
+  <ul class="intel">
+    <li><strong>Silver Bulletin launches FLIPR 2026 midterm forecast.</strong> Nate Silver&rsquo;s model debuted September 13 with Democrats favored to retain Senate control. The model incorporates generic ballot, district-level polling, and economic conditions. The September 12 note said "September polling has been very good for Democrats," citing a consistent generic ballot lead and improved candidate quality in key races. <a href="https://www.natesilver.net/p/nate-silver-2026-midterm-election-polls-model" target="_blank" rel="noopener">Silver Bulletin, September 13</a></li>
+    <li><strong>SCOTUSblog confirms Missouri map now in litigation limbo.</strong> After the Supreme Court&rsquo;s September 10 stay, constitutional scholars Akhil and Vikram Amar wrote that this is "the latest and, we think, final major round of litigation concerning Missouri&rsquo;s congressional districting map." The existing 6&ndash;2 Democratic map runs in November. <a href="https://www.scotusblog.com/2026/09/a-quick-update-on-the-missouri-congressional-districting-case/" target="_blank" rel="noopener">SCOTUSblog, September 10</a></li>
+  </ul>
+
+  <div class="sowhat">
+    <div class="k">So what</div>
+    <p>The Senate number crossing 50.4% is not a strong signal on its own: the Senate has been within 2 points of 50% for weeks and EBO aggregates fluctuate. What is directionally meaningful is the combination: Texas tilting Democratic, New Hampshire and Maine solidifying, and the generic ballot holding at +5.8. A +5&ndash;6 generic ballot environment historically produces significant seat swings in open-seat cycles.</p>
+    <p>Missouri is now resolved for November election purposes. The SCOTUS stay locks in the existing map; the litigation is over in practical terms. The one-seat implication (Cleaver&rsquo;s MO-5 stays competitive rather than becoming an impossible 7&ndash;1 district) is baked in. The relevant question now is whether the House majority math works under the existing map, which the chamber control markets put at 52.5% for a Dem sweep.</p>
+    <p>RFK Jr. at 49% for the GOP 2028 nomination is a market anomaly worth flagging but not overinterpreting. The general election market (separate, $705M volume) does not price him as the general-election frontrunner, and the overround in binary nomination markets means two candidates can each show near-50% without that being incoherent. Watch for volume growth on the RFK Jr. market as a signal of whether this is a sustained view or a speculative spike.</p>
+  </div>
+</section>
+
+<!-- SECTION 2: DEMOCRATIC RESILIENCE -->
+<section id="s2">
+  <h2>Democratic resilience</h2>
+
+  <div class="pull" id="blw-short">
+    <div class="body">
+      <p><strong>On the numbers:</strong> Bright Line Watch tracks expert-assessed democratic <em>practice</em> (how officials behave, norm-following, specific incidents), which tends to move faster than structural measures (institutions, rights, formal constraints). For how BLW compares to V-Dem, Freedom House, and EIU, see the <a href="#blw-appendix">deep-dive appendix</a>. In 2026 the two land close together, so there is no divergence to read into: BLW is at 60 and V-Dem&rsquo;s Liberal Democracy Index rescales to roughly 57.</p>
+    </div>
+    <div class="fig">
+      <span class="l">Bright Line Watch, wave 29</span>
+      <span class="v">60</span>
+      <span class="s">of 100, expert rating. Fielded July 10&ndash;27, 2026; 568 political scientists plus 2,750 members of the public. Up from 57 in the February&ndash;March wave; the highest of Trump&rsquo;s second term. Semi-annual; no new wave this period. <a href="https://brightlinewatch.org/a-partial-democratic-rebound/" target="_blank" rel="noopener">BLW, August 2026</a> &middot; <a href="#blw-appendix">Method and trajectory</a></span>
+    </div>
+  </div>
+
+  <h3>Metaculus US Democracy Threat Index</h3>
+  <p class="intro">The <a href="https://www.metaculus.com/tournament/32829/" target="_blank" rel="noopener">Democracy Threat Index</a> tournament remains open with a $10,000 prize pool. Question-level community forecasts were not retrievable this run; forecaster counts indicate where attention sits.</p>
+  <table class="mtable compact" id="dti"><thead><tr><th>Question</th><th class="r">Forecasters</th></tr></thead><tbody>
+<tr><td class="mname"><a href="https://www.metaculus.com/questions/39796/" target="_blank" rel="noopener">Will the sitting president&rsquo;s net worth reach &ge;4x its pre-presidency value?</a> <span class="meta" style="display:inline">Metaculus 39796</span></td><td class="num">150</td></tr>
+<tr><td class="mname"><a href="https://www.metaculus.com/questions/39778/" target="_blank" rel="noopener">Will any US authority refuse to recognize citizenship of US-born children of non-citizens?</a> <span class="meta" style="display:inline">Metaculus 39778</span></td><td class="num">140</td></tr>
+<tr><td class="mname"><a href="https://www.metaculus.com/questions/39790/" target="_blank" rel="noopener">Will the president formally invoke the Insurrection Act?</a> <span class="meta" style="display:inline">Metaculus 39790</span></td><td class="num">134</td></tr>
+<tr><td class="mname"><a href="https://www.metaculus.com/questions/39800/" target="_blank" rel="noopener">Will federal military forces be deployed for non-routine domestic missions?</a> <span class="meta" style="display:inline">Metaculus 39800</span></td><td class="num">120</td></tr>
+<tr><td class="mname"><a href="https://www.metaculus.com/questions/39777/" target="_blank" rel="noopener">Will Congress pass new limits on early voting, absentee voting, or voter registration?</a> <span class="meta" style="display:inline">Metaculus 39777</span></td><td class="num">121</td></tr>
+<tr><td class="mname"><a href="https://www.metaculus.com/questions/39840/" target="_blank" rel="noopener">How will Bright Line Watch experts rate US democracy at year end?</a> <span class="meta" style="display:inline">Metaculus 39840</span></td><td class="num">90</td></tr>
+  </tbody></table>
+
+  <h3>EA Forum</h3>
+  <ul class="intel">
+    <li><strong>Maxwell Love &mdash; &ldquo;What the Pro-Democracy Movement Knows About Quitting in Protest&rdquo;</strong> (September 10, EAF, karma 30)
+      <ul>
+        <li>Citing Pinckney &amp; Trilling (2024): noncooperation by insiders succeeded approximately 2x as often as public speaking out (67% vs 33%) in anti-authoritarian movements abroad.</li>
+        <li>Loyalty shifts in institutions are rare (23 out of 140 observed opportunities); when they occurred, quiet outreach to insiders was effective ~39% of the time; public protest did worse than no campaign at all.</li>
+        <li>The author&rsquo;s framework distinguishes "breaking" (visible, public exit) from "binding" (staying and working from inside), each subdivided into speaking, acting, and standing in the way (noncooperation).</li>
+        <li>Takeaway for democracy organizers: refusing a specific task while staying in an institution has higher empirical success rates than resigning publicly; the evidence base for "resign and go public" as a primary tactic is weak.</li>
+      </ul>
+      <a href="https://forum.effectivealtruism.org/posts/vALwH5KFDgGg6aYwK/what-the-pro-democracy-movement-knows-about-quitting-in" target="_blank" rel="noopener">EA Forum, September 10</a>
+    </li>
+  </ul>
+
+  <h3>Trump tenure markets</h3>
+  <table class="mtable" id="tenure"><thead><tr><th>Market</th><th class="l">Since Apr</th><th class="r">Now</th><th class="r">&Delta; since Sep 9</th><th class="r">Volume</th></tr></thead><tbody>
+<tr>
+  <td class="mname"><a href="https://polymarket.com/market/trump-out-as-president-before-2027" target="_blank" rel="noopener">Trump out as President before 2027</a><div class="meta"><a href="https://polymarket.com/market/trump-out-as-president-before-2027" target="_blank" rel="noopener">Polymarket</a> &middot; created Nov 2025 &middot; near resolution</div></td>
+  <td class="sp"><svg class="spark" width="64" height="16" viewBox="0 0 64 16" aria-hidden="true"><title>11 editions, 5.5 to 16.5</title><polyline points="2.0,2.0 8.0,5.3 14.0,7.5 20.0,9.6 26.0,7.5 32.0,9.1 38.0,9.6 44.0,11.8 50.0,12.9 56.0,14.0 62.0,14.0" fill="none" stroke="var(--spark)" stroke-width="1.25" stroke-linejoin="round" stroke-linecap="round"></polyline><circle cx="62.0" cy="14.0" r="2.2" fill="currentColor"></circle></svg></td>
+  <td class="num">5.5%</td>
+  <td class="num"><span class="mut">0.0</span></td>
+  <td class="num vol">$11.6M</td>
+</tr>
+<tr>
+  <td class="mname"><a href="https://polymarket.com/market/will-trump-be-impeached-by-december-31-2026" target="_blank" rel="noopener">Trump impeached by December 31, 2026</a><div class="meta"><a href="https://polymarket.com/market/will-trump-be-impeached-by-december-31-2026" target="_blank" rel="noopener">Polymarket</a> &middot; created Jul 2025 &middot; near resolution</div></td>
+  <td class="sp"><svg class="spark" width="64" height="16" viewBox="0 0 64 16" aria-hidden="true"><title>11 editions, 1.8 to 13</title><polyline points="2.0,2.5 8.0,2.0 14.0,2.0 20.0,2.0 26.0,7.9 32.0,9.0 38.0,7.9 44.0,12.6 50.0,13.7 56.0,13.4 62.0,14.0" fill="none" stroke="var(--spark)" stroke-width="1.25" stroke-linejoin="round" stroke-linecap="round"></polyline><circle cx="62.0" cy="14.0" r="2.2" fill="currentColor"></circle></svg></td>
+  <td class="num">1.8%</td>
+  <td class="num"><span class="dn">−0.6</span></td>
+  <td class="num vol">$1.0M</td>
+</tr>
+<tr>
+  <td class="mname"><a href="https://polymarket.com/market/trump-removed-via-25th-amendment-before-2027" target="_blank" rel="noopener">25th Amendment removal before 2027</a><div class="meta"><a href="https://polymarket.com/market/trump-removed-via-25th-amendment-before-2027" target="_blank" rel="noopener">Polymarket</a> &middot; created Nov 2025 &middot; near resolution</div></td>
+  <td class="sp"><svg class="spark" width="64" height="16" viewBox="0 0 64 16" aria-hidden="true"><title>11 editions, 2.8 to 9</title><polyline points="2.0,2.0 8.0,2.0 14.0,2.0 20.0,4.9 26.0,5.9 32.0,9.7 38.0,8.8 44.0,11.1 50.0,14.0 56.0,13.7 62.0,13.6" fill="none" stroke="var(--spark)" stroke-width="1.25" stroke-linejoin="round" stroke-linecap="round"></polyline><circle cx="62.0" cy="13.6" r="2.2" fill="currentColor"></circle></svg></td>
+  <td class="num">3.0%</td>
+  <td class="num"><span class="up">+0.1</span></td>
+  <td class="num vol">$50K<span class="tag">thin</span></td>
+</tr>
+  </tbody></table>
+
+  <h3>Democracy and backsliding markets</h3>
+  <table class="mtable" id="backsliding"><thead><tr><th>Market</th><th class="l">Since Apr</th><th class="r">Now</th><th class="r">&Delta; since Sep 9</th><th class="r">Volume</th></tr></thead><tbody>
+<tr>
+  <td class="mname"><a href="https://polymarket.com/event/insurrection-act-invoked-by" target="_blank" rel="noopener">Insurrection Act invoked by December 31, 2026</a><div class="meta"><a href="https://polymarket.com/event/insurrection-act-invoked-by" target="_blank" rel="noopener">Polymarket</a> &middot; created Jan 2026 &middot; active</div></td>
+  <td class="sp"><svg class="spark" width="64" height="16" viewBox="0 0 64 16" aria-hidden="true"><title>9 editions, 15 to 28</title><polyline points="2.0,2.0 9.5,4.8 17.0,10.8 24.5,11.7 32.0,11.2 39.5,12.6 47.0,13.1 54.5,14.0 62.0,12.6" fill="none" stroke="var(--spark)" stroke-width="1.25" stroke-linejoin="round" stroke-linecap="round"></polyline><circle cx="62.0" cy="12.6" r="2.2" fill="currentColor"></circle></svg></td>
+  <td class="num">16.5%</td>
+  <td class="num"><span class="up">+1.5</span></td>
+  <td class="num vol">$1.1M</td>
+</tr>
+<tr>
+  <td class="mname"><a href="https://polymarket.com/event/insurrection-act-invoked-by" target="_blank" rel="noopener">Insurrection Act invoked by September 30, 2026</a><div class="meta"><a href="https://polymarket.com/event/insurrection-act-invoked-by" target="_blank" rel="noopener">Polymarket</a> &middot; created Jul 2026 &middot; near resolution</div></td>
+  <td class="sp"><svg class="spark" width="64" height="16" viewBox="0 0 64 16" aria-hidden="true"><title>3 editions, 1.9 to 2</title><polyline points="2.0,2.0 32.0,8.0 62.0,14.0" fill="none" stroke="var(--spark)" stroke-width="1.25" stroke-linejoin="round" stroke-linecap="round"></polyline><circle cx="62.0" cy="14.0" r="2.2" fill="currentColor"></circle></svg></td>
+  <td class="num">1.9%</td>
+  <td class="num"><span class="dn">−0.1</span></td>
+  <td class="num vol">$34<span class="tag">thin</span></td>
+</tr>
+<tr>
+  <td class="mname"><a href="https://polymarket.com/market/supreme-court-vacancy-in-2026" target="_blank" rel="noopener">Supreme Court vacancy in 2026</a><div class="meta"><a href="https://polymarket.com/market/supreme-court-vacancy-in-2026" target="_blank" rel="noopener">Polymarket</a> &middot; created Dec 2025 &middot; active</div></td>
+  <td class="sp"><svg class="spark" width="64" height="16" viewBox="0 0 64 16" aria-hidden="true"><title>8 editions, 21 to 55</title><polyline points="2.0,2.0 10.6,7.3 19.1,9.8 27.7,8.7 36.3,8.5 44.9,14.0 53.4,13.5 62.0,13.1" fill="none" stroke="var(--spark)" stroke-width="1.25" stroke-linejoin="round" stroke-linecap="round"></polyline><circle cx="62.0" cy="13.1" r="2.2" fill="currentColor"></circle></svg></td>
+  <td class="num">23.5%</td>
+  <td class="num"><span class="up">+1.0</span></td>
+  <td class="num vol">$19.1K<span class="tag">thin</span></td>
+</tr>
+<tr>
+  <td class="mname"><a href="https://polymarket.com/event/will-samuel-alito-announce-his-retirement-by" target="_blank" rel="noopener">Alito announces retirement by September 30, 2026</a><div class="meta"><a href="https://polymarket.com/event/will-samuel-alito-announce-his-retirement-by" target="_blank" rel="noopener">Polymarket</a> &middot; created Jun 2026 &middot; near resolution</div></td>
+  <td class="sp"><svg class="spark" width="64" height="16" viewBox="0 0 64 16" aria-hidden="true"><title>3 editions, 0.8 to 1.2</title><polyline points="2.0,2.0 32.0,2.0 62.0,14.0" fill="none" stroke="var(--spark)" stroke-width="1.25" stroke-linejoin="round" stroke-linecap="round"></polyline><circle cx="62.0" cy="14.0" r="2.2" fill="currentColor"></circle></svg></td>
+  <td class="num">0.8%</td>
+  <td class="num"><span class="dn">−0.4</span></td>
+  <td class="num vol">$1.1M</td>
+</tr>
+<tr>
+  <td class="mname"><a href="https://polymarket.com/event/will-samuel-alito-announce-his-retirement-by" target="_blank" rel="noopener">Alito announces retirement by December 31, 2026</a><div class="meta"><a href="https://polymarket.com/event/will-samuel-alito-announce-his-retirement-by" target="_blank" rel="noopener">Polymarket</a> &middot; created Feb 2026 &middot; active</div></td>
+  <td class="sp"><svg class="spark" width="64" height="16" viewBox="0 0 64 16" aria-hidden="true"><title>8 editions, 5.5 to 53</title><polyline points="2.0,2.0 10.6,5.8 19.1,7.4 27.7,8.6 36.3,11.7 44.9,14.0 53.4,14.0 62.0,14.0" fill="none" stroke="var(--spark)" stroke-width="1.25" stroke-linejoin="round" stroke-linecap="round"></polyline><circle cx="62.0" cy="14.0" r="2.2" fill="currentColor"></circle></svg></td>
+  <td class="num">5.5%</td>
+  <td class="num"><span class="mut">0.0</span></td>
+  <td class="num vol">$847K</td>
+</tr>
+<tr>
+  <td class="mname"><a href="https://polymarket.com/event/will-samuel-alito-announce-his-retirement-by" target="_blank" rel="noopener">Alito announces retirement by June 30, 2027</a><div class="meta"><a href="https://polymarket.com/event/will-samuel-alito-announce-his-retirement-by" target="_blank" rel="noopener">Polymarket</a> &middot; created Jun 2026 &middot; active</div></td>
+  <td class="sp"><svg class="spark" width="64" height="16" viewBox="0 0 64 16" aria-hidden="true"><title>3 editions, 35 to 39.5</title><polyline points="2.0,14.0 32.0,2.0 62.0,4.7" fill="none" stroke="var(--spark)" stroke-width="1.25" stroke-linejoin="round" stroke-linecap="round"></polyline><circle cx="62.0" cy="4.7" r="2.2" fill="currentColor"></circle></svg></td>
+  <td class="num">38.5%</td>
+  <td class="num"><span class="dn">−1.0</span></td>
+  <td class="num vol">$3.6M</td>
+</tr>
+<tr>
+  <td class="mname"><a href="https://polymarket.com/market/save-act-signed-into-law-in-2026" target="_blank" rel="noopener"><span class="tip" title="H.R. 22, the SAVE Act, would require documentary proof of citizenship to register to vote in federal elections.">SAVE Act (H.R. 22) signed into law in 2026</span></a><div class="meta"><a href="https://polymarket.com/market/save-act-signed-into-law-in-2026" target="_blank" rel="noopener">Polymarket</a> &middot; created Feb 2026 &middot; near resolution</div></td>
+  <td class="sp"><svg class="spark" width="64" height="16" viewBox="0 0 64 16" aria-hidden="true"><title>12 editions, 5.5 to 12.5</title><polyline points="2.0,2.9 7.5,2.0 12.9,6.3 18.4,7.1 23.8,10.6 29.3,9.7 34.7,9.7 40.2,8.9 45.6,12.3 51.1,14.0 56.5,14.0 62.0,13.1" fill="none" stroke="var(--spark)" stroke-width="1.25" stroke-linejoin="round" stroke-linecap="round"></polyline><circle cx="62.0" cy="13.1" r="2.2" fill="currentColor"></circle></svg></td>
+  <td class="num">6.0%</td>
+  <td class="num"><span class="up">+0.5</span></td>
+  <td class="num vol">$191K</td>
+</tr>
+<tr>
+  <td class="mname"><a href="https://polymarket.com/market/will-a-us-court-rule-that-the-2020-election-was-fradulent" target="_blank" rel="noopener">US court rules the 2020 election was fraudulent</a><div class="meta"><a href="https://polymarket.com/market/will-a-us-court-rule-that-the-2020-election-was-fradulent" target="_blank" rel="noopener">Polymarket</a> &middot; created Feb 2026 &middot; active</div></td>
+  <td class="sp"><svg class="spark" width="64" height="16" viewBox="0 0 64 16" aria-hidden="true"><title>10 editions, 8 to 23.5</title><polyline points="2.0,14.0 8.7,14.0 15.3,14.0 22.0,14.0 28.7,5.9 35.3,2.0 42.0,11.3 48.7,13.6 55.3,11.3 62.0,12.8" fill="none" stroke="var(--spark)" stroke-width="1.25" stroke-linejoin="round" stroke-linecap="round"></polyline><circle cx="62.0" cy="12.8" r="2.2" fill="currentColor"></circle></svg></td>
+  <td class="num">9.5%</td>
+  <td class="num"><span class="dn">−2.0</span></td>
+  <td class="num vol">$24.6K<span class="tag">thin</span></td>
+</tr>
+<tr>
+  <td class="mname"><a href="https://polymarket.com/market/us-recession-by-end-of-2026" target="_blank" rel="noopener">US recession by end of 2026</a><div class="meta"><a href="https://polymarket.com/market/us-recession-by-end-of-2026" target="_blank" rel="noopener">Polymarket</a> &middot; created Jan 2026 &middot; near resolution</div></td>
+  <td class="sp"><svg class="spark" width="64" height="16" viewBox="0 0 64 16" aria-hidden="true"><title>2 editions, 7.5 to 8.5</title><polyline points="2.0,14.0 62.0,2.0" fill="none" stroke="var(--spark)" stroke-width="1.25" stroke-linejoin="round" stroke-linecap="round"></polyline><circle cx="62.0" cy="2.0" r="2.2" fill="currentColor"></circle></svg></td>
+  <td class="num">8.5%</td>
+  <td class="num"><span class="up">+1.0</span></td>
+  <td class="num vol">$1.75M</td>
+</tr>
+  </tbody></table>
+  <p class="fn">Thin: under $5K volume. Near resolution: above 90% or below 10%. Trend lines show edition values since April 15, 2026; a dot alone means the market entered the brief this edition.</p>
+
+  <h3>Resolved markets</h3>
+  <p class="intro">Closed since the project began; outcomes recorded for context.</p>
+  <table class="mtable compact" id="resolved"><thead><tr><th>Market</th><th class="l">Outcome</th><th class="r">Resolved</th></tr></thead><tbody>
+<tr><td>SCOTUS strikes down Trump birthright citizenship EO</td><td class="up" style="white-space:nowrap;font-size:12.5px">Yes: struck down</td><td class="num vol">August 2026</td></tr>
+<tr><td>SCOTUS lets Trump fire FTC commissioners (<em>Trump v. Slaughter</em>)</td><td class="dn" style="white-space:nowrap;font-size:12.5px">Yes: firing authority upheld</td><td class="num vol">June 2026</td></tr>
+<tr><td>SCOTUS bars counting mail ballots after Election Day</td><td class="up" style="white-space:nowrap;font-size:12.5px">No: not barred</td><td class="num vol">August 2026</td></tr>
+<tr><td>Insurrection Act invoked before July 2026</td><td class="up" style="white-space:nowrap;font-size:12.5px">No</td><td class="num vol">July 2026</td></tr>
+<tr><td>SAVE Act H.R. 7296 Senate companion passes</td><td class="up" style="white-space:nowrap;font-size:12.5px">No</td><td class="num vol">May 2026</td></tr>
+<tr><td>Virginia redistricting referendum passes</td><td class="up" style="white-space:nowrap;font-size:12.5px">No</td><td class="num vol">April 2026</td></tr>
+  </tbody></table>
+  <p class="fn">Green marks outcomes that favored democratic constraint; red marks the reverse.</p>
+
+  <h3>Intel</h3>
+  <ul class="intel">
+    <li><strong>SCOTUS emergency stay blocks Missouri&rsquo;s Republican congressional map.</strong> On September 10, in a brief unsigned order, the Supreme Court halted a federal district court ruling that would have permitted Missouri to use a newly drawn congressional map adding a Republican House seat. The existing 6&ndash;2 Democratic-advantage map now runs in November. Legal scholars Akhil and Vikram Amar characterized the stay as effectively final, noting the Supreme Court bench-slapped four lower federal court judges who had allowed the map. <a href="https://www.scotusblog.com/" target="_blank" rel="noopener">SCOTUSblog, September 10</a></li>
+    <li><strong>EA Forum: evidence on when insider resistance moves institutions.</strong> A September 10 post by Maxwell Love, drawing on Pinckney and Trilling (2024), finds that noncooperation tactics by institutional insiders succeed roughly twice as often as public exit in anti-authoritarian contexts. The post is relevant for anyone advising people inside democratic institutions on how to resist erosion. The dataset covers 140 documented loyalty-shift opportunities across international cases of democratic backsliding. <a href="https://forum.effectivealtruism.org/posts/vALwH5KFDgGg6aYwK/what-the-pro-democracy-movement-knows-about-quitting-in" target="_blank" rel="noopener">EA Forum, September 10</a></li>
+  </ul>
+
+  <div class="sowhat">
+    <div class="k">So what for our work</div>
+    <p>The insurrection-act-by-December market rising to 16.5% (+1.5pp from September 9) is worth watching in the post-election context. A scenario where Democrats win the House and the lame-duck period involves pressure on certification is exactly when the Insurrection Act concern becomes most acute. The market is not pricing a lame-duck crisis specifically, but the elevated probability reflects general political tension through year-end.</p>
+    <p>The EA Forum post on insider resistance is directly actionable for anyone running democracy-defense training programs. The empirical finding that quiet outreach to institutional insiders produces loyalty shifts ~39% of the time, versus essentially 0% for public protest, cuts against the intuitive assumption that maximizing visibility is always the right approach. This is worth incorporating into frameworks like Hold the Line and similar projects.</p>
+  </div>
+</section>
+
+<!-- AUTHORITARIAN DRIFT -->
+<section id="drift">
+  <h2>Week in authoritarian drift</h2>
+  <ul class="intel">
+    <li><strong>NATO allies foiled Russian submarine operation targeting Arctic undersea cables.</strong> Deep in Arctic waters near Svalbard this spring, British, Norwegian, and US forces tracked and confronted Russian vessels from the GUGI undersea warfare directorate practicing the deployment of technology to disable underwater cables without leaving fingerprints. The vessels were prevented from completing the exercise and departed. The mechanism is covert infrastructure warfare: Russia is developing capabilities to disable communications and data infrastructure at will, with built-in deniability. Mainstream coverage focused on Russian drone campaigns; this submarine dimension received significantly less attention. <a href="https://olgalautman.substack.com/p/russian-digest-cbb" target="_blank" rel="noopener">Olga Lautman Russian Digest, September 13</a></li>
+    <li><strong>Russian official will attend G20 energy meeting in Houston next week.</strong> A Russian official will attend the G20 Ministerial Meeting on Energy Abundance in Houston, September 15&ndash;17. US officials attending include the Interior Secretary, Energy Secretary, and a White House energy adviser. This follows Russian Finance Minister Anton Siluanov attending a G20 finance meeting in North Carolina in August, the first in-person Russian participation since the 2022 Ukraine invasion. The mechanism is gradual normalization: Russia is reintegrating into G20 forums while the war continues, and the US is facilitating it. <a href="https://olgalautman.substack.com/p/russian-digest-cbb" target="_blank" rel="noopener">Olga Lautman Russian Digest, September 13</a></li>
+    <li><strong>Son of Medvedev&rsquo;s alleged &ldquo;wallet&rdquo; is building a major development in Silicon Valley.</strong> A Russian businessman whose family has repeatedly been identified as a financial intermediary for former Russian President Dmitry Medvedev is attempting to build a large-scale real estate development in Silicon Valley. The development is proceeding amid active Russian aggression against Ukraine and Russia&rsquo;s ongoing covert influence campaigns against NATO countries. The mechanism is financial foothold: Russian-connected capital is acquiring physical assets in US technology infrastructure hubs, which is distinct from cyber or influence operations and harder to detect or reverse. <a href="https://olgalautman.substack.com/p/why-is-the-son-of-medvedevs-alleged" target="_blank" rel="noopener">Olga Lautman, September 9</a></li>
+    <li><strong>An investigation reveals Russia spent decades training Iran&rsquo;s defense specialists.</strong> A new investigation (published in Russian by Svoboda, English by RFE/RL) documents that Russia systematically trained Iranian defense specialists for decades, contributing directly to Iran&rsquo;s weapons programs. The mechanism matters for the US context: the Iran-Russia defense relationship is now producing weapons systems (Shahed drones, ballistic missiles) that directly affect European security, increasing the cost of NATO commitments and providing indirect leverage on US foreign policy before the midterms. <a href="https://olgalautman.substack.com/p/new-investigation-reveals-russia" target="_blank" rel="noopener">Olga Lautman, September 10</a></li>
+  </ul>
+</section>
+
+<!-- SOURCES AND METHOD -->
+<section id="sources" class="sources">
+  <h2>Sources and method</h2>
+  <p><strong>Core sources checked every edition:</strong>
+    <a href="https://blog.sentinel-team.org/" target="_blank" rel="noopener">Sentinel</a> (superforecaster-calibrated weekly roundups; no democracy-relevant content this period &mdash; recent posts are AI-focused),
+    <a href="https://www.lesswrong.com/" target="_blank" rel="noopener">LessWrong</a> (no democracy posts this period &mdash; 25 recent posts reviewed, all AI-focused),
+    <a href="https://forum.effectivealtruism.org/" target="_blank" rel="noopener">EA Forum</a> (one democracy-relevant post: Maxwell Love on insider resistance, September 10),
+    <a href="https://olgalautman.substack.com/" target="_blank" rel="noopener">Olga Lautman</a> (six posts September 8&ndash;13; four included in Authoritarian Drift),
+    <a href="https://pressfreedomtracker.us/" target="_blank" rel="noopener">US Press Freedom Tracker</a> (no incidents in the September 9&ndash;14 window),
+    <a href="https://brightlinewatch.org/" target="_blank" rel="noopener">Bright Line Watch</a>.</p>
+  <p><strong>Markets and forecasts:</strong>
+    <a href="https://gamma-api.polymarket.com/" target="_blank" rel="noopener">Polymarket Gamma API</a>,
+    <a href="https://www.metaculus.com/" target="_blank" rel="noopener">Metaculus</a>,
+    <a href="https://electionbettingodds.com/" target="_blank" rel="noopener">Election Betting Odds</a> (aggregates Kalshi, Polymarket, PredictIt, Betfair, Smarkets),
+    <a href="https://manifold.markets/" target="_blank" rel="noopener">Manifold</a>.
+    <strong>Race ratings and polling:</strong>
+    <a href="https://centerforpolitics.org/crystalball/" target="_blank" rel="noopener">Sabato&rsquo;s Crystal Ball</a>,
+    <a href="https://www.natesilver.net/" target="_blank" rel="noopener">Silver Bulletin</a>,
+    <a href="https://www.270towin.com/2026-senate-election/" target="_blank" rel="noopener">270toWin</a> (Cook and Inside Elections cross-check),
+    <a href="https://split-ticket.org/" target="_blank" rel="noopener">Split Ticket</a>.
+    <strong>Calendar and down-ballot:</strong>
+    <a href="https://ballotpedia.org/" target="_blank" rel="noopener">Ballotpedia</a>,
+    <a href="https://www.ncsl.org/" target="_blank" rel="noopener">NCSL</a>,
+    <a href="https://boltsmag.org/" target="_blank" rel="noopener">Bolts</a>.
+    <strong>Economic data:</strong>
+    <a href="https://www.bls.gov/" target="_blank" rel="noopener">BLS</a> (CPI, unemployment),
+    <a href="https://fred.stlouisfed.org/" target="_blank" rel="noopener">FRED</a> (S&amp;P 500).
+    <strong>SCOTUS:</strong>
+    <a href="https://www.scotusblog.com/" target="_blank" rel="noopener">SCOTUSblog</a>.</p>
+  <h4>Method notes for this edition</h4>
+  <ul>
+    <li><strong>Comparison window.</strong> Changes are measured against the September 9, 2026 edition. Rows marked with a square moved 5 points or more.</li>
+    <li><strong>Trend lines.</strong> Drawn from the value recorded in each edition since April 15, 2026 (<a href="history.json">history.json</a>). Senate lines show the probability the Democrat wins, or the aligned independent in Nebraska (Osborn) and Montana (Bodnar).</li>
+    <li><strong>EBO vs. Polymarket for Senate races.</strong> Individual Senate race probabilities are sourced from Polymarket directly this run; EBO is used for chamber-level aggregates (House 83.8%, Senate 50.4%) because it aggregates multiple platforms.</li>
+    <li><strong>Metaculus community forecasts.</strong> Question-level aggregations were not returned by the Metaculus API this run. No Metaculus probabilities are quoted; forecaster counts and links only. Project 32829 returning zero results is a persistent API issue.</li>
+    <li><strong>Sabato, 270toWin, Split Ticket.</strong> Sabato Crystal Ball RSS returned 403 this run. 270toWin content is JavaScript-rendered and ratings were not extractable. Split Ticket was not checked this run. Silver Bulletin FLIPR is the primary forecast source for this edition.</li>
+    <li><strong>Press Freedom Tracker.</strong> The API returned 404; the most recent incidents in the HTML page are from August 29, 2026 and earlier, suggesting a data-entry lag. The Press Freedom subsection is omitted this edition per the empty-section rule.</li>
+    <li><strong>Thin markets.</strong> Markets below $5K volume carry a Thin tag. Markets below $50K volume with narrow or procedural resolution criteria are excluded.</li>
+    <li><strong>RFK Jr. in GOP 2028 table.</strong> First appearance in tracking. No prior-edition value; Δ shown as &mdash;.</li>
+  </ul>
+  <p id="audit-line">Claim audit: 26 claims verified, 26 sourced, 0 unsourced. Two flags: SCOTUSblog URL slug unconfirmed (claim confirmed via homepage); recession Δ direction semantically correct (bad news framed as dn). <a href="archive/2026-09-14-audit.json">Full audit log</a></p>
+</section>
+
+<!-- APPENDIX A1: Bright Line Watch -->
+<section id="blw-appendix" class="appx">
+  <div class="k">Appendix</div>
+  <h2>Bright Line Watch deep dive</h2>
+
+  <h4>What Bright Line Watch is</h4>
+  <p>A recurring survey project run by political scientists at Dartmouth, the University of Chicago, and the University of Rochester. Each wave asks a large panel of political science experts, alongside a representative public sample, to rate how well the United States is currently meeting a list of specific democratic principles and to rate overall democratic performance. Wave 29 surveyed 568 experts and 2,750 members of the public.</p>
+
+  <h4>The 0&ndash;100 scale</h4>
+  <p>Respondents rate US democratic performance from 0 (not a democracy) to 100 (a perfect democracy). The number is an expert-perception measure of democratic <em>practice</em>, not a structural index of institutions or formal rights. It moves faster than structural measures because officials&rsquo; behavior can change in months while institutions change over years.</p>
+
+  <h4>Historical trajectory, expert ratings</h4>
+  <table class="mtable compact" id="blw-trajectory"><thead><tr><th>Wave</th><th class="r">Score</th><th style="padding-left:14px">Notes</th></tr></thead><tbody>
+<tr><td style="white-space:nowrap">October 2020</td><td class="num">61</td><td class="note">Trump first-term low</td></tr>
+<tr><td style="white-space:nowrap">November 2021</td><td class="num">66</td><td class="note">Biden-administration low</td></tr>
+<tr><td style="white-space:nowrap">December 2024</td><td class="num">67</td><td class="note">End of Biden term</td></tr>
+<tr><td style="white-space:nowrap">April 2025</td><td class="num">53</td><td class="note">Early Trump second term; lowest recorded since the project began in 2017</td></tr>
+<tr><td style="white-space:nowrap">February to March 2026</td><td class="num">57</td><td class="note">Fielded February 19 to March 6, 2026; published May 2026</td></tr>
+<tr><td style="white-space:nowrap">July 2026, wave 29</td><td class="num">60</td><td class="note">Fielded July 10 to 27, 2026; published August 2026 as &ldquo;A Partial Democratic Rebound?&rdquo;. Highest of the second term, still below the first-term low of 61. Public rating 52. Forecasters surveyed alongside the wave expect the rating to fall back to 51&ndash;56 by year end.</td></tr>
+  </tbody></table>
+
+  <h4>What the July 2026 wave found</h4>
+  <p>Experts perceive a partial rebound from the second-term low points while reporting persistent serious concerns. Specific threats named: partisan mid-decade redistricting, renewed claims of widespread election fraud, and consequential Supreme Court rulings on presidential power and voting rights. Principle-level ratings diverge sharply: 81% of experts judged that parties are not barred by ideology and that elections are free of fraud and manipulation, but only 4% judged that district boundaries do not systematically advantage a party. Expert confidence in accurate vote counting is 94% at state level and 82% nationwide.</p>
+
+  <h4>What BLW measures well</h4>
+  <ul>
+    <li>Short-term norm violations and behavioral changes by officials</li>
+    <li>Expert consensus on democratic backsliding in close to real time</li>
+    <li>Specific electoral integrity and civil liberties dimensions, principle by principle</li>
+  </ul>
+
+  <h4>What BLW does not capture well</h4>
+  <ul>
+    <li>Structural institutional strength (constitutional design, judicial independence as a matter of law)</li>
+    <li>Long-run democratic trajectory, which needs a multi-decade frame</li>
+    <li>Sub-national variation across US states</li>
+    <li>Economic drivers of democratic erosion such as inequality and stagnation</li>
+  </ul>
+
+  <h4>Comparison to other indices</h4>
+  <p><strong>V-Dem Liberal Democracy Index:</strong> US at 0.57 (v16, 2025 data), 51st globally, the lowest since 1965. Rescaled to 0&ndash;100 that is 57. With BLW now at 60, the two sit close together; there is no expert-survey versus structural divergence to read into the 2026 numbers.</p>
+  <p><strong>RSF World Press Freedom Index:</strong> US ranked 57th (2025), &ldquo;Problematic Situation&rdquo; category.</p>
+  <p><strong>Freedom House:</strong> Rates the US as &ldquo;Free&rdquo; with declining scores since 2016; more conservative than BLW or V-Dem in registering decline.</p>
+  <p><strong>EIU Democracy Index:</strong> Classifies the US as a &ldquo;Flawed Democracy&rdquo;; weights electoral mechanics more heavily than norm compliance.</p>
+  <p class="fn"><a href="#blw-short">&uarr; Back to the Bright Line Watch figure</a></p>
+</section>
+
+<footer>
+  <p>Written by Claude each Sunday and published unreviewed. Alex estimates about 97% accuracy: expect one to three errors and maybe one big error an issue. Message him with corrections or feedback. Updates Sundays, 7pm ET. <a href="#sources">Sources and method</a> &middot; <a href="archive/2026-09-14-audit.json">Claim audit</a></p>
+</footer>
+
+</main>
+</body>
+</html>
